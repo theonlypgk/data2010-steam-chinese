@@ -2,7 +2,8 @@ table,column,meaning
 games_clean,app_id,Steam application id (key)
 games_clean,name,Game title (for checking only)
 games_clean,release_year,Year of release
-games_clean,price,Price in USD in snapshot A
+games_clean,price,List price in USD (snapshot price undone for the discount)
+games_clean,discount_pct,Discount (%) running on the snapshot day
 games_clean,price_tier,free / lt5 / 5to10 / 10to20 / gt20
 games_clean,genre_group,"One of 6 groups, from the first matching tag"
 games_clean,n_other_langs,Supported languages other than English and Chinese
