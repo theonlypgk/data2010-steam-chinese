@@ -1,0 +1,11 @@
+# raw downloads are re-created by `python run.py data`
+data/raw/*
+!data/raw/.gitkeep
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+report/*_files/
+.quarto/

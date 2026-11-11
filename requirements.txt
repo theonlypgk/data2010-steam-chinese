@@ -1,0 +1,11 @@
+# Lower bounds only for now. T0: replace with exact versions (pip freeze) once the
+# environment is confirmed on every member's machine.
+pandas>=2.2
+numpy>=1.26
+openpyxl>=3.1
+matplotlib>=3.8
+seaborn>=0.13
+huggingface_hub>=0.23
+jupyter>=1.0
+pytest>=8.0
+streamlit>=1.36
