@@ -2,6 +2,7 @@ table,column,meaning
 games_clean,app_id,Steam application id (key)
 games_clean,name,Game title (for checking only)
 games_clean,release_year,Year of release
+games_clean,year_band,<=2017 / 2018-2019 / 2020-2021 / 2022+
 games_clean,price,List price in USD (snapshot price undone for the discount)
 games_clean,discount_pct,Discount (%) running on the snapshot day
 games_clean,price_tier,free / lt5 / 5to10 / 10to20 / gt20
@@ -13,14 +14,14 @@ games_clean,positive,Positive reviews
 games_clean,negative,Negative reviews
 games_clean,total_reviews,Reach = positive + negative
 games_clean,log_total_reviews,log10 of total_reviews
-games_clean,group_id,genre_group | release_year | price_tier | n_other_langs_bin
+games_clean,group_id,genre_group | year_band | price_tier | n_other_langs_bin
 sq1_groups,group_id,Comparison group (key)
 sq1_groups,n_zh / n_no_zh,Games with / without Simplified Chinese in the group
 sq1_groups,median_reviews_zh / median_reviews_no_zh,Median total_reviews on each side
 sq1_groups,pct_diff,median_reviews_zh / median_reviews_no_zh - 1
 sq1_groups,extra_reviews,(median_reviews_zh - median_reviews_no_zh) * n_zh
 sq1_groups,eligible,True when both sides have at least 10 games
-panel_ac,app_id,"Steam application id (key); game is in both A and C, no Chinese in C"
+panel_ac,app_id,"Steam application id (key); game is in both A and C, no Chinese in C, has reviews in A"
 panel_ac,"genre_group, release_year, year_band, price_c, price_tier, n_other_langs_bin","Group variables, all taken from snapshot C"
 panel_ac,reviews_c / reviews_a,total_reviews in January 2024 / in snapshot A
 panel_ac,growth,(reviews_a - reviews_c) / reviews_c
@@ -30,7 +31,7 @@ panel_ac,added_only_zh,1 = Simplified Chinese is the only language added
 panel_ac,added_other_major_lang,1 = added at least one major language (see config.MAJOR_LANGS)
 panel_ac,n_langs_added,Number of languages in A that were not in C
 panel_ac,arm,"treated (added_zh=1) / control (no Chinese, no major language added) / excluded"
-panel_ac,group_id_sq2,genre_group | year_band | price_tier | n_other_langs_bin | initial_reach_bin
+panel_ac,group_id_sq2,genre_group | initial_reach_bin
 sq2_groups,group_id_sq2,Comparison group (key)
 sq2_groups,n_treated / n_control,Games in each arm
 sq2_groups,median_growth_treated / median_growth_control,Median growth in each arm

@@ -14,5 +14,6 @@ panel_ac,keep released >= 1 year before snapshot,34516
 panel_ac,"keep games with a genre group, price and year",31639
 panel_ac,keep games with no Chinese (Simplified or Traditional) in C,23015
 panel_ac,keep games also present in A,21663
-panel_ac,arm = treated,512
-panel_ac,arm = control,20908
+panel_ac,keep games with reviews in A (not delisted),21623
+panel_ac,arm = treated,511
+panel_ac,arm = control,20870
