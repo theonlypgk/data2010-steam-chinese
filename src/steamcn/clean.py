@@ -154,7 +154,8 @@ def build_games_clean(feat_a: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]
     steps = _base_filters(feat_a) + [("drop Traditional-Chinese-only", ~feat_a["is_traditional_only"])]
     df, funnel = apply_filters(feat_a, steps, "games_clean")
     df["has_zh"] = df["has_zh_simplified"].astype(int)
-    df["log_total_reviews"] = np.log10(df["total_reviews"])
+    # Round derived floats so that outputs do not depend on the last bits of a library.
+    df["log_total_reviews"] = np.log10(df["total_reviews"]).round(6)
     df["group_id"] = (
         df["genre_group"] + " | " + df["release_year"].astype(str) + " | "
         + df["price_tier"] + " | " + df["n_other_langs_bin"]
@@ -183,8 +184,8 @@ def build_sq1_groups(games_clean: pd.DataFrame) -> pd.DataFrame:
         "median_reviews_no_zh": wide[("median", 0)] if ("median", 0) in wide else np.nan,
     }).reset_index()
     out[["n_zh", "n_no_zh"]] = out[["n_zh", "n_no_zh"]].fillna(0).astype(int)
-    out["pct_diff"] = out["median_reviews_zh"] / out["median_reviews_no_zh"] - 1
-    out["extra_reviews"] = (out["median_reviews_zh"] - out["median_reviews_no_zh"]) * out["n_zh"]
+    out["pct_diff"] = (out["median_reviews_zh"] / out["median_reviews_no_zh"] - 1).round(6)
+    out["extra_reviews"] = ((out["median_reviews_zh"] - out["median_reviews_no_zh"]) * out["n_zh"]).round(2)
     out["eligible"] = (out["n_zh"] >= cfg.MIN_GAMES_PER_SIDE) & (out["n_no_zh"] >= cfg.MIN_GAMES_PER_SIDE)
     return out.sort_values("group_id").reset_index(drop=True)
 
@@ -215,7 +216,7 @@ def build_panel_ac(feat_a: pd.DataFrame, feat_c: pd.DataFrame) -> tuple[pd.DataF
     p["n_other_langs_bin"] = c["n_other_langs_bin"]
     p["reviews_c"] = c["total_reviews"]
     p["reviews_a"] = a["total_reviews"]
-    p["growth"] = (p["reviews_a"] - p["reviews_c"]) / p["reviews_c"]
+    p["growth"] = ((p["reviews_a"] - p["reviews_c"]) / p["reviews_c"]).round(6)
     p["initial_reach_bin"] = pd.qcut(
         p["reviews_c"].rank(method="first"), 3, labels=cfg.REACH_LABELS
     ).astype(str)
@@ -261,7 +262,10 @@ def build_sq2_groups(panel: pd.DataFrame) -> pd.DataFrame:
         "median_growth_control": col("median", "control", np.nan),
     }).reset_index()
     out[["n_treated", "n_control"]] = out[["n_treated", "n_control"]].fillna(0).astype(int)
-    out["uplift_pts"] = out["median_growth_treated"] - out["median_growth_control"]
+    out[["median_growth_treated", "median_growth_control"]] = out[
+        ["median_growth_treated", "median_growth_control"]
+    ].round(6)
+    out["uplift_pts"] = (out["median_growth_treated"] - out["median_growth_control"]).round(6)
     out["eligible"] = (out["n_treated"] >= cfg.MIN_GAMES_PER_SIDE) & (out["n_control"] >= cfg.MIN_GAMES_PER_SIDE)
     return out.sort_values("group_id_sq2").reset_index(drop=True)
 

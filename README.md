@@ -16,8 +16,8 @@ of similar games (same genre, release year, price tier and number of other langu
 ## Reproduce everything
 
 ```bash
-pip install -r requirements.txt
-python run.py all        # or: make all
+pip install -r requirements.txt   # Python 3.12, exact versions
+python run.py all                 # or: make all
 ```
 
 | Step | Command | Reads | Writes |
@@ -31,6 +31,9 @@ python run.py all        # or: make all
 Every processed table is saved twice in `data/processed/` with the prefix `pcd_`:
 `pcd_<table>.xlsx` to open and check, `pcd_<table>.csv` for code. Later steps only ever
 read the CSV files with `pandas.read_csv`.
+
+Opening the repo in GitHub Codespaces uses `.devcontainer/` (Python 3.12 + the pinned
+packages), so it matches the GitHub Actions environment.
 
 The GitHub Actions workflow `pipeline` runs `test`, `data` and `tables` on a clean
 machine and commits the outputs, so the tables in the repo are always produced by code.

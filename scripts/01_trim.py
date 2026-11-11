@@ -66,7 +66,8 @@ def trim(raw_path, out_path) -> None:
     for raw_name, clean_name in cfg.OPTIONAL_RAW_TO_CLEAN.items():
         out[clean_name] = raw[raw_name] if raw_name in raw.columns else "0"
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    out.to_csv(out_path, index=False)
+    # mtime=0 keeps the gzip header free of the run time, so re-runs give identical bytes.
+    out.to_csv(out_path, index=False, compression={"method": "gzip", "mtime": 0})
     print(f"{out_path.name}: {len(out):,} rows x {out.shape[1]} columns")
 
 
