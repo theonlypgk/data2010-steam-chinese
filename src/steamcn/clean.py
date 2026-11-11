@@ -156,12 +156,14 @@ def build_games_clean(feat_a: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]
     df["has_zh"] = df["has_zh_simplified"].astype(int)
     # Round derived floats so that outputs do not depend on the last bits of a library.
     df["log_total_reviews"] = np.log10(df["total_reviews"]).round(6)
+    # Comparison group for SQ1. Release years are merged into bands (allowed by the
+    # framework): single years left most groups with < 10 games on one side.
     df["group_id"] = (
-        df["genre_group"] + " | " + df["release_year"].astype(str) + " | "
+        df["genre_group"] + " | " + df["year_band"] + " | "
         + df["price_tier"] + " | " + df["n_other_langs_bin"]
     )
     cols = [
-        "app_id", "name", "release_year", "price", "discount_pct", "price_tier", "genre_group",
+        "app_id", "name", "release_year", "year_band", "price", "discount_pct", "price_tier", "genre_group",
         "n_other_langs", "n_other_langs_bin", "has_zh", "positive", "negative",
         "total_reviews", "log_total_reviews", "group_id",
     ]
@@ -171,7 +173,7 @@ def build_games_clean(feat_a: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]
 # --------------------------------------------------------------------------- table 2: sq1_groups
 def build_sq1_groups(games_clean: pd.DataFrame) -> pd.DataFrame:
     """One row per group: median reviews with vs without Simplified Chinese."""
-    keys = ["group_id", "genre_group", "release_year", "price_tier", "n_other_langs_bin"]
+    keys = ["group_id", "genre_group", "year_band", "price_tier", "n_other_langs_bin"]
     wide = (
         games_clean.groupby(keys + ["has_zh"])["total_reviews"]
         .agg(n="size", median="median")
@@ -216,6 +218,11 @@ def build_panel_ac(feat_a: pd.DataFrame, feat_c: pd.DataFrame) -> tuple[pd.DataF
     p["n_other_langs_bin"] = c["n_other_langs_bin"]
     p["reviews_c"] = c["total_reviews"]
     p["reviews_a"] = a["total_reviews"]
+    # A game with 0 reviews in A had >= 10 in C: it was delisted or its reviews are
+    # missing in the data. Its "growth" of -100% is not real, so it is dropped (logged below).
+    p = p[p["reviews_a"] > 0].copy()
+    a = a.loc[p.index]
+    c = c.loc[p.index]
     p["growth"] = ((p["reviews_a"] - p["reviews_c"]) / p["reviews_c"]).round(6)
     p["initial_reach_bin"] = pd.qcut(
         p["reviews_c"].rank(method="first"), 3, labels=cfg.REACH_LABELS
@@ -234,11 +241,12 @@ def build_panel_ac(feat_a: pd.DataFrame, feat_c: pd.DataFrame) -> tuple[pd.DataF
         ["treated", "control"],
         default="excluded",
     )
-    p["group_id_sq2"] = (
-        p["genre_group"] + " | " + p["year_band"] + " | " + p["price_tier"] + " | "
-        + p["n_other_langs_bin"] + " | " + p["initial_reach_bin"]
-    )
+    # Comparison group for SQ2: genre x initial reach. Only ~500 games added Chinese, so the
+    # five-way group of the framework left 7 eligible groups; this one keeps ~95% of them
+    # and all 6 genres. Year, price and other languages stay in the table for checks.
+    p["group_id_sq2"] = p["genre_group"] + " | " + p["initial_reach_bin"]
     funnel = pd.concat([funnel, pd.DataFrame([
+        {"table": "panel_ac", "step": "keep games with reviews in A (not delisted)", "games_left": len(p)},
         {"table": "panel_ac", "step": "arm = treated", "games_left": int((p["arm"] == "treated").sum())},
         {"table": "panel_ac", "step": "arm = control", "games_left": int((p["arm"] == "control").sum())},
     ])], ignore_index=True)
@@ -248,7 +256,7 @@ def build_panel_ac(feat_a: pd.DataFrame, feat_c: pd.DataFrame) -> tuple[pd.DataF
 # --------------------------------------------------------------------------- table 4: sq2_groups
 def build_sq2_groups(panel: pd.DataFrame) -> pd.DataFrame:
     """One row per SQ2 group: median growth of treated vs control games."""
-    keys = ["group_id_sq2", "genre_group", "year_band", "price_tier", "n_other_langs_bin", "initial_reach_bin"]
+    keys = ["group_id_sq2", "genre_group", "initial_reach_bin"]
     used = panel[panel["arm"].isin(["treated", "control"])]
     wide = used.groupby(keys + ["arm"])["growth"].agg(n="size", median="median").unstack("arm")
 
@@ -276,6 +284,7 @@ DATA_DICTIONARY = [
     ("games_clean", "app_id", "Steam application id (key)"),
     ("games_clean", "name", "Game title (for checking only)"),
     ("games_clean", "release_year", "Year of release"),
+    ("games_clean", "year_band", "<=2017 / 2018-2019 / 2020-2021 / 2022+"),
     ("games_clean", "price", "List price in USD (snapshot price undone for the discount)"),
     ("games_clean", "discount_pct", "Discount (%) running on the snapshot day"),
     ("games_clean", "price_tier", "free / lt5 / 5to10 / 10to20 / gt20"),
@@ -287,14 +296,14 @@ DATA_DICTIONARY = [
     ("games_clean", "negative", "Negative reviews"),
     ("games_clean", "total_reviews", "Reach = positive + negative"),
     ("games_clean", "log_total_reviews", "log10 of total_reviews"),
-    ("games_clean", "group_id", "genre_group | release_year | price_tier | n_other_langs_bin"),
+    ("games_clean", "group_id", "genre_group | year_band | price_tier | n_other_langs_bin"),
     ("sq1_groups", "group_id", "Comparison group (key)"),
     ("sq1_groups", "n_zh / n_no_zh", "Games with / without Simplified Chinese in the group"),
     ("sq1_groups", "median_reviews_zh / median_reviews_no_zh", "Median total_reviews on each side"),
     ("sq1_groups", "pct_diff", "median_reviews_zh / median_reviews_no_zh - 1"),
     ("sq1_groups", "extra_reviews", "(median_reviews_zh - median_reviews_no_zh) * n_zh"),
     ("sq1_groups", "eligible", "True when both sides have at least 10 games"),
-    ("panel_ac", "app_id", "Steam application id (key); game is in both A and C, no Chinese in C"),
+    ("panel_ac", "app_id", "Steam application id (key); game is in both A and C, no Chinese in C, has reviews in A"),
     ("panel_ac", "genre_group, release_year, year_band, price_c, price_tier, n_other_langs_bin", "Group variables, all taken from snapshot C"),
     ("panel_ac", "reviews_c / reviews_a", "total_reviews in January 2024 / in snapshot A"),
     ("panel_ac", "growth", "(reviews_a - reviews_c) / reviews_c"),
@@ -304,7 +313,7 @@ DATA_DICTIONARY = [
     ("panel_ac", "added_other_major_lang", "1 = added at least one major language (see config.MAJOR_LANGS)"),
     ("panel_ac", "n_langs_added", "Number of languages in A that were not in C"),
     ("panel_ac", "arm", "treated (added_zh=1) / control (no Chinese, no major language added) / excluded"),
-    ("panel_ac", "group_id_sq2", "genre_group | year_band | price_tier | n_other_langs_bin | initial_reach_bin"),
+    ("panel_ac", "group_id_sq2", "genre_group | initial_reach_bin"),
     ("sq2_groups", "group_id_sq2", "Comparison group (key)"),
     ("sq2_groups", "n_treated / n_control", "Games in each arm"),
     ("sq2_groups", "median_growth_treated / median_growth_control", "Median growth in each arm"),

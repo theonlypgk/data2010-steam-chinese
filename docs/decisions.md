@@ -24,7 +24,10 @@ Only the team leader edits this file. Every change gets a date and a reason at t
 | Price | list price: snapshot price / (1 - discount). Snapshot A was taken during a sale. |
 | Price tiers | free, lt5, 5to10, 10to20, gt20 (USD, list price) |
 | Other languages | count excluding English and Chinese; bins 0, 1-4, 5+ |
-| Year bands (SQ2) | <=2017, 2018-2019, 2020-2021, 2022+ |
+| Year bands | <=2017, 2018-2019, 2020-2021, 2022+ (used in the SQ1 group) |
+| SQ1 group | genre × year band × price tier × other languages |
+| SQ2 group | genre × initial reach |
+| SQ2 sample | also drops games with 0 reviews in A (delisted) |
 | Initial reach (SQ2) | terciles of `reviews_c`: small, medium, large |
 | Major languages (SQ2 control) | German, French, Spanish - Spain, Japanese, Russian, Korean, Portuguese - Brazil |
 | Eligible group | at least 10 games on each side |
@@ -48,3 +51,12 @@ Two figures per question in the body.
 - 2026-11-12 (Claude, overnight run): price tiers use the list price. Snapshot A (2026-06-20)
   was taken during a sale (e.g. Hades listed at 7.49 = 24.99 at -70%), so the raw price put
   many games in the wrong tier.
+- 2026-11-12 (Claude, overnight run, **to be confirmed by kp**): SQ1 groups use year bands
+  instead of single years (the framework allows this): eligible groups now cover 81% of
+  games instead of 47%.
+- 2026-11-12 (Claude, overnight run, **to be confirmed by kp**): SQ2 groups are genre ×
+  initial reach. The framework's five-way group gave 7 eligible groups (16% of treated
+  games, 2 genres); genre × reach gives 14 eligible groups (about 95% of treated games,
+  6 genres). Year, price and other languages are not held fixed in SQ2: state it as a limitation.
+- 2026-11-12 (Claude, overnight run): SQ2 drops 40 games with 0 reviews in A (delisted or
+  missing data); their growth of -100% is not real.

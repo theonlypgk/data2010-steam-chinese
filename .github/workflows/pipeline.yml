@@ -33,10 +33,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/interim data/processed
-          if git diff --cached --quiet; then
+          # .xlsx files are zip archives whose bytes change on every run even when the data
+          # does not; commit only when a CSV or a trimmed snapshot actually changed.
+          if git diff --quiet -- data/interim data/processed/*.csv; then
+            git checkout -- data/processed
             echo "outputs unchanged"
           else
+            git add data/interim data/processed
             git commit -m "data: rebuild trimmed snapshots and pcd_ tables [pipeline]"
             git push
           fi

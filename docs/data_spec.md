@@ -67,11 +67,11 @@ Filters on snapshot A, in this order (each one is logged in `funnel`):
 | Column | Meaning |
 |---|---|
 | `app_id`, `name` | key and title |
-| `release_year`, `price` (list price), `discount_pct`, `price_tier`, `genre_group` | group variables |
+| `release_year`, `year_band`, `price` (list price), `discount_pct`, `price_tier`, `genre_group` | group variables |
 | `n_other_langs`, `n_other_langs_bin` | group variable |
 | `has_zh` | **treatment**: 1 = supports Simplified Chinese, 0 = no Chinese at all |
 | `positive`, `negative`, `total_reviews`, `log_total_reviews` | **outcome**: reach |
-| `group_id` | `genre_group | release_year | price_tier | n_other_langs_bin` |
+| `group_id` | `genre_group | year_band | price_tier | n_other_langs_bin` (year bands, not single years: single years left 53% of games in groups with < 10 games on one side) |
 
 Used by:
 - **EDA**: histogram of `total_reviews` / `log_total_reviews`; share of `has_zh` by
@@ -84,7 +84,7 @@ Group `games_clean` by `group_id`.
 
 | Column | Meaning |
 |---|---|
-| `group_id`, `genre_group`, `release_year`, `price_tier`, `n_other_langs_bin` | the group |
+| `group_id`, `genre_group`, `year_band`, `price_tier`, `n_other_langs_bin` | the group |
 | `n_zh`, `n_no_zh` | games on each side |
 | `median_reviews_zh`, `median_reviews_no_zh` | median `total_reviews` on each side |
 | `pct_diff` | `median_reviews_zh / median_reviews_no_zh - 1` |
@@ -99,8 +99,8 @@ How SQ1 uses it (keep only `eligible` rows):
 ## Step 4. `panel_ac` (SQ2)
 
 Start from snapshot C. Filters, in order: the first five filters of Step 2 applied to C,
-then keep games with no Chinese at all in C, then keep games that also exist in A.
-Join to A on `app_id`.
+then keep games with no Chinese at all in C, then keep games that also exist in A, then
+drop games with 0 reviews in A (delisted, or reviews missing in the data). Join to A on `app_id`.
 
 | Column | Meaning |
 |---|---|
@@ -114,7 +114,7 @@ Join to A on `app_id`.
 | `added_other_major_lang` | 1 = added at least one major language |
 | `n_langs_added` | number of languages in A that were not in C |
 | `arm` | **treatment**: `treated` (`added_zh = 1`), `control` (no Chinese and no major language added), `excluded` (the rest) |
-| `group_id_sq2` | `genre_group | year_band | price_tier | n_other_langs_bin | initial_reach_bin` |
+| `group_id_sq2` | `genre_group | initial_reach_bin` (see Step 5) |
 
 Used by:
 - **SQ2**: boxplot of `growth` by `arm`; bootstrap inside each `group_id_sq2`;
@@ -123,11 +123,15 @@ Used by:
 
 ## Step 5. `sq2_groups` (SQ2)
 
-Group the `treated` and `control` rows of `panel_ac` by `group_id_sq2`.
+Group the `treated` and `control` rows of `panel_ac` by `group_id_sq2` = genre × initial reach
+(18 groups). Only about 500 games added Chinese between C and A, so the five-way group of the
+framework (genre × year × price × other languages × reach) left 7 eligible groups; genre ×
+reach keeps 14 eligible groups, about 95% of treated games and all 6 genres. Year, price and
+other languages stay in `panel_ac` and can be used as checks.
 
 | Column | Meaning |
 |---|---|
-| `group_id_sq2` and its five parts | the group |
+| `group_id_sq2`, `genre_group`, `initial_reach_bin` | the group |
 | `n_treated`, `n_control` | games in each arm |
 | `median_growth_treated`, `median_growth_control` | median `growth` in each arm |
 | `uplift_pts` | `median_growth_treated - median_growth_control` |
@@ -135,11 +139,11 @@ Group the `treated` and `control` rows of `panel_ac` by `group_id_sq2`.
 
 How SQ2 uses it (keep only `eligible` rows):
 - **Main result**: mean of `uplift_pts` weighted by `n_treated`.
-- **By genre** (report body) and **by price** (appendix): the same per `genre_group` / `price_tier`.
+- **By genre** (report body): the same per `genre_group`.
+- **By price** (appendix): from `panel_ac`, compare median `growth` of treated vs control per `price_tier`.
 
-If too few groups are eligible, coarsen the groups in this order and note it in
-`docs/decisions.md`: drop `n_other_langs_bin` from the group, then merge genres into
-text-heavy (Visual Novel, RPG, Strategy) and text-light (Action, Puzzle, Casual).
+Limitation to state in the report: SQ2 holds genre and starting reach fixed, but not
+release year, price or number of other languages.
 
 ## SQ3 (no new table here)
 

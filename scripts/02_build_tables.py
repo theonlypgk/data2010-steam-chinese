@@ -15,12 +15,17 @@ Output: for every table below, two files in data/processed/
 
 See docs/data_spec.md for every column and rule.
 """
+from datetime import datetime
+
 import pandas as pd
 
 import _bootstrap  # noqa: F401  (adds src/ to the import path)
 from steamcn import clean
 from steamcn import config as cfg
 from steamcn import paths
+
+
+FIXED_DATE = datetime(2026, 1, 1)
 
 
 def main() -> None:
@@ -36,7 +41,11 @@ def main() -> None:
     paths.PROCESSED.mkdir(parents=True, exist_ok=True)
     for name, table in tables.items():
         table.to_csv(paths.table_csv(name), index=False)
-        table.to_excel(paths.table_xlsx(name), index=False, sheet_name=name[:31])
+        with pd.ExcelWriter(paths.table_xlsx(name), engine="openpyxl") as writer:
+            table.to_excel(writer, index=False, sheet_name=name[:31])
+            # Fixed document dates: the xlsx metadata does not change between runs.
+            writer.book.properties.created = FIXED_DATE
+            writer.book.properties.modified = FIXED_DATE
         print(f"pcd_{name}: {len(table):,} rows x {table.shape[1]} columns (.csv + .xlsx)")
 
     # 4. Print the funnel so the effect of each filter is visible in the run log.

@@ -39,6 +39,7 @@ def _snapshots():
         _row(7, [zh], 500),                 # Chinese-publisher proxy (zh, no English)
         _row(8, [en], 80, tags="Simulation,Indie"),   # no genre group
         _row(11, [en, zh], 90, audio="['English', 'Simplified Chinese']"),  # Western game with zh voice
+        _row(13, [en], 50),                 # 0 reviews in A (delisted) -> dropped from panel
     ])
     a = pd.DataFrame([
         _row(1, [en, zh], 300),
@@ -53,6 +54,7 @@ def _snapshots():
         _row(10, [en, zh, fr], 60, price=0.0, tags="Puzzle"),
         _row(11, [en, zh], 90, audio="['English', 'Simplified Chinese']"),
         _row(12, [zh], 80, audio="['Simplified Chinese']"),  # Chinese-only -> proxy
+        _row(13, [en], 0),
     ])
     a["discount_pct"] = "0"
     a.loc[a["app_id"] == 2, ["price", "discount_pct"]] = [4.49, "70"]   # sale price
@@ -70,7 +72,7 @@ def test_games_clean_filters_and_columns():
     assert g.set_index("app_id").loc[2, "has_zh"] == 0
     assert g.set_index("app_id").loc[10, "price_tier"] == "free"
     assert g.set_index("app_id").loc[10, "n_other_langs_bin"] == "1-4"
-    assert g.set_index("app_id").loc[1, "group_id"] == "RPG | 2021 | 10to20 | 0"
+    assert g.set_index("app_id").loc[1, "group_id"] == "RPG | 2020-2021 | 10to20 | 0"
     assert all(col == col.lower() for col in g.columns)
 
 
