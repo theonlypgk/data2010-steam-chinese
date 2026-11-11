@@ -39,12 +39,13 @@ def trim(raw_path, out_path) -> None:
 
     # Read with the repaired header (skip the original header row) and only the
     # columns we need, everything as text first; types are set during cleaning.
+    optional = [c for c in cfg.OPTIONAL_RAW_TO_CLEAN if c in names]
     raw = pd.read_csv(
         raw_path,
         names=names,
         header=None,
         skiprows=1,
-        usecols=list(cfg.RAW_TO_CLEAN),
+        usecols=list(cfg.RAW_TO_CLEAN) + optional,
         dtype=str,
         keep_default_na=False,
         na_values=[""],
@@ -61,6 +62,9 @@ def trim(raw_path, out_path) -> None:
         )
 
     out = raw[list(cfg.RAW_TO_CLEAN)].rename(columns=cfg.RAW_TO_CLEAN)
+    # Optional columns: copy when the snapshot has them, otherwise fill with 0.
+    for raw_name, clean_name in cfg.OPTIONAL_RAW_TO_CLEAN.items():
+        out[clean_name] = raw[raw_name] if raw_name in raw.columns else "0"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(out_path, index=False)
     print(f"{out_path.name}: {len(out):,} rows x {out.shape[1]} columns")

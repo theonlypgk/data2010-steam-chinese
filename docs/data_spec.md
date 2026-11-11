@@ -32,7 +32,9 @@ c_trim ──┴─> panel_ac ─────> sq2_groups          (SQ2)
 ## Step 1. Clean each snapshot (same code for A and C)
 
 1. `app_id` to integer; drop rows without one; drop duplicate `app_id`.
-2. `positive`, `negative` to integers; `price` to float; `release_date` to a date.
+2. `positive`, `negative` to integers; `release_date` to a date. `price` becomes the
+   **list price**: snapshot A was taken during a sale, so `price = price_at_snapshot /
+   (1 - discount_pct / 100)` (snapshot C has no discount column, its price is used as is).
 3. Parse `supported_languages`, `full_audio_languages`, `tags`, `genres` into lists.
    Remove junk such as `[b]*[/b]`, HTML tags and line breaks.
 4. Add the derived columns:
@@ -43,7 +45,7 @@ c_trim ──┴─> panel_ac ─────> sq2_groups          (SQ2)
 | `has_zh_simplified`, `has_zh_traditional`, `has_english` | language is in `supported_languages` |
 | `n_other_langs` | number of supported languages other than English and the two Chinese variants |
 | `n_other_langs_bin` | `0`, `1-4`, `5+` |
-| `is_cn_publisher_proxy` | Chinese full audio, or Chinese supported without English |
+| `is_cn_publisher_proxy` | Chinese without English, in the text or in the voice-over |
 | `is_early_access` | "Early Access" in `genres` |
 | `is_traditional_only` | Traditional Chinese without Simplified |
 | `genre_group` | first tag (tags are ordered by votes) found in `config.TAG_TO_GENRE` |
@@ -65,7 +67,7 @@ Filters on snapshot A, in this order (each one is logged in `funnel`):
 | Column | Meaning |
 |---|---|
 | `app_id`, `name` | key and title |
-| `release_year`, `price`, `price_tier`, `genre_group` | group variables |
+| `release_year`, `price` (list price), `discount_pct`, `price_tier`, `genre_group` | group variables |
 | `n_other_langs`, `n_other_langs_bin` | group variable |
 | `has_zh` | **treatment**: 1 = supports Simplified Chinese, 0 = no Chinese at all |
 | `positive`, `negative`, `total_reviews`, `log_total_reviews` | **outcome**: reach |

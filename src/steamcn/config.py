@@ -29,6 +29,11 @@ RAW_TO_CLEAN = {
     "Genres": "genres",
     "Tags": "tags",
 }
+# Columns that exist in only some snapshots. Snapshot A has "Discount" (its prices are
+# sale prices at snapshot time); snapshot C has no such column, so it is filled with 0.
+OPTIONAL_RAW_TO_CLEAN = {
+    "Discount": "discount_pct",
+}
 
 # ---- language definitions ----
 ZH_SIMPLIFIED = "Simplified Chinese"

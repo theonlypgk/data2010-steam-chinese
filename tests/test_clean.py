@@ -38,6 +38,7 @@ def _snapshots():
         _row(6, [en], 50, genres="Indie,Early Access"),
         _row(7, [zh], 500),                 # Chinese-publisher proxy (zh, no English)
         _row(8, [en], 80, tags="Simulation,Indie"),   # no genre group
+        _row(11, [en, zh], 90, audio="['English', 'Simplified Chinese']"),  # Western game with zh voice
     ])
     a = pd.DataFrame([
         _row(1, [en, zh], 300),
@@ -50,7 +51,11 @@ def _snapshots():
         _row(8, [en], 100, tags="Simulation,Indie"),
         _row(9, [en, tw], 700),             # Traditional only -> dropped from games_clean
         _row(10, [en, zh, fr], 60, price=0.0, tags="Puzzle"),
+        _row(11, [en, zh], 90, audio="['English', 'Simplified Chinese']"),
+        _row(12, [zh], 80, audio="['Simplified Chinese']"),  # Chinese-only -> proxy
     ])
+    a["discount_pct"] = "0"
+    a.loc[a["app_id"] == 2, ["price", "discount_pct"]] = [4.49, "70"]   # sale price
     return a, c
 
 
@@ -58,7 +63,9 @@ def test_games_clean_filters_and_columns():
     a, c = _snapshots()
     t = clean.build_all(a, c, "2025-11-01", "2024-01-31")
     g = t["games_clean"]
-    assert sorted(g["app_id"]) == [1, 2, 3, 4, 10]
+    assert sorted(g["app_id"]) == [1, 2, 3, 4, 10, 11]     # 11 kept: English + zh voice
+    assert g.set_index("app_id").loc[2, "price"] == 14.97   # 4.49 at -70%
+    assert g.set_index("app_id").loc[2, "price_tier"] == "10to20"
     assert g.set_index("app_id").loc[1, "has_zh"] == 1
     assert g.set_index("app_id").loc[2, "has_zh"] == 0
     assert g.set_index("app_id").loc[10, "price_tier"] == "free"
@@ -70,7 +77,7 @@ def test_games_clean_filters_and_columns():
 def test_panel_arms_and_growth():
     a, c = _snapshots()
     p = clean.build_all(a, c, "2025-11-01", "2024-01-31")["panel_ac"].set_index("app_id")
-    assert sorted(p.index) == [1, 2, 3]
+    assert sorted(p.index) == [1, 2, 3]     # 4 and 11 already had zh in C
     assert p.loc[1, "arm"] == "treated" and p.loc[1, "added_only_zh"] == 1
     assert p.loc[2, "arm"] == "control"
     assert p.loc[3, "arm"] == "excluded"

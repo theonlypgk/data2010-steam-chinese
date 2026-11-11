@@ -31,7 +31,8 @@ redistributing the trimmed files._
 | `app_id` | AppID | Steam application id |
 | `name` | Name | Game title |
 | `release_date` | Release date | Release date |
-| `price` | Price | Price in USD |
+| `price` | Price | Price in USD on the snapshot day (sale price in A) |
+| `discount_pct` | Discount | Discount running on the snapshot day; only in A (0 in C) |
 | `supported_languages` | Supported languages | Interface / subtitle languages |
 | `full_audio_languages` | Full audio languages | Voiced languages |
 | `positive`, `negative` | Positive, Negative | Review counts |
@@ -45,4 +46,6 @@ and in `processed/data_dictionary.csv`.
 
 - Review counts cover all languages; reviews by Chinese-speaking players cannot be separated.
 - The exact date a game added a language is unknown, only that it changed between C and A.
-- Games by Chinese publishers are identified by a proxy (Chinese audio, or Chinese without English).
+- Games by Chinese publishers are identified by a proxy (Chinese without English, in text or voice-over).
+- Snapshot A was taken during a sale; list prices are recovered from the discount column.
+- In snapshot A the header merges "Discount" and "DLC count" into one name; `scripts/01_trim.py` splits it.

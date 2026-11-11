@@ -74,7 +74,12 @@ def add_features(trim: pd.DataFrame, snapshot_date: str) -> pd.DataFrame:
 
     for col in ("positive", "negative"):
         df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0).astype("int64")
-    df["price"] = pd.to_numeric(df["price"], errors="coerce")
+    # Prices in snapshot A are sale prices on the snapshot day (e.g. Hades 7.49 at -70%).
+    # Recover the list price so that price tiers describe the game, not the sale.
+    df["price_at_snapshot"] = pd.to_numeric(df["price"], errors="coerce")
+    discount = df["discount_pct"] if "discount_pct" in df else pd.Series(0, index=df.index)
+    df["discount_pct"] = pd.to_numeric(discount, errors="coerce").fillna(0).clip(0, 99)
+    df["price"] = (df["price_at_snapshot"] / (1 - df["discount_pct"] / 100)).round(2)
     df["release_date"] = pd.to_datetime(df["release_date"], errors="coerce", format="mixed")
     df["release_year"] = df["release_date"].dt.year.astype("Int64")
     df["days_since_release"] = (pd.Timestamp(snapshot_date) - df["release_date"]).dt.days
@@ -102,10 +107,14 @@ def add_features(trim: pd.DataFrame, snapshot_date: str) -> pd.DataFrame:
 
     # --- 5. flags used by the filters (Chinese-publisher proxy, Early Access, Traditional only)
     has_zh_audio = audio.map(lambda x: bool(set(x) & chinese))
+    has_en_audio = audio.map(lambda x: cfg.ENGLISH in x)
     any_zh = df["has_zh_simplified"] | df["has_zh_traditional"]
-    df["is_cn_publisher_proxy"] = has_zh_audio | (any_zh & ~df["has_english"])
+    # A game made by a Chinese publisher for the Chinese market: Chinese without English,
+    # in the text or in the voice-over. (Chinese voice-over alone is NOT used: many Western
+    # games such as Cyberpunk 2077 or The Witcher 3 have it. See docs/decisions.md.)
+    df["is_cn_publisher_proxy"] = (any_zh & ~df["has_english"]) | (has_zh_audio & ~has_en_audio)
     df["has_zh_audio"] = has_zh_audio
-    df["has_english_audio"] = audio.map(lambda x: cfg.ENGLISH in x)
+    df["has_english_audio"] = has_en_audio
     df["is_early_access"] = genres.map(lambda x: "Early Access" in x)
     df["is_traditional_only"] = df["has_zh_traditional"] & ~df["has_zh_simplified"]
 
@@ -151,7 +160,7 @@ def build_games_clean(feat_a: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]
         + df["price_tier"] + " | " + df["n_other_langs_bin"]
     )
     cols = [
-        "app_id", "name", "release_year", "price", "price_tier", "genre_group",
+        "app_id", "name", "release_year", "price", "discount_pct", "price_tier", "genre_group",
         "n_other_langs", "n_other_langs_bin", "has_zh", "positive", "negative",
         "total_reviews", "log_total_reviews", "group_id",
     ]
@@ -201,7 +210,7 @@ def build_panel_ac(feat_a: pd.DataFrame, feat_c: pd.DataFrame) -> tuple[pd.DataF
     p["genre_group"] = c["genre_group"]
     p["release_year"] = c["release_year"]
     p["year_band"] = c["year_band"]
-    p["price_c"] = c["price"]
+    p["price_c"] = c["price"]  # snapshot C has no discount column: price as listed in C
     p["price_tier"] = c["price_tier"]
     p["n_other_langs_bin"] = c["n_other_langs_bin"]
     p["reviews_c"] = c["total_reviews"]
@@ -263,7 +272,8 @@ DATA_DICTIONARY = [
     ("games_clean", "app_id", "Steam application id (key)"),
     ("games_clean", "name", "Game title (for checking only)"),
     ("games_clean", "release_year", "Year of release"),
-    ("games_clean", "price", "Price in USD in snapshot A"),
+    ("games_clean", "price", "List price in USD (snapshot price undone for the discount)"),
+    ("games_clean", "discount_pct", "Discount (%) running on the snapshot day"),
     ("games_clean", "price_tier", "free / lt5 / 5to10 / 10to20 / gt20"),
     ("games_clean", "genre_group", "One of 6 groups, from the first matching tag"),
     ("games_clean", "n_other_langs", "Supported languages other than English and Chinese"),
