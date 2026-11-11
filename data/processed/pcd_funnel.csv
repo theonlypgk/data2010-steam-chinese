@@ -1,0 +1,18 @@
+table,step,games_left
+games_clean,start,125855
+games_clean,drop Chinese-publisher proxy,113821
+games_clean,drop Early Access,103238
+games_clean,keep >= 10 reviews,45995
+games_clean,keep released >= 1 year before snapshot,45709
+games_clean,"keep games with a genre group, price and year",42256
+games_clean,drop Traditional-Chinese-only,41764
+panel_ac,start,85103
+panel_ac,drop Chinese-publisher proxy,77619
+panel_ac,drop Early Access,68087
+panel_ac,keep >= 10 reviews,33891
+panel_ac,keep released >= 1 year before snapshot,32068
+panel_ac,"keep games with a genre group, price and year",29324
+panel_ac,keep games with no Chinese (Simplified or Traditional) in C,23015
+panel_ac,keep games also present in A,21663
+panel_ac,arm = treated,512
+panel_ac,arm = control,20908

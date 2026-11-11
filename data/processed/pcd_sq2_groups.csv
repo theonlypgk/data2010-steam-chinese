@@ -1,0 +1,899 @@
+group_id_sq2,genre_group,year_band,price_tier,n_other_langs_bin,initial_reach_bin,n_treated,n_control,median_growth_treated,median_growth_control,uplift_pts,eligible
+Action | 2018-2019 | 10to20 | 0 | large,Action,2018-2019,10to20,0,large,3,47,0.5049800796812749,0.2125984251968504,0.2923816544844245,False
+Action | 2018-2019 | 10to20 | 0 | medium,Action,2018-2019,10to20,0,medium,1,55,0.0136986301369863,0.0967741935483871,-0.0830755634114008,False
+Action | 2018-2019 | 10to20 | 0 | small,Action,2018-2019,10to20,0,small,1,56,0.0,0.05572755417956656,-0.05572755417956656,False
+Action | 2018-2019 | 10to20 | 1-4 | large,Action,2018-2019,10to20,1-4,large,2,35,0.5873409292690145,0.27611940298507465,0.31122152628393984,False
+Action | 2018-2019 | 10to20 | 1-4 | medium,Action,2018-2019,10to20,1-4,medium,1,23,0.05194805194805195,0.14925373134328357,-0.09730567939523162,False
+Action | 2018-2019 | 10to20 | 1-4 | small,Action,2018-2019,10to20,1-4,small,0,16,,0.08012820512820512,,False
+Action | 2018-2019 | 10to20 | 5+ | large,Action,2018-2019,10to20,5+,large,0,21,,0.20901639344262296,,False
+Action | 2018-2019 | 10to20 | 5+ | medium,Action,2018-2019,10to20,5+,medium,0,17,,0.15217391304347827,,False
+Action | 2018-2019 | 10to20 | 5+ | small,Action,2018-2019,10to20,5+,small,0,5,,0.23076923076923078,,False
+Action | 2018-2019 | 5to10 | 0 | large,Action,2018-2019,5to10,0,large,1,40,0.0997920997920998,0.24765604765604765,-0.14786394786394785,False
+Action | 2018-2019 | 5to10 | 0 | medium,Action,2018-2019,5to10,0,medium,0,93,,0.1095890410958904,,False
+Action | 2018-2019 | 5to10 | 0 | small,Action,2018-2019,5to10,0,small,0,142,,0.08712121212121213,,False
+Action | 2018-2019 | 5to10 | 1-4 | large,Action,2018-2019,5to10,1-4,large,1,24,0.07423580786026202,0.2104686811164544,-0.13623287325619238,False
+Action | 2018-2019 | 5to10 | 1-4 | medium,Action,2018-2019,5to10,1-4,medium,1,37,0.140625,0.13157894736842105,0.009046052631578955,False
+Action | 2018-2019 | 5to10 | 1-4 | small,Action,2018-2019,5to10,1-4,small,0,35,,0.1,,False
+Action | 2018-2019 | 5to10 | 5+ | large,Action,2018-2019,5to10,5+,large,2,7,0.473643080420574,0.22807017543859648,0.24557290498197754,False
+Action | 2018-2019 | 5to10 | 5+ | medium,Action,2018-2019,5to10,5+,medium,0,9,,0.14084507042253522,,False
+Action | 2018-2019 | 5to10 | 5+ | small,Action,2018-2019,5to10,5+,small,0,13,,0.16,,False
+Action | 2018-2019 | free | 0 | large,Action,2018-2019,free,0,large,0,66,,0.08312540785382519,,False
+Action | 2018-2019 | free | 0 | medium,Action,2018-2019,free,0,medium,0,113,,0.16666666666666666,,False
+Action | 2018-2019 | free | 0 | small,Action,2018-2019,free,0,small,0,121,,0.3333333333333333,,False
+Action | 2018-2019 | free | 1-4 | large,Action,2018-2019,free,1-4,large,0,20,,0.17152886797076325,,False
+Action | 2018-2019 | free | 1-4 | medium,Action,2018-2019,free,1-4,medium,0,19,,0.12162162162162163,,False
+Action | 2018-2019 | free | 1-4 | small,Action,2018-2019,free,1-4,small,0,17,,0.3157894736842105,,False
+Action | 2018-2019 | free | 5+ | large,Action,2018-2019,free,5+,large,0,7,,0.05447339342301124,,False
+Action | 2018-2019 | free | 5+ | small,Action,2018-2019,free,5+,small,0,1,,0.5714285714285714,,False
+Action | 2018-2019 | gt20 | 0 | large,Action,2018-2019,gt20,0,large,0,12,,0.19510003455279412,,False
+Action | 2018-2019 | gt20 | 0 | medium,Action,2018-2019,gt20,0,medium,0,5,,0.09574468085106383,,False
+Action | 2018-2019 | gt20 | 0 | small,Action,2018-2019,gt20,0,small,0,2,,2.1205882352941177,,False
+Action | 2018-2019 | gt20 | 1-4 | large,Action,2018-2019,gt20,1-4,large,0,10,,0.2352408167625559,,False
+Action | 2018-2019 | gt20 | 1-4 | medium,Action,2018-2019,gt20,1-4,medium,0,7,,0.23684210526315788,,False
+Action | 2018-2019 | gt20 | 1-4 | small,Action,2018-2019,gt20,1-4,small,0,1,,0.38461538461538464,,False
+Action | 2018-2019 | gt20 | 5+ | large,Action,2018-2019,gt20,5+,large,0,15,,0.3378131524008351,,False
+Action | 2018-2019 | gt20 | 5+ | medium,Action,2018-2019,gt20,5+,medium,0,1,,0.38317757009345793,,False
+Action | 2018-2019 | gt20 | 5+ | small,Action,2018-2019,gt20,5+,small,0,1,,1.2857142857142858,,False
+Action | 2018-2019 | lt5 | 0 | large,Action,2018-2019,lt5,0,large,9,59,0.17525195968645016,0.18961038961038962,-0.014358429923939459,False
+Action | 2018-2019 | lt5 | 0 | medium,Action,2018-2019,lt5,0,medium,5,233,0.13636363636363635,0.11764705882352941,0.018716577540106943,False
+Action | 2018-2019 | lt5 | 0 | small,Action,2018-2019,lt5,0,small,1,358,0.0,0.1111111111111111,-0.1111111111111111,False
+Action | 2018-2019 | lt5 | 1-4 | large,Action,2018-2019,lt5,1-4,large,1,34,0.7674418604651163,0.09776645508394843,0.6696754053811679,False
+Action | 2018-2019 | lt5 | 1-4 | medium,Action,2018-2019,lt5,1-4,medium,1,83,0.7352941176470589,0.13043478260869565,0.6048593350383632,False
+Action | 2018-2019 | lt5 | 1-4 | small,Action,2018-2019,lt5,1-4,small,0,80,,0.16025641025641024,,False
+Action | 2018-2019 | lt5 | 5+ | large,Action,2018-2019,lt5,5+,large,0,10,,0.2710374908994852,,False
+Action | 2018-2019 | lt5 | 5+ | medium,Action,2018-2019,lt5,5+,medium,1,16,0.0392156862745098,0.15388257575757575,-0.11466688948306594,False
+Action | 2018-2019 | lt5 | 5+ | small,Action,2018-2019,lt5,5+,small,0,11,,0.21739130434782608,,False
+Action | 2020-2021 | 10to20 | 0 | large,Action,2020-2021,10to20,0,large,1,35,0.30703812316715545,0.38697318007662834,-0.07993505690947289,False
+Action | 2020-2021 | 10to20 | 0 | medium,Action,2020-2021,10to20,0,medium,1,56,0.19230769230769232,0.19801462904911182,-0.005706936741419505,False
+Action | 2020-2021 | 10to20 | 0 | small,Action,2020-2021,10to20,0,small,7,64,0.15384615384615385,0.17424242424242425,-0.0203962703962704,False
+Action | 2020-2021 | 10to20 | 1-4 | large,Action,2020-2021,10to20,1-4,large,0,19,,0.466529351184346,,False
+Action | 2020-2021 | 10to20 | 1-4 | medium,Action,2020-2021,10to20,1-4,medium,0,33,,0.3865546218487395,,False
+Action | 2020-2021 | 10to20 | 1-4 | small,Action,2020-2021,10to20,1-4,small,3,27,0.625,0.16666666666666666,0.45833333333333337,False
+Action | 2020-2021 | 10to20 | 5+ | large,Action,2020-2021,10to20,5+,large,2,18,1.3681036373319966,0.6194952290961067,0.7486084082358899,False
+Action | 2020-2021 | 10to20 | 5+ | medium,Action,2020-2021,10to20,5+,medium,0,16,,0.6262083780880774,,False
+Action | 2020-2021 | 10to20 | 5+ | small,Action,2020-2021,10to20,5+,small,1,9,0.36363636363636365,0.34782608695652173,0.015810276679841917,False
+Action | 2020-2021 | 5to10 | 0 | large,Action,2020-2021,5to10,0,large,1,28,2.1735780451908924,0.3490282508515328,1.8245497943393596,False
+Action | 2020-2021 | 5to10 | 0 | medium,Action,2020-2021,5to10,0,medium,0,76,,0.17152613606514316,,False
+Action | 2020-2021 | 5to10 | 0 | small,Action,2020-2021,5to10,0,small,3,127,0.0,0.18181818181818182,-0.18181818181818182,False
+Action | 2020-2021 | 5to10 | 1-4 | large,Action,2020-2021,5to10,1-4,large,0,13,,0.417910447761194,,False
+Action | 2020-2021 | 5to10 | 1-4 | medium,Action,2020-2021,5to10,1-4,medium,1,41,1.0862068965517242,0.27472527472527475,0.8114816218264495,False
+Action | 2020-2021 | 5to10 | 1-4 | small,Action,2020-2021,5to10,1-4,small,0,48,,0.2277432712215321,,False
+Action | 2020-2021 | 5to10 | 5+ | large,Action,2020-2021,5to10,5+,large,1,1,5.232449297971919,0.09603072983354674,5.136418568138373,False
+Action | 2020-2021 | 5to10 | 5+ | medium,Action,2020-2021,5to10,5+,medium,0,9,,0.36666666666666664,,False
+Action | 2020-2021 | 5to10 | 5+ | small,Action,2020-2021,5to10,5+,small,0,11,,0.5454545454545454,,False
+Action | 2020-2021 | free | 0 | large,Action,2020-2021,free,0,large,1,61,0.5655172413793104,0.16276202219482122,0.40275521918448914,False
+Action | 2020-2021 | free | 0 | medium,Action,2020-2021,free,0,medium,0,102,,0.272703818369453,,False
+Action | 2020-2021 | free | 0 | small,Action,2020-2021,free,0,small,0,95,,0.48,,False
+Action | 2020-2021 | free | 1-4 | large,Action,2020-2021,free,1-4,large,0,14,,0.1438377557249741,,False
+Action | 2020-2021 | free | 1-4 | medium,Action,2020-2021,free,1-4,medium,1,23,0.18,0.25,-0.07,False
+Action | 2020-2021 | free | 1-4 | small,Action,2020-2021,free,1-4,small,2,18,1.0400641025641026,0.4692028985507246,0.570861204013378,False
+Action | 2020-2021 | free | 5+ | large,Action,2020-2021,free,5+,large,1,11,0.18229854689564068,0.18860510805500982,-0.006306561159369145,False
+Action | 2020-2021 | free | 5+ | medium,Action,2020-2021,free,5+,medium,0,2,,0.3757649938800489,,False
+Action | 2020-2021 | free | 5+ | small,Action,2020-2021,free,5+,small,1,1,0.625,0.6153846153846154,0.009615384615384581,False
+Action | 2020-2021 | gt20 | 0 | large,Action,2020-2021,gt20,0,large,3,13,1.1166347992351817,0.1991701244813278,0.917464674753854,False
+Action | 2020-2021 | gt20 | 0 | medium,Action,2020-2021,gt20,0,medium,0,5,,0.2777777777777778,,False
+Action | 2020-2021 | gt20 | 0 | small,Action,2020-2021,gt20,0,small,0,8,,0.27789473684210525,,False
+Action | 2020-2021 | gt20 | 1-4 | large,Action,2020-2021,gt20,1-4,large,0,7,,0.559652928416486,,False
+Action | 2020-2021 | gt20 | 1-4 | medium,Action,2020-2021,gt20,1-4,medium,1,4,2.0520833333333335,0.24166666666666664,1.8104166666666668,False
+Action | 2020-2021 | gt20 | 1-4 | small,Action,2020-2021,gt20,1-4,small,0,4,,0.7197802197802197,,False
+Action | 2020-2021 | gt20 | 5+ | large,Action,2020-2021,gt20,5+,large,1,16,0.7566503800217155,0.4267662949605494,0.32988408506116607,False
+Action | 2020-2021 | gt20 | 5+ | medium,Action,2020-2021,gt20,5+,medium,0,3,,0.7702702702702703,,False
+Action | 2020-2021 | lt5 | 0 | large,Action,2020-2021,lt5,0,large,1,54,0.5893508388037928,0.2512916930107706,0.3380591457930222,False
+Action | 2020-2021 | lt5 | 0 | medium,Action,2020-2021,lt5,0,medium,6,163,0.027820121951219513,0.23636363636363636,-0.20854351441241684,False
+Action | 2020-2021 | lt5 | 0 | small,Action,2020-2021,lt5,0,small,5,334,0.21428571428571427,0.1846590909090909,0.029626623376623362,False
+Action | 2020-2021 | lt5 | 1-4 | large,Action,2020-2021,lt5,1-4,large,0,22,,0.4369665952864107,,False
+Action | 2020-2021 | lt5 | 1-4 | medium,Action,2020-2021,lt5,1-4,medium,1,71,1.11864406779661,0.18421052631578946,0.9344335414808206,False
+Action | 2020-2021 | lt5 | 1-4 | small,Action,2020-2021,lt5,1-4,small,3,120,0.2,0.20714285714285713,-0.0071428571428571175,False
+Action | 2020-2021 | lt5 | 5+ | large,Action,2020-2021,lt5,5+,large,0,2,,0.19974195300828468,,False
+Action | 2020-2021 | lt5 | 5+ | medium,Action,2020-2021,lt5,5+,medium,1,3,0.782608695652174,0.6521739130434783,0.13043478260869568,False
+Action | 2020-2021 | lt5 | 5+ | small,Action,2020-2021,lt5,5+,small,0,21,,0.4166666666666667,,False
+Action | 2022+ | 10to20 | 0 | large,Action,2022+,10to20,0,large,2,14,15.91444131874594,0.6815018543984666,15.232939464347474,False
+Action | 2022+ | 10to20 | 0 | medium,Action,2022+,10to20,0,medium,2,16,9.241555977229602,0.6264367816091954,8.615119195620407,False
+Action | 2022+ | 10to20 | 0 | small,Action,2022+,10to20,0,small,1,28,0.07142857142857142,0.6131578947368421,-0.5417293233082707,False
+Action | 2022+ | 10to20 | 1-4 | large,Action,2022+,10to20,1-4,large,1,3,2.169029443838604,1.1090425531914894,1.0599868906471148,False
+Action | 2022+ | 10to20 | 1-4 | medium,Action,2022+,10to20,1-4,medium,1,12,0.36633663366336633,0.9258563074352548,-0.5595196737718885,False
+Action | 2022+ | 10to20 | 1-4 | small,Action,2022+,10to20,1-4,small,3,14,4.346153846153846,0.5649509803921569,3.781202865761689,False
+Action | 2022+ | 10to20 | 5+ | large,Action,2022+,10to20,5+,large,0,2,,0.8551690012180269,,False
+Action | 2022+ | 10to20 | 5+ | medium,Action,2022+,10to20,5+,medium,2,2,1.6861657303370787,1.108574091332712,0.5775916390043667,False
+Action | 2022+ | 10to20 | 5+ | small,Action,2022+,10to20,5+,small,0,6,,1.1199999999999999,,False
+Action | 2022+ | 5to10 | 0 | large,Action,2022+,5to10,0,large,0,11,,0.9368575624082232,,False
+Action | 2022+ | 5to10 | 0 | medium,Action,2022+,5to10,0,medium,1,18,6.790697674418604,0.36629134412385644,6.424406330294747,False
+Action | 2022+ | 5to10 | 0 | small,Action,2022+,5to10,0,small,1,54,0.3333333333333333,0.6681818181818182,-0.3348484848484849,False
+Action | 2022+ | 5to10 | 1-4 | large,Action,2022+,5to10,1-4,large,0,2,,1.8027294199982504,,False
+Action | 2022+ | 5to10 | 1-4 | medium,Action,2022+,5to10,1-4,medium,2,12,3.450980392156863,0.5675287356321839,2.883451656524679,False
+Action | 2022+ | 5to10 | 1-4 | small,Action,2022+,5to10,1-4,small,0,14,,0.7267206477732794,,False
+Action | 2022+ | 5to10 | 5+ | large,Action,2022+,5to10,5+,large,0,1,,3.4893617021276597,,False
+Action | 2022+ | 5to10 | 5+ | medium,Action,2022+,5to10,5+,medium,1,1,1.1372549019607843,15.153846153846153,-14.01659125188537,False
+Action | 2022+ | 5to10 | 5+ | small,Action,2022+,5to10,5+,small,0,3,,0.125,,False
+Action | 2022+ | free | 0 | large,Action,2022+,free,0,large,0,2,,0.6057940417546328,,False
+Action | 2022+ | free | 0 | medium,Action,2022+,free,0,medium,0,4,,0.4634453781512605,,False
+Action | 2022+ | free | 0 | small,Action,2022+,free,0,small,0,3,,1.7857142857142858,,False
+Action | 2022+ | free | 1-4 | large,Action,2022+,free,1-4,large,0,1,,0.32158590308370044,,False
+Action | 2022+ | free | 1-4 | medium,Action,2022+,free,1-4,medium,0,1,,0.0891089108910891,,False
+Action | 2022+ | free | 1-4 | small,Action,2022+,free,1-4,small,0,1,,1.4166666666666667,,False
+Action | 2022+ | free | 5+ | large,Action,2022+,free,5+,large,2,0,2.417624168182551,,,False
+Action | 2022+ | gt20 | 0 | large,Action,2022+,gt20,0,large,2,4,0.9183177669894937,1.6011408953986122,-0.6828231284091184,False
+Action | 2022+ | gt20 | 0 | medium,Action,2022+,gt20,0,medium,0,2,,3.013888888888889,,False
+Action | 2022+ | gt20 | 0 | small,Action,2022+,gt20,0,small,9,12,0.47058823529411764,1.157142857142857,-0.6865546218487394,False
+Action | 2022+ | gt20 | 1-4 | large,Action,2022+,gt20,1-4,large,0,4,,1.7442616033755274,,False
+Action | 2022+ | gt20 | 1-4 | medium,Action,2022+,gt20,1-4,medium,1,3,3.523076923076923,1.5818181818181818,1.9412587412587412,False
+Action | 2022+ | gt20 | 1-4 | small,Action,2022+,gt20,1-4,small,1,4,0.9615384615384616,0.5,0.46153846153846156,False
+Action | 2022+ | gt20 | 5+ | large,Action,2022+,gt20,5+,large,2,3,3.8239243628391337,4.2317073170731705,-0.40778295423403677,False
+Action | 2022+ | gt20 | 5+ | medium,Action,2022+,gt20,5+,medium,0,4,,12.197413793103449,,False
+Action | 2022+ | gt20 | 5+ | small,Action,2022+,gt20,5+,small,0,6,,3.899350649350649,,False
+Action | 2022+ | lt5 | 0 | large,Action,2022+,lt5,0,large,0,8,,0.8075463860426475,,False
+Action | 2022+ | lt5 | 0 | medium,Action,2022+,lt5,0,medium,1,35,1.058252427184466,0.8,0.25825242718446595,False
+Action | 2022+ | lt5 | 0 | small,Action,2022+,lt5,0,small,5,90,1.5416666666666667,0.5833333333333334,0.9583333333333334,False
+Action | 2022+ | lt5 | 1-4 | large,Action,2022+,lt5,1-4,large,0,3,,0.7719821162444114,,False
+Action | 2022+ | lt5 | 1-4 | medium,Action,2022+,lt5,1-4,medium,2,6,1.7230158730158731,0.9264204545454545,0.7965954184704186,False
+Action | 2022+ | lt5 | 1-4 | small,Action,2022+,lt5,1-4,small,2,26,3.0551948051948052,1.0,2.0551948051948052,False
+Action | 2022+ | lt5 | 5+ | medium,Action,2022+,lt5,5+,medium,0,2,,2.3661997126436782,,False
+Action | 2022+ | lt5 | 5+ | small,Action,2022+,lt5,5+,small,0,9,,1.6923076923076923,,False
+Action | <=2017 | 10to20 | 0 | large,Action,<=2017,10to20,0,large,2,131,0.09773451085868447,0.08971553610503283,0.00801897475365164,False
+Action | <=2017 | 10to20 | 0 | medium,Action,<=2017,10to20,0,medium,0,50,,0.08464285714285714,,False
+Action | <=2017 | 10to20 | 0 | small,Action,<=2017,10to20,0,small,0,35,,0.06666666666666667,,False
+Action | <=2017 | 10to20 | 1-4 | large,Action,<=2017,10to20,1-4,large,1,119,0.15567765567765568,0.14816452896948254,0.00751312670817314,False
+Action | <=2017 | 10to20 | 1-4 | medium,Action,<=2017,10to20,1-4,medium,0,27,,0.11290322580645161,,False
+Action | <=2017 | 10to20 | 1-4 | small,Action,<=2017,10to20,1-4,small,0,14,,0.08012820512820512,,False
+Action | <=2017 | 10to20 | 5+ | large,Action,<=2017,10to20,5+,large,1,173,5.213550852439742,0.20573927375192727,5.007811578687814,False
+Action | <=2017 | 10to20 | 5+ | medium,Action,<=2017,10to20,5+,medium,0,29,,0.14516129032258066,,False
+Action | <=2017 | 10to20 | 5+ | small,Action,<=2017,10to20,5+,small,0,4,,0.06,,False
+Action | <=2017 | 5to10 | 0 | large,Action,<=2017,5to10,0,large,3,270,0.2630401342469585,0.09632015181389056,0.16671998243306793,False
+Action | <=2017 | 5to10 | 0 | medium,Action,<=2017,5to10,0,medium,1,163,0.09090909090909091,0.08333333333333333,0.007575757575757583,False
+Action | <=2017 | 5to10 | 0 | small,Action,<=2017,5to10,0,small,1,146,0.30434782608695654,0.0625,0.24184782608695654,False
+Action | <=2017 | 5to10 | 1-4 | large,Action,<=2017,5to10,1-4,large,4,174,0.5496906863083239,0.1929846132227921,0.35670607308553176,False
+Action | <=2017 | 5to10 | 1-4 | medium,Action,<=2017,5to10,1-4,medium,0,87,,0.08888888888888889,,False
+Action | <=2017 | 5to10 | 1-4 | small,Action,<=2017,5to10,1-4,small,0,37,,0.16666666666666666,,False
+Action | <=2017 | 5to10 | 5+ | large,Action,<=2017,5to10,5+,large,2,99,0.4829012797505319,0.136,0.34690127975053187,False
+Action | <=2017 | 5to10 | 5+ | medium,Action,<=2017,5to10,5+,medium,0,36,,0.06100441614460306,,False
+Action | <=2017 | 5to10 | 5+ | small,Action,<=2017,5to10,5+,small,0,8,,0.08712121212121213,,False
+Action | <=2017 | free | 0 | large,Action,<=2017,free,0,large,3,153,0.2360248447204969,0.0493436811344256,0.18668116358607129,False
+Action | <=2017 | free | 0 | medium,Action,<=2017,free,0,medium,0,103,,0.1523809523809524,,False
+Action | <=2017 | free | 0 | small,Action,<=2017,free,0,small,0,61,,0.3333333333333333,,False
+Action | <=2017 | free | 1-4 | large,Action,<=2017,free,1-4,large,0,65,,0.05194805194805195,,False
+Action | <=2017 | free | 1-4 | medium,Action,<=2017,free,1-4,medium,0,17,,0.14545454545454545,,False
+Action | <=2017 | free | 1-4 | small,Action,<=2017,free,1-4,small,0,6,,0.3310185185185185,,False
+Action | <=2017 | free | 5+ | large,Action,<=2017,free,5+,large,1,38,0.2798363763344308,0.021352929344822014,0.2584834469896088,False
+Action | <=2017 | free | 5+ | medium,Action,<=2017,free,5+,medium,0,4,,0.1708206686930091,,False
+Action | <=2017 | free | 5+ | small,Action,<=2017,free,5+,small,0,1,,0.42105263157894735,,False
+Action | <=2017 | gt20 | 0 | large,Action,<=2017,gt20,0,large,1,12,0.17557251908396945,0.16526610644257703,0.010306412641392426,False
+Action | <=2017 | gt20 | 0 | medium,Action,<=2017,gt20,0,medium,0,6,,0.10606060606060605,,False
+Action | <=2017 | gt20 | 0 | small,Action,<=2017,gt20,0,small,0,1,,0.09090909090909091,,False
+Action | <=2017 | gt20 | 1-4 | large,Action,<=2017,gt20,1-4,large,0,31,,0.2025974025974026,,False
+Action | <=2017 | gt20 | 1-4 | medium,Action,<=2017,gt20,1-4,medium,0,4,,0.26962582538517976,,False
+Action | <=2017 | gt20 | 1-4 | small,Action,<=2017,gt20,1-4,small,0,1,,0.1875,,False
+Action | <=2017 | gt20 | 5+ | large,Action,<=2017,gt20,5+,large,0,34,,0.25423199443973676,,False
+Action | <=2017 | gt20 | 5+ | medium,Action,<=2017,gt20,5+,medium,0,1,,0.0375,,False
+Action | <=2017 | lt5 | 0 | large,Action,<=2017,lt5,0,large,13,391,0.14666666666666667,0.07537688442211055,0.07128978224455612,True
+Action | <=2017 | lt5 | 0 | medium,Action,<=2017,lt5,0,medium,3,509,0.13953488372093023,0.10714285714285714,0.032392026578073094,False
+Action | <=2017 | lt5 | 0 | small,Action,<=2017,lt5,0,small,3,376,0.3,0.08695652173913043,0.21304347826086956,False
+Action | <=2017 | lt5 | 1-4 | large,Action,<=2017,lt5,1-4,large,1,147,1.0231597700218642,0.13355987294082883,0.8895998970810354,False
+Action | <=2017 | lt5 | 1-4 | medium,Action,<=2017,lt5,1-4,medium,0,146,,0.15641215715344697,,False
+Action | <=2017 | lt5 | 1-4 | small,Action,<=2017,lt5,1-4,small,1,67,2.5,0.08695652173913043,2.4130434782608696,False
+Action | <=2017 | lt5 | 5+ | large,Action,<=2017,lt5,5+,large,0,77,,0.15229357798165138,,False
+Action | <=2017 | lt5 | 5+ | medium,Action,<=2017,lt5,5+,medium,1,39,0.10714285714285714,0.13636363636363635,-0.029220779220779217,False
+Action | <=2017 | lt5 | 5+ | small,Action,<=2017,lt5,5+,small,0,11,,0.18181818181818182,,False
+Casual | 2018-2019 | 10to20 | 0 | large,Casual,2018-2019,10to20,0,large,0,14,,0.29965452981651375,,False
+Casual | 2018-2019 | 10to20 | 0 | medium,Casual,2018-2019,10to20,0,medium,0,21,,0.2,,False
+Casual | 2018-2019 | 10to20 | 0 | small,Casual,2018-2019,10to20,0,small,0,18,,0.09166666666666667,,False
+Casual | 2018-2019 | 10to20 | 1-4 | large,Casual,2018-2019,10to20,1-4,large,0,9,,0.20915032679738563,,False
+Casual | 2018-2019 | 10to20 | 1-4 | medium,Casual,2018-2019,10to20,1-4,medium,2,12,0.055673382820784725,0.36397058823529416,-0.30829720541450945,False
+Casual | 2018-2019 | 10to20 | 1-4 | small,Casual,2018-2019,10to20,1-4,small,0,13,,0.32,,False
+Casual | 2018-2019 | 10to20 | 5+ | large,Casual,2018-2019,10to20,5+,large,0,10,,0.29872740308291085,,False
+Casual | 2018-2019 | 10to20 | 5+ | medium,Casual,2018-2019,10to20,5+,medium,0,4,,0.2936730123180291,,False
+Casual | 2018-2019 | 10to20 | 5+ | small,Casual,2018-2019,10to20,5+,small,0,1,,0.038461538461538464,,False
+Casual | 2018-2019 | 5to10 | 0 | large,Casual,2018-2019,5to10,0,large,0,21,,0.291497975708502,,False
+Casual | 2018-2019 | 5to10 | 0 | medium,Casual,2018-2019,5to10,0,medium,2,62,0.23809523809523808,0.2373358348968105,0.0007594031984275718,False
+Casual | 2018-2019 | 5to10 | 0 | small,Casual,2018-2019,5to10,0,small,0,96,,0.20050125313283207,,False
+Casual | 2018-2019 | 5to10 | 1-4 | large,Casual,2018-2019,5to10,1-4,large,1,4,0.22794117647058823,0.21105313092979128,0.016888045540796953,False
+Casual | 2018-2019 | 5to10 | 1-4 | medium,Casual,2018-2019,5to10,1-4,medium,0,28,,0.34375,,False
+Casual | 2018-2019 | 5to10 | 1-4 | small,Casual,2018-2019,5to10,1-4,small,0,46,,0.212406015037594,,False
+Casual | 2018-2019 | 5to10 | 5+ | large,Casual,2018-2019,5to10,5+,large,1,4,0.5775280898876405,0.18747489959839356,0.3900531902892469,False
+Casual | 2018-2019 | 5to10 | 5+ | medium,Casual,2018-2019,5to10,5+,medium,0,19,,0.35294117647058826,,False
+Casual | 2018-2019 | 5to10 | 5+ | small,Casual,2018-2019,5to10,5+,small,0,19,,0.375,,False
+Casual | 2018-2019 | free | 0 | large,Casual,2018-2019,free,0,large,0,68,,0.13496054193728613,,False
+Casual | 2018-2019 | free | 0 | medium,Casual,2018-2019,free,0,medium,0,92,,0.18112244897959184,,False
+Casual | 2018-2019 | free | 0 | small,Casual,2018-2019,free,0,small,0,85,,0.3333333333333333,,False
+Casual | 2018-2019 | free | 1-4 | large,Casual,2018-2019,free,1-4,large,0,12,,0.12655691835431862,,False
+Casual | 2018-2019 | free | 1-4 | medium,Casual,2018-2019,free,1-4,medium,0,21,,0.2602739726027397,,False
+Casual | 2018-2019 | free | 1-4 | small,Casual,2018-2019,free,1-4,small,0,11,,0.16666666666666666,,False
+Casual | 2018-2019 | free | 5+ | large,Casual,2018-2019,free,5+,large,0,13,,0.22253521126760564,,False
+Casual | 2018-2019 | free | 5+ | medium,Casual,2018-2019,free,5+,medium,0,3,,0.07894736842105263,,False
+Casual | 2018-2019 | free | 5+ | small,Casual,2018-2019,free,5+,small,0,2,,0.421474358974359,,False
+Casual | 2018-2019 | gt20 | 0 | large,Casual,2018-2019,gt20,0,large,0,3,,0.3531400966183575,,False
+Casual | 2018-2019 | gt20 | 0 | medium,Casual,2018-2019,gt20,0,medium,0,6,,0.31156569630212433,,False
+Casual | 2018-2019 | gt20 | 0 | small,Casual,2018-2019,gt20,0,small,0,7,,0.38461538461538464,,False
+Casual | 2018-2019 | gt20 | 1-4 | large,Casual,2018-2019,gt20,1-4,large,0,1,,0.6219512195121951,,False
+Casual | 2018-2019 | gt20 | 1-4 | medium,Casual,2018-2019,gt20,1-4,medium,0,1,,0.2169811320754717,,False
+Casual | 2018-2019 | gt20 | 1-4 | small,Casual,2018-2019,gt20,1-4,small,0,2,,0.20938215102974828,,False
+Casual | 2018-2019 | gt20 | 5+ | large,Casual,2018-2019,gt20,5+,large,0,3,,0.5235323886639676,,False
+Casual | 2018-2019 | gt20 | 5+ | medium,Casual,2018-2019,gt20,5+,medium,0,1,,0.08333333333333333,,False
+Casual | 2018-2019 | lt5 | 0 | large,Casual,2018-2019,lt5,0,large,10,52,0.2675185114925192,0.19392490005711022,0.07359361143540899,True
+Casual | 2018-2019 | lt5 | 0 | medium,Casual,2018-2019,lt5,0,medium,13,240,0.08791208791208792,0.1777507733097658,-0.08983868539767788,True
+Casual | 2018-2019 | lt5 | 0 | small,Casual,2018-2019,lt5,0,small,11,308,0.16666666666666666,0.1396103896103896,0.027056277056277056,True
+Casual | 2018-2019 | lt5 | 1-4 | large,Casual,2018-2019,lt5,1-4,large,1,30,0.36728395061728397,0.268693011619869,0.09859093899741495,False
+Casual | 2018-2019 | lt5 | 1-4 | medium,Casual,2018-2019,lt5,1-4,medium,2,111,0.36111111111111116,0.1724137931034483,0.18869731800766287,False
+Casual | 2018-2019 | lt5 | 1-4 | small,Casual,2018-2019,lt5,1-4,small,1,118,0.4,0.26006441223832527,0.13993558776167475,False
+Casual | 2018-2019 | lt5 | 5+ | large,Casual,2018-2019,lt5,5+,large,0,11,,0.22811671087533156,,False
+Casual | 2018-2019 | lt5 | 5+ | medium,Casual,2018-2019,lt5,5+,medium,0,18,,0.2528475199020208,,False
+Casual | 2018-2019 | lt5 | 5+ | small,Casual,2018-2019,lt5,5+,small,0,15,,0.21052631578947367,,False
+Casual | 2020-2021 | 10to20 | 0 | large,Casual,2020-2021,10to20,0,large,0,11,,0.33147570218457423,,False
+Casual | 2020-2021 | 10to20 | 0 | medium,Casual,2020-2021,10to20,0,medium,0,22,,0.24808184143222506,,False
+Casual | 2020-2021 | 10to20 | 0 | small,Casual,2020-2021,10to20,0,small,11,31,0.0625,0.21052631578947367,-0.14802631578947367,True
+Casual | 2020-2021 | 10to20 | 1-4 | large,Casual,2020-2021,10to20,1-4,large,0,5,,0.19896373056994818,,False
+Casual | 2020-2021 | 10to20 | 1-4 | medium,Casual,2020-2021,10to20,1-4,medium,2,5,0.7925531914893618,0.07142857142857142,0.7211246200607904,False
+Casual | 2020-2021 | 10to20 | 1-4 | small,Casual,2020-2021,10to20,1-4,small,0,16,,0.09808612440191387,,False
+Casual | 2020-2021 | 10to20 | 5+ | large,Casual,2020-2021,10to20,5+,large,1,3,1.5055350553505535,0.8134328358208955,0.692102219529658,False
+Casual | 2020-2021 | 10to20 | 5+ | medium,Casual,2020-2021,10to20,5+,medium,0,4,,0.5059523809523809,,False
+Casual | 2020-2021 | 10to20 | 5+ | small,Casual,2020-2021,10to20,5+,small,0,4,,0.9271255060728745,,False
+Casual | 2020-2021 | 5to10 | 0 | large,Casual,2020-2021,5to10,0,large,0,13,,0.3723404255319149,,False
+Casual | 2020-2021 | 5to10 | 0 | medium,Casual,2020-2021,5to10,0,medium,0,51,,0.28888888888888886,,False
+Casual | 2020-2021 | 5to10 | 0 | small,Casual,2020-2021,5to10,0,small,0,77,,0.2727272727272727,,False
+Casual | 2020-2021 | 5to10 | 1-4 | large,Casual,2020-2021,5to10,1-4,large,0,8,,0.38822276069518713,,False
+Casual | 2020-2021 | 5to10 | 1-4 | medium,Casual,2020-2021,5to10,1-4,medium,1,22,0.6896551724137931,0.3444805194805195,0.34517465293327365,False
+Casual | 2020-2021 | 5to10 | 1-4 | small,Casual,2020-2021,5to10,1-4,small,0,56,,0.29411764705882354,,False
+Casual | 2020-2021 | 5to10 | 5+ | large,Casual,2020-2021,5to10,5+,large,0,3,,0.44171779141104295,,False
+Casual | 2020-2021 | 5to10 | 5+ | medium,Casual,2020-2021,5to10,5+,medium,0,5,,0.4444444444444444,,False
+Casual | 2020-2021 | 5to10 | 5+ | small,Casual,2020-2021,5to10,5+,small,0,12,,0.6259259259259259,,False
+Casual | 2020-2021 | free | 0 | large,Casual,2020-2021,free,0,large,0,68,,0.18132768536268629,,False
+Casual | 2020-2021 | free | 0 | medium,Casual,2020-2021,free,0,medium,1,64,1.9285714285714286,0.3190406976744186,1.60953073089701,False
+Casual | 2020-2021 | free | 0 | small,Casual,2020-2021,free,0,small,0,58,,0.5192307692307692,,False
+Casual | 2020-2021 | free | 1-4 | large,Casual,2020-2021,free,1-4,large,1,14,0.1989795918367347,0.1819256340802758,0.017053957756458904,False
+Casual | 2020-2021 | free | 1-4 | medium,Casual,2020-2021,free,1-4,medium,0,12,,0.25015812776723595,,False
+Casual | 2020-2021 | free | 1-4 | small,Casual,2020-2021,free,1-4,small,0,12,,0.6454849498327759,,False
+Casual | 2020-2021 | free | 5+ | large,Casual,2020-2021,free,5+,large,1,0,0.46603053435114505,,,False
+Casual | 2020-2021 | free | 5+ | medium,Casual,2020-2021,free,5+,medium,0,2,,0.6458393113342897,,False
+Casual | 2020-2021 | free | 5+ | small,Casual,2020-2021,free,5+,small,0,1,,0.8666666666666667,,False
+Casual | 2020-2021 | gt20 | 0 | large,Casual,2020-2021,gt20,0,large,0,5,,0.28286852589641437,,False
+Casual | 2020-2021 | gt20 | 0 | medium,Casual,2020-2021,gt20,0,medium,0,1,,0.2753623188405797,,False
+Casual | 2020-2021 | gt20 | 0 | small,Casual,2020-2021,gt20,0,small,1,10,0.3,0.23157894736842105,0.06842105263157894,False
+Casual | 2020-2021 | gt20 | 1-4 | large,Casual,2020-2021,gt20,1-4,large,0,1,,2.2951807228915664,,False
+Casual | 2020-2021 | gt20 | 1-4 | small,Casual,2020-2021,gt20,1-4,small,0,3,,0.23809523809523808,,False
+Casual | 2020-2021 | gt20 | 5+ | large,Casual,2020-2021,gt20,5+,large,0,5,,0.3962131837307153,,False
+Casual | 2020-2021 | gt20 | 5+ | small,Casual,2020-2021,gt20,5+,small,0,2,,1.3863636363636362,,False
+Casual | 2020-2021 | lt5 | 0 | large,Casual,2020-2021,lt5,0,large,2,43,1.2219949903700364,0.3452914798206278,0.8767035105494086,False
+Casual | 2020-2021 | lt5 | 0 | medium,Casual,2020-2021,lt5,0,medium,4,133,0.6475095785440613,0.28125,0.3662595785440613,False
+Casual | 2020-2021 | lt5 | 0 | small,Casual,2020-2021,lt5,0,small,11,309,0.23076923076923078,0.18181818181818182,0.04895104895104896,True
+Casual | 2020-2021 | lt5 | 1-4 | large,Casual,2020-2021,lt5,1-4,large,2,20,0.872890429424225,0.39080267558528425,0.48208775383894076,False
+Casual | 2020-2021 | lt5 | 1-4 | medium,Casual,2020-2021,lt5,1-4,medium,1,59,0.20689655172413793,0.3111111111111111,-0.10421455938697319,False
+Casual | 2020-2021 | lt5 | 1-4 | small,Casual,2020-2021,lt5,1-4,small,0,93,,0.23076923076923078,,False
+Casual | 2020-2021 | lt5 | 5+ | large,Casual,2020-2021,lt5,5+,large,1,3,0.33725490196078434,0.779874213836478,-0.4426193118756937,False
+Casual | 2020-2021 | lt5 | 5+ | medium,Casual,2020-2021,lt5,5+,medium,1,6,0.3466666666666667,0.37478777589134127,-0.02812110922467459,False
+Casual | 2020-2021 | lt5 | 5+ | small,Casual,2020-2021,lt5,5+,small,0,20,,0.2403846153846154,,False
+Casual | 2022+ | 10to20 | 0 | large,Casual,2022+,10to20,0,large,0,2,,10.198666423090975,,False
+Casual | 2022+ | 10to20 | 0 | medium,Casual,2022+,10to20,0,medium,3,6,0.6842105263157895,1.3143504005572972,-0.6301398742415077,False
+Casual | 2022+ | 10to20 | 0 | small,Casual,2022+,10to20,0,small,6,11,0.22402597402597402,0.38461538461538464,-0.16058941058941062,False
+Casual | 2022+ | 10to20 | 1-4 | large,Casual,2022+,10to20,1-4,large,0,1,,0.19101123595505617,,False
+Casual | 2022+ | 10to20 | 1-4 | medium,Casual,2022+,10to20,1-4,medium,0,3,,-0.6285714285714286,,False
+Casual | 2022+ | 10to20 | 1-4 | small,Casual,2022+,10to20,1-4,small,0,18,,0.47213622291021673,,False
+Casual | 2022+ | 10to20 | 5+ | large,Casual,2022+,10to20,5+,large,2,0,11.931096979731084,,,False
+Casual | 2022+ | 10to20 | 5+ | small,Casual,2022+,10to20,5+,small,0,3,,0.8181818181818182,,False
+Casual | 2022+ | 5to10 | 0 | large,Casual,2022+,5to10,0,large,1,1,1.2451874366767983,2.284033613445378,-1.0388461767685797,False
+Casual | 2022+ | 5to10 | 0 | medium,Casual,2022+,5to10,0,medium,0,12,,1.0785714285714285,,False
+Casual | 2022+ | 5to10 | 0 | small,Casual,2022+,5to10,0,small,0,32,,0.6076923076923078,,False
+Casual | 2022+ | 5to10 | 1-4 | large,Casual,2022+,5to10,1-4,large,0,2,,2.107660524697136,,False
+Casual | 2022+ | 5to10 | 1-4 | medium,Casual,2022+,5to10,1-4,medium,0,2,,0.43333333333333335,,False
+Casual | 2022+ | 5to10 | 1-4 | small,Casual,2022+,5to10,1-4,small,0,14,,0.5173913043478261,,False
+Casual | 2022+ | 5to10 | 5+ | medium,Casual,2022+,5to10,5+,medium,0,1,,-1.0,,False
+Casual | 2022+ | 5to10 | 5+ | small,Casual,2022+,5to10,5+,small,0,4,,2.9754545454545456,,False
+Casual | 2022+ | free | 0 | large,Casual,2022+,free,0,large,0,1,,0.178743961352657,,False
+Casual | 2022+ | free | 0 | medium,Casual,2022+,free,0,medium,0,2,,3.6847826086956523,,False
+Casual | 2022+ | gt20 | 0 | medium,Casual,2022+,gt20,0,medium,0,2,,7.751270325203253,,False
+Casual | 2022+ | gt20 | 0 | small,Casual,2022+,gt20,0,small,2,2,1.2272727272727273,0.95,0.27727272727272734,False
+Casual | 2022+ | gt20 | 1-4 | medium,Casual,2022+,gt20,1-4,medium,0,1,,-0.782608695652174,,False
+Casual | 2022+ | gt20 | 1-4 | small,Casual,2022+,gt20,1-4,small,0,11,,0.5,,False
+Casual | 2022+ | gt20 | 5+ | large,Casual,2022+,gt20,5+,large,1,1,1.138807223855523,1.9450980392156862,-0.8062908153601633,False
+Casual | 2022+ | gt20 | 5+ | medium,Casual,2022+,gt20,5+,medium,0,2,,5.248128342245989,,False
+Casual | 2022+ | lt5 | 0 | large,Casual,2022+,lt5,0,large,0,6,,2.340441932168551,,False
+Casual | 2022+ | lt5 | 0 | medium,Casual,2022+,lt5,0,medium,1,22,10.5625,1.1758333333333333,9.386666666666667,False
+Casual | 2022+ | lt5 | 0 | small,Casual,2022+,lt5,0,small,4,81,1.0446153846153847,0.5,0.5446153846153847,False
+Casual | 2022+ | lt5 | 1-4 | medium,Casual,2022+,lt5,1-4,medium,2,6,1.8307659392383395,1.6357142857142857,0.19505165352405385,False
+Casual | 2022+ | lt5 | 1-4 | small,Casual,2022+,lt5,1-4,small,3,26,1.56,0.7279411764705883,0.8320588235294117,False
+Casual | 2022+ | lt5 | 5+ | large,Casual,2022+,lt5,5+,large,1,1,3.905325443786982,4.704301075268817,-0.7989756314818348,False
+Casual | 2022+ | lt5 | 5+ | medium,Casual,2022+,lt5,5+,medium,2,1,1.974702380952381,0.6222222222222222,1.3524801587301587,False
+Casual | 2022+ | lt5 | 5+ | small,Casual,2022+,lt5,5+,small,0,4,,0.7663398692810457,,False
+Casual | <=2017 | 10to20 | 0 | large,Casual,<=2017,10to20,0,large,0,43,,0.11310592459605028,,False
+Casual | <=2017 | 10to20 | 0 | medium,Casual,<=2017,10to20,0,medium,0,23,,0.09615384615384616,,False
+Casual | <=2017 | 10to20 | 0 | small,Casual,<=2017,10to20,0,small,0,20,,0.041666666666666664,,False
+Casual | <=2017 | 10to20 | 1-4 | large,Casual,<=2017,10to20,1-4,large,0,18,,0.15488394778472342,,False
+Casual | <=2017 | 10to20 | 1-4 | medium,Casual,<=2017,10to20,1-4,medium,0,11,,0.17857142857142858,,False
+Casual | <=2017 | 10to20 | 1-4 | small,Casual,<=2017,10to20,1-4,small,0,8,,0.19221967963386727,,False
+Casual | <=2017 | 10to20 | 5+ | large,Casual,<=2017,10to20,5+,large,1,11,0.3289324394017535,0.19242579324462641,0.13650664615712707,False
+Casual | <=2017 | 10to20 | 5+ | medium,Casual,<=2017,10to20,5+,medium,1,13,0.39285714285714285,0.2808988764044944,0.11195826645264845,False
+Casual | <=2017 | 5to10 | 0 | large,Casual,<=2017,5to10,0,large,0,85,,0.14285714285714285,,False
+Casual | <=2017 | 5to10 | 0 | medium,Casual,<=2017,5to10,0,medium,1,159,0.35135135135135137,0.15853658536585366,0.1928147659854977,False
+Casual | <=2017 | 5to10 | 0 | small,Casual,<=2017,5to10,0,small,0,118,,0.18181818181818182,,False
+Casual | <=2017 | 5to10 | 1-4 | large,Casual,<=2017,5to10,1-4,large,1,51,0.06484962406015038,0.15425531914893617,-0.08940569508878579,False
+Casual | <=2017 | 5to10 | 1-4 | medium,Casual,<=2017,5to10,1-4,medium,0,63,,0.1527777777777778,,False
+Casual | <=2017 | 5to10 | 1-4 | small,Casual,<=2017,5to10,1-4,small,0,36,,0.09090909090909091,,False
+Casual | <=2017 | 5to10 | 5+ | large,Casual,<=2017,5to10,5+,large,2,47,0.1273690510495866,0.14339622641509434,-0.01602717536550774,False
+Casual | <=2017 | 5to10 | 5+ | medium,Casual,<=2017,5to10,5+,medium,0,56,,0.20317460317460317,,False
+Casual | <=2017 | 5to10 | 5+ | small,Casual,<=2017,5to10,5+,small,0,19,,0.1,,False
+Casual | <=2017 | free | 0 | large,Casual,<=2017,free,0,large,0,99,,0.0755287009063444,,False
+Casual | <=2017 | free | 0 | medium,Casual,<=2017,free,0,medium,0,76,,0.17971617323219966,,False
+Casual | <=2017 | free | 0 | small,Casual,<=2017,free,0,small,0,47,,0.2727272727272727,,False
+Casual | <=2017 | free | 1-4 | large,Casual,<=2017,free,1-4,large,0,24,,0.14785344189489266,,False
+Casual | <=2017 | free | 1-4 | medium,Casual,<=2017,free,1-4,medium,0,9,,0.3170731707317073,,False
+Casual | <=2017 | free | 1-4 | small,Casual,<=2017,free,1-4,small,0,5,,0.44,,False
+Casual | <=2017 | free | 5+ | large,Casual,<=2017,free,5+,large,2,13,0.2001880604870085,0.07550755774780386,0.12468050273920463,False
+Casual | <=2017 | free | 5+ | medium,Casual,<=2017,free,5+,medium,0,3,,0.2,,False
+Casual | <=2017 | free | 5+ | small,Casual,<=2017,free,5+,small,0,1,,0.5,,False
+Casual | <=2017 | gt20 | 0 | large,Casual,<=2017,gt20,0,large,0,4,,0.27047210059628085,,False
+Casual | <=2017 | gt20 | 0 | medium,Casual,<=2017,gt20,0,medium,0,4,,0.07127659574468086,,False
+Casual | <=2017 | gt20 | 0 | small,Casual,<=2017,gt20,0,small,0,1,,-0.11764705882352941,,False
+Casual | <=2017 | gt20 | 1-4 | large,Casual,<=2017,gt20,1-4,large,0,2,,0.3147593656731004,,False
+Casual | <=2017 | gt20 | 1-4 | medium,Casual,<=2017,gt20,1-4,medium,0,2,,0.06635802469135801,,False
+Casual | <=2017 | gt20 | 1-4 | small,Casual,<=2017,gt20,1-4,small,0,1,,0.14285714285714285,,False
+Casual | <=2017 | gt20 | 5+ | large,Casual,<=2017,gt20,5+,large,0,2,,0.39556861330537235,,False
+Casual | <=2017 | lt5 | 0 | large,Casual,<=2017,lt5,0,large,12,272,0.07448195484266046,0.10482572647508653,-0.030343771632426075,True
+Casual | <=2017 | lt5 | 0 | medium,Casual,<=2017,lt5,0,medium,3,369,0.18518518518518517,0.15789473684210525,0.02729044834307992,False
+Casual | <=2017 | lt5 | 0 | small,Casual,<=2017,lt5,0,small,0,210,,0.08333333333333333,,False
+Casual | <=2017 | lt5 | 1-4 | large,Casual,<=2017,lt5,1-4,large,1,98,0.6515804597701149,0.16809975738547167,0.48348070238464325,False
+Casual | <=2017 | lt5 | 1-4 | medium,Casual,<=2017,lt5,1-4,medium,0,124,,0.18722615436467813,,False
+Casual | <=2017 | lt5 | 1-4 | small,Casual,<=2017,lt5,1-4,small,0,53,,0.16666666666666666,,False
+Casual | <=2017 | lt5 | 5+ | large,Casual,<=2017,lt5,5+,large,0,49,,0.1521472392638037,,False
+Casual | <=2017 | lt5 | 5+ | medium,Casual,<=2017,lt5,5+,medium,0,55,,0.22321428571428573,,False
+Casual | <=2017 | lt5 | 5+ | small,Casual,<=2017,lt5,5+,small,0,24,,0.26190476190476186,,False
+Puzzle | 2018-2019 | 10to20 | 0 | large,Puzzle,2018-2019,10to20,0,large,1,12,0.49597423510466987,0.1412041039299286,0.35477013117474127,False
+Puzzle | 2018-2019 | 10to20 | 0 | medium,Puzzle,2018-2019,10to20,0,medium,0,1,,0.2727272727272727,,False
+Puzzle | 2018-2019 | 10to20 | 0 | small,Puzzle,2018-2019,10to20,0,small,0,5,,0.0,,False
+Puzzle | 2018-2019 | 10to20 | 1-4 | large,Puzzle,2018-2019,10to20,1-4,large,0,6,,0.4082421084924984,,False
+Puzzle | 2018-2019 | 10to20 | 1-4 | medium,Puzzle,2018-2019,10to20,1-4,medium,0,1,,0.48214285714285715,,False
+Puzzle | 2018-2019 | 10to20 | 1-4 | small,Puzzle,2018-2019,10to20,1-4,small,0,3,,0.125,,False
+Puzzle | 2018-2019 | 10to20 | 5+ | large,Puzzle,2018-2019,10to20,5+,large,0,6,,0.28949087415946206,,False
+Puzzle | 2018-2019 | 5to10 | 0 | large,Puzzle,2018-2019,5to10,0,large,0,3,,0.19553072625698323,,False
+Puzzle | 2018-2019 | 5to10 | 0 | medium,Puzzle,2018-2019,5to10,0,medium,0,19,,0.1951219512195122,,False
+Puzzle | 2018-2019 | 5to10 | 0 | small,Puzzle,2018-2019,5to10,0,small,0,9,,0.1111111111111111,,False
+Puzzle | 2018-2019 | 5to10 | 1-4 | large,Puzzle,2018-2019,5to10,1-4,large,0,5,,0.5386771300448431,,False
+Puzzle | 2018-2019 | 5to10 | 1-4 | medium,Puzzle,2018-2019,5to10,1-4,medium,0,6,,0.1703667953667954,,False
+Puzzle | 2018-2019 | 5to10 | 1-4 | small,Puzzle,2018-2019,5to10,1-4,small,1,8,0.14285714285714285,0.15610859728506787,-0.013251454427925025,False
+Puzzle | 2018-2019 | 5to10 | 5+ | large,Puzzle,2018-2019,5to10,5+,large,0,4,,0.43381693802587395,,False
+Puzzle | 2018-2019 | 5to10 | 5+ | medium,Puzzle,2018-2019,5to10,5+,medium,0,5,,0.1276595744680851,,False
+Puzzle | 2018-2019 | 5to10 | 5+ | small,Puzzle,2018-2019,5to10,5+,small,0,3,,0.2,,False
+Puzzle | 2018-2019 | free | 0 | large,Puzzle,2018-2019,free,0,large,0,15,,0.14084507042253522,,False
+Puzzle | 2018-2019 | free | 0 | medium,Puzzle,2018-2019,free,0,medium,0,10,,0.303030303030303,,False
+Puzzle | 2018-2019 | free | 0 | small,Puzzle,2018-2019,free,0,small,0,10,,0.7024291497975709,,False
+Puzzle | 2018-2019 | free | 1-4 | large,Puzzle,2018-2019,free,1-4,large,0,5,,0.24022346368715083,,False
+Puzzle | 2018-2019 | free | 1-4 | medium,Puzzle,2018-2019,free,1-4,medium,0,2,,0.2378986866791745,,False
+Puzzle | 2018-2019 | free | 1-4 | small,Puzzle,2018-2019,free,1-4,small,0,4,,0.48684210526315785,,False
+Puzzle | 2018-2019 | gt20 | 0 | large,Puzzle,2018-2019,gt20,0,large,0,2,,0.2997398697602961,,False
+Puzzle | 2018-2019 | gt20 | 1-4 | large,Puzzle,2018-2019,gt20,1-4,large,1,0,0.5261707988980716,,,False
+Puzzle | 2018-2019 | gt20 | 1-4 | medium,Puzzle,2018-2019,gt20,1-4,medium,0,1,,0.3148148148148148,,False
+Puzzle | 2018-2019 | gt20 | 5+ | large,Puzzle,2018-2019,gt20,5+,large,1,2,0.626193724420191,0.36857028296482985,0.2576234414553611,False
+Puzzle | 2018-2019 | lt5 | 0 | large,Puzzle,2018-2019,lt5,0,large,0,9,,0.5020408163265306,,False
+Puzzle | 2018-2019 | lt5 | 0 | medium,Puzzle,2018-2019,lt5,0,medium,1,37,0.3684210526315789,0.1958762886597938,0.17254476397178511,False
+Puzzle | 2018-2019 | lt5 | 0 | small,Puzzle,2018-2019,lt5,0,small,0,43,,0.17647058823529413,,False
+Puzzle | 2018-2019 | lt5 | 1-4 | large,Puzzle,2018-2019,lt5,1-4,large,0,8,,0.34246249106930227,,False
+Puzzle | 2018-2019 | lt5 | 1-4 | medium,Puzzle,2018-2019,lt5,1-4,medium,0,9,,0.2222222222222222,,False
+Puzzle | 2018-2019 | lt5 | 1-4 | small,Puzzle,2018-2019,lt5,1-4,small,0,18,,0.05024509803921569,,False
+Puzzle | 2018-2019 | lt5 | 5+ | large,Puzzle,2018-2019,lt5,5+,large,0,1,,0.5934844192634561,,False
+Puzzle | 2018-2019 | lt5 | 5+ | medium,Puzzle,2018-2019,lt5,5+,medium,0,1,,0.24074074074074073,,False
+Puzzle | 2018-2019 | lt5 | 5+ | small,Puzzle,2018-2019,lt5,5+,small,0,2,,0.23090909090909092,,False
+Puzzle | 2020-2021 | 10to20 | 0 | large,Puzzle,2020-2021,10to20,0,large,0,6,,0.5777314047831443,,False
+Puzzle | 2020-2021 | 10to20 | 0 | medium,Puzzle,2020-2021,10to20,0,medium,2,16,0.5854723707664884,0.3163083765752409,0.2691639941912475,False
+Puzzle | 2020-2021 | 10to20 | 0 | small,Puzzle,2020-2021,10to20,0,small,6,16,0.05572755417956656,0.4119047619047619,-0.35617720772519534,False
+Puzzle | 2020-2021 | 10to20 | 1-4 | large,Puzzle,2020-2021,10to20,1-4,large,1,6,0.7126436781609196,0.6831335758739774,0.029510102286942175,False
+Puzzle | 2020-2021 | 10to20 | 1-4 | medium,Puzzle,2020-2021,10to20,1-4,medium,0,10,,0.4553191489361702,,False
+Puzzle | 2020-2021 | 10to20 | 1-4 | small,Puzzle,2020-2021,10to20,1-4,small,1,4,0.23809523809523808,0.1213235294117647,0.11677170868347338,False
+Puzzle | 2020-2021 | 10to20 | 5+ | large,Puzzle,2020-2021,10to20,5+,large,1,3,0.7633941500144802,0.8808743169398907,-0.11748016692541052,False
+Puzzle | 2020-2021 | 10to20 | 5+ | medium,Puzzle,2020-2021,10to20,5+,medium,0,5,,0.6923076923076923,,False
+Puzzle | 2020-2021 | 10to20 | 5+ | small,Puzzle,2020-2021,10to20,5+,small,0,2,,0.14285714285714285,,False
+Puzzle | 2020-2021 | 5to10 | 0 | large,Puzzle,2020-2021,5to10,0,large,0,5,,0.6470588235294118,,False
+Puzzle | 2020-2021 | 5to10 | 0 | medium,Puzzle,2020-2021,5to10,0,medium,0,22,,0.3384920634920635,,False
+Puzzle | 2020-2021 | 5to10 | 0 | small,Puzzle,2020-2021,5to10,0,small,0,44,,0.3706293706293706,,False
+Puzzle | 2020-2021 | 5to10 | 1-4 | large,Puzzle,2020-2021,5to10,1-4,large,1,5,0.2845528455284553,0.4421768707482993,-0.15762402521984403,False
+Puzzle | 2020-2021 | 5to10 | 1-4 | medium,Puzzle,2020-2021,5to10,1-4,medium,1,15,0.7,0.30851063829787234,0.3914893617021276,False
+Puzzle | 2020-2021 | 5to10 | 1-4 | small,Puzzle,2020-2021,5to10,1-4,small,0,28,,0.25,,False
+Puzzle | 2020-2021 | 5to10 | 5+ | large,Puzzle,2020-2021,5to10,5+,large,0,1,,0.6667007986893303,,False
+Puzzle | 2020-2021 | 5to10 | 5+ | medium,Puzzle,2020-2021,5to10,5+,medium,1,4,0.3157894736842105,0.2896643783371472,0.02612509534706331,False
+Puzzle | 2020-2021 | 5to10 | 5+ | small,Puzzle,2020-2021,5to10,5+,small,0,5,,0.4090909090909091,,False
+Puzzle | 2020-2021 | free | 0 | large,Puzzle,2020-2021,free,0,large,0,14,,0.16442966151438076,,False
+Puzzle | 2020-2021 | free | 0 | medium,Puzzle,2020-2021,free,0,medium,0,12,,0.3696502531063046,,False
+Puzzle | 2020-2021 | free | 0 | small,Puzzle,2020-2021,free,0,small,0,15,,0.5333333333333333,,False
+Puzzle | 2020-2021 | free | 1-4 | large,Puzzle,2020-2021,free,1-4,large,0,5,,0.12875536480686695,,False
+Puzzle | 2020-2021 | free | 1-4 | medium,Puzzle,2020-2021,free,1-4,medium,0,6,,0.30640854472630175,,False
+Puzzle | 2020-2021 | free | 1-4 | small,Puzzle,2020-2021,free,1-4,small,0,3,,0.8888888888888888,,False
+Puzzle | 2020-2021 | free | 5+ | large,Puzzle,2020-2021,free,5+,large,0,2,,0.8078828939602597,,False
+Puzzle | 2020-2021 | free | 5+ | medium,Puzzle,2020-2021,free,5+,medium,0,1,,0.26,,False
+Puzzle | 2020-2021 | gt20 | 0 | medium,Puzzle,2020-2021,gt20,0,medium,0,1,,0.21839080459770116,,False
+Puzzle | 2020-2021 | gt20 | 0 | small,Puzzle,2020-2021,gt20,0,small,0,1,,0.0,,False
+Puzzle | 2020-2021 | gt20 | 1-4 | large,Puzzle,2020-2021,gt20,1-4,large,0,1,,0.3291139240506329,,False
+Puzzle | 2020-2021 | gt20 | 1-4 | medium,Puzzle,2020-2021,gt20,1-4,medium,0,1,,0.4225352112676056,,False
+Puzzle | 2020-2021 | gt20 | 1-4 | small,Puzzle,2020-2021,gt20,1-4,small,0,1,,0.0,,False
+Puzzle | 2020-2021 | gt20 | 5+ | small,Puzzle,2020-2021,gt20,5+,small,0,1,,0.11538461538461539,,False
+Puzzle | 2020-2021 | lt5 | 0 | large,Puzzle,2020-2021,lt5,0,large,3,13,0.18292682926829268,0.6191860465116279,-0.4362592172433352,False
+Puzzle | 2020-2021 | lt5 | 0 | medium,Puzzle,2020-2021,lt5,0,medium,6,75,0.44760963335729687,0.26666666666666666,0.1809429666906302,False
+Puzzle | 2020-2021 | lt5 | 0 | small,Puzzle,2020-2021,lt5,0,small,5,97,0.13333333333333333,0.2222222222222222,-0.08888888888888888,False
+Puzzle | 2020-2021 | lt5 | 1-4 | large,Puzzle,2020-2021,lt5,1-4,large,0,8,,0.4078581050740907,,False
+Puzzle | 2020-2021 | lt5 | 1-4 | medium,Puzzle,2020-2021,lt5,1-4,medium,3,36,0.2,0.31462365591397845,-0.11462365591397844,False
+Puzzle | 2020-2021 | lt5 | 1-4 | small,Puzzle,2020-2021,lt5,1-4,small,0,63,,0.25,,False
+Puzzle | 2020-2021 | lt5 | 5+ | medium,Puzzle,2020-2021,lt5,5+,medium,0,3,,0.09375,,False
+Puzzle | 2020-2021 | lt5 | 5+ | small,Puzzle,2020-2021,lt5,5+,small,0,11,,0.5294117647058824,,False
+Puzzle | 2022+ | 10to20 | 0 | large,Puzzle,2022+,10to20,0,large,1,3,2.078740157480315,0.5297691373025516,1.5489710201777633,False
+Puzzle | 2022+ | 10to20 | 0 | medium,Puzzle,2022+,10to20,0,medium,3,6,10.061946902654867,0.8544520547945205,9.207494847860346,False
+Puzzle | 2022+ | 10to20 | 0 | small,Puzzle,2022+,10to20,0,small,9,13,0.2727272727272727,1.9230769230769231,-1.6503496503496504,False
+Puzzle | 2022+ | 10to20 | 1-4 | large,Puzzle,2022+,10to20,1-4,large,1,2,2.7327659574468086,3.9180273311562703,-1.1852613737094617,False
+Puzzle | 2022+ | 10to20 | 1-4 | medium,Puzzle,2022+,10to20,1-4,medium,0,2,,0.48714733542319744,,False
+Puzzle | 2022+ | 10to20 | 1-4 | small,Puzzle,2022+,10to20,1-4,small,3,9,4.9,1.9230769230769231,2.976923076923077,False
+Puzzle | 2022+ | 10to20 | 5+ | large,Puzzle,2022+,10to20,5+,large,0,1,,0.8461538461538461,,False
+Puzzle | 2022+ | 10to20 | 5+ | medium,Puzzle,2022+,10to20,5+,medium,0,3,,0.5882352941176471,,False
+Puzzle | 2022+ | 10to20 | 5+ | small,Puzzle,2022+,10to20,5+,small,0,1,,1.4705882352941178,,False
+Puzzle | 2022+ | 5to10 | 0 | large,Puzzle,2022+,5to10,0,large,0,1,,2.146551724137931,,False
+Puzzle | 2022+ | 5to10 | 0 | medium,Puzzle,2022+,5to10,0,medium,1,6,3.3380281690140845,1.839035237769415,1.4989929312446695,False
+Puzzle | 2022+ | 5to10 | 0 | small,Puzzle,2022+,5to10,0,small,0,11,,1.0416666666666667,,False
+Puzzle | 2022+ | 5to10 | 1-4 | large,Puzzle,2022+,5to10,1-4,large,0,2,,4.6492557150451885,,False
+Puzzle | 2022+ | 5to10 | 1-4 | medium,Puzzle,2022+,5to10,1-4,medium,0,2,,0.969047619047619,,False
+Puzzle | 2022+ | 5to10 | 1-4 | small,Puzzle,2022+,5to10,1-4,small,0,12,,1.4764957264957266,,False
+Puzzle | 2022+ | 5to10 | 5+ | medium,Puzzle,2022+,5to10,5+,medium,0,2,,0.8567307692307692,,False
+Puzzle | 2022+ | 5to10 | 5+ | small,Puzzle,2022+,5to10,5+,small,0,1,,2.0,,False
+Puzzle | 2022+ | gt20 | 0 | large,Puzzle,2022+,gt20,0,large,1,0,8.509578544061302,,,False
+Puzzle | 2022+ | gt20 | 0 | medium,Puzzle,2022+,gt20,0,medium,1,0,-0.7126436781609196,,,False
+Puzzle | 2022+ | gt20 | 0 | small,Puzzle,2022+,gt20,0,small,5,1,0.5384615384615384,0.14285714285714285,0.3956043956043956,False
+Puzzle | 2022+ | gt20 | 1-4 | medium,Puzzle,2022+,gt20,1-4,medium,1,1,15.305555555555555,-0.6451612903225806,15.950716845878135,False
+Puzzle | 2022+ | gt20 | 1-4 | small,Puzzle,2022+,gt20,1-4,small,0,2,,0.5265151515151515,,False
+Puzzle | 2022+ | lt5 | 0 | large,Puzzle,2022+,lt5,0,large,1,5,2.552,2.7338709677419355,-0.18187096774193545,False
+Puzzle | 2022+ | lt5 | 0 | medium,Puzzle,2022+,lt5,0,medium,1,12,1.6896551724137931,0.44932079414838033,1.2403343782654128,False
+Puzzle | 2022+ | lt5 | 0 | small,Puzzle,2022+,lt5,0,small,3,35,0.5833333333333334,0.42857142857142855,0.15476190476190482,False
+Puzzle | 2022+ | lt5 | 1-4 | large,Puzzle,2022+,lt5,1-4,large,0,1,,0.8108108108108109,,False
+Puzzle | 2022+ | lt5 | 1-4 | medium,Puzzle,2022+,lt5,1-4,medium,1,10,0.5625,1.0517241379310345,-0.4892241379310345,False
+Puzzle | 2022+ | lt5 | 1-4 | small,Puzzle,2022+,lt5,1-4,small,1,25,1.0952380952380953,0.8181818181818182,0.2770562770562771,False
+Puzzle | 2022+ | lt5 | 5+ | small,Puzzle,2022+,lt5,5+,small,2,4,2.959752321981424,0.8833333333333333,2.076418988648091,False
+Puzzle | <=2017 | 10to20 | 0 | large,Puzzle,<=2017,10to20,0,large,1,34,0.5243299505594587,0.11982758620689654,0.4045023643525622,False
+Puzzle | <=2017 | 10to20 | 0 | medium,Puzzle,<=2017,10to20,0,medium,0,10,,0.5400383141762453,,False
+Puzzle | <=2017 | 10to20 | 0 | small,Puzzle,<=2017,10to20,0,small,0,4,,0.041666666666666664,,False
+Puzzle | <=2017 | 10to20 | 1-4 | large,Puzzle,<=2017,10to20,1-4,large,1,18,0.19663446556559677,0.20029963920993088,-0.0036651736443341076,False
+Puzzle | <=2017 | 10to20 | 1-4 | medium,Puzzle,<=2017,10to20,1-4,medium,0,2,,0.17493219682293687,,False
+Puzzle | <=2017 | 10to20 | 5+ | large,Puzzle,<=2017,10to20,5+,large,1,33,0.20567375886524822,0.13695652173913042,0.0687172371261178,False
+Puzzle | <=2017 | 10to20 | 5+ | medium,Puzzle,<=2017,10to20,5+,medium,0,1,,0.04081632653061224,,False
+Puzzle | <=2017 | 5to10 | 0 | large,Puzzle,<=2017,5to10,0,large,1,63,0.23880597014925373,0.19243604004449388,0.04636993010475984,False
+Puzzle | <=2017 | 5to10 | 0 | medium,Puzzle,<=2017,5to10,0,medium,1,34,0.13793103448275862,0.22456896551724137,-0.08663793103448275,False
+Puzzle | <=2017 | 5to10 | 0 | small,Puzzle,<=2017,5to10,0,small,1,18,0.23529411764705882,0.06458333333333333,0.1707107843137255,False
+Puzzle | <=2017 | 5to10 | 1-4 | large,Puzzle,<=2017,5to10,1-4,large,0,36,,0.17208453730458623,,False
+Puzzle | <=2017 | 5to10 | 1-4 | medium,Puzzle,<=2017,5to10,1-4,medium,0,15,,0.10810810810810811,,False
+Puzzle | <=2017 | 5to10 | 1-4 | small,Puzzle,<=2017,5to10,1-4,small,0,5,,0.058823529411764705,,False
+Puzzle | <=2017 | 5to10 | 5+ | large,Puzzle,<=2017,5to10,5+,large,3,36,0.4154312861313033,0.15642429035211852,0.2590069957791848,False
+Puzzle | <=2017 | 5to10 | 5+ | medium,Puzzle,<=2017,5to10,5+,medium,0,10,,0.14431818181818182,,False
+Puzzle | <=2017 | 5to10 | 5+ | small,Puzzle,<=2017,5to10,5+,small,0,2,,0.325,,False
+Puzzle | <=2017 | free | 0 | large,Puzzle,<=2017,free,0,large,1,21,0.5262541976188053,0.07331378299120235,0.452940414627603,False
+Puzzle | <=2017 | free | 0 | medium,Puzzle,<=2017,free,0,medium,0,10,,0.17068106312292358,,False
+Puzzle | <=2017 | free | 0 | small,Puzzle,<=2017,free,0,small,0,1,,0.5454545454545454,,False
+Puzzle | <=2017 | free | 1-4 | large,Puzzle,<=2017,free,1-4,large,0,9,,0.16319444444444445,,False
+Puzzle | <=2017 | free | 1-4 | medium,Puzzle,<=2017,free,1-4,medium,0,1,,0.20408163265306123,,False
+Puzzle | <=2017 | free | 5+ | large,Puzzle,<=2017,free,5+,large,0,6,,0.11990906649238961,,False
+Puzzle | <=2017 | free | 5+ | medium,Puzzle,<=2017,free,5+,medium,0,1,,0.3291139240506329,,False
+Puzzle | <=2017 | gt20 | 0 | large,Puzzle,<=2017,gt20,0,large,0,4,,0.14740900699840193,,False
+Puzzle | <=2017 | gt20 | 1-4 | large,Puzzle,<=2017,gt20,1-4,large,0,2,,0.11126215622712538,,False
+Puzzle | <=2017 | gt20 | 5+ | large,Puzzle,<=2017,gt20,5+,large,0,3,,0.19201435621354868,,False
+Puzzle | <=2017 | lt5 | 0 | large,Puzzle,<=2017,lt5,0,large,0,72,,0.12414340500440085,,False
+Puzzle | <=2017 | lt5 | 0 | medium,Puzzle,<=2017,lt5,0,medium,2,71,0.16908212560386474,0.19767441860465115,-0.028592293000786417,False
+Puzzle | <=2017 | lt5 | 0 | small,Puzzle,<=2017,lt5,0,small,0,22,,0.1455026455026455,,False
+Puzzle | <=2017 | lt5 | 1-4 | large,Puzzle,<=2017,lt5,1-4,large,1,37,0.22432432432432434,0.1553973902728351,0.06892693405148922,False
+Puzzle | <=2017 | lt5 | 1-4 | medium,Puzzle,<=2017,lt5,1-4,medium,1,22,0.6304347826086957,0.1760797342192691,0.4543550483894266,False
+Puzzle | <=2017 | lt5 | 1-4 | small,Puzzle,<=2017,lt5,1-4,small,0,7,,0.1111111111111111,,False
+Puzzle | <=2017 | lt5 | 5+ | large,Puzzle,<=2017,lt5,5+,large,2,28,0.23948121449374898,0.11375614712635589,0.12572506736739308,False
+Puzzle | <=2017 | lt5 | 5+ | medium,Puzzle,<=2017,lt5,5+,medium,0,5,,0.4186046511627907,,False
+Puzzle | <=2017 | lt5 | 5+ | small,Puzzle,<=2017,lt5,5+,small,0,3,,0.15,,False
+RPG | 2018-2019 | 10to20 | 0 | large,RPG,2018-2019,10to20,0,large,1,23,0.9950124688279302,0.13548387096774195,0.8595285978601882,False
+RPG | 2018-2019 | 10to20 | 0 | medium,RPG,2018-2019,10to20,0,medium,0,17,,0.13333333333333333,,False
+RPG | 2018-2019 | 10to20 | 0 | small,RPG,2018-2019,10to20,0,small,0,7,,0.14285714285714285,,False
+RPG | 2018-2019 | 10to20 | 1-4 | large,RPG,2018-2019,10to20,1-4,large,0,9,,0.3828701077708451,,False
+RPG | 2018-2019 | 10to20 | 1-4 | medium,RPG,2018-2019,10to20,1-4,medium,0,7,,0.25,,False
+RPG | 2018-2019 | 10to20 | 1-4 | small,RPG,2018-2019,10to20,1-4,small,0,8,,0.06798245614035087,,False
+RPG | 2018-2019 | 10to20 | 5+ | large,RPG,2018-2019,10to20,5+,large,1,8,0.7426900584795322,0.3322091213026057,0.41048093717692646,False
+RPG | 2018-2019 | 10to20 | 5+ | medium,RPG,2018-2019,10to20,5+,medium,0,2,,0.5439577508543025,,False
+RPG | 2018-2019 | 5to10 | 0 | large,RPG,2018-2019,5to10,0,large,0,13,,0.2054176072234763,,False
+RPG | 2018-2019 | 5to10 | 0 | medium,RPG,2018-2019,5to10,0,medium,0,38,,0.1412377450980392,,False
+RPG | 2018-2019 | 5to10 | 0 | small,RPG,2018-2019,5to10,0,small,0,29,,0.16,,False
+RPG | 2018-2019 | 5to10 | 1-4 | large,RPG,2018-2019,5to10,1-4,large,0,8,,0.21041377716134996,,False
+RPG | 2018-2019 | 5to10 | 1-4 | medium,RPG,2018-2019,5to10,1-4,medium,0,10,,0.17965052784856206,,False
+RPG | 2018-2019 | 5to10 | 1-4 | small,RPG,2018-2019,5to10,1-4,small,0,7,,0.16666666666666666,,False
+RPG | 2018-2019 | 5to10 | 5+ | large,RPG,2018-2019,5to10,5+,large,1,1,1.016680227827502,0.4752906976744186,0.5413895301530833,False
+RPG | 2018-2019 | 5to10 | 5+ | small,RPG,2018-2019,5to10,5+,small,0,1,,0.10714285714285714,,False
+RPG | 2018-2019 | free | 0 | large,RPG,2018-2019,free,0,large,0,24,,0.14012532411408818,,False
+RPG | 2018-2019 | free | 0 | medium,RPG,2018-2019,free,0,medium,0,22,,0.289961811238407,,False
+RPG | 2018-2019 | free | 0 | small,RPG,2018-2019,free,0,small,0,18,,0.3181818181818182,,False
+RPG | 2018-2019 | free | 1-4 | large,RPG,2018-2019,free,1-4,large,0,9,,0.0985997666277713,,False
+RPG | 2018-2019 | free | 1-4 | medium,RPG,2018-2019,free,1-4,medium,0,12,,0.24621212121212122,,False
+RPG | 2018-2019 | free | 1-4 | small,RPG,2018-2019,free,1-4,small,0,1,,0.3333333333333333,,False
+RPG | 2018-2019 | free | 5+ | large,RPG,2018-2019,free,5+,large,0,3,,0.234375,,False
+RPG | 2018-2019 | free | 5+ | medium,RPG,2018-2019,free,5+,medium,0,1,,0.11711711711711711,,False
+RPG | 2018-2019 | free | 5+ | small,RPG,2018-2019,free,5+,small,0,1,,1.0909090909090908,,False
+RPG | 2018-2019 | gt20 | 0 | large,RPG,2018-2019,gt20,0,large,0,4,,0.17020840692334865,,False
+RPG | 2018-2019 | gt20 | 0 | medium,RPG,2018-2019,gt20,0,medium,0,7,,0.2736842105263158,,False
+RPG | 2018-2019 | gt20 | 1-4 | large,RPG,2018-2019,gt20,1-4,large,0,15,,0.3696682464454976,,False
+RPG | 2018-2019 | gt20 | 5+ | large,RPG,2018-2019,gt20,5+,large,0,5,,0.31,,False
+RPG | 2018-2019 | lt5 | 0 | large,RPG,2018-2019,lt5,0,large,0,8,,0.21551864517179614,,False
+RPG | 2018-2019 | lt5 | 0 | medium,RPG,2018-2019,lt5,0,medium,0,39,,0.17346938775510204,,False
+RPG | 2018-2019 | lt5 | 0 | small,RPG,2018-2019,lt5,0,small,0,62,,0.16025641025641024,,False
+RPG | 2018-2019 | lt5 | 1-4 | large,RPG,2018-2019,lt5,1-4,large,0,3,,0.5529100529100529,,False
+RPG | 2018-2019 | lt5 | 1-4 | medium,RPG,2018-2019,lt5,1-4,medium,1,16,0.07142857142857142,0.1263138818412468,-0.05488531041267539,False
+RPG | 2018-2019 | lt5 | 1-4 | small,RPG,2018-2019,lt5,1-4,small,1,16,0.23076923076923078,0.09545454545454546,0.13531468531468532,False
+RPG | 2018-2019 | lt5 | 5+ | large,RPG,2018-2019,lt5,5+,large,0,2,,0.20286645683453236,,False
+RPG | 2018-2019 | lt5 | 5+ | medium,RPG,2018-2019,lt5,5+,medium,0,1,,0.40425531914893614,,False
+RPG | 2020-2021 | 10to20 | 0 | large,RPG,2020-2021,10to20,0,large,3,20,0.5801407349491791,0.293221110100091,0.28691962484908806,False
+RPG | 2020-2021 | 10to20 | 0 | medium,RPG,2020-2021,10to20,0,medium,0,20,,0.34768740031897927,,False
+RPG | 2020-2021 | 10to20 | 0 | small,RPG,2020-2021,10to20,0,small,0,16,,0.3484848484848485,,False
+RPG | 2020-2021 | 10to20 | 1-4 | large,RPG,2020-2021,10to20,1-4,large,3,12,0.42272024729520863,0.22443626591891574,0.19828398137629288,False
+RPG | 2020-2021 | 10to20 | 1-4 | medium,RPG,2020-2021,10to20,1-4,medium,0,21,,0.2619047619047619,,False
+RPG | 2020-2021 | 10to20 | 1-4 | small,RPG,2020-2021,10to20,1-4,small,0,7,,0.19230769230769232,,False
+RPG | 2020-2021 | 10to20 | 5+ | large,RPG,2020-2021,10to20,5+,large,1,2,0.8249733191035219,0.5039404653140351,0.32103285378948676,False
+RPG | 2020-2021 | 10to20 | 5+ | medium,RPG,2020-2021,10to20,5+,medium,0,7,,0.24324324324324326,,False
+RPG | 2020-2021 | 5to10 | 0 | large,RPG,2020-2021,5to10,0,large,0,12,,0.37762391415431784,,False
+RPG | 2020-2021 | 5to10 | 0 | medium,RPG,2020-2021,5to10,0,medium,1,18,0.5,0.2532051282051282,0.2467948717948718,False
+RPG | 2020-2021 | 5to10 | 0 | small,RPG,2020-2021,5to10,0,small,2,49,0.15,0.2727272727272727,-0.12272727272727271,False
+RPG | 2020-2021 | 5to10 | 1-4 | large,RPG,2020-2021,5to10,1-4,large,1,3,0.14396887159533073,0.25,-0.10603112840466927,False
+RPG | 2020-2021 | 5to10 | 1-4 | medium,RPG,2020-2021,5to10,1-4,medium,2,8,0.7720329024676851,0.1635601118359739,0.6084727906317111,False
+RPG | 2020-2021 | 5to10 | 1-4 | small,RPG,2020-2021,5to10,1-4,small,1,7,0.16666666666666666,0.14285714285714285,0.023809523809523808,False
+RPG | 2020-2021 | 5to10 | 5+ | large,RPG,2020-2021,5to10,5+,large,0,1,,0.4276729559748428,,False
+RPG | 2020-2021 | 5to10 | 5+ | medium,RPG,2020-2021,5to10,5+,medium,0,1,,0.27586206896551724,,False
+RPG | 2020-2021 | free | 0 | large,RPG,2020-2021,free,0,large,0,21,,0.2175925925925926,,False
+RPG | 2020-2021 | free | 0 | medium,RPG,2020-2021,free,0,medium,0,10,,0.32393617021276594,,False
+RPG | 2020-2021 | free | 0 | small,RPG,2020-2021,free,0,small,0,17,,0.5,,False
+RPG | 2020-2021 | free | 1-4 | large,RPG,2020-2021,free,1-4,large,1,12,1.188034188034188,0.13308284477267082,1.0549513432615172,False
+RPG | 2020-2021 | free | 1-4 | medium,RPG,2020-2021,free,1-4,medium,0,7,,0.38095238095238093,,False
+RPG | 2020-2021 | free | 1-4 | small,RPG,2020-2021,free,1-4,small,0,8,,0.4358974358974359,,False
+RPG | 2020-2021 | free | 5+ | large,RPG,2020-2021,free,5+,large,0,1,,0.1259259259259259,,False
+RPG | 2020-2021 | gt20 | 0 | large,RPG,2020-2021,gt20,0,large,1,8,0.6834319526627219,0.21904761904761905,0.4643843336151029,False
+RPG | 2020-2021 | gt20 | 0 | medium,RPG,2020-2021,gt20,0,medium,0,4,,0.32388663967611336,,False
+RPG | 2020-2021 | gt20 | 0 | small,RPG,2020-2021,gt20,0,small,0,3,,0.375,,False
+RPG | 2020-2021 | gt20 | 1-4 | large,RPG,2020-2021,gt20,1-4,large,0,8,,0.38305293432083914,,False
+RPG | 2020-2021 | gt20 | 1-4 | medium,RPG,2020-2021,gt20,1-4,medium,0,5,,0.36607142857142855,,False
+RPG | 2020-2021 | gt20 | 1-4 | small,RPG,2020-2021,gt20,1-4,small,0,2,,3.2604166666666665,,False
+RPG | 2020-2021 | gt20 | 5+ | large,RPG,2020-2021,gt20,5+,large,1,6,0.44291497975708505,0.388669313618315,0.05424566613877002,False
+RPG | 2020-2021 | lt5 | 0 | large,RPG,2020-2021,lt5,0,large,1,7,1.4107327141382868,0.3386363636363636,1.0720963505019232,False
+RPG | 2020-2021 | lt5 | 0 | medium,RPG,2020-2021,lt5,0,medium,0,15,,0.43478260869565216,,False
+RPG | 2020-2021 | lt5 | 0 | small,RPG,2020-2021,lt5,0,small,0,56,,0.2863636363636364,,False
+RPG | 2020-2021 | lt5 | 1-4 | large,RPG,2020-2021,lt5,1-4,large,0,6,,0.34684352738884794,,False
+RPG | 2020-2021 | lt5 | 1-4 | medium,RPG,2020-2021,lt5,1-4,medium,1,9,3.6052631578947367,0.45614035087719296,3.1491228070175437,False
+RPG | 2020-2021 | lt5 | 1-4 | small,RPG,2020-2021,lt5,1-4,small,0,7,,0.13333333333333333,,False
+RPG | 2020-2021 | lt5 | 5+ | small,RPG,2020-2021,lt5,5+,small,0,1,,1.173913043478261,,False
+RPG | 2022+ | 10to20 | 0 | large,RPG,2022+,10to20,0,large,2,5,4.50750321265373,1.0464135021097047,3.4610897105440253,False
+RPG | 2022+ | 10to20 | 0 | medium,RPG,2022+,10to20,0,medium,0,12,,0.8330188679245283,,False
+RPG | 2022+ | 10to20 | 0 | small,RPG,2022+,10to20,0,small,0,8,,0.47020933977455714,,False
+RPG | 2022+ | 10to20 | 1-4 | large,RPG,2022+,10to20,1-4,large,0,1,,1.1551020408163266,,False
+RPG | 2022+ | 10to20 | 1-4 | medium,RPG,2022+,10to20,1-4,medium,0,6,,1.0036945812807883,,False
+RPG | 2022+ | 10to20 | 1-4 | small,RPG,2022+,10to20,1-4,small,2,15,12.786842105263158,1.1363636363636365,11.650478468899522,False
+RPG | 2022+ | 10to20 | 5+ | large,RPG,2022+,10to20,5+,large,0,1,,0.6847405112316034,,False
+RPG | 2022+ | 10to20 | 5+ | medium,RPG,2022+,10to20,5+,medium,0,1,,2.011627906976744,,False
+RPG | 2022+ | 5to10 | 0 | large,RPG,2022+,5to10,0,large,0,2,,9.23463344905044,,False
+RPG | 2022+ | 5to10 | 0 | medium,RPG,2022+,5to10,0,medium,1,14,1.8189655172413792,1.3366666666666667,0.48229885057471256,False
+RPG | 2022+ | 5to10 | 0 | small,RPG,2022+,5to10,0,small,0,20,,1.0588235294117647,,False
+RPG | 2022+ | 5to10 | 1-4 | medium,RPG,2022+,5to10,1-4,medium,0,5,,1.1764705882352942,,False
+RPG | 2022+ | 5to10 | 1-4 | small,RPG,2022+,5to10,1-4,small,0,5,,0.6363636363636364,,False
+RPG | 2022+ | 5to10 | 5+ | medium,RPG,2022+,5to10,5+,medium,0,1,,0.5517241379310345,,False
+RPG | 2022+ | free | 0 | large,RPG,2022+,free,0,large,0,1,,0.17192982456140352,,False
+RPG | 2022+ | free | 0 | medium,RPG,2022+,free,0,medium,0,1,,0.3582089552238806,,False
+RPG | 2022+ | free | 1-4 | large,RPG,2022+,free,1-4,large,0,2,,6.567252503901137,,False
+RPG | 2022+ | free | 1-4 | medium,RPG,2022+,free,1-4,medium,0,1,,1.6486486486486487,,False
+RPG | 2022+ | gt20 | 0 | large,RPG,2022+,gt20,0,large,1,1,3.9034381858083393,1.0797546012269938,2.8236835845813455,False
+RPG | 2022+ | gt20 | 0 | medium,RPG,2022+,gt20,0,medium,0,5,,1.1515151515151516,,False
+RPG | 2022+ | gt20 | 0 | small,RPG,2022+,gt20,0,small,0,3,,0.29411764705882354,,False
+RPG | 2022+ | gt20 | 1-4 | large,RPG,2022+,gt20,1-4,large,2,0,11.629260597562292,,,False
+RPG | 2022+ | gt20 | 1-4 | medium,RPG,2022+,gt20,1-4,medium,0,3,,0.9519230769230769,,False
+RPG | 2022+ | gt20 | 1-4 | small,RPG,2022+,gt20,1-4,small,1,2,8.4,3.5681818181818183,4.831818181818182,False
+RPG | 2022+ | gt20 | 5+ | medium,RPG,2022+,gt20,5+,medium,0,2,,3.922131469410194,,False
+RPG | 2022+ | gt20 | 5+ | small,RPG,2022+,gt20,5+,small,0,1,,7.333333333333333,,False
+RPG | 2022+ | lt5 | 0 | large,RPG,2022+,lt5,0,large,0,1,,2.11482254697286,,False
+RPG | 2022+ | lt5 | 0 | medium,RPG,2022+,lt5,0,medium,0,4,,1.018414481897628,,False
+RPG | 2022+ | lt5 | 0 | small,RPG,2022+,lt5,0,small,1,15,0.3333333333333333,1.3571428571428572,-1.023809523809524,False
+RPG | 2022+ | lt5 | 1-4 | large,RPG,2022+,lt5,1-4,large,1,1,1.222707423580786,0.5059760956175299,0.7167313279632561,False
+RPG | 2022+ | lt5 | 1-4 | medium,RPG,2022+,lt5,1-4,medium,0,1,,2.830508474576271,,False
+RPG | 2022+ | lt5 | 1-4 | small,RPG,2022+,lt5,1-4,small,0,6,,0.9776785714285714,,False
+RPG | <=2017 | 10to20 | 0 | large,RPG,<=2017,10to20,0,large,0,78,,0.11253369272237196,,False
+RPG | <=2017 | 10to20 | 0 | medium,RPG,<=2017,10to20,0,medium,0,22,,0.15219907407407407,,False
+RPG | <=2017 | 10to20 | 0 | small,RPG,<=2017,10to20,0,small,0,8,,0.043478260869565216,,False
+RPG | <=2017 | 10to20 | 1-4 | large,RPG,<=2017,10to20,1-4,large,2,49,0.19695023448555454,0.17391304347826086,0.023037191007293678,False
+RPG | <=2017 | 10to20 | 1-4 | medium,RPG,<=2017,10to20,1-4,medium,0,15,,0.23423423423423423,,False
+RPG | <=2017 | 10to20 | 1-4 | small,RPG,<=2017,10to20,1-4,small,0,2,,0.18695652173913044,,False
+RPG | <=2017 | 10to20 | 5+ | large,RPG,<=2017,10to20,5+,large,1,31,0.245822525185498,0.12696540880503146,0.11885711638046653,False
+RPG | <=2017 | 10to20 | 5+ | medium,RPG,<=2017,10to20,5+,medium,0,1,,0.06837606837606838,,False
+RPG | <=2017 | 5to10 | 0 | large,RPG,<=2017,5to10,0,large,3,105,0.28776978417266186,0.08365019011406843,0.20411959405859342,False
+RPG | <=2017 | 5to10 | 0 | medium,RPG,<=2017,5to10,0,medium,0,72,,0.14174107142857142,,False
+RPG | <=2017 | 5to10 | 0 | small,RPG,<=2017,5to10,0,small,0,23,,0.13636363636363635,,False
+RPG | <=2017 | 5to10 | 1-4 | large,RPG,<=2017,5to10,1-4,large,0,48,,0.1547966467819693,,False
+RPG | <=2017 | 5to10 | 1-4 | medium,RPG,<=2017,5to10,1-4,medium,0,10,,0.12944961664841184,,False
+RPG | <=2017 | 5to10 | 1-4 | small,RPG,<=2017,5to10,1-4,small,0,4,,0.1463157894736842,,False
+RPG | <=2017 | 5to10 | 5+ | large,RPG,<=2017,5to10,5+,large,0,20,,0.18163715283904436,,False
+RPG | <=2017 | 5to10 | 5+ | medium,RPG,<=2017,5to10,5+,medium,0,1,,0.7222222222222222,,False
+RPG | <=2017 | free | 0 | large,RPG,<=2017,free,0,large,1,50,0.3070489844683393,0.0805852596529423,0.22646372481539698,False
+RPG | <=2017 | free | 0 | medium,RPG,<=2017,free,0,medium,0,30,,0.14924218991648625,,False
+RPG | <=2017 | free | 0 | small,RPG,<=2017,free,0,small,0,19,,0.3076923076923077,,False
+RPG | <=2017 | free | 1-4 | large,RPG,<=2017,free,1-4,large,1,37,0.05709479177395543,0.07513477088948788,-0.018039979115532442,False
+RPG | <=2017 | free | 1-4 | medium,RPG,<=2017,free,1-4,medium,0,6,,0.08078231292517007,,False
+RPG | <=2017 | free | 1-4 | small,RPG,<=2017,free,1-4,small,0,3,,0.36363636363636365,,False
+RPG | <=2017 | free | 5+ | large,RPG,<=2017,free,5+,large,1,11,0.30991036394398647,0.11940298507462686,0.1905073788693596,False
+RPG | <=2017 | gt20 | 0 | large,RPG,<=2017,gt20,0,large,0,13,,0.15535444947209653,,False
+RPG | <=2017 | gt20 | 0 | medium,RPG,<=2017,gt20,0,medium,0,3,,0.13793103448275862,,False
+RPG | <=2017 | gt20 | 0 | small,RPG,<=2017,gt20,0,small,0,2,,0.14583333333333334,,False
+RPG | <=2017 | gt20 | 1-4 | large,RPG,<=2017,gt20,1-4,large,0,8,,0.31606813261300487,,False
+RPG | <=2017 | gt20 | 1-4 | medium,RPG,<=2017,gt20,1-4,medium,0,1,,-0.018518518518518517,,False
+RPG | <=2017 | gt20 | 1-4 | small,RPG,<=2017,gt20,1-4,small,0,2,,0.04797979797979798,,False
+RPG | <=2017 | gt20 | 5+ | large,RPG,<=2017,gt20,5+,large,0,12,,0.16725997030453202,,False
+RPG | <=2017 | gt20 | 5+ | medium,RPG,<=2017,gt20,5+,medium,0,1,,0.1111111111111111,,False
+RPG | <=2017 | lt5 | 0 | large,RPG,<=2017,lt5,0,large,0,109,,0.0989433237271854,,False
+RPG | <=2017 | lt5 | 0 | medium,RPG,<=2017,lt5,0,medium,0,122,,0.16326530612244897,,False
+RPG | <=2017 | lt5 | 0 | small,RPG,<=2017,lt5,0,small,0,65,,0.13636363636363635,,False
+RPG | <=2017 | lt5 | 1-4 | large,RPG,<=2017,lt5,1-4,large,0,43,,0.18219461697722567,,False
+RPG | <=2017 | lt5 | 1-4 | medium,RPG,<=2017,lt5,1-4,medium,0,29,,0.22448979591836735,,False
+RPG | <=2017 | lt5 | 1-4 | small,RPG,<=2017,lt5,1-4,small,0,5,,0.058823529411764705,,False
+RPG | <=2017 | lt5 | 5+ | large,RPG,<=2017,lt5,5+,large,0,8,,0.1248283126292023,,False
+RPG | <=2017 | lt5 | 5+ | medium,RPG,<=2017,lt5,5+,medium,0,5,,0.04878048780487805,,False
+RPG | <=2017 | lt5 | 5+ | small,RPG,<=2017,lt5,5+,small,0,1,,-0.04,,False
+Strategy | 2018-2019 | 10to20 | 0 | large,Strategy,2018-2019,10to20,0,large,2,21,0.23342648657040832,0.11124019750217834,0.12218628906822998,False
+Strategy | 2018-2019 | 10to20 | 0 | medium,Strategy,2018-2019,10to20,0,medium,0,16,,0.09529411764705882,,False
+Strategy | 2018-2019 | 10to20 | 0 | small,Strategy,2018-2019,10to20,0,small,0,21,,0.05555555555555555,,False
+Strategy | 2018-2019 | 10to20 | 1-4 | large,Strategy,2018-2019,10to20,1-4,large,0,20,,0.214404137196745,,False
+Strategy | 2018-2019 | 10to20 | 1-4 | medium,Strategy,2018-2019,10to20,1-4,medium,0,14,,0.0908466819221968,,False
+Strategy | 2018-2019 | 10to20 | 1-4 | small,Strategy,2018-2019,10to20,1-4,small,0,5,,0.0,,False
+Strategy | 2018-2019 | 10to20 | 5+ | large,Strategy,2018-2019,10to20,5+,large,0,5,,0.2931854199683043,,False
+Strategy | 2018-2019 | 10to20 | 5+ | medium,Strategy,2018-2019,10to20,5+,medium,0,1,,0.15517241379310345,,False
+Strategy | 2018-2019 | 10to20 | 5+ | small,Strategy,2018-2019,10to20,5+,small,0,3,,0.3333333333333333,,False
+Strategy | 2018-2019 | 5to10 | 0 | large,Strategy,2018-2019,5to10,0,large,0,17,,0.11048158640226628,,False
+Strategy | 2018-2019 | 5to10 | 0 | medium,Strategy,2018-2019,5to10,0,medium,0,30,,0.12194525904203324,,False
+Strategy | 2018-2019 | 5to10 | 0 | small,Strategy,2018-2019,5to10,0,small,0,34,,0.09166666666666667,,False
+Strategy | 2018-2019 | 5to10 | 1-4 | large,Strategy,2018-2019,5to10,1-4,large,1,9,0.4267161410018553,0.12686567164179105,0.2998504693600642,False
+Strategy | 2018-2019 | 5to10 | 1-4 | medium,Strategy,2018-2019,5to10,1-4,medium,0,10,,0.10880582831802343,,False
+Strategy | 2018-2019 | 5to10 | 1-4 | small,Strategy,2018-2019,5to10,1-4,small,0,13,,0.08333333333333333,,False
+Strategy | 2018-2019 | 5to10 | 5+ | large,Strategy,2018-2019,5to10,5+,large,0,2,,0.5617480537862704,,False
+Strategy | 2018-2019 | 5to10 | 5+ | medium,Strategy,2018-2019,5to10,5+,medium,0,4,,0.28371592539454804,,False
+Strategy | 2018-2019 | 5to10 | 5+ | small,Strategy,2018-2019,5to10,5+,small,0,6,,0.20394736842105263,,False
+Strategy | 2018-2019 | free | 0 | large,Strategy,2018-2019,free,0,large,0,24,,0.188682522955161,,False
+Strategy | 2018-2019 | free | 0 | medium,Strategy,2018-2019,free,0,medium,0,30,,0.22816552250190691,,False
+Strategy | 2018-2019 | free | 0 | small,Strategy,2018-2019,free,0,small,0,27,,0.20833333333333334,,False
+Strategy | 2018-2019 | free | 1-4 | large,Strategy,2018-2019,free,1-4,large,0,3,,0.0,,False
+Strategy | 2018-2019 | free | 1-4 | medium,Strategy,2018-2019,free,1-4,medium,0,8,,0.19642857142857142,,False
+Strategy | 2018-2019 | free | 1-4 | small,Strategy,2018-2019,free,1-4,small,0,4,,0.22941176470588237,,False
+Strategy | 2018-2019 | free | 5+ | large,Strategy,2018-2019,free,5+,large,1,5,1.195906432748538,0.22234156820622986,0.9735648645423082,False
+Strategy | 2018-2019 | free | 5+ | medium,Strategy,2018-2019,free,5+,medium,0,3,,0.04918032786885246,,False
+Strategy | 2018-2019 | gt20 | 0 | large,Strategy,2018-2019,gt20,0,large,0,13,,0.13657623947614594,,False
+Strategy | 2018-2019 | gt20 | 0 | medium,Strategy,2018-2019,gt20,0,medium,0,4,,0.2518377848566528,,False
+Strategy | 2018-2019 | gt20 | 0 | small,Strategy,2018-2019,gt20,0,small,0,4,,0.13636363636363635,,False
+Strategy | 2018-2019 | gt20 | 1-4 | large,Strategy,2018-2019,gt20,1-4,large,0,9,,0.2107499468876142,,False
+Strategy | 2018-2019 | gt20 | 1-4 | medium,Strategy,2018-2019,gt20,1-4,medium,0,5,,0.11864406779661017,,False
+Strategy | 2018-2019 | gt20 | 1-4 | small,Strategy,2018-2019,gt20,1-4,small,0,3,,0.16,,False
+Strategy | 2018-2019 | gt20 | 5+ | large,Strategy,2018-2019,gt20,5+,large,0,2,,0.2518605580845728,,False
+Strategy | 2018-2019 | lt5 | 0 | large,Strategy,2018-2019,lt5,0,large,0,12,,0.30527777777777776,,False
+Strategy | 2018-2019 | lt5 | 0 | medium,Strategy,2018-2019,lt5,0,medium,0,20,,0.125,,False
+Strategy | 2018-2019 | lt5 | 0 | small,Strategy,2018-2019,lt5,0,small,0,63,,0.18181818181818182,,False
+Strategy | 2018-2019 | lt5 | 1-4 | large,Strategy,2018-2019,lt5,1-4,large,1,6,0.11464968152866242,0.19614895282834216,-0.08149927129967974,False
+Strategy | 2018-2019 | lt5 | 1-4 | medium,Strategy,2018-2019,lt5,1-4,medium,0,18,,0.1043557168784029,,False
+Strategy | 2018-2019 | lt5 | 1-4 | small,Strategy,2018-2019,lt5,1-4,small,0,25,,0.16666666666666666,,False
+Strategy | 2018-2019 | lt5 | 5+ | large,Strategy,2018-2019,lt5,5+,large,0,2,,0.22926921027055838,,False
+Strategy | 2018-2019 | lt5 | 5+ | medium,Strategy,2018-2019,lt5,5+,medium,0,5,,0.06896551724137931,,False
+Strategy | 2018-2019 | lt5 | 5+ | small,Strategy,2018-2019,lt5,5+,small,0,3,,0.25,,False
+Strategy | 2020-2021 | 10to20 | 0 | large,Strategy,2020-2021,10to20,0,large,1,13,1.0866336633663367,0.27411167512690354,0.8125219882394332,False
+Strategy | 2020-2021 | 10to20 | 0 | medium,Strategy,2020-2021,10to20,0,medium,1,24,0.5,0.16891891891891891,0.3310810810810811,False
+Strategy | 2020-2021 | 10to20 | 0 | small,Strategy,2020-2021,10to20,0,small,1,27,0.5,0.1,0.4,False
+Strategy | 2020-2021 | 10to20 | 1-4 | large,Strategy,2020-2021,10to20,1-4,large,0,10,,0.325701982561998,,False
+Strategy | 2020-2021 | 10to20 | 1-4 | medium,Strategy,2020-2021,10to20,1-4,medium,1,4,0.4473684210526316,0.20974076983503534,0.23762765121759624,False
+Strategy | 2020-2021 | 10to20 | 1-4 | small,Strategy,2020-2021,10to20,1-4,small,0,13,,0.16666666666666666,,False
+Strategy | 2020-2021 | 10to20 | 5+ | large,Strategy,2020-2021,10to20,5+,large,1,6,0.3249097472924188,0.23693377690991058,0.0879759703825082,False
+Strategy | 2020-2021 | 10to20 | 5+ | medium,Strategy,2020-2021,10to20,5+,medium,0,7,,0.2826086956521739,,False
+Strategy | 2020-2021 | 10to20 | 5+ | small,Strategy,2020-2021,10to20,5+,small,0,1,,0.07692307692307693,,False
+Strategy | 2020-2021 | 5to10 | 0 | large,Strategy,2020-2021,5to10,0,large,0,4,,0.44431046748580183,,False
+Strategy | 2020-2021 | 5to10 | 0 | medium,Strategy,2020-2021,5to10,0,medium,0,25,,0.23943661971830985,,False
+Strategy | 2020-2021 | 5to10 | 0 | small,Strategy,2020-2021,5to10,0,small,1,30,0.13043478260869565,0.15587044534412955,-0.025435662735433906,False
+Strategy | 2020-2021 | 5to10 | 1-4 | large,Strategy,2020-2021,5to10,1-4,large,0,6,,0.49334813564298297,,False
+Strategy | 2020-2021 | 5to10 | 1-4 | medium,Strategy,2020-2021,5to10,1-4,medium,0,14,,0.18570402298850575,,False
+Strategy | 2020-2021 | 5to10 | 1-4 | small,Strategy,2020-2021,5to10,1-4,small,0,23,,0.23529411764705882,,False
+Strategy | 2020-2021 | 5to10 | 5+ | large,Strategy,2020-2021,5to10,5+,large,0,2,,0.6961269302250878,,False
+Strategy | 2020-2021 | 5to10 | 5+ | medium,Strategy,2020-2021,5to10,5+,medium,0,3,,0.21052631578947367,,False
+Strategy | 2020-2021 | 5to10 | 5+ | small,Strategy,2020-2021,5to10,5+,small,0,3,,1.0769230769230769,,False
+Strategy | 2020-2021 | free | 0 | large,Strategy,2020-2021,free,0,large,0,17,,0.24528301886792453,,False
+Strategy | 2020-2021 | free | 0 | medium,Strategy,2020-2021,free,0,medium,0,18,,0.2728968973238085,,False
+Strategy | 2020-2021 | free | 0 | small,Strategy,2020-2021,free,0,small,0,18,,0.39230769230769236,,False
+Strategy | 2020-2021 | free | 1-4 | large,Strategy,2020-2021,free,1-4,large,0,2,,0.19866894126071483,,False
+Strategy | 2020-2021 | free | 1-4 | medium,Strategy,2020-2021,free,1-4,medium,0,8,,0.3684341548419218,,False
+Strategy | 2020-2021 | free | 1-4 | small,Strategy,2020-2021,free,1-4,small,0,4,,0.4842105263157894,,False
+Strategy | 2020-2021 | free | 5+ | large,Strategy,2020-2021,free,5+,large,0,2,,0.526027851458886,,False
+Strategy | 2020-2021 | free | 5+ | medium,Strategy,2020-2021,free,5+,medium,0,3,,0.10810810810810811,,False
+Strategy | 2020-2021 | gt20 | 0 | large,Strategy,2020-2021,gt20,0,large,1,13,1.6167400881057268,0.5636232925952552,1.0531167955104714,False
+Strategy | 2020-2021 | gt20 | 0 | medium,Strategy,2020-2021,gt20,0,medium,0,11,,0.17857142857142858,,False
+Strategy | 2020-2021 | gt20 | 0 | small,Strategy,2020-2021,gt20,0,small,0,9,,0.1875,,False
+Strategy | 2020-2021 | gt20 | 1-4 | large,Strategy,2020-2021,gt20,1-4,large,0,6,,0.506491533106491,,False
+Strategy | 2020-2021 | gt20 | 1-4 | medium,Strategy,2020-2021,gt20,1-4,medium,0,6,,0.13141025641025642,,False
+Strategy | 2020-2021 | gt20 | 1-4 | small,Strategy,2020-2021,gt20,1-4,small,0,2,,0.3287037037037037,,False
+Strategy | 2020-2021 | gt20 | 5+ | large,Strategy,2020-2021,gt20,5+,large,0,4,,0.37699373348642257,,False
+Strategy | 2020-2021 | gt20 | 5+ | medium,Strategy,2020-2021,gt20,5+,medium,0,2,,0.1995579133510168,,False
+Strategy | 2020-2021 | gt20 | 5+ | small,Strategy,2020-2021,gt20,5+,small,0,1,,1.4,,False
+Strategy | 2020-2021 | lt5 | 0 | large,Strategy,2020-2021,lt5,0,large,0,5,,0.43661971830985913,,False
+Strategy | 2020-2021 | lt5 | 0 | medium,Strategy,2020-2021,lt5,0,medium,0,25,,0.23684210526315788,,False
+Strategy | 2020-2021 | lt5 | 0 | small,Strategy,2020-2021,lt5,0,small,0,59,,0.16,,False
+Strategy | 2020-2021 | lt5 | 1-4 | large,Strategy,2020-2021,lt5,1-4,large,1,4,1.6272897196261682,0.21263221896887888,1.4146575006572892,False
+Strategy | 2020-2021 | lt5 | 1-4 | medium,Strategy,2020-2021,lt5,1-4,medium,0,18,,0.2843888664784187,,False
+Strategy | 2020-2021 | lt5 | 1-4 | small,Strategy,2020-2021,lt5,1-4,small,1,23,0.13636363636363635,0.2,-0.06363636363636366,False
+Strategy | 2020-2021 | lt5 | 5+ | large,Strategy,2020-2021,lt5,5+,large,0,1,,0.2971014492753623,,False
+Strategy | 2020-2021 | lt5 | 5+ | medium,Strategy,2020-2021,lt5,5+,medium,0,1,,0.22580645161290322,,False
+Strategy | 2020-2021 | lt5 | 5+ | small,Strategy,2020-2021,lt5,5+,small,0,3,,0.5333333333333333,,False
+Strategy | 2022+ | 10to20 | 0 | large,Strategy,2022+,10to20,0,large,3,3,0.5817307692307693,0.7825949367088607,-0.20086416747809144,False
+Strategy | 2022+ | 10to20 | 0 | medium,Strategy,2022+,10to20,0,medium,2,4,0.4701429772918419,0.9511385199240987,-0.4809955426322568,False
+Strategy | 2022+ | 10to20 | 0 | small,Strategy,2022+,10to20,0,small,0,12,,0.95,,False
+Strategy | 2022+ | 10to20 | 1-4 | large,Strategy,2022+,10to20,1-4,large,0,3,,0.6015037593984962,,False
+Strategy | 2022+ | 10to20 | 1-4 | medium,Strategy,2022+,10to20,1-4,medium,2,3,4.707478783592645,0.5084745762711864,4.199004207321458,False
+Strategy | 2022+ | 10to20 | 1-4 | small,Strategy,2022+,10to20,1-4,small,0,3,,0.32,,False
+Strategy | 2022+ | 10to20 | 5+ | large,Strategy,2022+,10to20,5+,large,0,1,,0.3064935064935065,,False
+Strategy | 2022+ | 5to10 | 0 | large,Strategy,2022+,5to10,0,large,0,2,,1.0363467261904762,,False
+Strategy | 2022+ | 5to10 | 0 | medium,Strategy,2022+,5to10,0,medium,0,5,,0.6979166666666666,,False
+Strategy | 2022+ | 5to10 | 0 | small,Strategy,2022+,5to10,0,small,0,8,,0.38181818181818183,,False
+Strategy | 2022+ | 5to10 | 1-4 | large,Strategy,2022+,5to10,1-4,large,0,1,,0.43526785714285715,,False
+Strategy | 2022+ | 5to10 | 1-4 | medium,Strategy,2022+,5to10,1-4,medium,1,2,0.5294117647058824,0.5813492063492063,-0.05193744164332392,False
+Strategy | 2022+ | 5to10 | 1-4 | small,Strategy,2022+,5to10,1-4,small,2,2,1.393939393939394,0.28146853146853146,1.1124708624708626,False
+Strategy | 2022+ | 5to10 | 5+ | large,Strategy,2022+,5to10,5+,large,0,3,,0.7162162162162162,,False
+Strategy | 2022+ | 5to10 | 5+ | medium,Strategy,2022+,5to10,5+,medium,0,3,,0.5666666666666667,,False
+Strategy | 2022+ | free | 0 | medium,Strategy,2022+,free,0,medium,0,1,,1.0,,False
+Strategy | 2022+ | free | 0 | small,Strategy,2022+,free,0,small,0,3,,0.4166666666666667,,False
+Strategy | 2022+ | free | 1-4 | medium,Strategy,2022+,free,1-4,medium,0,2,,0.6109907120743034,,False
+Strategy | 2022+ | free | 1-4 | small,Strategy,2022+,free,1-4,small,0,1,,1.1176470588235294,,False
+Strategy | 2022+ | gt20 | 0 | large,Strategy,2022+,gt20,0,large,0,3,,0.6193096548274137,,False
+Strategy | 2022+ | gt20 | 0 | medium,Strategy,2022+,gt20,0,medium,1,3,0.4142857142857143,1.488888888888889,-1.0746031746031746,False
+Strategy | 2022+ | gt20 | 0 | small,Strategy,2022+,gt20,0,small,1,10,0.375,2.0183333333333335,-1.6433333333333335,False
+Strategy | 2022+ | gt20 | 1-4 | large,Strategy,2022+,gt20,1-4,large,0,2,,3.1770244821092275,,False
+Strategy | 2022+ | gt20 | 1-4 | medium,Strategy,2022+,gt20,1-4,medium,0,1,,0.922077922077922,,False
+Strategy | 2022+ | gt20 | 1-4 | small,Strategy,2022+,gt20,1-4,small,0,2,,4.522727272727273,,False
+Strategy | 2022+ | gt20 | 5+ | large,Strategy,2022+,gt20,5+,large,0,1,,1.5108695652173914,,False
+Strategy | 2022+ | gt20 | 5+ | medium,Strategy,2022+,gt20,5+,medium,0,1,,1.5757575757575757,,False
+Strategy | 2022+ | gt20 | 5+ | small,Strategy,2022+,gt20,5+,small,0,1,,17.7,,False
+Strategy | 2022+ | lt5 | 0 | large,Strategy,2022+,lt5,0,large,1,2,5.4222222222222225,0.7449820202680615,4.677240201954161,False
+Strategy | 2022+ | lt5 | 0 | medium,Strategy,2022+,lt5,0,medium,0,4,,0.390625,,False
+Strategy | 2022+ | lt5 | 0 | small,Strategy,2022+,lt5,0,small,0,18,,0.6917989417989419,,False
+Strategy | 2022+ | lt5 | 1-4 | medium,Strategy,2022+,lt5,1-4,medium,0,3,,0.5675675675675675,,False
+Strategy | 2022+ | lt5 | 1-4 | small,Strategy,2022+,lt5,1-4,small,2,7,1.6388888888888888,1.3125,0.32638888888888884,False
+Strategy | 2022+ | lt5 | 5+ | large,Strategy,2022+,lt5,5+,large,0,1,,1.440909090909091,,False
+Strategy | 2022+ | lt5 | 5+ | medium,Strategy,2022+,lt5,5+,medium,0,1,,11.980392156862745,,False
+Strategy | <=2017 | 10to20 | 0 | large,Strategy,<=2017,10to20,0,large,1,58,0.17272727272727273,0.0899095534200113,0.08281771930726142,False
+Strategy | <=2017 | 10to20 | 0 | medium,Strategy,<=2017,10to20,0,medium,0,44,,0.060462991166615895,,False
+Strategy | <=2017 | 10to20 | 0 | small,Strategy,<=2017,10to20,0,small,0,12,,0.018518518518518517,,False
+Strategy | <=2017 | 10to20 | 1-4 | large,Strategy,<=2017,10to20,1-4,large,0,62,,0.1175233794859723,,False
+Strategy | <=2017 | 10to20 | 1-4 | medium,Strategy,<=2017,10to20,1-4,medium,0,17,,0.08928571428571429,,False
+Strategy | <=2017 | 10to20 | 1-4 | small,Strategy,<=2017,10to20,1-4,small,0,12,,0.5178571428571428,,False
+Strategy | <=2017 | 10to20 | 5+ | large,Strategy,<=2017,10to20,5+,large,3,50,0.4622268112200998,0.12403269754768392,0.33819411367241586,False
+Strategy | <=2017 | 10to20 | 5+ | medium,Strategy,<=2017,10to20,5+,medium,0,2,,0.3586080586080586,,False
+Strategy | <=2017 | 5to10 | 0 | large,Strategy,<=2017,5to10,0,large,0,123,,0.14615384615384616,,False
+Strategy | <=2017 | 5to10 | 0 | medium,Strategy,<=2017,5to10,0,medium,0,86,,0.11507936507936507,,False
+Strategy | <=2017 | 5to10 | 0 | small,Strategy,<=2017,5to10,0,small,1,54,0.29411764705882354,0.10818713450292397,0.18593051255589957,False
+Strategy | <=2017 | 5to10 | 1-4 | large,Strategy,<=2017,5to10,1-4,large,0,101,,0.16883116883116883,,False
+Strategy | <=2017 | 5to10 | 1-4 | medium,Strategy,<=2017,5to10,1-4,medium,0,30,,0.09878787878787879,,False
+Strategy | <=2017 | 5to10 | 1-4 | small,Strategy,<=2017,5to10,1-4,small,0,10,,0.0,,False
+Strategy | <=2017 | 5to10 | 5+ | large,Strategy,<=2017,5to10,5+,large,0,57,,0.10784313725490197,,False
+Strategy | <=2017 | 5to10 | 5+ | medium,Strategy,<=2017,5to10,5+,medium,0,10,,0.08020833333333333,,False
+Strategy | <=2017 | 5to10 | 5+ | small,Strategy,<=2017,5to10,5+,small,0,9,,0.2,,False
+Strategy | <=2017 | free | 0 | large,Strategy,<=2017,free,0,large,0,50,,0.036093177193517234,,False
+Strategy | <=2017 | free | 0 | medium,Strategy,<=2017,free,0,medium,0,44,,0.14243421052631577,,False
+Strategy | <=2017 | free | 0 | small,Strategy,<=2017,free,0,small,0,13,,0.32,,False
+Strategy | <=2017 | free | 1-4 | large,Strategy,<=2017,free,1-4,large,0,28,,0.08468767388728504,,False
+Strategy | <=2017 | free | 1-4 | medium,Strategy,<=2017,free,1-4,medium,0,12,,0.058000478354460656,,False
+Strategy | <=2017 | free | 5+ | large,Strategy,<=2017,free,5+,large,0,21,,0.02674066599394551,,False
+Strategy | <=2017 | free | 5+ | medium,Strategy,<=2017,free,5+,medium,0,4,,-0.005747126436781609,,False
+Strategy | <=2017 | gt20 | 0 | large,Strategy,<=2017,gt20,0,large,0,24,,0.14595751085881392,,False
+Strategy | <=2017 | gt20 | 0 | medium,Strategy,<=2017,gt20,0,medium,0,11,,0.13333333333333333,,False
+Strategy | <=2017 | gt20 | 0 | small,Strategy,<=2017,gt20,0,small,0,2,,0.11212121212121212,,False
+Strategy | <=2017 | gt20 | 1-4 | large,Strategy,<=2017,gt20,1-4,large,0,34,,0.18964517757405025,,False
+Strategy | <=2017 | gt20 | 1-4 | medium,Strategy,<=2017,gt20,1-4,medium,0,8,,0.1911992263056093,,False
+Strategy | <=2017 | gt20 | 1-4 | small,Strategy,<=2017,gt20,1-4,small,0,1,,0.19230769230769232,,False
+Strategy | <=2017 | gt20 | 5+ | large,Strategy,<=2017,gt20,5+,large,2,25,0.45865351697761536,0.15187713310580206,0.3067763838718133,False
+Strategy | <=2017 | gt20 | 5+ | medium,Strategy,<=2017,gt20,5+,medium,0,1,,0.13333333333333333,,False
+Strategy | <=2017 | lt5 | 0 | large,Strategy,<=2017,lt5,0,large,1,114,0.27367539267015706,0.12152777777777778,0.15214761489237927,False
+Strategy | <=2017 | lt5 | 0 | medium,Strategy,<=2017,lt5,0,medium,0,119,,0.11827956989247312,,False
+Strategy | <=2017 | lt5 | 0 | small,Strategy,<=2017,lt5,0,small,0,64,,0.07142857142857142,,False
+Strategy | <=2017 | lt5 | 1-4 | large,Strategy,<=2017,lt5,1-4,large,2,75,0.3016383891778214,0.20938628158844766,0.09225210758937372,False
+Strategy | <=2017 | lt5 | 1-4 | medium,Strategy,<=2017,lt5,1-4,medium,0,55,,0.1836734693877551,,False
+Strategy | <=2017 | lt5 | 1-4 | small,Strategy,<=2017,lt5,1-4,small,0,14,,0.34807692307692306,,False
+Strategy | <=2017 | lt5 | 5+ | large,Strategy,<=2017,lt5,5+,large,0,39,,0.16326530612244897,,False
+Strategy | <=2017 | lt5 | 5+ | medium,Strategy,<=2017,lt5,5+,medium,0,15,,0.3103448275862069,,False
+Strategy | <=2017 | lt5 | 5+ | small,Strategy,<=2017,lt5,5+,small,0,7,,0.26666666666666666,,False
+Visual Novel | 2018-2019 | 10to20 | 0 | large,Visual Novel,2018-2019,10to20,0,large,0,11,,0.26973684210526316,,False
+Visual Novel | 2018-2019 | 10to20 | 0 | medium,Visual Novel,2018-2019,10to20,0,medium,1,10,0.72,0.11894060995184591,0.601059390048154,False
+Visual Novel | 2018-2019 | 10to20 | 0 | small,Visual Novel,2018-2019,10to20,0,small,0,6,,0.23026315789473684,,False
+Visual Novel | 2018-2019 | 10to20 | 1-4 | large,Visual Novel,2018-2019,10to20,1-4,large,0,10,,0.2723940296089272,,False
+Visual Novel | 2018-2019 | 10to20 | 1-4 | medium,Visual Novel,2018-2019,10to20,1-4,medium,0,2,,0.1496212121212121,,False
+Visual Novel | 2018-2019 | 10to20 | 1-4 | small,Visual Novel,2018-2019,10to20,1-4,small,0,5,,0.11538461538461539,,False
+Visual Novel | 2018-2019 | 5to10 | 0 | large,Visual Novel,2018-2019,5to10,0,large,0,7,,0.2047244094488189,,False
+Visual Novel | 2018-2019 | 5to10 | 0 | medium,Visual Novel,2018-2019,5to10,0,medium,0,8,,0.18888888888888888,,False
+Visual Novel | 2018-2019 | 5to10 | 0 | small,Visual Novel,2018-2019,5to10,0,small,0,7,,0.35,,False
+Visual Novel | 2018-2019 | 5to10 | 1-4 | large,Visual Novel,2018-2019,5to10,1-4,large,1,7,0.06572769953051644,0.13247863247863248,-0.06675093294811604,False
+Visual Novel | 2018-2019 | 5to10 | 1-4 | medium,Visual Novel,2018-2019,5to10,1-4,medium,0,4,,0.10059860325906218,,False
+Visual Novel | 2018-2019 | 5to10 | 1-4 | small,Visual Novel,2018-2019,5to10,1-4,small,0,5,,0.16666666666666666,,False
+Visual Novel | 2018-2019 | free | 0 | large,Visual Novel,2018-2019,free,0,large,0,16,,0.12289238991070314,,False
+Visual Novel | 2018-2019 | free | 0 | medium,Visual Novel,2018-2019,free,0,medium,1,16,0.13953488372093023,0.19142512077294688,-0.05189023705201665,False
+Visual Novel | 2018-2019 | free | 0 | small,Visual Novel,2018-2019,free,0,small,0,6,,0.3446969696969697,,False
+Visual Novel | 2018-2019 | free | 1-4 | large,Visual Novel,2018-2019,free,1-4,large,0,3,,0.24378698224852072,,False
+Visual Novel | 2018-2019 | free | 1-4 | medium,Visual Novel,2018-2019,free,1-4,medium,0,7,,0.25396825396825395,,False
+Visual Novel | 2018-2019 | free | 1-4 | small,Visual Novel,2018-2019,free,1-4,small,0,1,,0.5833333333333334,,False
+Visual Novel | 2018-2019 | gt20 | 0 | large,Visual Novel,2018-2019,gt20,0,large,1,6,0.45357142857142857,0.2071086807928913,0.24646274777853727,False
+Visual Novel | 2018-2019 | gt20 | 0 | medium,Visual Novel,2018-2019,gt20,0,medium,2,7,0.6129032258064516,0.21052631578947367,0.40237691001697795,False
+Visual Novel | 2018-2019 | gt20 | 0 | small,Visual Novel,2018-2019,gt20,0,small,0,2,,0.0,,False
+Visual Novel | 2018-2019 | gt20 | 1-4 | large,Visual Novel,2018-2019,gt20,1-4,large,0,10,,0.5029411764705882,,False
+Visual Novel | 2018-2019 | gt20 | 1-4 | medium,Visual Novel,2018-2019,gt20,1-4,medium,0,4,,0.3017429193899782,,False
+Visual Novel | 2018-2019 | gt20 | 1-4 | small,Visual Novel,2018-2019,gt20,1-4,small,0,1,,0.6538461538461539,,False
+Visual Novel | 2018-2019 | lt5 | 0 | large,Visual Novel,2018-2019,lt5,0,large,1,5,0.3782051282051282,0.2916666666666667,0.08653846153846151,False
+Visual Novel | 2018-2019 | lt5 | 0 | medium,Visual Novel,2018-2019,lt5,0,medium,0,9,,0.175,,False
+Visual Novel | 2018-2019 | lt5 | 0 | small,Visual Novel,2018-2019,lt5,0,small,0,8,,0.027777777777777776,,False
+Visual Novel | 2018-2019 | lt5 | 1-4 | large,Visual Novel,2018-2019,lt5,1-4,large,0,8,,0.27755237396530386,,False
+Visual Novel | 2018-2019 | lt5 | 1-4 | medium,Visual Novel,2018-2019,lt5,1-4,medium,1,9,0.17073170731707318,0.19444444444444445,-0.023712737127371264,False
+Visual Novel | 2018-2019 | lt5 | 1-4 | small,Visual Novel,2018-2019,lt5,1-4,small,0,4,,0.14166666666666666,,False
+Visual Novel | 2020-2021 | 10to20 | 0 | large,Visual Novel,2020-2021,10to20,0,large,2,11,1.5365393178377416,0.6447368421052632,0.8918024757324784,False
+Visual Novel | 2020-2021 | 10to20 | 0 | medium,Visual Novel,2020-2021,10to20,0,medium,0,17,,0.5274725274725275,,False
+Visual Novel | 2020-2021 | 10to20 | 0 | small,Visual Novel,2020-2021,10to20,0,small,3,13,0.1,0.6470588235294118,-0.5470588235294118,False
+Visual Novel | 2020-2021 | 10to20 | 1-4 | large,Visual Novel,2020-2021,10to20,1-4,large,1,5,0.12541133455210238,0.4666666666666667,-0.34125533211456427,False
+Visual Novel | 2020-2021 | 10to20 | 1-4 | medium,Visual Novel,2020-2021,10to20,1-4,medium,1,11,2.72,0.20212765957446807,2.5178723404255323,False
+Visual Novel | 2020-2021 | 10to20 | 1-4 | small,Visual Novel,2020-2021,10to20,1-4,small,1,7,2.0,0.4666666666666667,1.5333333333333332,False
+Visual Novel | 2020-2021 | 10to20 | 5+ | large,Visual Novel,2020-2021,10to20,5+,large,1,0,1.0555555555555556,,,False
+Visual Novel | 2020-2021 | 5to10 | 0 | large,Visual Novel,2020-2021,5to10,0,large,0,3,,0.5147058823529411,,False
+Visual Novel | 2020-2021 | 5to10 | 0 | medium,Visual Novel,2020-2021,5to10,0,medium,0,7,,0.3793103448275862,,False
+Visual Novel | 2020-2021 | 5to10 | 0 | small,Visual Novel,2020-2021,5to10,0,small,0,22,,0.33421052631578946,,False
+Visual Novel | 2020-2021 | 5to10 | 1-4 | large,Visual Novel,2020-2021,5to10,1-4,large,0,5,,0.6846590909090909,,False
+Visual Novel | 2020-2021 | 5to10 | 1-4 | medium,Visual Novel,2020-2021,5to10,1-4,medium,2,6,2.2562881562881563,0.24904214559386972,2.0072460106942867,False
+Visual Novel | 2020-2021 | 5to10 | 1-4 | small,Visual Novel,2020-2021,5to10,1-4,small,1,9,0.46153846153846156,0.3125,0.14903846153846156,False
+Visual Novel | 2020-2021 | free | 0 | large,Visual Novel,2020-2021,free,0,large,0,10,,0.3013004548970255,,False
+Visual Novel | 2020-2021 | free | 0 | medium,Visual Novel,2020-2021,free,0,medium,0,14,,0.2879310344827586,,False
+Visual Novel | 2020-2021 | free | 0 | small,Visual Novel,2020-2021,free,0,small,0,8,,0.7090909090909091,,False
+Visual Novel | 2020-2021 | free | 1-4 | large,Visual Novel,2020-2021,free,1-4,large,0,7,,0.13872832369942195,,False
+Visual Novel | 2020-2021 | free | 1-4 | medium,Visual Novel,2020-2021,free,1-4,medium,0,7,,0.4318181818181818,,False
+Visual Novel | 2020-2021 | free | 1-4 | small,Visual Novel,2020-2021,free,1-4,small,0,2,,0.36888111888111885,,False
+Visual Novel | 2020-2021 | free | 5+ | large,Visual Novel,2020-2021,free,5+,large,0,1,,0.30666666666666664,,False
+Visual Novel | 2020-2021 | gt20 | 0 | large,Visual Novel,2020-2021,gt20,0,large,0,5,,1.2012951969778738,,False
+Visual Novel | 2020-2021 | gt20 | 0 | medium,Visual Novel,2020-2021,gt20,0,medium,1,3,0.06976744186046512,0.8585858585858586,-0.7888184167253934,False
+Visual Novel | 2020-2021 | gt20 | 0 | small,Visual Novel,2020-2021,gt20,0,small,0,2,,0.8333333333333333,,False
+Visual Novel | 2020-2021 | gt20 | 1-4 | large,Visual Novel,2020-2021,gt20,1-4,large,0,3,,0.7348484848484849,,False
+Visual Novel | 2020-2021 | gt20 | 1-4 | medium,Visual Novel,2020-2021,gt20,1-4,medium,0,4,,0.9375,,False
+Visual Novel | 2020-2021 | gt20 | 1-4 | small,Visual Novel,2020-2021,gt20,1-4,small,1,1,1.9047619047619047,0.45454545454545453,1.45021645021645,False
+Visual Novel | 2020-2021 | lt5 | 0 | large,Visual Novel,2020-2021,lt5,0,large,0,9,,0.10160427807486631,,False
+Visual Novel | 2020-2021 | lt5 | 0 | medium,Visual Novel,2020-2021,lt5,0,medium,1,13,0.024390243902439025,0.42028985507246375,-0.3958996111700247,False
+Visual Novel | 2020-2021 | lt5 | 0 | small,Visual Novel,2020-2021,lt5,0,small,1,27,0.05555555555555555,0.36363636363636365,-0.30808080808080807,False
+Visual Novel | 2020-2021 | lt5 | 1-4 | large,Visual Novel,2020-2021,lt5,1-4,large,1,4,1.7335640138408304,0.8791509037410676,0.8544131100997627,False
+Visual Novel | 2020-2021 | lt5 | 1-4 | medium,Visual Novel,2020-2021,lt5,1-4,medium,2,9,0.5673913043478261,0.4,0.16739130434782612,False
+Visual Novel | 2020-2021 | lt5 | 1-4 | small,Visual Novel,2020-2021,lt5,1-4,small,0,11,,0.18181818181818182,,False
+Visual Novel | 2022+ | 10to20 | 0 | large,Visual Novel,2022+,10to20,0,large,0,3,,4.748538011695906,,False
+Visual Novel | 2022+ | 10to20 | 0 | medium,Visual Novel,2022+,10to20,0,medium,0,7,,2.933333333333333,,False
+Visual Novel | 2022+ | 10to20 | 0 | small,Visual Novel,2022+,10to20,0,small,1,8,7.136363636363637,1.4615384615384615,5.674825174825175,False
+Visual Novel | 2022+ | 10to20 | 1-4 | large,Visual Novel,2022+,10to20,1-4,large,2,1,1.9019438955067591,0.6581196581196581,1.2438242373871011,False
+Visual Novel | 2022+ | 10to20 | 1-4 | medium,Visual Novel,2022+,10to20,1-4,medium,0,3,,1.0,,False
+Visual Novel | 2022+ | 10to20 | 1-4 | small,Visual Novel,2022+,10to20,1-4,small,0,1,,0.2,,False
+Visual Novel | 2022+ | 5to10 | 0 | medium,Visual Novel,2022+,5to10,0,medium,0,4,,2.7598722415795587,,False
+Visual Novel | 2022+ | 5to10 | 0 | small,Visual Novel,2022+,5to10,0,small,0,7,,1.2941176470588236,,False
+Visual Novel | 2022+ | 5to10 | 1-4 | large,Visual Novel,2022+,5to10,1-4,large,0,1,,1.6839080459770115,,False
+Visual Novel | 2022+ | 5to10 | 1-4 | medium,Visual Novel,2022+,5to10,1-4,medium,0,2,,3.201167076167076,,False
+Visual Novel | 2022+ | 5to10 | 1-4 | small,Visual Novel,2022+,5to10,1-4,small,0,5,,1.1,,False
+Visual Novel | 2022+ | gt20 | 0 | medium,Visual Novel,2022+,gt20,0,medium,0,1,,1.1555555555555554,,False
+Visual Novel | 2022+ | gt20 | 0 | small,Visual Novel,2022+,gt20,0,small,1,4,0.3,1.1375,-0.8374999999999999,False
+Visual Novel | 2022+ | gt20 | 1-4 | medium,Visual Novel,2022+,gt20,1-4,medium,0,3,,5.054054054054054,,False
+Visual Novel | 2022+ | gt20 | 1-4 | small,Visual Novel,2022+,gt20,1-4,small,0,2,,5.266666666666667,,False
+Visual Novel | 2022+ | lt5 | 0 | large,Visual Novel,2022+,lt5,0,large,0,2,,0.5598039215686275,,False
+Visual Novel | 2022+ | lt5 | 0 | medium,Visual Novel,2022+,lt5,0,medium,0,2,,0.8039529914529915,,False
+Visual Novel | 2022+ | lt5 | 0 | small,Visual Novel,2022+,lt5,0,small,0,12,,1.5833333333333335,,False
+Visual Novel | 2022+ | lt5 | 1-4 | medium,Visual Novel,2022+,lt5,1-4,medium,0,3,,0.4230769230769231,,False
+Visual Novel | 2022+ | lt5 | 1-4 | small,Visual Novel,2022+,lt5,1-4,small,0,10,,0.5952380952380952,,False
+Visual Novel | 2022+ | lt5 | 5+ | small,Visual Novel,2022+,lt5,5+,small,1,1,22.96,1.4,21.560000000000002,False
+Visual Novel | <=2017 | 10to20 | 0 | large,Visual Novel,<=2017,10to20,0,large,1,26,0.7347549569771792,0.06058897243107769,0.6741659845461014,False
+Visual Novel | <=2017 | 10to20 | 0 | medium,Visual Novel,<=2017,10to20,0,medium,0,16,,0.15897973445143254,,False
+Visual Novel | <=2017 | 10to20 | 0 | small,Visual Novel,<=2017,10to20,0,small,0,5,,0.08333333333333333,,False
+Visual Novel | <=2017 | 10to20 | 1-4 | large,Visual Novel,<=2017,10to20,1-4,large,1,14,1.3453947368421053,0.12137162092568143,1.2240231159164239,False
+Visual Novel | <=2017 | 10to20 | 1-4 | medium,Visual Novel,<=2017,10to20,1-4,medium,0,4,,0.05045454545454545,,False
+Visual Novel | <=2017 | 10to20 | 1-4 | small,Visual Novel,<=2017,10to20,1-4,small,0,2,,0.1,,False
+Visual Novel | <=2017 | 10to20 | 5+ | large,Visual Novel,<=2017,10to20,5+,large,0,2,,0.1372142966712686,,False
+Visual Novel | <=2017 | 5to10 | 0 | large,Visual Novel,<=2017,5to10,0,large,0,32,,0.07796383933988593,,False
+Visual Novel | <=2017 | 5to10 | 0 | medium,Visual Novel,<=2017,5to10,0,medium,0,25,,0.1,,False
+Visual Novel | <=2017 | 5to10 | 0 | small,Visual Novel,<=2017,5to10,0,small,0,1,,0.0,,False
+Visual Novel | <=2017 | 5to10 | 1-4 | large,Visual Novel,<=2017,5to10,1-4,large,0,12,,0.11506641932663811,,False
+Visual Novel | <=2017 | 5to10 | 1-4 | medium,Visual Novel,<=2017,5to10,1-4,medium,0,8,,0.0998062015503876,,False
+Visual Novel | <=2017 | 5to10 | 1-4 | small,Visual Novel,<=2017,5to10,1-4,small,0,1,,0.07142857142857142,,False
+Visual Novel | <=2017 | 5to10 | 5+ | large,Visual Novel,<=2017,5to10,5+,large,0,2,,0.095255231055659,,False
+Visual Novel | <=2017 | free | 0 | large,Visual Novel,<=2017,free,0,large,1,29,0.3333333333333333,0.05263157894736842,0.2807017543859649,False
+Visual Novel | <=2017 | free | 0 | medium,Visual Novel,<=2017,free,0,medium,0,8,,0.26398809523809524,,False
+Visual Novel | <=2017 | free | 1-4 | large,Visual Novel,<=2017,free,1-4,large,1,15,0.09681093394077449,0.10327706057596822,-0.0064661266351937335,False
+Visual Novel | <=2017 | free | 1-4 | small,Visual Novel,<=2017,free,1-4,small,0,1,,0.3888888888888889,,False
+Visual Novel | <=2017 | free | 5+ | large,Visual Novel,<=2017,free,5+,large,0,3,,0.03226586102719033,,False
+Visual Novel | <=2017 | free | 5+ | medium,Visual Novel,<=2017,free,5+,medium,0,1,,0.017857142857142856,,False
+Visual Novel | <=2017 | gt20 | 0 | large,Visual Novel,<=2017,gt20,0,large,0,10,,0.12344691966192259,,False
+Visual Novel | <=2017 | gt20 | 0 | medium,Visual Novel,<=2017,gt20,0,medium,1,6,0.7333333333333333,0.20096830985915493,0.5323650234741784,False
+Visual Novel | <=2017 | gt20 | 0 | small,Visual Novel,<=2017,gt20,0,small,0,1,,0.20833333333333334,,False
+Visual Novel | <=2017 | gt20 | 1-4 | large,Visual Novel,<=2017,gt20,1-4,large,0,8,,0.5075144536535044,,False
+Visual Novel | <=2017 | gt20 | 1-4 | medium,Visual Novel,<=2017,gt20,1-4,medium,0,3,,0.10810810810810811,,False
+Visual Novel | <=2017 | gt20 | 1-4 | small,Visual Novel,<=2017,gt20,1-4,small,0,1,,0.20833333333333334,,False
+Visual Novel | <=2017 | gt20 | 5+ | large,Visual Novel,<=2017,gt20,5+,large,1,0,0.28412600370599134,,,False
+Visual Novel | <=2017 | lt5 | 0 | large,Visual Novel,<=2017,lt5,0,large,0,18,,0.037731926615040795,,False
+Visual Novel | <=2017 | lt5 | 0 | medium,Visual Novel,<=2017,lt5,0,medium,0,12,,0.08391608391608392,,False
+Visual Novel | <=2017 | lt5 | 0 | small,Visual Novel,<=2017,lt5,0,small,1,6,10.916666666666666,0.038461538461538464,10.878205128205128,False
+Visual Novel | <=2017 | lt5 | 1-4 | large,Visual Novel,<=2017,lt5,1-4,large,0,13,,0.1644486692015209,,False
+Visual Novel | <=2017 | lt5 | 1-4 | medium,Visual Novel,<=2017,lt5,1-4,medium,0,7,,0.2903225806451613,,False
+Visual Novel | <=2017 | lt5 | 1-4 | small,Visual Novel,<=2017,lt5,1-4,small,0,1,,0.041666666666666664,,False
