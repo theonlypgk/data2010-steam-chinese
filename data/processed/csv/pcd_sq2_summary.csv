@@ -1,0 +1,8 @@
+level,value,order,n_groups,n_treated,n_control,avg_uplift_pts,ci_low,ci_high,large_enough
+overall,all,0,16,456,17419,0.327953,0.110049,0.620498,True
+genre,Action,0,4,165,8087,0.193151,0.100094,0.396768,True
+genre,Casual,1,4,136,5498,0.125531,-0.024555,0.519081,False
+genre,Puzzle,2,3,81,1382,-0.01262,-0.169676,0.400183,False
+genre,RPG,3,2,30,562,1.771655,0.23474,3.841818,True
+genre,Strategy,4,2,25,1637,-0.023711,-0.145846,0.593619,False
+genre,Visual Novel,5,1,19,253,0.514493,-0.314599,1.484563,False

@@ -1,0 +1,25 @@
+group_id_sq2,genre_group,year_band,n_treated,n_control,median_growth_treated,median_growth_control,uplift_pts,eligible
+Action | <=2017,Action,1,41,3891,0.171821,0.105263,0.066558,True
+Action | 2018-2019,Action,2,31,1960,0.175252,0.147244,0.028008,True
+Action | 2020-2021,Action,3,49,1792,0.285714,0.255392,0.030322,True
+Action | 2022+,Action,4,44,444,1.347716,0.7,0.647716,True
+Casual | <=2017,Casual,1,24,2313,0.134079,0.142857,-0.008778,True
+Casual | 2018-2019,Casual,2,44,1630,0.142857,0.210526,-0.067669,True
+Casual | 2020-2021,Casual,3,41,1277,0.25,0.266667,-0.016667,True
+Casual | 2022+,Casual,4,27,278,1.261905,0.666667,0.595238,True
+Puzzle | <=2017,Puzzle,1,16,644,0.229809,0.147938,0.081871,True
+Puzzle | 2018-2019,Puzzle,2,5,275,0.495974,0.21875,0.277224,False
+Puzzle | 2020-2021,Puzzle,3,30,566,0.24549,0.30718,-0.06169,True
+Puzzle | 2022+,Puzzle,4,35,172,0.769231,0.827273,-0.058042,True
+RPG | <=2017,RPG,1,9,1072,0.260782,0.129809,0.130973,False
+RPG | 2018-2019,RPG,2,5,456,0.74269,0.183655,0.559035,False
+RPG | 2020-2021,RPG,3,19,417,0.580141,0.298673,0.281468,True
+RPG | 2022+,RPG,4,11,145,4.295176,1.033333,3.261843,True
+Strategy | <=2017,Strategy,1,10,1515,0.283896,0.125,0.158896,True
+Strategy | 2018-2019,Strategy,2,5,528,0.245614,0.153995,0.091619,False
+Strategy | 2020-2021,Strategy,3,9,478,0.5,0.248853,0.251147,False
+Strategy | 2022+,Strategy,4,15,122,0.560976,0.767294,-0.206318,True
+Visual Novel | <=2017,Visual Novel,1,7,293,0.733333,0.097378,0.635955,False
+Visual Novel | 2018-2019,Visual Novel,2,8,203,0.302006,0.204724,0.097282,False
+Visual Novel | 2020-2021,Visual Novel,3,19,253,0.934783,0.42029,0.514493,True
+Visual Novel | 2022+,Visual Novel,4,5,81,3.247837,1.405797,1.84204,False
