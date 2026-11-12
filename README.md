@@ -69,35 +69,41 @@ report/                        report, figures, reflections, slides
 ### a. Clean data
 
 **Strategy**
-- Read only 13 of the 40 columns, with English names: the rest is not needed.
-- Clean A and C in exactly the same way, so a game looks the same in both snapshots.
-- Repair the header of A (`DiscountDLC count` is one name for two columns): otherwise every
-  later column is shifted by one.
-- Use the list price, `sale price / (1 - discount / 100)`: A was taken during a Steam sale.
-- Remove store-page junk (`[b]*[/b]`, HTML) from language and tag cells before parsing them.
-- Drop rows without an id or with a repeated id; unreadable dates become missing.
-- Genre = first user tag found in the genre map: Steam orders tags by votes.
-- Remove all Chinese games, large or small: they are made for China, not translated into Chinese.
-- Chinese game = Chinese without English (text or voice-over), or every developer is Chinese
-  (Chinese-character name, mainland city in the name, or known Chinese company).
-- Chinese voice-over alone is not a rule: it would remove 4,233 Western games (Cyberpunk 2077).
-- Developers only, all of them: publishers are often regional partners (bilibili for Core
-  Keeper), and Western games list Chinese support studios (Ubisoft Shanghai on Far Cry).
+
+*Read the data*
+- Read only 13 of the 40 columns, renamed to English: the rest is not needed.
+- Clean snapshots A and C in exactly the same way: a game must look the same in both.
+
+*Fix errors in the raw data*
+- Header of A: `DiscountDLC count` is one name for two columns, so it is split; otherwise
+  every later column is shifted by one.
+- Price: A was taken during a Steam sale, so the list price is recovered as
+  `sale price / (1 - discount / 100)`.
+- Language and tag cells: store-page junk (`[b]*[/b]`, HTML) is removed before parsing.
+- Ids and dates: rows without an id or with a repeated id are dropped; unreadable dates
+  become missing.
+
+*Remove Chinese games (large or small)*
+- Why: they are made for China, not translated into Chinese.
+- A game is Chinese if it has Chinese without English (text or voice-over), or if every
+  developer is Chinese (Chinese-character name, mainland city in the name, known company).
+- Not "Chinese voice-over" alone: it would remove 4,233 Western games (Cyberpunk 2077).
+- Developers only, and all of them: publishers are often regional partners (bilibili for
+  Core Keeper), and Western games list Chinese support studios (Ubisoft Shanghai, Far Cry).
+
+*Keep only games that can be compared fairly*
 - Drop Early Access: unfinished games, their reviews behave differently.
 - Keep >= 10 reviews: below that, reach is noise.
-- Keep games released >= 1 year before the snapshot: every game had time to collect reviews.
+- Keep games released >= 1 year before the snapshot: time to collect reviews.
 - Keep games with a genre, price and year: needed to form comparison groups.
-- Drop Traditional-Chinese-only games: neither "with Simplified Chinese" nor "without Chinese".
-- Encode price tier, year band and other-language bin as ranks 1, 2, 3, ...: as text they sort
-  in the wrong order ("10to20" before "5to10").
-- Codes are ranks, not amounts: never averaged. Genre is not encoded: it has no order.
+- Drop Traditional-Chinese-only games: neither "with" nor "without" Simplified Chinese.
 
-**In code** (notebook Step 1)
-- 1.1 `download_snapshots`, `read_header`, `load_snapshot`: download, repair the header, read.
-- 1.2 `parse_list`, `first_genre`, `split_developers`, `add_features`: clean and add columns.
-- 1.3 `apply_filters`, `base_filters`: the filters, logged in a funnel.
-- 1.4 `build_games_clean`: final rows and columns.
-- 1.5: shows the funnel and the removed Chinese games (2,862 with >= 10 reviews), for checking.
+*Create and encode the analysis columns*
+- Genre = first user tag found in the genre map (Steam orders tags by votes).
+- Price tier, year band and other-language bin are saved as ranks 1, 2, 3, ...: as text they
+  sort in the wrong order ("10to20" before "5to10").
+- Codes are ranks, not amounts, so they are never averaged; genre has no order, so it is
+  not encoded.
 
 **Final output table:** `pcd_games_clean` (44,765 games, 14,078 with Simplified Chinese)
 
@@ -118,26 +124,35 @@ report/                        report, figures, reflections, slides
 | `total_reviews` | positive + negative reviews (outcome: reach) |
 | `log_total_reviews` | log10 of `total_reviews`, for figures (counts are very skewed) |
 
+**First 3 rows**
+
+| app_id | name | genre_group | release_year | year_band | price | price_tier | n_other_langs | n_other_langs_bin | has_zh | total_reviews | log_total_reviews |
+|---:|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 10 | Counter-Strike | Action | 2000 | 1 | 9.95 | 3 | 5 | 3 | 1 | 250245 | 5.39837 |
+| 20 | Team Fortress Classic | Action | 1999 | 1 | 4.96 | 2 | 6 | 3 | 1 | 8738 | 3.94141 |
+| 30 | Day of Defeat | Action | 2003 | 1 | 4.96 | 2 | 4 | 2 | 0 | 7102 | 3.85138 |
+
 ### b. SQ1: groups of similar games, with vs without Chinese
 
 **Strategy**
-- Compare games with and without Chinese only inside groups of similar games: otherwise the
-  gap would partly come from other differences (bigger games are translated more).
-- Group = genre x price tier x year band x number of other languages: each of these affects
-  reach and differs between the two sides.
-- Genre: genres differ in audience size and amount of text.
+
+*Why groups*
+- Compare games with and without Chinese only inside groups of similar games: otherwise
+  the gap partly comes from other differences (bigger games are translated more).
+
+*Which variables form a group: genre x price tier x year band x other languages*
+- Each affects reach and differs between games with and without Chinese (a confounder).
+- Genre: audience size and amount of text differ by genre.
 - Price tier: stands in for budget and studio size.
 - Year band: older games had more time to collect reviews; bands, because single years leave
   only 44% of games in usable groups (76% with bands).
 - Other languages: the strongest; games with Chinese have a median of 7 other languages,
   games without it 0.
+
+*How each group is compared*
 - Medians, not means: review counts are very skewed.
 - Gap = median with Chinese / median without - 1.
-- A group is eligible only with >= 10 games on each side: a median of fewer moves too much.
-
-**In code** (notebook Step 2)
-- `add_sq1_group`: gives every game its readable group name.
-- `build_sq1_groups`: counts, medians, gap and eligibility per group.
+- Eligible only with >= 10 games on each side: a median of fewer games moves too much.
 
 **Final output table:** `pcd_sq1_groups` (360 groups, 178 eligible, 76% of games)
 
@@ -145,7 +160,7 @@ report/                        report, figures, reflections, slides
 
 | Column | Description |
 |---|---|
-| `group_id` | group name, e.g. `Action | <=2017 | lt5 | 5+` |
+| `group_id` | group name: genre \| year band \| price tier \| other languages |
 | `genre_group` | genre of the group |
 | `year_band` | year-band code of the group (as in `pcd_games_clean`) |
 | `price_tier` | price-tier code of the group |
@@ -157,28 +172,41 @@ report/                        report, figures, reflections, slides
 | `pct_diff` | gap: `median_reviews_zh / median_reviews_no_zh - 1` (0.5 = +50%) |
 | `eligible` | True if the group has >= 10 games on each side |
 
+**First 3 rows**
+
+| group_id | genre_group | year_band | price_tier | n_other_langs_bin | n_zh | n_no_zh | median_reviews_zh | median_reviews_no_zh | pct_diff | eligible |
+|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|:---|
+| Action \| <=2017 \| free \| 0 | Action | 1 | 1 | 1 | 6 | 348 | 54 | 103.5 | -0.478261 | False |
+| Action \| <=2017 \| free \| 1-4 | Action | 1 | 1 | 2 | 11 | 99 | 45 | 310 | -0.854839 | True |
+| Action \| <=2017 \| free \| 5+ | Action | 1 | 1 | 3 | 77 | 52 | 8617 | 1328 | 5.48871 | True |
+
 ### c. SQ2: groups of similar games, added Chinese after launch vs did not
 
 **Strategy**
-- Follow the same games over time: games with no Chinese in C that are still in A.
-- Filter C exactly as in a.: the starting point is measured the same way.
-- Take game characteristics from C: what the game looked like before adding Chinese.
-- Drop games with 0 reviews in A: delisted, a growth of -100% is not real.
+
+*Which games*
+- Games with no Chinese in snapshot C that are still in snapshot A, followed over time.
+- C is filtered exactly as in a.: the starting point is measured the same way.
+- Game characteristics come from C: what the game looked like before adding Chinese.
+- Games with 0 reviews in A are dropped: delisted, a growth of -100% is not real.
+
+*Outcome and treatment*
 - Growth = (reviews in A - reviews in C) / reviews in C.
 - Treated = added Simplified Chinese; control = added neither Chinese nor a major language.
-- Major language added = own localisation push, so not a clean "did nothing": excluded.
+- Games that added another major language are excluded: a localisation push of their own.
 - A control arm is needed: every game gains reviews over time anyway.
-- Group = genre x year band: only 509 games added Chinese, so only the strongest confounders.
-- Year band is in: control games from <=2017 grow +12%, from 2022+ +77%, and treated games
-  are about 2 years newer.
+
+*Which variables form a group: genre x year band*
+- Only 509 games added Chinese, so only the strongest confounders fit.
+- Year band is in: control games from <=2017 grow +12%, from 2022+ +77%, and treated
+  games are about 2 years newer.
 - Price tier is out: little effect on growth once the year is fixed; with it, only 3 genres
   keep usable groups.
 - Other languages are out: treated and control have almost the same mix.
-- Uplift = median growth treated - median growth control; same >= 10 per side rule.
 
-**In code** (notebook Step 3)
-- `build_sq2_panel`: joins C and A, computes growth and the arm (one row per game, not saved).
-- `add_sq2_group`, `build_sq2_groups`: group name, counts, medians, uplift and eligibility.
+*How each group is compared*
+- Uplift = median growth treated - median growth control.
+- Eligible only with >= 10 games on each side, as in SQ1.
 
 **Final output table:** `pcd_sq2_groups` (24 groups, 16 eligible, 90% of treated games)
 
@@ -186,7 +214,7 @@ report/                        report, figures, reflections, slides
 
 | Column | Description |
 |---|---|
-| `group_id_sq2` | group name, e.g. `Action | <=2017` |
+| `group_id_sq2` | group name: genre \| year band |
 | `genre_group` | genre of the group |
 | `year_band` | year-band code of the group (as in `pcd_games_clean`) |
 | `n_treated` | number of games that added Simplified Chinese (509 in total) |
@@ -195,6 +223,14 @@ report/                        report, figures, reflections, slides
 | `median_growth_control` | median review growth of the control games |
 | `uplift_pts` | `median_growth_treated - median_growth_control` (0.1 = +10 points) |
 | `eligible` | True if the group has >= 10 games on each side |
+
+**First 3 rows**
+
+| group_id_sq2 | genre_group | year_band | n_treated | n_control | median_growth_treated | median_growth_control | uplift_pts | eligible |
+|:---|:---|---:|---:|---:|---:|---:|---:|:---|
+| Action \| <=2017 | Action | 1 | 41 | 3891 | 0.171821 | 0.105263 | 0.066558 | True |
+| Action \| 2018-2019 | Action | 2 | 31 | 1960 | 0.175252 | 0.147244 | 0.028008 | True |
+| Action \| 2020-2021 | Action | 3 | 49 | 1792 | 0.285714 | 0.255392 | 0.030322 | True |
 
 ## 4. Data analysis / EDA
 
