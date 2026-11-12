@@ -70,40 +70,51 @@ report/                        report, figures, reflections, slides
 
 **Strategy**
 
-*Read the data*
-- Read only 13 of the 40 columns, renamed to English: the rest is not needed.
-- Clean snapshots A and C in exactly the same way: a game must look the same in both.
+*1. Data assessment / profiling*
+- Raw size: A has 125,855 rows, C has 85,103 rows, 40 columns each.
+- Header of A: `DiscountDLC count` is one name over two value columns, so every later column
+  is shifted; found by checking that language cells look like lists.
+- Prices of A are sale prices (Hades 7.49 = 24.99 at -70%): A was taken during a Steam sale.
+- Language and tag cells contain store-page junk (`[b]*[/b]`, HTML).
 
-*Fix errors in the raw data*
-- Header of A: `DiscountDLC count` is one name for two columns, so it is split; otherwise
-  every later column is shifted by one.
-- Price: A was taken during a Steam sale, so the list price is recovered as
-  `sale price / (1 - discount / 100)`.
-- Language and tag cells: store-page junk (`[b]*[/b]`, HTML) is removed before parsing.
-- Ids and dates: rows without an id or with a repeated id are dropped; unreadable dates
-  become missing.
+*2. Deduplication*
+- Repeated `app_id`: only the first row is kept, so each game appears once.
 
-*Remove Chinese games (large or small)*
-- Why: they are made for China, not translated into Chinese.
-- A game is Chinese if it has Chinese without English (text or voice-over), or if every
-  developer is Chinese (Chinese-character name, mainland city in the name, known company).
-- Not "Chinese voice-over" alone: it would remove 4,233 Western games (Cyberpunk 2077).
-- Developers only, and all of them: publishers are often regional partners (bilibili for
-  Core Keeper), and Western games list Chinese support studios (Ubisoft Shanghai, Far Cry).
+*3. Structural error correction*
+- Split the merged header back into `Discount` and `DLC count`.
+- Rename columns to English snake_case; ids and review counts to integers, prices to numbers.
+- Dates come as "Aug 1, 2023" or "Aug 2023": all converted to one date type.
+- Price: list price recovered as `sale price / (1 - discount / 100)`, so tiers describe the
+  game, not the sale.
+- Junk removed from list cells, then cells parsed into clean lists of languages and tags.
+- Tags standardised into 6 genre groups: the first matching tag wins (Steam orders by votes).
+- Price, year and other languages encoded as ranks 1, 2, 3, ...: as text they sort in the
+  wrong order ("10to20" before "5to10"); codes are never averaged; genre has no order, so it
+  is not encoded.
 
-*Keep only games that can be compared fairly*
-- Drop Early Access: unfinished games, their reviews behave differently.
-- Keep >= 10 reviews: below that, reach is noise.
-- Keep games released >= 1 year before the snapshot: time to collect reviews.
-- Keep games with a genre, price and year: needed to form comparison groups.
-- Drop Traditional-Chinese-only games: neither "with" nor "without" Simplified Chinese.
+*4. Handling missing values*
+- No `app_id`: row dropped (the game cannot be identified).
+- Missing review count or discount: set to 0 (Steam shows nothing when there is none).
+- Unreadable date, no price, or no matching genre tag: game dropped, not imputed, because an
+  invented value would put the game in a wrong comparison group.
 
-*Create and encode the analysis columns*
-- Genre = first user tag found in the genre map (Steam orders tags by votes).
-- Price tier, year band and other-language bin are saved as ranks 1, 2, 3, ...: as text they
-  sort in the wrong order ("10to20" before "5to10").
-- Codes are ranks, not amounts, so they are never averaged; genre has no order, so it is
-  not encoded.
+*5. Outliers*
+- Review counts are very skewed (a few hits have millions): kept, because they are real;
+  later comparisons use medians, which they do not distort.
+- Discount capped at 0-99%: a 100% discount would make the list price infinite.
+
+*6. Irrelevant data*
+- Only 13 of the 40 columns are read: the rest does not serve the questions.
+- Chinese games removed, large or small: made for China, not translated into Chinese.
+  - Chinese = Chinese without English (text or voice-over), or every developer is Chinese
+    (Chinese-character name, mainland city in the name, known Chinese company).
+  - Not "Chinese voice-over" alone: it would remove 4,233 Western games (Cyberpunk 2077).
+  - Developers only, and all of them: publishers are often regional partners (bilibili for
+    Core Keeper), and Western games list Chinese support studios (Ubisoft Shanghai, Far Cry).
+- Early Access removed: unfinished games, their reviews behave differently.
+- Fewer than 10 reviews removed: below that, reach is noise.
+- Released less than 1 year before the snapshot removed: no time to collect reviews.
+- Traditional-Chinese-only games removed: neither "with" nor "without" Simplified Chinese.
 
 **Final output table:** `pcd_games_clean` (44,765 games, 14,078 with Simplified Chinese)
 
