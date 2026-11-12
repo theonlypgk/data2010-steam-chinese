@@ -20,8 +20,8 @@ names the notebook section that does it and explains why each choice was made.
 steam_chinese_analysis.ipynb   ALL the code, from the two input files to the analysis
 requirements.txt               exact package versions (Python 3.12)
 data/raw/                      the two input files (downloaded by the notebook, not committed)
-data/processed/csv/            the two cleaned tables, for code (pandas.read_csv)
-data/processed/xlsx/           the same two tables, to open and look at
+data/processed/csv/            the six output tables (Steps 4 and 6), for code (pandas.read_csv)
+data/processed/xlsx/           the same six tables, to open and look at
 report/                        report, figures, reflections, slides
 .github/, .devcontainer/       automatic re-runs on GitHub; Codespaces environment
 ```
@@ -116,19 +116,20 @@ and large Western games list Chinese support studios (Ubisoft Shanghai for Far C
 Activision Shanghai for Call of Duty). Result: 2,862 games with >= 10 reviews removed;
 section A6 lists them, biggest first.
 
-## Step 4. The two output tables (notebook: A7 saves, A8 checks)
+## Step 4. Cleaned data, one row per game (notebook: A4, A5)
 
-Each table is saved whole, as `data/processed/csv/pcd_<table>.csv` (for code) and
-`data/processed/xlsx/pcd_<table>.xlsx` (to look at). Section A8 stops with an error if
-anything is wrong (unique ids, English column names, csv = xlsx, known games kept or removed).
+The notebook saves six tables: the two game-level tables below, and four comparison tables
+ready to plot (Step 6). Each is saved whole, as `data/processed/csv/pcd_<table>.csv` (for
+code) and `data/processed/xlsx/pcd_<table>.xlsx` (to look at). Section A10 stops with an
+error if anything is wrong (unique ids, English column names, csv = xlsx, known games kept or
+removed, every game in exactly one group, intervals around their averages).
 
 ```python
 import pandas as pd
-sq1_games = pd.read_csv("data/processed/csv/pcd_sq1_games.csv")
-sq2_games = pd.read_csv("data/processed/csv/pcd_sq2_games.csv")
+games_clean = pd.read_csv("data/processed/csv/pcd_games_clean.csv")
 ```
 
-### `pcd_sq1_games`: one game in snapshot A (EDA, SQ1). 44,765 games, 14,078 with Simplified Chinese
+### `pcd_games_clean`: one game in snapshot A (EDA, input of SQ1). 44,765 games, 14,078 with Simplified Chinese
 
 | Column | Meaning |
 |---|---|
@@ -141,7 +142,7 @@ sq2_games = pd.read_csv("data/processed/csv/pcd_sq2_games.csv")
 | `total_reviews`, `log_total_reviews` | **outcome**: reach |
 | `group_id` | comparison group (Step 5): `genre_group | year_band | price_tier | n_other_langs_bin` |
 
-### `pcd_sq2_games`: one game in both snapshots, no Chinese in January 2024 (SQ2). 21,555 games
+### `pcd_sq2_panel`: one game in both snapshots, no Chinese in January 2024 (input of SQ2). 21,555 games
 
 | Column | Meaning |
 |---|---|
@@ -211,20 +212,55 @@ confounders that matter most for **growth**:
 
 Result: 24 groups, **16 usable, covering 90% of treated games**, all 6 genres.
 
-## Step 6. Analysis (notebook: Part B)
+## Step 6. Comparison tables, ready to plot (notebook: A7, A8)
 
-| Section | What |
+All the data wrangling and the comparisons are done in Part A; these four tables are what
+the analysis reads.
+
+### `pcd_sq1_groups` and `pcd_sq2_groups`: one row per comparison group
+
+| Column | Meaning |
 |---|---|
-| B1 EDA | describe both tables |
-| B2 SQ1 | inside each `group_id`, the gap = median `total_reviews` with Chinese / without Chinese. The result is the average gap over the usable groups: overall, and per genre (average over the groups of that genre); per price tier in the appendix |
-| B3 SQ2 | inside each `group_id_sq2`, the uplift = median `growth` of treated minus control. Average over the usable groups: overall and per genre |
-| B4 SQ3 | per genre: translate at launch, later, or not a priority, from B2 and B3 |
+| `group_id` / `group_id_sq2` and its parts | the group (Step 5); parts as codes |
+| `n_zh`, `n_no_zh` (SQ1) / `n_treated`, `n_control` (SQ2) | number of games on each side |
+| `median_reviews_zh`, `median_reviews_no_zh` (SQ1) | median reviews on each side |
+| `median_growth_treated`, `median_growth_control` (SQ2) | median growth on each side |
+| `pct_diff` (SQ1) | gap: `median with / median without - 1` (0.5 = +50% reviews) |
+| `uplift_pts` (SQ2) | uplift: `median growth treated - median growth control` (0.1 = +10 points) |
+| `eligible` | the group has >= 10 games on each side and is used |
 
-"Per genre" is only how results are reported: every comparison is still made inside the
-full group, never across groups.
+Medians, not means: review counts are very skewed (a few hits have millions of reviews).
 
-Uncertainty: bootstrap, 2,000 resamples, seed 2010. A gap is "large enough" when SQ1 >= +20%
-or SQ2 >= +10 points, and its interval does not include 0.
+### `pcd_sq1_summary` and `pcd_sq2_summary`: the answers, one row per reporting level
+
+| Column | Meaning |
+|---|---|
+| `level`, `value`, `order` | `overall`/`all`, `genre`/a genre, or (SQ1 only) `price_tier`/a code; `order` sorts the rows |
+| `n_groups`, game counts | eligible groups and games behind the row |
+| `avg_pct_diff` (SQ1) / `avg_uplift_pts` (SQ2) | average gap / uplift over the eligible groups of that level |
+| `ci_low`, `ci_high` | 95% bootstrap interval |
+| `large_enough` | the average reaches the threshold (SQ1 +20%, SQ2 +10 points) and `ci_low > 0` |
+
+How a row is computed: each eligible group gives one gap; a row averages the gaps of its
+groups, each group counting once (so one huge group cannot dominate). "Per genre" is only
+which groups are averaged: every gap is still measured inside one comparison group.
+
+Interval: a gap is a function of two medians, which has no simple formula for its
+uncertainty, so it is bootstrapped. The games of each side are resampled with replacement
+within their group, 2,000 times (seed 2010, so every run gives the same numbers), the
+average is recomputed each time, and the middle 95% of the results is the interval.
+
+The thresholds (+20% for SQ1, +10 points for SQ2) were fixed before any result was seen:
+below them, a gap is too small to justify the cost of a translation.
+
+## Step 7. Analysis: figures and insights (notebook: Part B)
+
+| Section | Reads | What |
+|---|---|---|
+| B1 EDA | `pcd_games_clean` | describe the data |
+| B2 SQ1 | `pcd_sq1_groups`, `pcd_sq1_summary` | gap overall and per genre (price tier in the appendix) |
+| B3 SQ2 | `pcd_sq2_panel`, `pcd_sq2_groups`, `pcd_sq2_summary` | uplift overall and per genre |
+| B4 SQ3 | both summaries, per genre | translate at launch, later, or not a priority |
 
 ## Limitations
 
