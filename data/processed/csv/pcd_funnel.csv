@@ -1,19 +1,19 @@
 table,step,games_left
 games_clean,start,125855
-games_clean,drop Chinese-publisher proxy,121325
-games_clean,drop Early Access,110172
-games_clean,keep >= 10 reviews,49955
-games_clean,keep released >= 1 year before snapshot,49631
-games_clean,"keep games with a genre group, price and year",45986
-games_clean,drop Traditional-Chinese-only,45307
+games_clean,drop Chinese games (any of 4 rules),119432
+games_clean,drop Early Access,108424
+games_clean,keep >= 10 reviews,49249
+games_clean,keep released >= 1 year before snapshot,48929
+games_clean,"keep games with a genre group, price and year",45310
+games_clean,drop Traditional-Chinese-only,44650
 panel_ac,start,85103
-panel_ac,drop Chinese-publisher proxy,82023
-panel_ac,drop Early Access,72068
-panel_ac,keep >= 10 reviews,36546
-panel_ac,keep released >= 1 year before snapshot,34516
-panel_ac,"keep games with a genre group, price and year",31639
-panel_ac,keep games with no Chinese (Simplified or Traditional) in C,23015
-panel_ac,keep games also present in A,21663
-panel_ac,keep games with reviews in A (not delisted),21623
-panel_ac,arm = treated,511
-panel_ac,arm = control,20870
+panel_ac,drop Chinese games (any of 4 rules),80823
+panel_ac,drop Early Access,71015
+panel_ac,keep >= 10 reviews,36026
+panel_ac,keep released >= 1 year before snapshot,34042
+panel_ac,"keep games with a genre group, price and year",31194
+panel_ac,keep games with no Chinese (Simplified or Traditional) in C,22932
+panel_ac,keep games also present in A,21585
+panel_ac,keep games with reviews in A (not delisted),21545
+panel_ac,arm = treated,509
+panel_ac,arm = control,20795

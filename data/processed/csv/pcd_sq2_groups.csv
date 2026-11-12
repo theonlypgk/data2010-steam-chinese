@@ -1,19 +1,19 @@
 group_id_sq2,genre_group,initial_reach_bin,n_treated,n_control,median_growth_treated,median_growth_control,uplift_pts,eligible
-Action | large,Action,large,71,2689,0.307038,0.1396,0.167438,True
-Action | medium,Action,medium,40,2654,0.26381,0.152462,0.111348,True
-Action | small,Action,small,54,2781,0.320512,0.173913,0.146599,True
-Casual | large,Casual,large,45,1287,0.279945,0.159184,0.120761,True
-Casual | medium,Casual,medium,42,2042,0.177699,0.20671,-0.029011,True
-Casual | small,Casual,small,50,2187,0.177084,0.217391,-0.040307,True
-Puzzle | large,Puzzle,large,24,563,0.43296,0.17382,0.25914,True
+Action | large,Action,large,71,2672,0.307038,0.139324,0.167714,True
+Action | medium,Action,medium,40,2635,0.26381,0.152381,0.111429,True
+Action | small,Action,small,54,2777,0.320512,0.173913,0.146599,True
+Casual | large,Casual,large,45,1284,0.279945,0.158978,0.120967,True
+Casual | medium,Casual,medium,42,2040,0.177699,0.206897,-0.029198,True
+Casual | small,Casual,small,49,2174,0.166667,0.217391,-0.050724,True
+Puzzle | large,Puzzle,large,24,562,0.43296,0.174031,0.258929,True
 Puzzle | medium,Puzzle,medium,26,524,0.490584,0.272727,0.217857,True
-Puzzle | small,Puzzle,small,37,572,0.238095,0.278889,-0.040794,True
-RPG | large,RPG,large,30,889,0.713061,0.148718,0.564343,True
-RPG | medium,RPG,medium,6,671,0.772033,0.207547,0.564486,False
-RPG | small,RPG,small,8,532,0.282051,0.25,0.032051,False
-Strategy | large,Strategy,large,22,1127,0.451671,0.148585,0.303086,True
-Strategy | medium,Strategy,medium,8,828,0.514706,0.154509,0.360197,False
-Strategy | small,Strategy,small,9,691,0.454545,0.181818,0.272727,False
-Visual Novel | large,Visual Novel,large,15,336,0.556051,0.145353,0.410698,True
+Puzzle | small,Puzzle,small,36,571,0.254011,0.277778,-0.023767,True
+RPG | large,RPG,large,30,886,0.713061,0.148644,0.564417,True
+RPG | medium,RPG,medium,6,666,0.772033,0.208514,0.563519,False
+RPG | small,RPG,small,8,531,0.282051,0.25,0.032051,False
+Strategy | large,Strategy,large,22,1126,0.451671,0.148445,0.303226,True
+Strategy | medium,Strategy,medium,8,828,0.514706,0.155364,0.359342,False
+Strategy | small,Strategy,small,9,689,0.454545,0.181818,0.272727,False
+Visual Novel | large,Visual Novel,large,15,335,0.556051,0.143498,0.412553,True
 Visual Novel | medium,Visual Novel,medium,13,282,0.72,0.235442,0.484558,True
-Visual Novel | small,Visual Novel,small,11,215,0.461538,0.388889,0.072649,True
+Visual Novel | small,Visual Novel,small,11,213,0.461538,0.388889,0.072649,True
