@@ -72,3 +72,20 @@ All analysis decisions are in `docs/decisions.md` (change log at the bottom).
   idle and uses the free monthly quota.
 - Google Doc master plan: task tabs grouped into 6.1 Before code, 6.2 Data handling,
   6.3 Analysis, 6.4 After code; references to CLAUDE.md removed; outputs renamed to `pcd_`.
+
+## Update, 12 Nov 2026 morning (after kp's review)
+
+- **All Chinese games removed, large or small** (kp's decision). Four rules in
+  `config.py` ("CHINESE GAMES"): Chinese without English; or every developer is Chinese by
+  name in Chinese characters, mainland-city name, or known company. Removed games, with the
+  rule that matched, are in `pcd_cn_excluded` (2,862 games with >= 10 reviews in A).
+  A first version also looked at publishers and at any single developer; it removed Far Cry,
+  Call of Duty, Core Keeper and Sekiro by mistake, so it was narrowed.
+- **Outputs split**: `data/processed/xlsx/` to view, `data/processed/csv/` for code (moved
+  with `git mv`, nothing deleted).
+- **Raw snapshots archived** as release `raw-snapshots-v1` (made by the `archive-raw`
+  workflow, with SHA-256 checksums).
+- **README**: where to find the data, where each decision is in the code, Limitations.
+- **Comments**: every fixed choice in `config.py` has its reason; real-data problems are
+  marked `DATA ISSUE` in the code.
+- Snapshot A stays at 2026-06-20 (kp's decision).
