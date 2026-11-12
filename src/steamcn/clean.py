@@ -137,11 +137,13 @@ def add_features(trim: pd.DataFrame, snapshot_date: str) -> pd.DataFrame:
         # rule 1: Chinese text without English text, or Chinese voice-over without English
         "chinese_without_english": (any_zh & ~df["has_english"]) | (has_zh_audio & ~has_en_audio),
         # rule 2: developer or publisher written in Chinese characters
-        "maker_name_in_chinese": makers.str.contains(_CJK),
+        "maker_name_in_chinese": makers.map(lambda s: bool(_CJK.search(s))),
         # rule 3: developer or publisher named after a mainland Chinese city
-        "maker_in_chinese_city": makers.str.contains(_CN_CITY),
+        "maker_in_chinese_city": makers.map(lambda s: bool(_CN_CITY.search(s))),
         # rule 4: developer or publisher is a well-known Chinese company
-        "known_chinese_company": makers.str.contains(_CN_COMPANY),
+        "known_chinese_company": makers.map(lambda s: bool(_CN_COMPANY.search(s))),
+        # (Python's re is used on purpose instead of .str.contains: with pyarrow installed,
+        # pandas would switch to a different regex engine and results could differ.)
     }
     rule_frame = pd.DataFrame(rules)
     df["is_cn_game"] = rule_frame.any(axis=1)
