@@ -224,8 +224,3 @@ report/                        report, figures, reflections, slides
 | Khúc | Bonus app & slides | |
 
 ## Use of AI tools
-
-This project was built with AI coding agents (Claude) under human direction. Agents wrote
-most of the code and first drafts; team members defined the questions and the analysis
-design, checked every output against the data, and made all decisions. Individual
-reflections were written by the members themselves.
