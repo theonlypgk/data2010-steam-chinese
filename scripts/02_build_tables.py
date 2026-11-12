@@ -1,15 +1,16 @@
 """Step 3 (task T3): clean both snapshots and build the analysis tables.
 
 Input : data/interim/a_trim.csv.gz, data/interim/c_trim.csv.gz
-Output: for every table below, two files in data/processed/
-          pcd_<table>.xlsx  -> for people to open and check
-          pcd_<table>.csv   -> for code: later steps read it with pandas.read_csv
+Output: for every table below, two files with the same name:
+          data/processed/xlsx/pcd_<table>.xlsx  -> to open and look at
+          data/processed/csv/pcd_<table>.csv    -> for code: later steps read it with pandas.read_csv
 
   table            one row is                                  used by
   games_clean      one game in snapshot A                      EDA, SQ1
   sq1_groups       one group of similar games                  SQ1
   panel_ac         one game in A and C, no Chinese in C        SQ2
   sq2_groups       one SQ2 group of similar games              SQ2
+  cn_excluded      one Chinese game removed                    manual check of the rules
   funnel           one filter step                             report (data cleaning)
   data_dictionary  one column of the tables above              reference
 
@@ -38,7 +39,8 @@ def main() -> None:
     tables = clean.build_all(trim_a, trim_c, cfg.SNAPSHOT_DATE_A, cfg.SNAPSHOT_DATE_C)
 
     # 3. Save every table as CSV (for code) and XLSX (for people), same name, prefix pcd_.
-    paths.PROCESSED.mkdir(parents=True, exist_ok=True)
+    paths.PROCESSED_CSV.mkdir(parents=True, exist_ok=True)
+    paths.PROCESSED_XLSX.mkdir(parents=True, exist_ok=True)
     for name, table in tables.items():
         table.to_csv(paths.table_csv(name), index=False)
         with pd.ExcelWriter(paths.table_xlsx(name), engine="openpyxl") as writer:

@@ -19,9 +19,10 @@ def test_first_genre_takes_first_matching_tag():
 
 
 def _row(app_id, langs, pos, neg=0, tags="RPG,Indie", price=14.99, date="Mar 5, 2021",
-         audio="[]", genres="Indie,RPG", name=None):
+         audio="[]", genres="Indie,RPG", name=None, dev="Some Studio", pub="Some Publisher"):
     return {
         "app_id": app_id, "name": name or f"game {app_id}", "release_date": date, "price": price,
+        "developers": dev, "publishers": pub,
         "supported_languages": str(langs), "full_audio_languages": audio,
         "positive": pos, "negative": neg, "genres": genres, "tags": tags,
     }
@@ -53,8 +54,11 @@ def _snapshots():
         _row(9, [en, tw], 700),             # Traditional only -> dropped from games_clean
         _row(10, [en, zh, fr], 60, price=0.0, tags="Puzzle"),
         _row(11, [en, zh], 90, audio="['English', 'Simplified Chinese']"),
-        _row(12, [zh], 80, audio="['Simplified Chinese']"),  # Chinese-only -> proxy
+        _row(12, [zh], 80, audio="['Simplified Chinese']"),  # Chinese-only -> rule 1
         _row(13, [en], 0),
+        _row(14, [en, zh], 900, dev="Game Science"),              # known company -> rule 4
+        _row(15, [en, zh], 700, pub="Shanghai Fun Network Technology Co., Ltd."),  # city -> rule 3
+        _row(16, [en, zh], 600, dev="幻境工作室"),  # Chinese characters -> rule 2
     ])
     a["discount_pct"] = "0"
     a.loc[a["app_id"] == 2, ["price", "discount_pct"]] = [4.49, "70"]   # sale price
@@ -66,6 +70,10 @@ def test_games_clean_filters_and_columns():
     t = clean.build_all(a, c, "2025-11-01", "2024-01-31")
     g = t["games_clean"]
     assert sorted(g["app_id"]) == [1, 2, 3, 4, 10, 11]     # 11 kept: English + zh voice
+    cn = t["cn_excluded"].set_index("app_id")["cn_rules"]
+    assert cn[14] == "known_chinese_company"
+    assert cn[15] == "maker_in_chinese_city"
+    assert cn[16] == "maker_name_in_chinese"
     assert g.set_index("app_id").loc[2, "price"] == 14.97   # 4.49 at -70%
     assert g.set_index("app_id").loc[2, "price_tier"] == "10to20"
     assert g.set_index("app_id").loc[1, "has_zh"] == 1

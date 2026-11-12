@@ -1,0 +1,42 @@
+# Archives the two pinned raw snapshots as assets of a GitHub Release, so the exact input
+# files stay available even if the Hugging Face history changes. Run once from the Actions
+# tab ("Run workflow"). Release assets do not count against the repository size limit.
+name: archive-raw
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TAG: raw-snapshots-v1
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Download the pinned snapshots
+        run: python scripts/00_download.py
+      - name: Compress and checksum
+        run: |
+          cd data/raw
+          gzip -9 -n -k games_a.csv games_c.csv
+          sha256sum games_a.csv games_c.csv games_a.csv.gz games_c.csv.gz > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+      - name: Create or update the release
+        run: |
+          NOTES="Raw input files of the project, exactly as downloaded by scripts/00_download.py.
+          games_a.csv.gz: snapshot A, Hugging Face FronkonGames/steam-games-dataset commit 52ba62ab (2026-06-20).
+          games_c.csv.gz: snapshot C, commit aefdeb1f (2024-01-11).
+          To use: download both, gunzip into data/raw/, then run python run.py tables.
+          SHA256SUMS.txt lists the checksums of the compressed and uncompressed files."
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" data/raw/games_a.csv.gz data/raw/games_c.csv.gz data/raw/SHA256SUMS.txt --clobber
+          else
+            gh release create "$TAG" data/raw/games_a.csv.gz data/raw/games_c.csv.gz data/raw/SHA256SUMS.txt \
+              --title "Raw snapshots A and C" --notes "$NOTES"
+          fi

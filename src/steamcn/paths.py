@@ -12,17 +12,19 @@ A_TRIM = INTERIM / "a_trim.csv.gz"
 C_TRIM = INTERIM / "c_trim.csv.gz"
 
 # Every processed table is saved twice, with the prefix "pcd_" (processed):
-#   pcd_<table>.xlsx  for people to open and check
-#   pcd_<table>.csv   for code: every later step reads it with pandas.read_csv
+#   data/processed/xlsx/pcd_<table>.xlsx  -> to open and look at (Excel, Google Sheets)
+#   data/processed/csv/pcd_<table>.csv    -> for code: later steps read it with pandas.read_csv
 PREFIX = "pcd_"
+PROCESSED_CSV = PROCESSED / "csv"
+PROCESSED_XLSX = PROCESSED / "xlsx"
 
 
 def table_csv(name: str) -> Path:
-    return PROCESSED / f"{PREFIX}{name}.csv"
+    return PROCESSED_CSV / f"{PREFIX}{name}.csv"
 
 
 def table_xlsx(name: str) -> Path:
-    return PROCESSED / f"{PREFIX}{name}.xlsx"
+    return PROCESSED_XLSX / f"{PREFIX}{name}.xlsx"
 
 
 GAMES_CLEAN = table_csv("games_clean")

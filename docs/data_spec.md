@@ -4,8 +4,8 @@ Everything below is produced by `python run.py tables` (`scripts/02_build_tables
 functions in `src/steamcn/clean.py`). Each table is saved twice in `data/processed/`,
 with the prefix `pcd_` (processed):
 
-- `pcd_<table>.csv`: what every later step reads with `pandas.read_csv`;
-- `pcd_<table>.xlsx`: the same data, for people to open and check.
+- `data/processed/csv/pcd_<table>.csv`: what every later step reads with `pandas.read_csv`;
+- `data/processed/xlsx/pcd_<table>.xlsx`: the same data, for people to open and check.
 
 All column names are English snake_case.
 
@@ -17,6 +17,7 @@ All column names are English snake_case.
 | `sq1_groups` | one group of similar games | `games_clean` | SQ1 (main result, by genre, by price) |
 | `panel_ac` | one game present in both A and C, with no Chinese in C | A + C | SQ2 |
 | `sq2_groups` | one SQ2 group of similar games | `panel_ac` | SQ2 (main result, by genre, by price) |
+| `cn_excluded` | one Chinese game removed | A | Manual check of the Chinese-game rules |
 | `funnel` | one filter step | A, C | Data cleaning section of the report |
 | `data_dictionary` | one column | | Reference |
 
@@ -45,7 +46,7 @@ c_trim ──┴─> panel_ac ─────> sq2_groups          (SQ2)
 | `has_zh_simplified`, `has_zh_traditional`, `has_english` | language is in `supported_languages` |
 | `n_other_langs` | number of supported languages other than English and the two Chinese variants |
 | `n_other_langs_bin` | `0`, `1-4`, `5+` |
-| `is_cn_publisher_proxy` | Chinese without English, in the text or in the voice-over |
+| `is_cn_game` | Chinese game, by any of 4 rules: Chinese without English (text or voice-over); developer/publisher name in Chinese characters; name contains a mainland Chinese city; known Chinese company. `cn_rules` says which matched |
 | `is_early_access` | "Early Access" in `genres` |
 | `is_traditional_only` | Traditional Chinese without Simplified |
 | `genre_group` | first tag (tags are ordered by votes) found in `config.TAG_TO_GENRE` |
@@ -57,7 +58,7 @@ c_trim ──┴─> panel_ac ─────> sq2_groups          (SQ2)
 
 Filters on snapshot A, in this order (each one is logged in `funnel`):
 
-1. drop Chinese-publisher proxy;
+1. drop Chinese games (any of the 4 rules);
 2. drop Early Access;
 3. keep `total_reviews >= 10`;
 4. keep games released at least one year before the snapshot;
@@ -158,9 +159,11 @@ the estimate and its interval). SQ3 reads both and writes `sq3_summary.csv`:
 
 ## Checks to run by hand after `python run.py tables`
 
-1. Open `pcd_funnel.xlsx`: no single filter should remove most games.
-2. `pcd_games_clean.xlsx`: pick 20 random rows and compare `has_zh`, `genre_group`,
+1. Open `xlsx/pcd_funnel.xlsx`: no single filter should remove most games.
+2. `xlsx/pcd_games_clean.xlsx`: pick 20 random rows and compare `has_zh`, `genre_group`,
    `price_tier` with the game's Steam page.
-3. `pcd_panel_ac.xlsx`: check 10 `treated` games really have Simplified Chinese today, and
+3. `xlsx/pcd_panel_ac.xlsx`: check 10 `treated` games really have Simplified Chinese today, and
    count `arm` by `genre_group` (need roughly 20+ treated games per genre).
-4. `pcd_sq1_groups.xlsx` and `pcd_sq2_groups.xlsx`: count the `eligible` rows.
+4. `xlsx/pcd_sq1_groups.xlsx` and `xlsx/pcd_sq2_groups.xlsx`: count the `eligible` rows.
+5. `xlsx/pcd_cn_excluded.xlsx`: scan the biggest games and the `cn_rules` column; a Western
+   game in the list means a rule is too broad (add an exception in `config.py`).

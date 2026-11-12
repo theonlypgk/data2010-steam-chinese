@@ -8,6 +8,11 @@ Output: four analysis tables, saved by scripts/02_build_tables.py as
     sq1_groups   one row per comparison group        -> SQ1
     panel_ac     one row per game in both A and C    -> SQ2
     sq2_groups   one row per SQ2 comparison group    -> SQ2
+    cn_excluded  one row per Chinese game removed    -> manual check of the Chinese-game rules
+
+Every fixed choice (thresholds, lists, bins) lives in config.py with its reason; the
+comments below explain how each one is applied. Data issues found in the real files are
+marked "DATA ISSUE".
 
 SQ3 builds no table of its own: it combines the by-genre results of SQ1 and SQ2.
 """
@@ -21,7 +26,19 @@ import pandas as pd
 
 from . import config as cfg
 
+# DATA ISSUE: language and tag cells contain leftovers from Steam's store pages, such as
+# "English[b]*[/b]" (the star marks full audio), HTML tags and line breaks.
 _TAG_JUNK = re.compile(r"\[/?[a-zA-Z]+\]|<[^>]+>|&amp;|&lt;|&gt;|\*|\r|\n|#lang_\w+")
+
+
+def _word_regex(words: list[str]) -> re.Pattern:
+    """Case-insensitive whole-word match for any of `words`."""
+    return re.compile(r"\b(?:" + "|".join(re.escape(w) for w in words) + r")\b", re.IGNORECASE)
+
+
+_CN_CITY = _word_regex(cfg.CN_CITIES)
+_CN_COMPANY = _word_regex(cfg.CN_COMPANIES)
+_CJK = re.compile(r"[\u4e00-\u9fff]")   # Chinese characters
 
 
 # --------------------------------------------------------------------------- parsing
@@ -68,6 +85,7 @@ def add_features(trim: pd.DataFrame, snapshot_date: str) -> pd.DataFrame:
     df = trim.copy()
 
     # --- 1. types: ids and counts to integers, price to float, release date to a date
+    # DATA ISSUE: a few rows have no usable id or repeat an id; keep the first occurrence.
     df["app_id"] = pd.to_numeric(df["app_id"], errors="coerce")
     df = df.dropna(subset=["app_id"]).drop_duplicates("app_id")
     df["app_id"] = df["app_id"].astype("int64")
@@ -80,6 +98,8 @@ def add_features(trim: pd.DataFrame, snapshot_date: str) -> pd.DataFrame:
     discount = df["discount_pct"] if "discount_pct" in df else pd.Series(0, index=df.index)
     df["discount_pct"] = pd.to_numeric(discount, errors="coerce").fillna(0).clip(0, 99)
     df["price"] = (df["price_at_snapshot"] / (1 - df["discount_pct"] / 100)).round(2)
+    # DATA ISSUE: dates come as "Aug 1, 2023" or "Aug 2023"; anything unreadable becomes
+    # missing and the game is dropped by the "has a release year" filter.
     df["release_date"] = pd.to_datetime(df["release_date"], errors="coerce", format="mixed")
     df["release_year"] = df["release_date"].dt.year.astype("Int64")
     df["days_since_release"] = (pd.Timestamp(snapshot_date) - df["release_date"]).dt.days
@@ -105,20 +125,39 @@ def add_features(trim: pd.DataFrame, snapshot_date: str) -> pd.DataFrame:
     df["major_langs"] = langs.map(lambda x: "|".join(sorted(set(x) & set(cfg.MAJOR_LANGS))))
     df["all_langs"] = langs.map(lambda x: "|".join(sorted(x)))
 
-    # --- 5. flags used by the filters (Chinese-publisher proxy, Early Access, Traditional only)
+    # --- 5. Chinese games: ALL are removed (rules and reasons in config.py, "CHINESE GAMES")
     has_zh_audio = audio.map(lambda x: bool(set(x) & chinese))
     has_en_audio = audio.map(lambda x: cfg.ENGLISH in x)
     any_zh = df["has_zh_simplified"] | df["has_zh_traditional"]
-    # A game made by a Chinese publisher for the Chinese market: Chinese without English,
-    # in the text or in the voice-over. (Chinese voice-over alone is NOT used: many Western
-    # games such as Cyberpunk 2077 or The Witcher 3 have it. See docs/decisions.md.)
-    df["is_cn_publisher_proxy"] = (any_zh & ~df["has_english"]) | (has_zh_audio & ~has_en_audio)
+    makers = (
+        df.get("developers", pd.Series("", index=df.index)).fillna("").astype(str) + " | "
+        + df.get("publishers", pd.Series("", index=df.index)).fillna("").astype(str)
+    )
+    rules = {
+        # rule 1: Chinese text without English text, or Chinese voice-over without English
+        "chinese_without_english": (any_zh & ~df["has_english"]) | (has_zh_audio & ~has_en_audio),
+        # rule 2: developer or publisher written in Chinese characters
+        "maker_name_in_chinese": makers.str.contains(_CJK),
+        # rule 3: developer or publisher named after a mainland Chinese city
+        "maker_in_chinese_city": makers.str.contains(_CN_CITY),
+        # rule 4: developer or publisher is a well-known Chinese company
+        "known_chinese_company": makers.str.contains(_CN_COMPANY),
+    }
+    rule_frame = pd.DataFrame(rules)
+    df["is_cn_game"] = rule_frame.any(axis=1)
+    # Which rules matched, e.g. "maker_in_chinese_city;known_chinese_company" (for checking).
+    df["cn_rules"] = rule_frame.apply(lambda r: ";".join(r.index[r.to_numpy()]), axis=1)
+    df["makers"] = makers
     df["has_zh_audio"] = has_zh_audio
     df["has_english_audio"] = has_en_audio
+
+    # --- 6. other filter flags
+    # Early Access games are unfinished; their reviews behave differently.
+    # Traditional-only games are neither "with Simplified Chinese" nor "without Chinese".
     df["is_early_access"] = genres.map(lambda x: "Early Access" in x)
     df["is_traditional_only"] = df["has_zh_traditional"] & ~df["has_zh_simplified"]
 
-    # --- 6. grouping variables: genre group, price tier, year band
+    # --- 7. grouping variables: genre group, price tier, year band
     df["genre_group"] = tags.map(first_genre)
     df["price_tier"] = pd.cut(df["price"], cfg.PRICE_BINS, labels=cfg.PRICE_LABELS).astype(str)
     df["year_band"] = pd.cut(
@@ -138,14 +177,24 @@ def apply_filters(df: pd.DataFrame, steps: list[tuple[str, pd.Series]], table: s
 
 
 def _base_filters(df: pd.DataFrame) -> list[tuple[str, pd.Series]]:
+    """Filters shared by games_clean (on A) and panel_ac (on C). Reasons: config.py."""
     return [
-        ("drop Chinese-publisher proxy", ~df["is_cn_publisher_proxy"]),
+        ("drop Chinese games (any of 4 rules)", ~df["is_cn_game"]),
         ("drop Early Access", ~df["is_early_access"]),
         (f"keep >= {cfg.MIN_REVIEWS} reviews", df["total_reviews"] >= cfg.MIN_REVIEWS),
         ("keep released >= 1 year before snapshot", df["days_since_release"] >= cfg.MIN_AGE_DAYS),
         ("keep games with a genre group, price and year",
          df["genre_group"].notna() & df["price"].notna() & df["release_year"].notna()),
     ]
+
+
+# --------------------------------------------------------------------------- check table: cn_excluded
+def build_cn_excluded(feat_a: pd.DataFrame) -> pd.DataFrame:
+    """Chinese games removed from snapshot A that would otherwise have been kept
+    (>= MIN_REVIEWS reviews), with the rule(s) that matched. For checking by hand."""
+    df = feat_a[feat_a["is_cn_game"] & (feat_a["total_reviews"] >= cfg.MIN_REVIEWS)]
+    cols = ["app_id", "name", "makers", "cn_rules", "has_english", "has_zh_audio", "total_reviews"]
+    return df[cols].sort_values("total_reviews", ascending=False).reset_index(drop=True)
 
 
 # --------------------------------------------------------------------------- table 1: games_clean
@@ -172,7 +221,12 @@ def build_games_clean(feat_a: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]
 
 # --------------------------------------------------------------------------- table 2: sq1_groups
 def build_sq1_groups(games_clean: pd.DataFrame) -> pd.DataFrame:
-    """One row per group: median reviews with vs without Simplified Chinese."""
+    """One row per group: median reviews with vs without Simplified Chinese.
+
+    Games are compared only inside a group of similar games (same genre, year band, price
+    tier and number of other languages), so that the gap is not just "bigger games are
+    translated more". Medians, not means: review counts are very skewed.
+    """
     keys = ["group_id", "genre_group", "year_band", "price_tier", "n_other_langs_bin"]
     wide = (
         games_clean.groupby(keys + ["has_zh"])["total_reviews"]
@@ -186,6 +240,8 @@ def build_sq1_groups(games_clean: pd.DataFrame) -> pd.DataFrame:
         "median_reviews_no_zh": wide[("median", 0)] if ("median", 0) in wide else np.nan,
     }).reset_index()
     out[["n_zh", "n_no_zh"]] = out[["n_zh", "n_no_zh"]].fillna(0).astype(int)
+    # pct_diff: how many % more reviews the games with Chinese have.
+    # extra_reviews: that gap in reviews, times the number of games with Chinese.
     out["pct_diff"] = (out["median_reviews_zh"] / out["median_reviews_no_zh"] - 1).round(6)
     out["extra_reviews"] = ((out["median_reviews_zh"] - out["median_reviews_no_zh"]) * out["n_zh"]).round(2)
     out["eligible"] = (out["n_zh"] >= cfg.MIN_GAMES_PER_SIDE) & (out["n_no_zh"] >= cfg.MIN_GAMES_PER_SIDE)
@@ -196,8 +252,10 @@ def build_sq1_groups(games_clean: pd.DataFrame) -> pd.DataFrame:
 def build_panel_ac(feat_a: pd.DataFrame, feat_c: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     """One row per game present in both snapshots that had no Chinese in C. Serves SQ2.
 
-    Group variables (genre, price, year, other languages) come from C, the starting point.
+    Group variables (genre, price, year, other languages) come from C, the starting point,
+    because what a game looked like BEFORE adding Chinese is what we hold fixed.
     """
+    # Start from games with no Chinese at all in January 2024: only they can "add" Chinese.
     steps = _base_filters(feat_c) + [
         ("keep games with no Chinese (Simplified or Traditional) in C",
          ~(feat_c["has_zh_simplified"] | feat_c["has_zh_traditional"])),
@@ -223,11 +281,14 @@ def build_panel_ac(feat_a: pd.DataFrame, feat_c: pd.DataFrame) -> tuple[pd.DataF
     p = p[p["reviews_a"] > 0].copy()
     a = a.loc[p.index]
     c = c.loc[p.index]
+    # Outcome: how much reach grew between the two snapshots.
     p["growth"] = ((p["reviews_a"] - p["reviews_c"]) / p["reviews_c"]).round(6)
+    # Starting reach in three equal-size bins (rank first, so ties do not break qcut).
     p["initial_reach_bin"] = pd.qcut(
         p["reviews_c"].rank(method="first"), 3, labels=cfg.REACH_LABELS
     ).astype(str)
 
+    # Languages present in A but not in C = languages added after January 2024.
     new_langs = [
         set(la.split("|")) - set(lc.split("|")) - {""}
         for la, lc in zip(a["all_langs"], c["all_langs"])
@@ -236,6 +297,8 @@ def build_panel_ac(feat_a: pd.DataFrame, feat_c: pd.DataFrame) -> tuple[pd.DataF
     p["added_only_zh"] = [int(n == {cfg.ZH_SIMPLIFIED}) for n in new_langs]
     p["added_other_major_lang"] = [int(bool(n & set(cfg.MAJOR_LANGS))) for n in new_langs]
     p["n_langs_added"] = [len(n) for n in new_langs]
+    # treated: added Simplified Chinese. control: added neither Chinese nor any major
+    # language (a clean "did nothing"). excluded: added another major language only.
     p["arm"] = np.select(
         [p["added_zh"] == 1, (p["added_zh"] == 0) & (p["added_other_major_lang"] == 0)],
         ["treated", "control"],
@@ -255,7 +318,11 @@ def build_panel_ac(feat_a: pd.DataFrame, feat_c: pd.DataFrame) -> tuple[pd.DataF
 
 # --------------------------------------------------------------------------- table 4: sq2_groups
 def build_sq2_groups(panel: pd.DataFrame) -> pd.DataFrame:
-    """One row per SQ2 group: median growth of treated vs control games."""
+    """One row per SQ2 group: median growth of treated vs control games.
+
+    uplift_pts = extra growth of games that added Chinese, compared with similar games that
+    did not. The control arm is needed because every game gains reviews over time anyway.
+    """
     keys = ["group_id_sq2", "genre_group", "initial_reach_bin"]
     used = panel[panel["arm"].isin(["treated", "control"])]
     wide = used.groupby(keys + ["arm"])["growth"].agg(n="size", median="median").unstack("arm")
@@ -319,6 +386,11 @@ DATA_DICTIONARY = [
     ("sq2_groups", "median_growth_treated / median_growth_control", "Median growth in each arm"),
     ("sq2_groups", "uplift_pts", "median_growth_treated - median_growth_control"),
     ("sq2_groups", "eligible", "True when both arms have at least 10 games"),
+    ("cn_excluded", "app_id, name", "Chinese game removed from snapshot A (>= 10 reviews)"),
+    ("cn_excluded", "makers", "Developers | publishers"),
+    ("cn_excluded", "cn_rules", "Rules that matched: chinese_without_english, maker_name_in_chinese, maker_in_chinese_city, known_chinese_company"),
+    ("cn_excluded", "has_english, has_zh_audio", "English text supported / Chinese voice-over"),
+    ("cn_excluded", "total_reviews", "positive + negative in snapshot A"),
 ]
 
 
@@ -333,6 +405,7 @@ def build_all(trim_a: pd.DataFrame, trim_c: pd.DataFrame, date_a: str, date_c: s
         "sq1_groups": build_sq1_groups(games_clean),
         "panel_ac": panel_ac,
         "sq2_groups": build_sq2_groups(panel_ac),
+        "cn_excluded": build_cn_excluded(feat_a),
         "funnel": pd.concat([funnel_1, funnel_2], ignore_index=True),
         "data_dictionary": pd.DataFrame(DATA_DICTIONARY, columns=["table", "column", "meaning"]),
     }

@@ -35,7 +35,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # .xlsx files are zip archives whose bytes change on every run even when the data
           # does not; commit only when a CSV or a trimmed snapshot actually changed.
-          if git diff --quiet -- data/interim data/processed/*.csv; then
+          if git diff --quiet -- data/interim data/processed/csv && [ -z "$(git ls-files --others --exclude-standard data/processed)" ]; then
             git checkout -- data/processed
             echo "outputs unchanged"
           else

@@ -16,13 +16,17 @@ Steam Games Dataset by FronkonGames, taken from its Hugging Face repository
 Licence: _T1: copy the licence stated on the dataset page and confirm it allows
 redistributing the trimmed files._
 
+Backup of the raw files: GitHub release `raw-snapshots-v1` of this repo (made by the
+`archive-raw` workflow) holds `games_a.csv.gz`, `games_c.csv.gz` and their SHA-256 checksums.
+
 ## Files
 
 | Folder | File | Committed | Made by |
 |---|---|---|---|
 | `raw/` | `games_a.csv`, `games_c.csv` | no (too large for GitHub) | `scripts/00_download.py` |
 | `interim/` | `a_trim.csv.gz`, `c_trim.csv.gz` | yes | `scripts/01_trim.py` |
-| `processed/` | `pcd_games_clean`, `pcd_sq1_groups`, `pcd_panel_ac`, `pcd_sq2_groups`, `pcd_funnel`, `pcd_data_dictionary` (each as `.csv` and `.xlsx`) | yes | `scripts/02_build_tables.py` |
+| `processed/csv/` | `pcd_<table>.csv`: for code (`pandas.read_csv`) | yes | `scripts/02_build_tables.py` |
+| `processed/xlsx/` | `pcd_<table>.xlsx`: to open and look at | yes | `scripts/02_build_tables.py` |
 
 ## Columns kept from the raw data
 
@@ -36,16 +40,17 @@ redistributing the trimmed files._
 | `supported_languages` | Supported languages | Interface / subtitle languages |
 | `full_audio_languages` | Full audio languages | Voiced languages |
 | `positive`, `negative` | Positive, Negative | Review counts |
+| `developers`, `publishers` | Developers, Publishers | Studio names (used to identify Chinese games) |
 | `genres` | Genres | Steam genres (includes "Early Access") |
 | `tags` | Tags | User tags, ordered by votes |
 
 The full description of every processed table and column is in `../docs/data_spec.md`
-and in `processed/data_dictionary.csv`.
+and in `processed/csv/pcd_data_dictionary.csv`.
 
 ## Known limitations
 
 - Review counts cover all languages; reviews by Chinese-speaking players cannot be separated.
 - The exact date a game added a language is unknown, only that it changed between C and A.
-- Games by Chinese publishers are identified by a proxy (Chinese without English, in text or voice-over).
+- Chinese games are identified by four rules (no country field exists); see `pcd_cn_excluded`.
 - Snapshot A was taken during a sale; list prices are recovered from the discount column.
 - In snapshot A the header merges "Discount" and "DLC count" into one name; `scripts/01_trim.py` splits it.

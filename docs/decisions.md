@@ -17,7 +17,7 @@ Only the team leader edits this file. Every change gets a date and a reason at t
 |---|---|
 | Reach | `total_reviews = positive + negative` |
 | Treatment (SQ1) | `has_zh = 1` if Simplified Chinese is supported; `0` if no Chinese at all. Traditional-only games are dropped. |
-| Chinese-publisher proxy | Chinese (text) without English text, or Chinese voice-over without English voice-over. Dropped. **Changed 2026-11-12, see log.** |
+| Chinese games | ALL dropped, large or small, if any rule matches: Chinese without English (text or voice-over); developer/publisher name in Chinese characters; name contains a mainland Chinese city; known Chinese company (`config.CN_COMPANIES`). |
 | Minimum reviews | 10 |
 | Minimum age | released at least 365 days before the snapshot |
 | Genre group | first tag found in `TAG_TO_GENRE` (6 groups: Visual Novel, RPG, Strategy, Action, Puzzle, Casual). **Draft list, to be confirmed.** |
@@ -60,3 +60,8 @@ Two figures per question in the body.
   6 genres). Year, price and other languages are not held fixed in SQ2: state it as a limitation.
 - 2026-11-12 (Claude, overnight run): SQ2 drops 40 games with 0 reviews in A (delisted or
   missing data); their growth of -100% is not real.
+- 2026-11-12 (kp): ALL Chinese games are removed, large or small. Implemented with four
+  rules (language pattern + developer/publisher names); removed games are listed in
+  `pcd_cn_excluded` with the rule that matched.
+- 2026-11-12 (kp): snapshot A stays at 2026-06-20 (last CSV version).
+- 2026-11-12: processed tables split into `data/processed/csv/` (code) and `xlsx/` (viewing).

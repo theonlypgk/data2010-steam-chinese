@@ -32,5 +32,6 @@ def test_trim_repairs_merged_header(tmp_path):
     assert row["supported_languages"] == "['English', 'Simplified Chinese']"
     assert (row["positive"], row["negative"]) == (120, 30)
     assert row["tags"] == "RPG,Indie"
+    assert (row["developers"], row["publishers"]) == ("Dev", "Pub")
     assert row["price"] == 9.99
     assert row["discount_pct"] == 0        # the "Discount" value of the row
