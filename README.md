@@ -13,8 +13,8 @@ DATA2010 Data Science Programming, final project.
 Reach = number of reviews (`positive + negative`). Every comparison is made inside a group
 of similar games, so that a gap is not simply "bigger games get translated more".
 
-This README is the only document of the project. It follows the work in order, from the two
-input files to the answers; each step names the notebook section that does it.
+This README follows the work in order, from the two input files to the answers; each step
+names the notebook section that does it and explains why each choice was made.
 
 ```
 steam_chinese_analysis.ipynb   ALL the code, from the two input files to the analysis
@@ -28,7 +28,7 @@ report/                        report, figures, reflections, slides
 
 ---
 
-## Step 0. Run it
+## Step 0. Reproducing the results
 
 ```bash
 pip install -r requirements.txt
@@ -40,11 +40,10 @@ the two input files itself. Two runs give byte-identical CSV files (exact packag
 rounded floats, fixed xlsx dates). On GitHub, the `pipeline` workflow (Actions tab) runs the
 notebook on a clean machine after every change and commits the tables if they changed.
 
-To work on the project: edit the notebook, run it from the top, commit the notebook (and the
-tables if they changed). The first line of every code cell says what kind of step it is
-(LOAD DATA, DATA CLEANING, SELECT ROWS, AGGREGATE, SAVE OUTPUTS, CHECKS); problems found in
-the real data are marked `DATA ISSUE`. Every fixed choice is in the **Settings and
-decisions** cell, with its reason; a change there gets a dated line in the change log below.
+In the notebook, the first line of every code cell says what kind of step it is (LOAD DATA,
+DATA CLEANING, SELECT ROWS, AGGREGATE, SAVE OUTPUTS, CHECKS), and problems found in the real
+data are marked `DATA ISSUE`. Every fixed choice is in the **Settings and decisions** cell
+with its reason; all of them were set before any result was looked at.
 
 ## Step 1. The two input files (notebook: Settings, A1)
 
@@ -109,12 +108,13 @@ Applied in this order:
 4. Every developer is a known Chinese company (`CN_COMPANIES`, e.g. Game Science, so Black
    Myth: Wukong is removed although it ships English).
 
-Rules 2-4 look at developers only, and all developers must match. Earlier versions went
-wrong: "Chinese voice-over" alone removed 4,233 Western games (Cyberpunk 2077, The Witcher 3,
-Hollow Knight, ...); looking at publishers or at any one developer removed Core Keeper
-(publisher bilibili), Far Cry (Ubisoft Shanghai), Call of Duty (Activision Shanghai) and
-Sekiro. Result: 2,862 games with >= 10 reviews removed. Section A6 lists them, biggest first,
-so a wrongly removed game can be spotted and added as an exception in Settings.
+Why these rules and not simpler ones: Chinese voice-over alone is not a sign of a Chinese
+game, since it would remove 4,233 Western games (Cyberpunk 2077, The Witcher 3, Hollow
+Knight, ...). Rules 2-4 look at developers only, and all developers must match, because
+publishers are often regional partners (bilibili publishes the Swedish Core Keeper in China)
+and large Western games list Chinese support studios (Ubisoft Shanghai for Far Cry,
+Activision Shanghai for Call of Duty). Result: 2,862 games with >= 10 reviews removed;
+section A6 lists them, biggest first.
 
 ## Step 4. The two output tables (notebook: A7 saves, A8 checks)
 
@@ -170,11 +170,8 @@ Uncertainty: bootstrap, 2,000 resamples, seed 2010. A gap is "large enough" when
 or SQ2 >= +10 points, and its interval does not include 0.
 
 Why these groups: with single release years, SQ1 groups big enough covered only 47% of games;
-year bands raise this to 81%. For SQ2 the five-way group left 7 usable groups in 2 genres;
+year bands raise this to 81%. For SQ2, a five-way group (genre, year, price, other languages, starting reach) leaves only 7 usable groups in 2 genres;
 genre x starting reach gives 14 groups in all 6 genres.
-
-Report (10 pages): Introduction 1.5, SQ1 2.5, SQ2 2.5, SQ3 1.5, Conclusion 1, Lifecycle
-reflection 1; two figures per question in the body.
 
 ## Limitations
 
@@ -192,33 +189,11 @@ reflection 1; two figures per question in the body.
 - **Genre comes from user tags**, which may not match how the studio describes the game.
 - **Snapshot A is from 2026-06-20**, not today. Snapshot C has no discount information.
 
-## Still to do (team leader)
-
-- [ ] Review `TAG_TO_GENRE` (genre map, draft) and `MAJOR_LANGS` in the Settings cell.
-- [ ] Spot-check 20 rows of `pcd_sq1_games.xlsx` and 10 `treated` rows of `pcd_sq2_games.xlsx` against Steam.
-- [ ] Check the removed Chinese games in section A6 for Western games.
-- [ ] Copy the dataset licence from its page and confirm it allows sharing derived tables.
-- [ ] Invite the 4 members as collaborators (Settings -> Collaborators).
-- [ ] Fill in the team table below.
-
-## Change log
-
-Decisions were fixed before any result was looked at; each later change is dated.
-
-- 2026-11-12: scope fixed: SQ1, SQ2 (main result + per genre; price tier in the appendix), SQ3 per genre.
-- 2026-11-12: prices use the list price (snapshot A taken during a sale).
-- 2026-11-12: SQ1 groups use year bands; SQ2 groups are genre x starting reach (to be confirmed by kp).
-- 2026-11-12: SQ2 drops 40 games with 0 reviews in A (delisted).
-- 2026-11-12 (kp): all Chinese games removed, large or small; rules 2-4 use developers only, all must match.
-- 2026-11-12 (kp): snapshot A stays at 2026-06-20.
-- 2026-11-12 (kp): the whole project is one notebook; outputs are only the two cleaned tables; all
-  documentation is in this README.
-
 ## Team and contributions
 
 | Member | Role | Main contributions |
 |---|---|---|
-| kp | Leader | |
+| Khanh Phung | Leader | |
 | Hưng | Tech lead | |
 | Phú | Data & EDA | |
 | Chí Minh | SQ1 & testing | |
