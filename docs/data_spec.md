@@ -46,7 +46,7 @@ c_trim ──┴─> panel_ac ─────> sq2_groups          (SQ2)
 | `has_zh_simplified`, `has_zh_traditional`, `has_english` | language is in `supported_languages` |
 | `n_other_langs` | number of supported languages other than English and the two Chinese variants |
 | `n_other_langs_bin` | `0`, `1-4`, `5+` |
-| `is_cn_game` | Chinese game, by any of 4 rules: Chinese without English (text or voice-over); developer/publisher name in Chinese characters; name contains a mainland Chinese city; known Chinese company. `cn_rules` says which matched |
+| `is_cn_game` | Chinese game, by any of 4 rules: (1) Chinese without English, in text or voice-over; or every developer is Chinese: (2) name in Chinese characters, (3) name contains a mainland Chinese city, (4) known Chinese company. `cn_rules` says which matched |
 | `is_early_access` | "Early Access" in `genres` |
 | `is_traditional_only` | Traditional Chinese without Simplified |
 | `genre_group` | first tag (tags are ordered by votes) found in `config.TAG_TO_GENRE` |

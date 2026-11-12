@@ -76,13 +76,17 @@ MAJOR_LANGS = [
 # The dataset has no "country" column, so a game is treated as Chinese if ANY rule matches
 # (the rule that matched is written to pcd_cn_excluded so it can be checked by hand):
 #   1. Chinese text or voice-over WITHOUT English (made for the Chinese market).
-#   2. Developer or publisher name written in Chinese characters.
-#   3. Developer or publisher name contains a mainland Chinese city (Chinese companies are
-#      registered as "Shanghai ... Network Technology Co., Ltd." and similar).
-#   4. Developer or publisher is a well-known Chinese company (list below).
+#   2-4. EVERY developer of the game is Chinese, by one of these signs:
+#   2. the developer name is written in Chinese characters;
+#   3. the developer name contains a mainland Chinese city (Chinese companies are
+#      registered as "Shanghai ... Network Technology Co., Ltd." and similar);
+#   4. the developer is a well-known Chinese company (list below).
 # Rule 1 alone is not enough: Black Myth: Wukong (Game Science) ships English, so only
-# rules 2-4 catch it. Chinese voice-over alone is NOT a rule: many Western games such as
+# rule 4 catches it. Chinese voice-over alone is NOT a rule: many Western games such as
 # Cyberpunk 2077 or The Witcher 3 have it (an earlier rule removed 4,233 such games).
+# Rules 2-4 look at DEVELOPERS only and need ALL of them to be Chinese: publishers are often
+# regional partners (bilibili publishes the Swedish Core Keeper in China) and big Western
+# games list Chinese support studios (Far Cry: "Ubisoft Montreal, ..., Ubisoft Shanghai").
 CN_CITIES = [
     "Beijing", "Shanghai", "Shenzhen", "Guangzhou", "Hangzhou", "Chengdu", "Nanjing",
     "Wuhan", "Xiamen", "Suzhou", "Chongqing", "Tianjin", "Changsha", "Fuzhou", "Hefei",
@@ -93,8 +97,10 @@ CN_COMPANIES = [
     "X.D. Network", "XD Inc", "bilibili", "Gamera Games", "Hypergryph", "Lilith Games",
     "Seasun", "Kingsoft", "Papergames", "Paper Games", "Yostar", "Pathea", "NExT Studios",
     "TiMi Studio", "Leiting", "Giant Network", "Snail Games", "Shanda", "CMGE", "Zulong",
-    "Hero Games", "Youthcat",
+    "Hero Games", "Youthcat", "24 Entertainment",
 ]
+# Legal suffixes left over when a developer list is split on commas ("FromSoftware, Inc.").
+COMPANY_SUFFIXES = ["inc", "ltd", "llc", "co", "corp", "limited", "gmbh", "plc", "sa", "srl", "co. ltd"]
 
 # =============================================================================
 # GENRE GROUPS

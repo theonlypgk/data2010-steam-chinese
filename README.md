@@ -96,8 +96,9 @@ marked `DATA ISSUE` in the code.
 - **Exact date of a language addition is unknown.** We only know it happened between January
   2024 and June 2026. A big update or sale at the same time could also raise reviews.
 - **Chinese games are identified by rules, not by a country field.** The dataset has no
-  country of origin. Four rules (language pattern, Chinese characters, Chinese city, known
-  company) catch most Chinese games, but some may be missed or wrongly caught;
+  country of origin. Four rules (language pattern; developers with Chinese-character names,
+  Chinese-city names or known Chinese companies) catch most Chinese games, but a Chinese
+  studio with an English name that is not on the list and ships English can be missed;
   `pcd_cn_excluded` lists every removed game so this can be checked.
 - **Genre comes from user tags.** A game's genre group is its most-voted matching tag, which
   may not match how the studio describes it.

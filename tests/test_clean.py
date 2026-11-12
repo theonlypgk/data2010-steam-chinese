@@ -57,7 +57,9 @@ def _snapshots():
         _row(12, [zh], 80, audio="['Simplified Chinese']"),  # Chinese-only -> rule 1
         _row(13, [en], 0),
         _row(14, [en, zh], 900, dev="Game Science"),              # known company -> rule 4
-        _row(15, [en, zh], 700, pub="Shanghai Fun Network Technology Co., Ltd."),  # city -> rule 3
+        _row(15, [en, zh], 700, dev="Shanghai Fun Network Technology Co., Ltd."),  # city -> rule 3
+        _row(17, [en, zh], 650, dev="Ubisoft Montreal, Ubisoft Shanghai"),  # not ALL Chinese -> kept
+        _row(18, [en, zh], 640, pub="bilibili"),                  # publisher only -> kept
         _row(16, [en, zh], 600, dev="幻境工作室"),  # Chinese characters -> rule 2
     ])
     a["discount_pct"] = "0"
@@ -69,11 +71,12 @@ def test_games_clean_filters_and_columns():
     a, c = _snapshots()
     t = clean.build_all(a, c, "2025-11-01", "2024-01-31")
     g = t["games_clean"]
-    assert sorted(g["app_id"]) == [1, 2, 3, 4, 10, 11]     # 11 kept: English + zh voice
+    assert sorted(g["app_id"]) == [1, 2, 3, 4, 10, 11, 17, 18]  # 11: English + zh voice
     cn = t["cn_excluded"].set_index("app_id")["cn_rules"]
-    assert cn[14] == "known_chinese_company"
-    assert cn[15] == "maker_in_chinese_city"
-    assert cn[16] == "maker_name_in_chinese"
+    assert cn[14] == "developer_known_chinese_company"
+    assert cn[15] == "developer_in_chinese_city"
+    assert cn[16] == "developer_name_in_chinese"
+    assert 17 not in cn.index and 18 not in cn.index
     assert g.set_index("app_id").loc[2, "price"] == 14.97   # 4.49 at -70%
     assert g.set_index("app_id").loc[2, "price_tier"] == "10to20"
     assert g.set_index("app_id").loc[1, "has_zh"] == 1

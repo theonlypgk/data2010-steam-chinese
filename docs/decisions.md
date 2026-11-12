@@ -17,7 +17,7 @@ Only the team leader edits this file. Every change gets a date and a reason at t
 |---|---|
 | Reach | `total_reviews = positive + negative` |
 | Treatment (SQ1) | `has_zh = 1` if Simplified Chinese is supported; `0` if no Chinese at all. Traditional-only games are dropped. |
-| Chinese games | ALL dropped, large or small, if any rule matches: Chinese without English (text or voice-over); developer/publisher name in Chinese characters; name contains a mainland Chinese city; known Chinese company (`config.CN_COMPANIES`). |
+| Chinese games | ALL dropped, large or small, if any rule matches: (1) Chinese without English, in text or voice-over; or EVERY developer of the game is Chinese: (2) name in Chinese characters, (3) name contains a mainland Chinese city, (4) known Chinese company (`config.CN_COMPANIES`). Publishers are not used. |
 | Minimum reviews | 10 |
 | Minimum age | released at least 365 days before the snapshot |
 | Genre group | first tag found in `TAG_TO_GENRE` (6 groups: Visual Novel, RPG, Strategy, Action, Puzzle, Casual). **Draft list, to be confirmed.** |
@@ -65,3 +65,7 @@ Two figures per question in the body.
   `pcd_cn_excluded` with the rule that matched.
 - 2026-11-12 (kp): snapshot A stays at 2026-06-20 (last CSV version).
 - 2026-11-12: processed tables split into `data/processed/csv/` (code) and `xlsx/` (viewing).
+- 2026-11-12: Chinese-game rules 2-4 look at developers only, and all developers must be
+  Chinese. With publishers and "any developer", Western games were removed because of a
+  regional publisher (bilibili for Core Keeper) or a Chinese support studio (Ubisoft
+  Shanghai for Far Cry, Activision Shanghai for Call of Duty).

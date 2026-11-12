@@ -78,6 +78,18 @@ def first_genre(tags: list[str]) -> str | None:
     return None
 
 
+def split_developers(text: str) -> list[str]:
+    """Split a developer cell on commas and drop leftover legal suffixes ("Inc.", "Ltd.")."""
+    parts = [p.strip().strip(".").strip() for p in str(text).split(",")]
+    suffixes = set(cfg.COMPANY_SUFFIXES)
+    return [p for p in parts if p and p.lower().rstrip(".") not in suffixes]
+
+
+def all_match(developers: list[str], pattern: re.Pattern) -> bool:
+    """True when the game has developers and every one of them matches the pattern."""
+    return bool(developers) and all(pattern.search(d) for d in developers)
+
+
 # --------------------------------------------------------------------------- per-game features
 def add_features(trim: pd.DataFrame, snapshot_date: str) -> pd.DataFrame:
     """Add every derived column to one trimmed snapshot. No row is dropped here
@@ -129,21 +141,19 @@ def add_features(trim: pd.DataFrame, snapshot_date: str) -> pd.DataFrame:
     has_zh_audio = audio.map(lambda x: bool(set(x) & chinese))
     has_en_audio = audio.map(lambda x: cfg.ENGLISH in x)
     any_zh = df["has_zh_simplified"] | df["has_zh_traditional"]
-    makers = (
-        df.get("developers", pd.Series("", index=df.index)).fillna("").astype(str) + " | "
-        + df.get("publishers", pd.Series("", index=df.index)).fillna("").astype(str)
-    )
+    developers = df.get("developers", pd.Series("", index=df.index)).fillna("").astype(str)
+    publishers = df.get("publishers", pd.Series("", index=df.index)).fillna("").astype(str)
+    makers = developers + " | " + publishers
+    dev_lists = developers.map(split_developers)
     rules = {
         # rule 1: Chinese text without English text, or Chinese voice-over without English
         "chinese_without_english": (any_zh & ~df["has_english"]) | (has_zh_audio & ~has_en_audio),
-        # rule 2: developer or publisher written in Chinese characters
-        "maker_name_in_chinese": makers.map(lambda s: bool(_CJK.search(s))),
-        # rule 3: developer or publisher named after a mainland Chinese city
-        "maker_in_chinese_city": makers.map(lambda s: bool(_CN_CITY.search(s))),
-        # rule 4: developer or publisher is a well-known Chinese company
-        "known_chinese_company": makers.map(lambda s: bool(_CN_COMPANY.search(s))),
+        # rules 2-4: EVERY developer is Chinese by that sign (publishers are not used)
+        "developer_name_in_chinese": dev_lists.map(lambda d: all_match(d, _CJK)),
+        "developer_in_chinese_city": dev_lists.map(lambda d: all_match(d, _CN_CITY)),
+        "developer_known_chinese_company": dev_lists.map(lambda d: all_match(d, _CN_COMPANY)),
         # (Python's re is used on purpose instead of .str.contains: with pyarrow installed,
-        # pandas would switch to a different regex engine and results could differ.)
+        # pandas switches to Arrow's regex engine, which rejects some of these patterns.)
     }
     rule_frame = pd.DataFrame(rules)
     df["is_cn_game"] = rule_frame.any(axis=1)
@@ -390,7 +400,7 @@ DATA_DICTIONARY = [
     ("sq2_groups", "eligible", "True when both arms have at least 10 games"),
     ("cn_excluded", "app_id, name", "Chinese game removed from snapshot A (>= 10 reviews)"),
     ("cn_excluded", "makers", "Developers | publishers"),
-    ("cn_excluded", "cn_rules", "Rules that matched: chinese_without_english, maker_name_in_chinese, maker_in_chinese_city, known_chinese_company"),
+    ("cn_excluded", "cn_rules", "Rules that matched: chinese_without_english, developer_name_in_chinese, developer_in_chinese_city, developer_known_chinese_company"),
     ("cn_excluded", "has_english, has_zh_audio", "English text supported / Chinese voice-over"),
     ("cn_excluded", "total_reviews", "positive + negative in snapshot A"),
 ]
