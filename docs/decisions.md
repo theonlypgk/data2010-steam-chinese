@@ -71,3 +71,6 @@ Two figures per question in the body.
   Shanghai for Far Cry, Activision Shanghai for Call of Duty).
 - 2026-11-12 (kp): the whole project is one notebook, `steam_chinese_analysis.ipynb`, from the two
   input CSV files to the tables; all other code files and the trimmed intermediate files removed.
+- 2026-11-12 (kp): outputs are only the two cleaned tables, `pcd_sq1_games` (was games_clean)
+  and `pcd_sq2_games` (was panel_ac). Group tables moved to the start of SQ1/SQ2 in Part B;
+  funnel and removed Chinese games are shown in the notebook, not saved.

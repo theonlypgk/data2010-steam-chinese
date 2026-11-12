@@ -15,30 +15,25 @@ of similar games, so that the gap is not simply "bigger games get translated mor
 
 ## Where to find the data
 
+The cleaned data is two tables, each saved whole in two formats:
+
 | I want to... | Go to |
 |---|---|
 | **look at** a table (Excel, Google Sheets) | `data/processed/xlsx/pcd_<table>.xlsx` |
 | **read** a table **in code** | `data/processed/csv/pcd_<table>.csv` |
-| know what each table and column means | `docs/data_spec.md`, or `pcd_data_dictionary` |
-| get the original input files | run section A1 of the notebook, or the release [raw-snapshots-v1](../../releases/tag/raw-snapshots-v1) |
-
-The `.xlsx` and `.csv` files with the same name hold exactly the same data. Code always
-reads the CSV version, for example:
-
-```python
-import pandas as pd
-games = pd.read_csv("data/processed/csv/pcd_games_clean.csv")
-```
+| know what each column means | `docs/data_spec.md` |
+| get the two original input files | notebook section A1, or the release [raw-snapshots-v1](../../releases/tag/raw-snapshots-v1) |
 
 | Table | One row is | Used for |
 |---|---|---|
-| `pcd_games_clean` | one game in snapshot A, after cleaning | EDA, SQ1 |
-| `pcd_sq1_groups` | one group of similar games | SQ1 |
-| `pcd_panel_ac` | one game present in both snapshots, with no Chinese in January 2024 | SQ2 |
-| `pcd_sq2_groups` | one SQ2 group (genre x starting reach) | SQ2 |
-| `pcd_cn_excluded` | one Chinese game that was removed, with the rule that matched | checking |
-| `pcd_funnel` | one cleaning step, with the number of games left | report |
-| `pcd_data_dictionary` | one column of the tables above | reference |
+| `pcd_sq1_games` | one game in snapshot A (2026), after cleaning: 44,765 games | EDA, SQ1 |
+| `pcd_sq2_games` | one game present in both snapshots, with no Chinese in January 2024: 21,555 games | SQ2 |
+
+```python
+import pandas as pd
+sq1_games = pd.read_csv("data/processed/csv/pcd_sq1_games.csv")
+sq2_games = pd.read_csv("data/processed/csv/pcd_sq2_games.csv")
+```
 
 ## Reproduce the project
 
@@ -60,12 +55,13 @@ files are kept in the release [raw-snapshots-v1](../../releases/tag/raw-snapshot
 | Notebook section | What it does | Output |
 |---|---|---|
 | Settings and decisions | every fixed choice, with its reason | |
-| A1 Load the raw snapshots | download A and C, repair the header, keep 13 columns | `data/raw/` |
-| A2 Clean each snapshot | fix types, parse lists, add derived columns | |
-| A3-A8 Filters and tables | select rows, join A and C, aggregate | |
-| A9 Save the tables | write csv and xlsx | `data/processed/` |
-| A10 Checks | stop with an error if anything is wrong | |
-| B1-B4 Analysis | EDA, SQ1, SQ2, SQ3 (to be written by the team) | `report/figures/` |
+| A1 Load | download the two input files, repair the header, keep 13 columns | `data/raw/` |
+| A2 Clean | fix types, parse lists, add derived columns | |
+| A3-A5 Select rows | filters; table for SQ1; table for SQ2 (join A and C) | |
+| A6 What was removed | funnel and removed Chinese games, shown for checking | |
+| A7 Save | write the two tables as csv and xlsx | `data/processed/` |
+| A8 Checks | stop with an error if anything is wrong | |
+| B1-B4 Analysis | EDA, SQ1, SQ2, SQ3 (B2 and B3 start with the group comparison) | `report/figures/` |
 
 ## Where each decision is in the notebook
 
@@ -83,11 +79,11 @@ SAVE OUTPUTS, CHECKS), and problems found in the real data are marked `DATA ISSU
 | All Chinese games removed (4 rules) | Settings "CHINESE GAMES"; A2 `add_features()` step 5 |
 | Genre = first matching user tag | Settings `TAG_TO_GENRE`; A2 `first_genre()` |
 | Filters: Early Access, >= 10 reviews, >= 1 year old, Traditional-only | Settings "FILTERS"; A3 `_base_filters()`; A4 |
-| SQ1 groups use year bands | Settings `YEAR_BAND_BINS`; A4 `build_games_clean()` |
-| SQ2 treated / control / excluded | Settings `MAJOR_LANGS`; A6 `build_panel_ac()` |
-| SQ2 drops delisted games (0 reviews in A) | A6 `build_panel_ac()` |
-| SQ2 groups = genre x starting reach | A6 `build_panel_ac()` |
-| Byte-identical re-runs (versions, rounding, xlsx dates) | `requirements.txt`; A4-A7 rounding; A9 |
+| SQ1 groups use year bands | Settings `YEAR_BAND_BINS`; A4 `build_games_clean()`; B2 |
+| SQ2 treated / control / excluded | Settings `MAJOR_LANGS`; A5 `build_panel_ac()` |
+| SQ2 drops delisted games (0 reviews in A) | A5 `build_panel_ac()` |
+| SQ2 groups = genre x starting reach | A5 `build_panel_ac()`; B3 |
+| Byte-identical re-runs (versions, rounding, xlsx dates) | `requirements.txt`; rounding in A4-A5; A7 |
 
 ## Limitations
 
@@ -106,7 +102,7 @@ SAVE OUTPUTS, CHECKS), and problems found in the real data are marked `DATA ISSU
   country of origin. Four rules (language pattern; developers with Chinese-character names,
   Chinese-city names or known Chinese companies) catch most Chinese games, but a Chinese
   studio with an English name that is not on the list and ships English can be missed;
-  `pcd_cn_excluded` lists every removed game so this can be checked.
+  section A6 of the notebook lists every removed game so this can be checked.
 - **Genre comes from user tags.** A game's genre group is its most-voted matching tag, which
   may not match how the studio describes it.
 - **Snapshot dates.** Snapshot A is from 2026-06-20 (the last CSV version of the dataset),
@@ -119,10 +115,10 @@ steam_chinese_analysis.ipynb   THE project: all code, from the two input files t
 requirements.txt               exact package versions
 data/
   raw/              the two input CSV files (downloaded by the notebook, not committed)
-  processed/csv/    output tables, for code (pandas.read_csv)
-  processed/xlsx/   the same tables, to open and look at
+  processed/csv/    the two cleaned tables, for code (pandas.read_csv)
+  processed/xlsx/   the same two tables, to open and look at
   README.md         source, versions, columns, licence
-docs/               data_spec.md (tables and columns), decisions.md (all choices), qc/ (check logs)
+docs/               data_spec.md (cleaning steps and columns), decisions.md (all choices), qc/ (check logs)
 report/             report, figures, reflections, slides
 ```
 

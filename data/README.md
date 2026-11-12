@@ -23,8 +23,8 @@ Backup of the raw files: GitHub release `raw-snapshots-v1` of this repo (made by
 | Folder | File | Committed | Made by |
 |---|---|---|---|
 | `raw/` | `games_a.csv`, `games_c.csv` (the two inputs) | no (too large for GitHub) | notebook, section A1 |
-| `processed/csv/` | `pcd_<table>.csv`: for code (`pandas.read_csv`) | yes | notebook, section A9 |
-| `processed/xlsx/` | `pcd_<table>.xlsx`: to open and look at | yes | notebook, section A9 |
+| `processed/csv/` | `pcd_sq1_games.csv`, `pcd_sq2_games.csv`: for code (`pandas.read_csv`) | yes | notebook, section A7 |
+| `processed/xlsx/` | `pcd_sq1_games.xlsx`, `pcd_sq2_games.xlsx`: to open and look at | yes | notebook, section A7 |
 
 ## Columns read from the raw data
 
@@ -42,13 +42,12 @@ Backup of the raw files: GitHub release `raw-snapshots-v1` of this repo (made by
 | `genres` | Genres | Steam genres (includes "Early Access") |
 | `tags` | Tags | User tags, ordered by votes |
 
-The full description of every processed table and column is in `../docs/data_spec.md`
-and in `processed/csv/pcd_data_dictionary.csv`.
+The full description of both tables and every column is in `../docs/data_spec.md`.
 
 ## Known limitations
 
 - Review counts cover all languages; reviews by Chinese-speaking players cannot be separated.
 - The exact date a game added a language is unknown, only that it changed between C and A.
-- Chinese games are identified by four rules (no country field exists); see `pcd_cn_excluded`.
+- Chinese games are identified by four rules (no country field exists); the notebook lists the removed ones.
 - Snapshot A was taken during a sale; list prices are recovered from the discount column.
 - In snapshot A the header merges "Discount" and "DLC count" into one name; the notebook splits it (`read_header()`).
