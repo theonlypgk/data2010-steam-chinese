@@ -13,22 +13,22 @@ DATA2010 Data Science Programming, final project.
 Reach = number of reviews (`positive + negative`).
 
 The whole project is one notebook, `steam_chinese_analysis.ipynb`, in three steps that
-produce six tables, followed by the analysis. This README summarises each step; the
+produce three tables, followed by the analysis. This README summarises each step; the
 notebook explains the strategy at the top of each step and the code in comments.
 
 | Step | What | Output tables |
 |---|---|---|
 | 1 | clean the data and encode it | `pcd_games_clean` |
-| 2 | SQ1: games with vs without Chinese, inside groups of similar games | `pcd_sq1_groups`, `pcd_sq1_summary` |
-| 3 | SQ2: games that added Chinese vs similar games that did not | `pcd_sq2_panel`, `pcd_sq2_groups`, `pcd_sq2_summary` |
+| 2 | SQ1: group similar games, with vs without Chinese | `pcd_sq1_groups` |
+| 3 | SQ2: group similar games, added Chinese after launch vs did not | `pcd_sq2_groups` |
 | Part B | figures and insights (EDA, SQ1, SQ2, SQ3) | `report/figures/` |
 
 ```
 steam_chinese_analysis.ipynb   all the code, from the two input files to the analysis
 requirements.txt               exact package versions (Python 3.12)
 data/raw/                      the two input files (downloaded by the notebook, not committed)
-data/processed/csv/            the six tables, for code (pandas.read_csv)
-data/processed/xlsx/           the same six tables, to open and look at
+data/processed/csv/            the three tables, for code (pandas.read_csv)
+data/processed/xlsx/           the same three tables, to open and look at
 report/                        report, figures, reflections, slides
 .github/, .devcontainer/       automatic re-runs on GitHub; Codespaces environment
 ```
@@ -41,8 +41,8 @@ jupyter nbconvert --to notebook --execute steam_chinese_analysis.ipynb --output 
 ```
 
 or open the notebook and choose *Run All*. It downloads the two input files itself. Two runs
-give byte-identical CSV files (exact package versions, rounded floats, fixed seed, fixed
-xlsx dates). On GitHub, the `pipeline` workflow runs the notebook on a clean machine after
+give byte-identical CSV files (exact package versions, rounded floats, fixed xlsx
+dates). On GitHub, the `pipeline` workflow runs the notebook on a clean machine after
 every change and commits the tables if they changed.
 
 ```python
@@ -123,7 +123,7 @@ averaged or used as a plain number in a regression. Genre is not encoded: it has
 | `has_zh` | **treatment**: 1 = Simplified Chinese, 0 = no Chinese at all |
 | `total_reviews`, `log_total_reviews` | **outcome**: reach (log10 for figures, because counts are very skewed) |
 
-## Step 2. SQ1 tables → `pcd_sq1_groups`, `pcd_sq1_summary`
+## Step 2. SQ1 groups → `pcd_sq1_groups`
 
 **Strategy: compare only similar games.** A confounder affects reach and also differs
 between games with and without Chinese (bigger-budget games are both more often translated
@@ -139,18 +139,10 @@ compared only inside the same group, where the confounders are the same on both 
 | Release-year band | older games have had more time to collect reviews; bands, because single years leave only 44% of games in usable groups (76% with bands) |
 | Other languages | the strongest: games with Chinese have a median of 7 other languages, games without it 0 (69% vs 9% have 5+); without it SQ1 would compare "localised" with "not localised" |
 
-**Method**
-- Per group: number of games and **median** reviews on each side (medians, because review
-  counts are very skewed), gap `pct_diff = median with / median without - 1`. A group is used
-  (`eligible`) only with >= 10 games per side. Result: 360 groups, 178 eligible, covering 76%
-  of games (87% of games with Chinese).
-- Per reporting level (overall, each genre, each price tier): the **average gap over its
-  eligible groups**, each group counting once. "Per genre" only says which groups are
-  averaged; every gap is measured inside one group.
-- **95% interval** by bootstrap: games of each side are resampled within their group 2,000
-  times (seed 2010), the average is recomputed, and the middle 95% is kept. A gap is a
-  function of two medians, which has no simple formula for its uncertainty.
-- **Large enough** = average >= +20% and the whole interval above 0 (fixed beforehand).
+Per group: number of games and **median** reviews on each side (medians, because review
+counts are very skewed), and the gap `pct_diff = median with / median without - 1`. A group
+is `eligible` only with >= 10 games per side. Result: 360 groups, 178 eligible, covering 76%
+of games (87% of games with Chinese).
 
 ### `pcd_sq1_groups`: one row per group (360)
 
@@ -163,24 +155,14 @@ compared only inside the same group, where the confounders are the same on both 
 | `pct_diff` | gap (0.5 = +50% reviews) |
 | `eligible` | >= 10 games on each side |
 
-### `pcd_sq1_summary`: one row per reporting level (12)
-
-| Column | Meaning |
-|---|---|
-| `level`, `value`, `order` | `overall`/`all`, `genre`/a genre, `price_tier`/a code; `order` sorts the rows |
-| `n_groups`, `n_zh`, `n_no_zh` | eligible groups and games behind the row |
-| `avg_pct_diff` | average gap over those groups |
-| `ci_low`, `ci_high` | 95% bootstrap interval |
-| `large_enough` | `avg_pct_diff >= 0.20` and `ci_low > 0` |
-
-## Step 3. SQ2 tables → `pcd_sq2_panel`, `pcd_sq2_groups`, `pcd_sq2_summary`
+## Step 3. SQ2 groups → `pcd_sq2_groups`
 
 **Strategy: follow the same games over time.** Games with no Chinese in January 2024
 (snapshot C) that are still on Steam in June 2026 (snapshot A): those that added Chinese
 in between (**treated**) are compared with similar games that added nothing (**control**).
 The control arm is needed because every game gains reviews over time anyway.
 
-**Panel.** Snapshot C is filtered as in Step 1; game characteristics are taken from C
+**Panel** (one row per game, the input of the groups; not saved). Snapshot C is filtered as in Step 1; game characteristics are taken from C
 (what a game looked like before adding Chinese); games with 0 reviews in A are dropped
 (delisted: a growth of -100% is not real). `growth = (reviews A - reviews C) / reviews C`.
 `arm`: `treated` = added Simplified Chinese (509); `control` = added neither Chinese nor any
@@ -198,35 +180,29 @@ only the confounders that matter most for growth:
 | Price tier | no | with the year band fixed, growth is about the same in every tier except > $20; genre x price x year leaves only 17 usable groups, 54% of treated games and 3 genres |
 | Other languages | no | treated and control have almost the same mix (0 / 1-4 / 5+: 62/25/13% vs 64/26/10%) |
 
-Result: 24 groups, 16 eligible, covering 90% of treated games and all 6 genres. Groups and
-summary are built exactly as in Step 2, with `uplift_pts = median growth treated - median
-growth control` (0.1 = +10 points), reported overall and per genre; **large enough** =
-average >= +10 points and the whole interval above 0.
+Result: 24 groups, 16 eligible, covering 90% of treated games and all 6 genres. The table is
+built as in Step 2, with `uplift_pts = median growth treated - median growth control`
+(0.1 = +10 growth points).
 
-### `pcd_sq2_panel`: one row per game (21,555)
+### `pcd_sq2_groups`: one row per group (24)
 
 | Column | Meaning |
 |---|---|
-| `app_id`, `name` | Steam id and title |
-| `genre_group`, `release_year`, `year_band`, `price_c`, `price_tier` | the game in January 2024 (codes as in Step 1) |
-| `reviews_c`, `reviews_a` | reviews in January 2024 and June 2026 |
-| `growth` | **outcome** |
-| `arm` | **treatment**: treated / control / excluded |
-
-### `pcd_sq2_groups` (24) and `pcd_sq2_summary` (7)
-
-Same layout as the SQ1 tables, with `group_id_sq2` (e.g. `Action | <=2017`), `n_treated`,
-`n_control`, `median_growth_treated`, `median_growth_control`, `uplift_pts` and, in the
-summary, `avg_uplift_pts`.
+| `group_id_sq2` | readable group name, e.g. `Action | <=2017` |
+| `genre_group`, `year_band` | the group's parts (year band as code) |
+| `n_treated`, `n_control` | games that added Chinese / did not |
+| `median_growth_treated`, `median_growth_control` | median growth on each side |
+| `uplift_pts` | uplift (0.1 = +10 growth points) |
+| `eligible` | >= 10 games on each side |
 
 ## Part B. Analysis: figures and insights
 
 | Section | Reads | What |
 |---|---|---|
 | B1 EDA | `pcd_games_clean` | describe the data |
-| B2 SQ1 | `pcd_sq1_groups`, `pcd_sq1_summary` | gap overall and per genre (price tier in the appendix) |
-| B3 SQ2 | `pcd_sq2_panel`, `pcd_sq2_groups`, `pcd_sq2_summary` | uplift overall and per genre |
-| B4 SQ3 | both summaries, per genre | translate at launch, later, or not a priority |
+| B2 SQ1 | `pcd_sq1_groups` | gap overall and per genre (price tier in the appendix) |
+| B3 SQ2 | `pcd_sq2_groups` | uplift overall and per genre |
+| B4 SQ3 | both group tables, per genre | translate at launch, later, or not a priority |
 
 ## Limitations
 
