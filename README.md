@@ -134,9 +134,9 @@ sq2_games = pd.read_csv("data/processed/csv/pcd_sq2_games.csv")
 |---|---|
 | `app_id`, `name` | Steam id and title |
 | `genre_group` | genre group |
-| `release_year`, `year_band` | release year and its band |
-| `price`, `price_tier` | list price (USD) and its tier |
-| `n_other_langs`, `n_other_langs_bin` | number of other languages and its bin |
+| `release_year`, `year_band` | release year; band code 1-4 |
+| `price`, `price_tier` | list price (USD); tier code 1-5 |
+| `n_other_langs`, `n_other_langs_bin` | number of other languages; bin code 1-3 |
 | `has_zh` | **treatment**: 1 = supports Simplified Chinese, 0 = no Chinese at all |
 | `total_reviews`, `log_total_reviews` | **outcome**: reach |
 | `group_id` | comparison group (Step 5): `genre_group | year_band | price_tier | n_other_langs_bin` |
@@ -146,11 +146,27 @@ sq2_games = pd.read_csv("data/processed/csv/pcd_sq2_games.csv")
 | Column | Meaning |
 |---|---|
 | `app_id`, `name` | Steam id and title |
-| `genre_group`, `release_year`, `year_band`, `price_c`, `price_tier` | the game in January 2024 (snapshot C) |
+| `genre_group`, `release_year`, `year_band`, `price_c`, `price_tier` | the game in January 2024 (snapshot C); `year_band` and `price_tier` as codes |
 | `reviews_c`, `reviews_a` | reviews in January 2024 and in June 2026 |
 | `growth` | **outcome**: `(reviews_a - reviews_c) / reviews_c` |
 | `arm` | **treatment**: `treated` = added Simplified Chinese (509); `control` = added neither Chinese nor a major language (20,805); `excluded` = added another major language only (241) |
 | `group_id_sq2` | comparison group (Step 5): `genre_group | year_band` |
+
+**Codes of the binned columns.** The three binned columns have a natural order, so each
+label is saved as its rank:
+
+| Column | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|
+| `price_tier` | free | < $5 | $5-10 | $10-20 | > $20 |
+| `year_band` | <=2017 | 2018-2019 | 2020-2021 | 2022+ | |
+| `n_other_langs_bin` | 0 | 1-4 | 5+ | | |
+
+As text the labels sort in the wrong order ("10to20" before "5to10", "<=2017" after
+"2022+"), which breaks tables and figure axes; the codes sort correctly and can be used in
+calculations that need an order, such as a trend over price tiers. They are ranks, not
+amounts (tier 4 is not twice tier 2), so they are not averaged or used as a plain number in
+a regression. `genre_group` is not encoded: genres have no order, so a number would invent
+one. The comparison groups (`group_id`, `group_id_sq2`) keep the readable labels.
 
 Major languages: German, French, Spanish - Spain, Japanese, Russian, Korean, Portuguese - Brazil.
 
