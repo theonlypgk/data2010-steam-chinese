@@ -1403,6 +1403,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 219990,Grim Dawn,2016,<=2017,24.93,85,gt20,RPG,11,5+,1,93489,6241,99730,4.998826,RPG | <=2017 | gt20 | 5+
 220160,Trials Evolution: Gold Edition,2013,<=2017,19.96,75,10to20,Action,9,5+,1,1745,557,2302,3.362105,Action | <=2017 | 10to20 | 5+
 220200,Kerbal Space Program,2015,<=2017,39.96,75,gt20,Strategy,7,5+,1,121084,6078,127162,5.104357,Strategy | <=2017 | gt20 | 5+
+220240,Far Cry 3,2012,<=2017,19.95,80,10to20,Action,14,5+,1,101914,12105,114019,5.056977,Action | <=2017 | 10to20 | 5+
 220260,Farming Simulator 2013 Titanium Edition,2013,<=2017,14.99,0,10to20,Casual,6,5+,0,4857,396,5253,3.720407,Casual | <=2017 | 10to20 | 5+
 220420,Nancy Drew®: The Deadly Device,2012,<=2017,19.98,35,10to20,Puzzle,0,0,0,77,7,84,1.924279,Puzzle | <=2017 | 10to20 | 0
 220440,DmC: Devil May Cry,2013,<=2017,29.96,75,gt20,Action,8,5+,0,27949,2035,29984,4.47689,Action | <=2017 | gt20 | 5+
@@ -1755,6 +1756,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 245430,Wizardry 7: Crusaders of the Dark Savant,2013,<=2017,0.84,0,lt5,RPG,1,1-4,0,207,48,255,2.40654,RPG | <=2017 | lt5 | 1-4
 245450,Wizardry 8,2013,<=2017,1.49,0,lt5,RPG,0,0,0,1005,112,1117,3.048053,RPG | <=2017 | lt5 | 0
 245470,Democracy 3,2013,<=2017,24.97,70,gt20,Strategy,7,5+,1,5381,1862,7243,3.859918,Strategy | <=2017 | gt20 | 5+
+245490,Trials Fusion™,2014,<=2017,19.95,80,10to20,Action,8,5+,1,1580,764,2344,3.369958,Action | <=2017 | 10to20 | 5+
 245620,Tropico 5,2014,<=2017,19.97,65,10to20,Strategy,7,5+,0,11092,3031,14123,4.149927,Strategy | <=2017 | 10to20 | 5+
 246070,Hack 'n' Slash,2014,<=2017,2.0,0,lt5,Action,0,0,0,480,428,908,2.958086,Action | <=2017 | lt5 | 0
 246090,Spacebase DF-9,2014,<=2017,9.93,85,5to10,Strategy,0,0,0,780,3529,4309,3.634376,Strategy | <=2017 | 5to10 | 0
@@ -2892,6 +2894,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 298020,Escape The Museum,2014,<=2017,3.95,80,lt5,Puzzle,0,0,0,30,42,72,1.857332,Puzzle | <=2017 | lt5 | 0
 298030,Total Annihilation,2015,<=2017,4.99,0,lt5,Strategy,0,0,0,3355,122,3477,3.541205,Strategy | <=2017 | lt5 | 0
 298050,Master of Orion,2016,<=2017,24.99,0,gt20,Strategy,10,5+,1,6076,1842,7918,3.898615,Strategy | <=2017 | gt20 | 5+
+298110,Far Cry® 4,2014,<=2017,29.93,85,gt20,Action,15,5+,1,51618,9649,61267,4.787227,Action | <=2017 | gt20 | 5+
 298140,Rhiannon: Curse of the Four Branches,2014,<=2017,4.95,80,lt5,Puzzle,0,0,0,91,56,147,2.167317,Puzzle | <=2017 | lt5 | 0
 298160,Eldevin,2014,<=2017,0.0,0,free,RPG,0,0,0,1385,351,1736,3.23955,RPG | <=2017 | free | 0
 298180,The Desolate Hope,2014,<=2017,0.0,0,free,RPG,0,0,0,1508,131,1639,3.214579,RPG | <=2017 | free | 0
@@ -3633,6 +3636,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 327510,WASTED,2016,<=2017,12.96,73,10to20,Action,0,0,0,899,272,1171,3.068557,Action | <=2017 | 10to20 | 0
 327560,Near Death,2016,<=2017,7.99,0,5to10,Action,6,5+,0,934,92,1026,3.011147,Action | <=2017 | 5to10 | 5+
 327670,Ironcast,2015,<=2017,14.95,80,10to20,Strategy,4,1-4,0,681,254,935,2.970812,Strategy | <=2017 | 10to20 | 1-4
+327690,Gigantic,2017,<=2017,0.0,0,free,Action,2,1-4,0,5759,1731,7490,3.874482,Action | <=2017 | free | 1-4
 327740,TRON 2.0,2014,<=2017,9.97,65,5to10,Action,4,1-4,0,641,68,709,2.850646,Action | <=2017 | 5to10 | 1-4
 327760,Bacon Man: An Adventure,2018,2018-2019,9.99,0,5to10,Action,0,0,0,32,8,40,1.60206,Action | 2018-2019 | 5to10 | 0
 327860,Salt,2018,2018-2019,14.96,75,10to20,RPG,0,0,0,1712,526,2238,3.34986,RPG | 2018-2019 | 10to20 | 0
@@ -4190,6 +4194,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 346040,Joe's Diner,2015,<=2017,4.95,80,lt5,Action,9,5+,0,98,151,249,2.396199,Action | <=2017 | lt5 | 5+
 346080,Astro Emporia,2015,<=2017,1.0,51,lt5,Casual,0,0,0,46,47,93,1.968483,Casual | <=2017 | lt5 | 0
 346090,I Can't Escape: Darkness,2015,<=2017,11.97,66,10to20,Puzzle,3,1-4,0,53,14,67,1.826075,Puzzle | <=2017 | 10to20 | 1-4
+346110,ARK: Survival Evolved,2017,<=2017,14.98,34,10to20,Action,18,5+,1,612177,117993,730170,5.863424,Action | <=2017 | 10to20 | 5+
 346120,Boring Man - Online Tactical Stickman Combat,2015,<=2017,0.0,0,free,Action,0,0,0,4800,651,5451,3.736476,Action | <=2017 | free | 0
 346140,Hidden Object Bundle 5 in 1,2015,<=2017,9.97,70,5to10,Casual,8,5+,0,172,85,257,2.409933,Casual | <=2017 | 5to10 | 5+
 346160,Barter Empire,2015,<=2017,4.99,0,lt5,RPG,0,0,0,15,14,29,1.462398,RPG | <=2017 | lt5 | 0
@@ -4902,6 +4907,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 368370,Her Story,2015,<=2017,9.98,50,5to10,Puzzle,1,1-4,0,8718,1014,9732,3.988202,Puzzle | <=2017 | 5to10 | 1-4
 368390,The Darkside Detective,2017,<=2017,14.98,55,10to20,Puzzle,3,1-4,1,4464,260,4724,3.67431,Puzzle | <=2017 | 10to20 | 1-4
 368450,Rememoried,2015,<=2017,9.99,0,5to10,Puzzle,0,0,0,131,97,228,2.357935,Puzzle | <=2017 | 5to10 | 0
+368500,Assassin's Creed® Syndicate,2015,<=2017,29.93,85,gt20,Action,12,5+,1,23779,5900,29679,4.472449,Action | <=2017 | gt20 | 5+
 368570,Beat Da Beat,2016,<=2017,1.99,0,lt5,Action,9,5+,1,441,31,472,2.673942,Action | <=2017 | lt5 | 5+
 368590,Albert and Otto,2015,<=2017,4.99,0,lt5,Action,0,0,0,410,230,640,2.80618,Action | <=2017 | lt5 | 0
 368600,Terra Nova: Strike Force Centauri,2015,<=2017,5.93,85,5to10,Action,0,0,0,89,6,95,1.977724,Action | <=2017 | 5to10 | 0
@@ -6759,6 +6765,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 436320,Raw Data,2017,<=2017,39.93,85,gt20,Action,0,0,0,1895,573,2468,3.392345,Action | <=2017 | gt20 | 0
 436360,Robo's World: The Zarnok Fortress,2016,<=2017,9.98,55,5to10,Action,0,0,0,17,5,22,1.342423,Action | <=2017 | 5to10 | 0
 436390,Prison Run and Gun,2016,<=2017,3.97,70,lt5,Action,0,0,0,481,48,529,2.723456,Action | <=2017 | lt5 | 0
+436400,Heroes of the Seven Seas VR,2016,<=2017,1.99,0,lt5,RPG,0,0,0,33,13,46,1.662758,RPG | <=2017 | lt5 | 0
 436470,Gamma Bros,2018,2018-2019,0.0,0,free,Action,0,0,0,144,14,158,2.198657,Action | 2018-2019 | free | 0
 436500,Diaries of a Spaceport Janitor,2016,<=2017,9.97,66,5to10,Casual,0,0,0,696,256,952,2.978637,Casual | <=2017 | 5to10 | 0
 436520,Line of Sight,2017,<=2017,0.0,0,free,Action,0,0,0,5402,3653,9055,3.956888,Action | <=2017 | free | 0
@@ -9631,6 +9638,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 552450,Serious Sam VR: The First Encounter,2017,<=2017,19.9,90,10to20,Action,0,0,0,606,90,696,2.842609,Action | <=2017 | 10to20 | 0
 552460,Serious Sam VR: The Second Encounter,2017,<=2017,19.93,85,10to20,Action,0,0,0,199,36,235,2.371068,Action | <=2017 | 10to20 | 0
 552500,Warhammer: Vermintide 2,2018,2018-2019,29.9,90,gt20,Action,7,5+,1,113489,20234,133723,5.126206,Action | 2018-2019 | gt20 | 5+
+552520,Far Cry® 5,2018,2018-2019,59.93,85,gt20,Action,12,5+,1,140377,33100,173477,5.239242,Action | 2018-2019 | gt20 | 5+
 552540,Lotia®,2017,<=2017,0.0,0,free,RPG,0,0,0,14,6,20,1.30103,RPG | <=2017 | free | 0
 552570,The New Queen,2017,<=2017,1.09,0,lt5,RPG,0,0,0,19,13,32,1.50515,RPG | <=2017 | lt5 | 0
 552580,Jade's Journey,2016,<=2017,0.99,0,lt5,RPG,0,0,0,46,34,80,1.90309,RPG | <=2017 | lt5 | 0
@@ -10357,6 +10365,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 580320,Ashworld,2017,<=2017,14.95,80,10to20,Action,0,0,0,16,12,28,1.447158,Action | <=2017 | 10to20 | 0
 580410,Destination: Pluto The VR Experience,2017,<=2017,0.0,0,free,Casual,0,0,0,25,17,42,1.623249,Casual | <=2017 | free | 0
 580420,Tourists Kidnapped a Little Bear,2017,<=2017,0.99,0,lt5,Action,0,0,0,70,23,93,1.968483,Action | <=2017 | lt5 | 0
+580560,Hero Barrier,2017,<=2017,0.99,0,lt5,Action,0,0,1,48,28,76,1.880814,Action | <=2017 | lt5 | 0
 580570,Lethis - Daring Discoverers,2017,<=2017,12.9,90,10to20,Casual,1,1-4,0,18,15,33,1.518514,Casual | <=2017 | 10to20 | 1-4
 580590,Cublast HD,2017,<=2017,9.99,0,5to10,Casual,0,0,0,42,3,45,1.653213,Casual | <=2017 | 5to10 | 0
 580680,CYBER JOLT (VR),2017,<=2017,0.99,17,lt5,Action,0,0,0,14,11,25,1.39794,Action | <=2017 | lt5 | 0
@@ -10568,6 +10577,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 588800,HEVN,2018,2018-2019,9.98,50,5to10,Action,0,0,0,11,12,23,1.361728,Action | 2018-2019 | 5to10 | 0
 588880,Crush,2017,<=2017,11.99,0,10to20,Action,9,5+,0,20,3,23,1.361728,Action | <=2017 | 10to20 | 5+
 588890,Heroes of Arca,2017,<=2017,0.0,0,free,Strategy,1,1-4,0,51,26,77,1.886491,Strategy | <=2017 | free | 1-4
+588920,BADASS,2017,<=2017,0.79,0,lt5,RPG,0,0,0,15,14,29,1.462398,RPG | <=2017 | lt5 | 0
 588950,Kingsway,2017,<=2017,9.98,60,5to10,RPG,0,0,0,1518,128,1646,3.21643,RPG | <=2017 | 5to10 | 0
 588970,Oik,2017,<=2017,0.7,0,lt5,Casual,25,5+,1,1515,172,1687,3.227115,Casual | <=2017 | lt5 | 5+
 588980,Speed and Scream,2017,<=2017,4.99,0,lt5,Casual,0,0,0,8,8,16,1.20412,Casual | <=2017 | lt5 | 0
@@ -10745,6 +10755,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 595960,Pinball Wicked,2025,2022+,7.98,40,5to10,Casual,0,0,0,183,28,211,2.324282,Casual | 2022+ | 5to10 | 0
 596080,Embers of Mirrim,2017,<=2017,14.96,75,10to20,Puzzle,4,1-4,0,28,5,33,1.518514,Puzzle | <=2017 | 10to20 | 1-4
 596090,Gray Destiny,2023,2022+,39.8,95,gt20,Action,0,0,0,34,6,40,1.60206,Action | 2022+ | gt20 | 0
+596200,Blood 'n Bikinis,2018,2018-2019,9.96,75,5to10,RPG,0,0,0,26,9,35,1.544068,RPG | 2018-2019 | 5to10 | 0
 596240,Apocryph: an old-school shooter,2018,2018-2019,14.99,0,10to20,Action,6,5+,1,168,151,319,2.503791,Action | 2018-2019 | 10to20 | 5+
 596370,Turn,2017,<=2017,0.0,0,free,Casual,0,0,0,14,0,14,1.146128,Casual | <=2017 | free | 0
 596380,Coffee Crisis,2018,2018-2019,9.99,0,5to10,Action,0,0,0,121,61,182,2.260071,Action | 2018-2019 | 5to10 | 0
@@ -11074,6 +11085,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 610860,Shogo: Mobile Armor Division,2017,<=2017,13.99,0,10to20,Action,0,0,0,166,46,212,2.326336,Action | <=2017 | 10to20 | 0
 610900,Sumatra: Fate of Yandi,2019,2018-2019,7.98,60,5to10,Puzzle,3,1-4,0,160,4,164,2.214844,Puzzle | 2018-2019 | 5to10 | 1-4
 610940,iStorm,2017,<=2017,0.0,0,free,Action,0,0,0,53,75,128,2.10721,Action | <=2017 | free | 0
+610960,红石遗迹 - Red Obsidian Remnant,2017,<=2017,8.99,0,5to10,Action,0,0,1,701,133,834,2.921166,Action | <=2017 | 5to10 | 0
 610980,The Midnight Sanctuary,2018,2018-2019,9.97,70,5to10,Visual Novel,1,1-4,0,27,1,28,1.447158,Visual Novel | 2018-2019 | 5to10 | 1-4
 611020,CityBattle | Virtual Earth,2018,2018-2019,0.0,0,free,Action,1,1-4,0,1008,499,1507,3.178113,Action | 2018-2019 | free | 1-4
 611040,Tube Tycoon,2018,2018-2019,10.98,35,10to20,Casual,7,5+,0,459,136,595,2.774517,Casual | 2018-2019 | 10to20 | 5+
@@ -11213,6 +11225,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 616690,BRKÖUT,2017,<=2017,2.99,0,lt5,Action,0,0,0,12,3,15,1.176091,Action | <=2017 | lt5 | 0
 616700,Rage of Car Force: Car Crashing Games,2020,2020-2021,0.0,0,free,Casual,11,5+,1,663,229,892,2.950365,Casual | 2020-2021 | free | 5+
 616720,Live2DViewerEX,2021,2020-2021,4.99,10,lt5,Action,2,1-4,1,3223,267,3490,3.542825,Action | 2020-2021 | lt5 | 1-4
+616740,克莉丝的炎之信仰 Cryste: the Faith of Fire Vol.1,2017,<=2017,9.99,0,5to10,Casual,0,0,1,262,33,295,2.469822,Casual | <=2017 | 5to10 | 0
 616750,1943 Deadly Desert,2018,2018-2019,9.93,85,5to10,Strategy,8,5+,1,65,33,98,1.991226,Strategy | 2018-2019 | 5to10 | 5+
 616830,Cartoon Strike,2020,2020-2021,0.0,0,free,Action,0,0,0,348,193,541,2.733197,Action | 2020-2021 | free | 0
 616880,No Stick Shooter,2017,<=2017,0.99,0,lt5,Action,8,5+,0,28,5,33,1.518514,Action | <=2017 | lt5 | 5+
@@ -11819,6 +11832,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 648810,Vehicle VR,2017,<=2017,1.99,0,lt5,Action,0,0,0,22,11,33,1.518514,Action | <=2017 | lt5 | 0
 648880,S.O.Y.F. - S#!T ON YOUR FRIENDS,2017,<=2017,2.98,50,lt5,Action,0,0,0,12,0,12,1.079181,Action | <=2017 | lt5 | 0
 649150,Phobia,2017,<=2017,5.92,88,5to10,Action,1,1-4,0,19,49,68,1.832509,Action | <=2017 | 5to10 | 1-4
+649170,The Seasons,2017,<=2017,4.99,0,lt5,Visual Novel,0,0,1,44,17,61,1.78533,Visual Novel | <=2017 | lt5 | 0
 649240,RADtv,2019,2018-2019,9.99,0,5to10,Action,7,5+,1,28,11,39,1.591065,Action | 2018-2019 | 5to10 | 5+
 649300,Wisdom of War,2017,<=2017,0.99,0,lt5,Strategy,0,0,1,6,10,16,1.20412,Strategy | <=2017 | lt5 | 0
 649450,Deadly Escape,2018,2018-2019,1.98,60,lt5,Action,0,0,0,52,27,79,1.897627,Action | 2018-2019 | lt5 | 0
@@ -13451,6 +13465,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 718790,Warmonger,2018,2018-2019,0.0,0,free,Action,5,5+,0,169,126,295,2.469822,Action | 2018-2019 | free | 5+
 718850,Age of Wonders: Planetfall,2019,2018-2019,29.97,66,gt20,Strategy,7,5+,1,5137,1294,6431,3.808279,Strategy | 2018-2019 | gt20 | 5+
 718910,Vitamin Girl / ビタミンガール,2017,<=2017,3.99,0,lt5,Action,3,1-4,0,13,7,20,1.30103,Action | <=2017 | lt5 | 1-4
+718940,Prey with Gun 带枪的猎物,2017,<=2017,0.0,0,free,RPG,0,0,1,173,28,201,2.303196,RPG | <=2017 | free | 0
 718960,The Flesh God,2017,<=2017,0.0,0,free,Action,0,0,0,15,4,19,1.278754,Action | <=2017 | free | 0
 719040,Wasteland 3,2020,2020-2021,11.99,0,10to20,RPG,7,5+,0,17695,3201,20896,4.320063,RPG | 2020-2021 | 10to20 | 5+
 719070,BlowOut,2018,2018-2019,3.49,0,lt5,Action,0,0,0,9,4,13,1.113943,Action | 2018-2019 | lt5 | 0
@@ -13935,6 +13950,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 743130,MewnBase,2023,2022+,9.98,50,5to10,Casual,12,5+,0,1287,92,1379,3.139564,Casual | 2022+ | 5to10 | 5+
 743190,Zap Zap Zombie Cats,2018,2018-2019,0.0,0,free,Action,0,0,0,43,26,69,1.838849,Action | 2018-2019 | free | 0
 743230,Baseball Mogul 2018,2018,2018-2019,29.99,0,gt20,Strategy,0,0,0,14,2,16,1.20412,Strategy | 2018-2019 | gt20 | 0
+743350,Slay.one,2018,2018-2019,9.99,0,5to10,Action,12,5+,1,76,63,139,2.143015,Action | 2018-2019 | 5to10 | 5+
 743380,"Split - manipulate time, make clones and solve cyber puzzles from the future!",2023,2022+,11.99,0,10to20,Casual,9,5+,1,39,23,62,1.792392,Casual | 2022+ | 10to20 | 5+
 743450,Monster Prom,2018,2018-2019,2.39,0,lt5,Visual Novel,0,0,1,13052,946,13998,4.146066,Visual Novel | 2018-2019 | lt5 | 0
 743550,COSMONAUT,2018,2018-2019,0.0,0,free,Action,0,0,0,33,6,39,1.591065,Action | 2018-2019 | free | 0
@@ -14565,6 +14581,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 771470,Stage Fright (by Broan Games),2018,2018-2019,1.99,0,lt5,Action,0,0,0,7,10,17,1.230449,Action | 2018-2019 | lt5 | 0
 771500,The Intern,2021,2020-2021,0.79,0,lt5,Casual,5,5+,0,12,12,24,1.380211,Casual | 2020-2021 | lt5 | 5+
 771530,Take That,2020,2020-2021,3.95,79,lt5,Casual,6,5+,1,70,20,90,1.954243,Casual | 2020-2021 | lt5 | 5+
+771570,Zombie City,2018,2018-2019,3.99,0,lt5,Action,0,0,1,20,6,26,1.414973,Action | 2018-2019 | lt5 | 0
 771680,Shield Impact,2018,2018-2019,1.99,20,lt5,Action,1,1-4,0,59,16,75,1.875061,Action | 2018-2019 | lt5 | 1-4
 771690,Fimbul,2019,2018-2019,9.99,0,5to10,Action,7,5+,0,22,14,36,1.556303,Action | 2018-2019 | 5to10 | 5+
 771700,Airhead,2024,2022+,19.96,75,10to20,Action,25,5+,1,53,4,57,1.755875,Action | 2022+ | 10to20 | 5+
@@ -15452,6 +15469,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 812070,Project Nightmares Case 36: Henrietta Kedward,2021,2020-2021,19.95,80,10to20,Action,12,5+,1,287,87,374,2.572872,Action | 2020-2021 | 10to20 | 5+
 812100,Blake and Mortimer: The Curse of the Thirty Denarii,2018,2018-2019,0.79,0,lt5,Casual,2,1-4,0,20,12,32,1.50515,Casual | 2018-2019 | lt5 | 1-4
 812110,Alice in Wonderland - Hidden Objects,2018,2018-2019,0.79,0,lt5,Casual,4,1-4,0,48,27,75,1.875061,Casual | 2018-2019 | lt5 | 1-4
+812140,Assassin's Creed® Odyssey,2018,2018-2019,59.93,85,gt20,RPG,12,5+,1,153091,19102,172193,5.236015,RPG | 2018-2019 | gt20 | 5+
 812160,Etherborn,2019,2018-2019,16.97,60,10to20,Puzzle,7,5+,1,313,117,430,2.633468,Puzzle | 2018-2019 | 10to20 | 5+
 812190,Miasma Caves,2020,2020-2021,0.0,0,free,Action,0,0,0,23,5,28,1.447158,Action | 2020-2021 | free | 0
 812380,Flock of Dogs,2024,2022+,9.99,0,5to10,Action,0,0,0,97,16,113,2.053078,Action | 2022+ | 5to10 | 0
@@ -15492,6 +15510,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 814300,Pigeons Attack,2019,2018-2019,4.97,70,lt5,Action,8,5+,1,172,15,187,2.271842,Action | 2018-2019 | lt5 | 5+
 814360,Mythic Ocean,2020,2020-2021,14.95,80,10to20,Visual Novel,0,0,0,138,8,146,2.164353,Visual Novel | 2020-2021 | 10to20 | 0
 814370,Monster Sanctuary,2020,2020-2021,19.96,75,10to20,RPG,7,5+,1,10468,971,11439,4.058388,RPG | 2020-2021 | 10to20 | 5+
+814380,Sekiro™: Shadows Die Twice - GOTY Edition,2019,2018-2019,59.98,50,gt20,Action,10,5+,1,307041,15193,322234,5.508171,Action | 2018-2019 | gt20 | 5+
 814400,Battlewake,2019,2018-2019,29.93,85,gt20,Action,0,0,0,91,34,125,2.09691,Action | 2018-2019 | gt20 | 0
 814420,TetraLogical,2019,2018-2019,2.99,0,lt5,Casual,0,0,0,19,1,20,1.30103,Casual | 2018-2019 | lt5 | 0
 814480,Mini World: CREATA,2018,2018-2019,0.0,0,free,Action,13,5+,1,2519,1835,4354,3.638888,Action | 2018-2019 | free | 5+
@@ -15727,6 +15746,8 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 823500,BONEWORKS,2019,2018-2019,29.99,20,gt20,Action,0,0,0,32917,2762,35679,4.552413,Action | 2018-2019 | gt20 | 0
 823530,Aesthetic Arena,2018,2018-2019,0.99,0,lt5,Action,0,0,0,35,10,45,1.653213,Action | 2018-2019 | lt5 | 0
 823550,Booty Calls,2018,2018-2019,0.0,0,free,Strategy,4,1-4,0,255,294,549,2.739572,Strategy | 2018-2019 | free | 1-4
+823580,Isoland 2 - Ashes of Time,2018,2018-2019,2.99,0,lt5,Puzzle,7,5+,1,279,15,294,2.468347,Puzzle | 2018-2019 | lt5 | 5+
+823600,Battle Brawlers,2018,2018-2019,0.0,0,free,Strategy,0,0,1,114,81,195,2.290035,Strategy | 2018-2019 | free | 0
 823610,Dungeon Of Dragon Knight,2019,2018-2019,11.98,51,10to20,RPG,6,5+,1,269,78,347,2.540329,RPG | 2018-2019 | 10to20 | 5+
 823640,Gnomes Garden Lost King,2018,2018-2019,14.99,0,10to20,Casual,3,1-4,0,45,43,88,1.944483,Casual | 2018-2019 | 10to20 | 1-4
 823650,Zombow,2018,2018-2019,0.99,0,lt5,Casual,0,0,0,16,40,56,1.748188,Casual | 2018-2019 | lt5 | 0
@@ -15869,6 +15890,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 831470,One Dollar Simulator,2020,2020-2021,1.0,0,lt5,Casual,0,0,0,65,8,73,1.863323,Casual | 2020-2021 | lt5 | 0
 831490,Draw Near,2018,2018-2019,0.0,0,free,Action,1,1-4,0,19,8,27,1.431364,Action | 2018-2019 | free | 1-4
 831540,Norilsk,2018,2018-2019,4.99,0,lt5,Visual Novel,0,0,0,4,8,12,1.079181,Visual Novel | 2018-2019 | lt5 | 0
+831570,Isoland,2018,2018-2019,0.99,0,lt5,Puzzle,4,1-4,1,264,25,289,2.460898,Puzzle | 2018-2019 | lt5 | 1-4
 831590,VRQ Test,2018,2018-2019,0.0,0,free,Casual,0,0,1,13,5,18,1.255273,Casual | 2018-2019 | free | 0
 831670,SPACE HUNT,2018,2018-2019,0.49,0,lt5,Action,0,0,0,9,9,18,1.255273,Action | 2018-2019 | lt5 | 0
 831680,Hero Go,2018,2018-2019,1.98,50,lt5,Casual,0,0,1,15,1,16,1.20412,Casual | 2018-2019 | lt5 | 0
@@ -15945,6 +15967,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 835710,Tactics Maiden Remastered,2018,2018-2019,14.99,0,10to20,RPG,1,1-4,0,15,0,15,1.176091,RPG | 2018-2019 | 10to20 | 1-4
 835910,Above the Fold,2018,2018-2019,13.99,0,10to20,Strategy,0,0,0,14,12,26,1.414973,Strategy | 2018-2019 | 10to20 | 0
 835960,The Talos Principle 2,2023,2022+,29.97,70,gt20,Puzzle,9,5+,1,11357,540,11897,4.075437,Puzzle | 2022+ | gt20 | 5+
+836080,BARRAGE / 铁幕,2018,2018-2019,4.99,0,lt5,Action,0,0,1,53,9,62,1.792392,Action | 2018-2019 | lt5 | 0
 836110,Time Tenshi Paradox: Episode 2,2018,2018-2019,2.99,0,lt5,Visual Novel,0,0,0,11,11,22,1.342423,Visual Novel | 2018-2019 | lt5 | 0
 836260,Call of Bitcoin,2018,2018-2019,0.99,0,lt5,Casual,1,1-4,0,45,33,78,1.892095,Casual | 2018-2019 | lt5 | 1-4
 836290,Achievement Lurker: Ballad of the Shimapan Warrior - King of Panties,2018,2018-2019,1.98,50,lt5,RPG,0,0,0,33,11,44,1.643453,RPG | 2018-2019 | lt5 | 0
@@ -16683,6 +16706,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 870080,Running Through Russia 2,2018,2018-2019,0.99,0,lt5,Casual,1,1-4,0,78,31,109,2.037426,Casual | 2018-2019 | lt5 | 1-4
 870090,Lems,2020,2020-2021,17.99,0,10to20,Action,1,1-4,0,20,1,21,1.322219,Action | 2020-2021 | 10to20 | 1-4
 870100,乌鸦 - Crows,2018,2018-2019,0.49,0,lt5,Action,0,0,1,28,41,69,1.838849,Action | 2018-2019 | lt5 | 0
+870110,The Monsters' History Book,2018,2018-2019,3.99,0,lt5,RPG,0,0,1,93,21,114,2.056905,RPG | 2018-2019 | lt5 | 0
 870120,The Bad Gravedigger,2018,2018-2019,1.97,70,lt5,Action,3,1-4,1,19,18,37,1.568202,Action | 2018-2019 | lt5 | 1-4
 870140,Treasure Hunter Man 2,2018,2018-2019,0.99,0,lt5,Action,0,0,0,16,1,17,1.230449,Action | 2018-2019 | lt5 | 0
 870160,R.O.V.E.R.,2018,2018-2019,0.71,0,lt5,Action,1,1-4,0,20,16,36,1.556303,Action | 2018-2019 | lt5 | 1-4
@@ -16691,6 +16715,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 870290,The Miskatonic,2018,2018-2019,0.99,0,lt5,Visual Novel,0,0,0,321,94,415,2.618048,Visual Novel | 2018-2019 | lt5 | 0
 870390,Moonshine Maniacs - A Wild West Saga,2020,2020-2021,0.0,0,free,Action,0,0,0,44,21,65,1.812913,Action | 2020-2021 | free | 0
 870400,Fugue,2019,2018-2019,4.99,0,lt5,Puzzle,0,0,0,4,6,10,1.0,Puzzle | 2018-2019 | lt5 | 0
+870520,太平洋之嵐6 ～ 史上最大的激戰諾曼第攻防戰! Pacific Storm 6 - Battle for Normandy,2018,2018-2019,24.99,0,gt20,Action,1,1-4,1,21,13,34,1.531479,Action | 2018-2019 | gt20 | 1-4
 870670,Ink Cipher,2018,2018-2019,0.49,0,lt5,Casual,0,0,0,19,2,21,1.322219,Casual | 2018-2019 | lt5 | 0
 870690,Galaxy Trucker: Extended Edition,2019,2018-2019,9.95,80,5to10,Strategy,6,5+,0,197,23,220,2.342423,Strategy | 2018-2019 | 5to10 | 5+
 870730,Adapt or Perish,2019,2018-2019,9.98,50,5to10,Strategy,0,0,0,37,6,43,1.633468,Strategy | 2018-2019 | 5to10 | 0
@@ -17976,6 +18001,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 939790,Royal Alchemist,2020,2020-2021,11.99,0,10to20,RPG,0,0,0,288,17,305,2.4843,RPG | 2020-2021 | 10to20 | 0
 939850,The Dark Pictures Anthology: Man of Medan,2019,2018-2019,19.98,50,10to20,Action,10,5+,1,8812,2797,11609,4.064795,Action | 2018-2019 | 10to20 | 5+
 939870,BlackberryNOVA,2021,2020-2021,2.09,0,lt5,Visual Novel,1,1-4,1,21,7,28,1.447158,Visual Novel | 2020-2021 | lt5 | 1-4
+939960,Far Cry® New Dawn,2019,2018-2019,39.95,80,gt20,Action,12,5+,1,24362,7819,32181,4.5076,Action | 2018-2019 | gt20 | 5+
 939990,Boxing School,2019,2018-2019,9.99,30,5to10,Strategy,0,0,0,469,53,522,2.717671,Strategy | 2018-2019 | 5to10 | 0
 940140,Project AETHER: First Contact,2020,2020-2021,12.99,0,10to20,Action,0,0,0,27,2,29,1.462398,Action | 2020-2021 | 10to20 | 0
 940190,Chuckie Egg 2017,2018,2018-2019,1.49,0,lt5,Action,0,0,0,12,5,17,1.230449,Action | 2018-2019 | lt5 | 0
@@ -18534,6 +18560,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 971610,Gyro Boss DX,2019,2018-2019,0.69,0,lt5,Action,0,0,0,14,4,18,1.255273,Action | 2018-2019 | lt5 | 0
 971620,Puyo Puyo Champions,2019,2018-2019,9.99,30,5to10,Puzzle,5,5+,1,670,176,846,2.92737,Puzzle | 2018-2019 | 5to10 | 5+
 971650,Failspace,2020,2020-2021,9.99,0,5to10,Action,0,0,0,25,19,44,1.643453,Action | 2020-2021 | 5to10 | 0
+971680,Montaro RE,2018,2018-2019,0.99,20,lt5,Casual,5,5+,1,1251,65,1316,3.119256,Casual | 2018-2019 | lt5 | 5+
 971690,Cake Bash,2020,2020-2021,19.93,85,10to20,Casual,8,5+,1,403,56,459,2.661813,Casual | 2020-2021 | 10to20 | 5+
 971780,Elemental Connection,2018,2018-2019,2.98,50,lt5,Casual,0,0,0,11,0,11,1.041393,Casual | 2018-2019 | lt5 | 0
 971880,Solitaire Mystery: Four Seasons,2018,2018-2019,5.93,85,5to10,Casual,9,5+,0,8,7,15,1.176091,Casual | 2018-2019 | 5to10 | 5+
@@ -18623,6 +18650,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 976900,Lumberhill,2021,2020-2021,14.95,80,10to20,Casual,12,5+,1,152,41,193,2.285557,Casual | 2020-2021 | 10to20 | 5+
 976920,Dance of Death: Du Lac & Fey,2019,2018-2019,18.98,50,10to20,Casual,3,1-4,0,131,34,165,2.217484,Casual | 2018-2019 | 10to20 | 1-4
 976930,Groove Gunner,2022,2022+,16.93,85,10to20,Casual,3,1-4,0,30,5,35,1.544068,Casual | 2022+ | 10to20 | 1-4
+976940,永冻之壳 The Shell of Permafrost,2018,2018-2019,0.0,0,free,RPG,0,0,1,1150,26,1176,3.070407,RPG | 2018-2019 | free | 0
 976960,Heart of Moon : The Mask of Seasons,2018,2018-2019,5.99,0,5to10,Casual,2,1-4,0,35,0,35,1.544068,Casual | 2018-2019 | 5to10 | 1-4
 976980,The Great Emu War,2018,2018-2019,0.0,0,free,Action,0,0,0,26,5,31,1.491362,Action | 2018-2019 | free | 0
 977050,Action: Source,2019,2018-2019,0.0,0,free,Action,0,0,0,113,32,145,2.161368,Action | 2018-2019 | free | 0
@@ -19283,6 +19311,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1014050,Hockey Manager 20|20,2020,2020-2021,19.98,50,10to20,Strategy,2,1-4,0,63,29,92,1.963788,Strategy | 2020-2021 | 10to20 | 1-4
 1014110,Fish Simulator: Aquarium Manager,2020,2020-2021,9.99,0,5to10,Casual,8,5+,0,22,12,34,1.531479,Casual | 2020-2021 | 5to10 | 5+
 1014140,Snakebird Primer,2019,2018-2019,7.98,50,5to10,Casual,0,0,0,211,15,226,2.354108,Casual | 2018-2019 | 5to10 | 0
+1014180,化者天狱 Revenant in the Paradise,2019,2018-2019,1.0,51,lt5,RPG,0,0,1,9,1,10,1.0,RPG | 2018-2019 | lt5 | 0
 1014240,Starship Saboteur Prototype,2020,2020-2021,0.0,0,free,RPG,0,0,0,11,2,13,1.113943,RPG | 2020-2021 | free | 0
 1014260,Passageway of the Ancients,2024,2022+,19.96,75,10to20,RPG,0,0,0,9,6,15,1.176091,RPG | 2022+ | 10to20 | 0
 1014270,Plaguepunk Justice,2019,2018-2019,9.96,75,5to10,Strategy,4,1-4,0,14,0,14,1.146128,Strategy | 2018-2019 | 5to10 | 1-4
@@ -21043,6 +21072,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1105600,Welcome To... Chichester 2 - Part II : No Regrets For The Future,2020,2020-2021,1.97,70,lt5,Visual Novel,0,0,0,13,2,15,1.176091,Visual Novel | 2020-2021 | lt5 | 0
 1105620,Exertus,2019,2018-2019,1.99,0,lt5,Action,5,5+,1,252,44,296,2.471292,Action | 2018-2019 | lt5 | 5+
 1105660,Stay Safe: Labyrinth of the Mad,2019,2018-2019,5.99,0,5to10,RPG,0,0,0,32,10,42,1.623249,RPG | 2018-2019 | 5to10 | 0
+1105670,The Last Spell,2023,2022+,24.98,60,gt20,Strategy,8,5+,1,10557,939,11496,4.060547,Strategy | 2022+ | gt20 | 5+
 1105710,Grind: Skateboarding,2021,2020-2021,4.99,0,lt5,Action,0,0,0,5,5,10,1.0,Action | 2020-2021 | lt5 | 0
 1105730,HANGMAN,2019,2018-2019,0.72,0,lt5,Casual,100,5+,1,28,11,39,1.591065,Casual | 2018-2019 | lt5 | 5+
 1105740,Wheel of Fate,2021,2020-2021,0.99,0,lt5,RPG,1,1-4,0,44,13,57,1.755875,RPG | 2020-2021 | lt5 | 1-4
@@ -21394,6 +21424,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1125330,Griefhelm,2020,2020-2021,9.99,0,5to10,Action,0,0,0,234,75,309,2.489958,Action | 2020-2021 | 5to10 | 0
 1125390,Atrio: The Dark Wild,2023,2022+,19.99,30,10to20,Strategy,7,5+,1,465,105,570,2.755875,Strategy | 2022+ | 10to20 | 5+
 1125420,Death and Progress,2019,2018-2019,2.98,50,lt5,Puzzle,0,0,0,20,2,22,1.342423,Puzzle | 2018-2019 | lt5 | 0
+1125480,School Years,2019,2018-2019,11.9,90,10to20,Visual Novel,0,0,1,1233,257,1490,3.173186,Visual Novel | 2018-2019 | 10to20 | 0
 1125490,STORM AREA 51: CUTE ALIEN GIRL EDITION,2019,2018-2019,1.99,20,lt5,Action,0,0,0,11,6,17,1.230449,Action | 2018-2019 | lt5 | 0
 1125620,Wizhood: The Epic of Freedom,2019,2018-2019,0.99,0,lt5,Action,1,1-4,0,11,0,11,1.041393,Action | 2018-2019 | lt5 | 1-4
 1125710,Gatewalkers,2023,2022+,24.98,50,gt20,RPG,6,5+,0,229,103,332,2.521138,RPG | 2022+ | gt20 | 5+
@@ -21585,6 +21616,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1135200,soko loco,2020,2020-2021,2.98,50,lt5,Strategy,0,0,0,7,5,12,1.079181,Strategy | 2020-2021 | lt5 | 0
 1135230,Ember Knights,2023,2022+,9.99,0,5to10,Action,9,5+,1,5814,375,6189,3.79162,Action | 2022+ | 5to10 | 5+
 1135240,Men of War: Assault Squad 2 - Cold War,2019,2018-2019,19.9,90,10to20,Strategy,6,5+,1,313,897,1210,3.082785,Strategy | 2018-2019 | 10to20 | 5+
+1135300,King's Bounty II,2021,2020-2021,39.9,90,gt20,Strategy,9,5+,1,3322,2007,5329,3.726646,Strategy | 2020-2021 | gt20 | 5+
 1135370,Star Girl Proxima,2020,2020-2021,4.99,0,lt5,Action,0,0,0,15,3,18,1.255273,Action | 2020-2021 | lt5 | 0
 1135450,Psy High 2: High Summer,2019,2018-2019,6.99,30,5to10,RPG,0,0,0,10,1,11,1.041393,RPG | 2018-2019 | 5to10 | 0
 1135570,Martian Law,2019,2018-2019,1.99,0,lt5,Action,0,0,0,144,273,417,2.620136,Action | 2018-2019 | lt5 | 0
@@ -21664,6 +21696,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1139480,Mask of Sanity,2020,2020-2021,6.98,50,5to10,Action,1,1-4,1,21,28,49,1.690196,Action | 2020-2021 | 5to10 | 1-4
 1139490,Summer Daze: Tilly's Tale,2023,2022+,19.99,0,10to20,Visual Novel,0,0,0,12,8,20,1.30103,Visual Novel | 2022+ | 10to20 | 0
 1139760,DEDstress,2020,2020-2021,9.99,0,5to10,Action,0,0,0,28,3,31,1.491362,Action | 2020-2021 | 5to10 | 0
+1139800,Chinatris,2020,2020-2021,1.98,60,lt5,Casual,0,0,1,975,151,1126,3.051538,Casual | 2020-2021 | lt5 | 0
 1139830,Recyclomania,2019,2018-2019,6.99,25,5to10,Casual,1,1-4,0,16,8,24,1.380211,Casual | 2018-2019 | 5to10 | 1-4
 1139870,The Dark Eye : Book of Heroes,2020,2020-2021,9.99,0,5to10,RPG,3,1-4,0,83,127,210,2.322219,RPG | 2020-2021 | 5to10 | 1-4
 1139880,Chapeau,2020,2020-2021,0.99,0,lt5,Action,5,5+,1,16,0,16,1.20412,Action | 2020-2021 | lt5 | 5+
@@ -21728,6 +21761,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1142500,Fun with Ragdolls: The Game,2019,2018-2019,14.99,0,10to20,Action,0,0,0,4341,614,4955,3.695044,Action | 2018-2019 | 10to20 | 0
 1142510,Cucumber Defense VR,2019,2018-2019,7.99,26,5to10,Action,0,0,1,11,0,11,1.041393,Action | 2018-2019 | 5to10 | 0
 1142710,Total War: WARHAMMER III,2022,2022+,59.96,75,gt20,Strategy,10,5+,1,87141,32717,119858,5.078667,Strategy | 2022+ | gt20 | 5+
+1142740,Escape from the Cursed Convent,2025,2022+,0.0,0,free,Puzzle,0,0,1,106,5,111,2.045323,Puzzle | 2022+ | free | 0
 1142750,BAFF 3,2019,2018-2019,0.55,0,lt5,Puzzle,100,5+,1,10,10,20,1.30103,Puzzle | 2018-2019 | lt5 | 5+
 1142760,Racing angle,2019,2018-2019,1.99,0,lt5,Action,1,1-4,0,19,13,32,1.50515,Action | 2018-2019 | lt5 | 1-4
 1142810,Toasterball,2023,2022+,9.95,80,5to10,Action,8,5+,1,303,10,313,2.495544,Action | 2022+ | 5to10 | 5+
@@ -21823,6 +21857,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1146910,Atomorf2,2019,2018-2019,9.88,92,5to10,Action,26,5+,1,19,3,22,1.342423,Action | 2018-2019 | 5to10 | 5+
 1146920,Xenociders,2020,2020-2021,24.99,0,gt20,Action,8,5+,1,10,12,22,1.342423,Action | 2020-2021 | gt20 | 5+
 1146940,I will eat you,2019,2018-2019,4.99,0,lt5,Casual,16,5+,1,228,65,293,2.466868,Casual | 2018-2019 | lt5 | 5+
+1146970,My Vow to My Liege,2020,2020-2021,9.98,40,5to10,Visual Novel,0,0,1,3665,284,3949,3.596487,Visual Novel | 2020-2021 | 5to10 | 0
 1147110,The Long Gate,2020,2020-2021,19.93,85,10to20,Puzzle,0,0,0,36,8,44,1.643453,Puzzle | 2020-2021 | 10to20 | 0
 1147130,Countryballs: Modern Ballfare,2023,2022+,4.97,69,lt5,Action,0,0,0,245,16,261,2.416641,Action | 2022+ | lt5 | 0
 1147220,Grim Tales: Guest From The Future Collector's Edition,2019,2018-2019,9.98,50,5to10,Casual,0,0,0,11,2,13,1.113943,Casual | 2018-2019 | 5to10 | 0
@@ -21938,6 +21973,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1152950,Blackberry,2021,2020-2021,0.99,0,lt5,Action,5,5+,1,100,64,164,2.214844,Action | 2020-2021 | lt5 | 5+
 1153040,Primate Signal,2020,2020-2021,5.0,0,5to10,Visual Novel,0,0,0,13,1,14,1.146128,Visual Novel | 2020-2021 | 5to10 | 0
 1153130,Wurroom,2019,2018-2019,0.0,0,free,Casual,0,0,0,662,46,708,2.850033,Casual | 2018-2019 | free | 0
+1153150,PARA♰BELLUM ~ 魔弹帕菈,2024,2022+,1.49,0,lt5,Action,1,1-4,1,131,5,136,2.133539,Action | 2022+ | lt5 | 1-4
 1153170,Bomber Bother,2019,2018-2019,0.0,0,free,Action,2,1-4,0,56,8,64,1.80618,Action | 2018-2019 | free | 1-4
 1153200,Wormskull,2020,2020-2021,7.93,85,5to10,RPG,0,0,0,56,2,58,1.763428,RPG | 2020-2021 | 5to10 | 0
 1153210,Bartender Hustle,2022,2022+,14.98,50,10to20,Casual,10,5+,1,175,33,208,2.318063,Casual | 2022+ | 10to20 | 5+
@@ -22449,6 +22485,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1180030,Wardwell House,2020,2020-2021,0.0,0,free,Action,0,0,0,634,138,772,2.887617,Action | 2020-2021 | free | 0
 1180110,DeadShotZ,2019,2018-2019,1.99,0,lt5,Action,2,1-4,0,15,2,17,1.230449,Action | 2018-2019 | lt5 | 1-4
 1180130,The Final Earth 2,2022,2022+,5.99,0,5to10,Strategy,6,5+,0,292,8,300,2.477121,Strategy | 2022+ | 5to10 | 5+
+1180190,Call of VII,2020,2020-2021,0.99,24,lt5,Strategy,0,0,1,15,1,16,1.20412,Strategy | 2020-2021 | lt5 | 0
 1180250,DIVINATION,2019,2018-2019,1.98,50,lt5,Visual Novel,0,0,0,157,19,176,2.245513,Visual Novel | 2018-2019 | lt5 | 0
 1180270,Forbidden Love With The Ghost Girl,2019,2018-2019,14.98,60,10to20,Visual Novel,1,1-4,0,166,21,187,2.271842,Visual Novel | 2018-2019 | 10to20 | 1-4
 1180370,Wienne,2020,2020-2021,0.0,0,free,RPG,0,0,0,55,6,61,1.78533,RPG | 2020-2021 | free | 0
@@ -22529,6 +22566,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1184480,Inertial Drift,2020,2020-2021,4.99,0,lt5,Casual,6,5+,1,1168,190,1358,3.1329,Casual | 2020-2021 | lt5 | 5+
 1184500,YUKI Space Ranger,2021,2020-2021,9.98,55,5to10,Action,0,0,0,58,5,63,1.799341,Action | 2020-2021 | 5to10 | 0
 1184530,Aurora - Hidden Colors,2021,2020-2021,4.94,84,lt5,Puzzle,1,1-4,0,21,2,23,1.361728,Puzzle | 2020-2021 | lt5 | 1-4
+1184560,Phantom Breaker: Omnia,2022,2022+,19.9,90,10to20,Action,5,5+,1,184,65,249,2.396199,Action | 2022+ | 10to20 | 5+
 1184570,Last Neighbor,2019,2018-2019,2.97,66,lt5,Action,0,0,0,187,59,246,2.390935,Action | 2018-2019 | lt5 | 0
 1184760,Shovel Knight Pocket Dungeon,2021,2020-2021,19.99,20,10to20,Action,8,5+,1,460,45,505,2.703291,Action | 2020-2021 | 10to20 | 5+
 1184810,Mainframe Defenders,2020,2020-2021,5.9,90,5to10,Strategy,11,5+,1,609,82,691,2.839478,Strategy | 2020-2021 | 5to10 | 5+
@@ -22746,6 +22784,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1196440,Potion Party,2021,2020-2021,9.99,33,5to10,Casual,3,1-4,1,116,7,123,2.089905,Casual | 2020-2021 | 5to10 | 1-4
 1196470,WE ARE FOOTBALL,2021,2020-2021,24.96,75,gt20,Strategy,6,5+,1,1105,321,1426,3.15412,Strategy | 2020-2021 | gt20 | 5+
 1196500,Party Arena: Board Game Battler,2020,2020-2021,4.99,0,lt5,Action,7,5+,1,32,10,42,1.623249,Action | 2020-2021 | lt5 | 5+
+1196570,Suzunaan on Fire,2019,2018-2019,1.99,0,lt5,Casual,1,1-4,1,16,3,19,1.278754,Casual | 2018-2019 | lt5 | 1-4
 1196580,The Pale City,2020,2020-2021,7.99,0,5to10,RPG,0,0,0,30,0,30,1.477121,RPG | 2020-2021 | 5to10 | 0
 1196590,Resident Evil Village,2021,2020-2021,39.96,75,gt20,Action,11,5+,1,114131,5219,119350,5.076822,Action | 2020-2021 | gt20 | 5+
 1196630,Nexomon: Extinction,2020,2020-2021,19.96,75,10to20,RPG,7,5+,0,2951,286,3237,3.510143,RPG | 2020-2021 | 10to20 | 5+
@@ -22785,6 +22824,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1198210,Dogworld,2021,2020-2021,14.99,0,10to20,Action,0,0,0,102,4,106,2.025306,Action | 2020-2021 | 10to20 | 0
 1198270,The Button Witch,2020,2020-2021,14.9,90,10to20,Puzzle,0,0,0,50,0,50,1.69897,Puzzle | 2020-2021 | 10to20 | 0
 1198290,Space Block Buster,2022,2022+,9.99,0,5to10,Casual,0,0,0,37,5,42,1.623249,Casual | 2022+ | 5to10 | 0
+1198310,Mr.King Luo!Don't be kidding,2020,2020-2021,3.99,30,lt5,Action,0,0,1,33,13,46,1.662758,Action | 2020-2021 | lt5 | 0
 1198390,Kawaii Girl,2020,2020-2021,1.0,51,lt5,Action,2,1-4,1,29,4,33,1.518514,Action | 2020-2021 | lt5 | 1-4
 1198400,Rhythm Fighter,2020,2020-2021,14.98,55,10to20,Action,1,1-4,1,356,81,437,2.640481,Action | 2020-2021 | 10to20 | 1-4
 1198450,The Secret Order 8: Return to the Buried Kingdom,2020,2020-2021,14.96,75,10to20,Casual,7,5+,1,125,25,150,2.176091,Casual | 2020-2021 | 10to20 | 5+
@@ -23022,6 +23062,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1209510,Hand In Hand,2023,2022+,11.96,75,10to20,Action,6,5+,1,83,3,86,1.934498,Action | 2022+ | 10to20 | 5+
 1209520,Smart Moves,2020,2020-2021,4.93,86,lt5,Puzzle,1,1-4,0,14,0,14,1.146128,Puzzle | 2020-2021 | lt5 | 1-4
 1209570,Cosmos,2020,2020-2021,1.99,0,lt5,Action,0,0,0,12,2,14,1.146128,Action | 2020-2021 | lt5 | 0
+1209650,The Island Story,2020,2020-2021,4.99,0,lt5,Casual,0,0,1,19,11,30,1.477121,Casual | 2020-2021 | lt5 | 0
 1209720,Machina of the Planet Tree -Unity Unions-,2020,2020-2021,18.97,70,10to20,RPG,1,1-4,1,31,13,44,1.643453,RPG | 2020-2021 | 10to20 | 1-4
 1209860,BDSM: Big Drunk Satanic Massacre Demo,2020,2020-2021,0.0,0,free,Action,1,1-4,0,156,29,185,2.267172,Action | 2020-2021 | free | 1-4
 1209910,Britannic,2020,2020-2021,3.98,40,lt5,Action,0,0,0,95,35,130,2.113943,Action | 2020-2021 | lt5 | 0
@@ -23038,6 +23079,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1210340,Breakneck City,2020,2020-2021,14.97,67,10to20,Action,0,0,0,14,0,14,1.146128,Action | 2020-2021 | 10to20 | 0
 1210380,Bingo VR,2020,2020-2021,0.0,0,free,Casual,0,0,0,24,10,34,1.531479,Casual | 2020-2021 | free | 0
 1210470,The Adventures of Bluke Bifton: Chapter 1,2023,2022+,5.99,0,5to10,Visual Novel,0,0,0,26,0,26,1.414973,Visual Novel | 2022+ | 5to10 | 0
+1210490,YesterMorrow,2020,2020-2021,19.96,75,10to20,Action,5,5+,1,44,22,66,1.819544,Action | 2020-2021 | 10to20 | 5+
 1210550,Hohokum,2022,2022+,3.99,0,lt5,Puzzle,16,5+,1,85,14,99,1.995635,Puzzle | 2022+ | lt5 | 5+
 1210570,Rocket Ghost Aidan,2020,2020-2021,0.99,0,lt5,Action,0,0,0,11,1,12,1.079181,Action | 2020-2021 | lt5 | 0
 1210590,Pipeline Of Emperor Yu,2020,2020-2021,2.99,0,lt5,Casual,0,0,1,15,1,16,1.20412,Casual | 2020-2021 | lt5 | 0
@@ -23357,6 +23399,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1227860,Plastris,2020,2020-2021,2.76,75,lt5,Casual,100,5+,1,30,2,32,1.50515,Casual | 2020-2021 | lt5 | 5+
 1228320,Dungeon Looter,2024,2022+,11.98,50,10to20,Action,2,1-4,1,70,19,89,1.94939,Action | 2022+ | 10to20 | 1-4
 1228360,Megacopter: Blades of the Goddess,2024,2022+,2.59,0,lt5,RPG,9,5+,0,136,11,147,2.167317,RPG | 2022+ | lt5 | 5+
+1228410,WATCH / 透视,2020,2020-2021,10.98,50,10to20,Action,0,0,1,48,8,56,1.748188,Action | 2020-2021 | 10to20 | 0
 1228430,Pair-a-Site,2020,2020-2021,0.0,0,free,Visual Novel,0,0,0,67,1,68,1.832509,Visual Novel | 2020-2021 | free | 0
 1228470,Ship Surveyor Through the Ages - VR,2020,2020-2021,0.0,0,free,Casual,0,0,0,13,2,15,1.176091,Casual | 2020-2021 | free | 0
 1228500,1428: Shadows over Silesia,2022,2022+,3.99,0,lt5,RPG,9,5+,1,189,46,235,2.371068,RPG | 2022+ | lt5 | 5+
@@ -23394,6 +23437,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1230000,Curse of Eternity,2022,2022+,2.49,0,lt5,RPG,0,0,0,21,7,28,1.447158,RPG | 2022+ | lt5 | 0
 1230010,A.R.M.: Absolutely Reliable Machine,2020,2020-2021,2.49,0,lt5,Action,1,1-4,0,17,0,17,1.230449,Action | 2020-2021 | lt5 | 1-4
 1230100,Fantastic Fishing,2020,2020-2021,7.99,0,5to10,Casual,0,0,0,7,7,14,1.146128,Casual | 2020-2021 | 5to10 | 0
+1230140,ATRI -My Dear Moments-,2020,2020-2021,20.98,55,gt20,Visual Novel,1,1-4,1,20584,298,20882,4.319772,Visual Novel | 2020-2021 | gt20 | 1-4
 1230170,Gunsmith Simulator: Prologue,2023,2022+,0.0,0,free,Puzzle,12,5+,1,1355,233,1588,3.20085,Puzzle | 2022+ | free | 5+
 1230200,Pendula Swing - The Complete Journey,2020,2020-2021,9.96,75,5to10,RPG,0,0,0,43,12,55,1.740363,RPG | 2020-2021 | 5to10 | 0
 1230340,The Sperminator: Rescuing Tzar Vlad,2020,2020-2021,1.0,51,lt5,Action,0,0,0,40,12,52,1.716003,Action | 2020-2021 | lt5 | 0
@@ -23478,6 +23522,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1235120,Meme Run 2,2020,2020-2021,4.2,0,lt5,Action,0,0,0,58,11,69,1.838849,Action | 2020-2021 | lt5 | 0
 1235140,Yakuza: Like a Dragon,2020,2020-2021,19.97,60,10to20,RPG,8,5+,1,31409,1853,33262,4.521948,RPG | 2020-2021 | 10to20 | 5+
 1235400,CATharsis,2020,2020-2021,2.95,80,lt5,Visual Novel,1,1-4,0,9,1,10,1.0,Visual Novel | 2020-2021 | lt5 | 1-4
+1235450,Treasure Drifter: Nian,2021,2020-2021,1.39,0,lt5,Action,1,1-4,1,30,8,38,1.579784,Action | 2020-2021 | lt5 | 1-4
 1235460,Angry Bunny 2: Lost hole,2020,2020-2021,1.0,51,lt5,Casual,0,0,0,29,18,47,1.672098,Casual | 2020-2021 | lt5 | 0
 1235480,Abst Clicker Farm,2020,2020-2021,0.59,0,lt5,Casual,0,0,0,1,17,18,1.255273,Casual | 2020-2021 | lt5 | 0
 1235790,dancing chair,2020,2020-2021,0.0,0,free,Casual,0,0,0,96,15,111,2.045323,Casual | 2020-2021 | free | 0
@@ -24071,6 +24116,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1271100,Deadly Premonition 2: A Blessing in Disguise,2022,2022+,39.99,0,gt20,Action,5,5+,0,296,118,414,2.617,Action | 2022+ | gt20 | 5+
 1271110,Healing Spree,2021,2020-2021,14.99,0,10to20,Strategy,2,1-4,1,59,49,108,2.033424,Strategy | 2020-2021 | 10to20 | 1-4
 1271170,The Wizard and The Slug,2020,2020-2021,4.93,85,lt5,Strategy,0,0,0,50,0,50,1.69897,Strategy | 2020-2021 | lt5 | 0
+1271190,Queen's Glory,2020,2020-2021,6.98,50,5to10,Visual Novel,13,5+,1,431,178,609,2.784617,Visual Novel | 2020-2021 | 5to10 | 5+
 1271250,Date Night Bowling,2021,2020-2021,2.49,0,lt5,Casual,0,0,0,15,2,17,1.230449,Casual | 2020-2021 | lt5 | 0
 1271280,Rift Wizard,2021,2020-2021,14.98,50,10to20,Strategy,0,0,0,945,75,1020,3.0086,Strategy | 2020-2021 | 10to20 | 0
 1271300,Methods: The Detective Competition,2020,2020-2021,19.97,65,10to20,RPG,0,0,1,554,50,604,2.781037,RPG | 2020-2021 | 10to20 | 0
@@ -24360,6 +24406,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1286160,Mosquitoes and zombies,2020,2020-2021,2.95,80,lt5,Casual,26,5+,1,12,1,13,1.113943,Casual | 2020-2021 | lt5 | 5+
 1286170,The Broston Saga,2020,2020-2021,0.0,0,free,RPG,0,0,0,8,5,13,1.113943,RPG | 2020-2021 | free | 0
 1286210,The Battle of Angels,2020,2020-2021,4.99,0,lt5,Action,25,5+,1,16,4,20,1.30103,Action | 2020-2021 | lt5 | 5+
+1286280,Pronty,2021,2020-2021,17.96,75,10to20,Action,8,5+,1,1004,93,1097,3.040207,Action | 2020-2021 | 10to20 | 5+
 1286320,Exoprimal,2023,2022+,59.94,84,gt20,Action,10,5+,1,2912,1305,4217,3.625004,Action | 2022+ | gt20 | 5+
 1286340,Daily Wife,2020,2020-2021,4.97,70,lt5,Casual,0,0,1,592,149,741,2.869818,Casual | 2020-2021 | lt5 | 0
 1286350,BPM: BULLETS PER MINUTE,2020,2020-2021,4.99,0,lt5,Action,6,5+,1,10091,1023,11114,4.04587,Action | 2020-2021 | lt5 | 5+
@@ -24769,6 +24816,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1308350,Deer Hunter xTreme Focal Plane,2020,2020-2021,0.55,0,lt5,Action,0,0,0,7,7,14,1.146128,Action | 2020-2021 | lt5 | 0
 1308360,GUN JAM,2023,2022+,9.99,0,5to10,Action,0,0,0,39,30,69,1.838849,Action | 2022+ | 5to10 | 0
 1308470,Journey to the Centre of the Cell,2020,2020-2021,0.0,0,free,Casual,0,0,0,14,4,18,1.255273,Casual | 2020-2021 | free | 0
+1308500,Soul Elegy,2021,2020-2021,18.95,79,10to20,Strategy,0,0,1,153,96,249,2.396199,Strategy | 2020-2021 | 10to20 | 0
 1308550,Speedrun,2022,2022+,0.0,0,free,Casual,0,0,0,35,17,52,1.716003,Casual | 2022+ | free | 0
 1308560,The Legend of HyperStar,2020,2020-2021,1.96,72,lt5,RPG,0,0,1,12,22,34,1.531479,RPG | 2020-2021 | lt5 | 0
 1308660,Gun Master,2020,2020-2021,0.99,0,lt5,Casual,0,0,0,5,8,13,1.113943,Casual | 2020-2021 | lt5 | 0
@@ -25093,6 +25141,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1332370,The Shadow You,2021,2020-2021,9.96,75,5to10,Visual Novel,3,1-4,1,37,5,42,1.623249,Visual Novel | 2020-2021 | 5to10 | 1-4
 1332380,Bring Dad Home,2020,2020-2021,2.99,0,lt5,Casual,15,5+,1,10,2,12,1.079181,Casual | 2020-2021 | lt5 | 5+
 1332450,Open The Gates!,2022,2022+,12.96,75,10to20,Strategy,1,1-4,0,53,17,70,1.845098,Strategy | 2022+ | 10to20 | 1-4
+1332470,Gladiator Guild Manager: Prologue,2020,2020-2021,0.0,0,free,Strategy,14,5+,1,1440,103,1543,3.188366,Strategy | 2020-2021 | free | 5+
 1332490,Chroma,2020,2020-2021,0.0,0,free,Action,0,0,0,31,8,39,1.591065,Action | 2020-2021 | free | 0
 1332540,Order from Caos,2020,2020-2021,2.97,70,lt5,RPG,1,1-4,0,13,2,15,1.176091,RPG | 2020-2021 | lt5 | 1-4
 1332590,Hero or Villain: Battle Royale,2020,2020-2021,6.99,30,5to10,Action,0,0,0,6,5,11,1.041393,Action | 2020-2021 | 5to10 | 0
@@ -25157,6 +25206,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1335440,Tyrgard Archer VR,2020,2020-2021,0.99,0,lt5,Casual,0,0,0,14,5,19,1.278754,Casual | 2020-2021 | lt5 | 0
 1335510,The Escape from Bungalow,2020,2020-2021,3.99,0,lt5,Strategy,2,1-4,1,13,7,20,1.30103,Strategy | 2020-2021 | lt5 | 1-4
 1335530,Alisa,2021,2020-2021,17.98,50,10to20,Action,3,1-4,0,1162,121,1283,3.108227,Action | 2020-2021 | 10to20 | 1-4
+1335560,UNREAL LIFE,2020,2020-2021,11.99,0,10to20,Puzzle,6,5+,1,1603,70,1673,3.223496,Puzzle | 2020-2021 | 10to20 | 5+
 1335610,JoY,2024,2022+,2.98,50,lt5,Action,0,0,0,25,17,42,1.623249,Action | 2022+ | lt5 | 0
 1335680,The Kind Camomille,2021,2020-2021,9.99,0,5to10,Casual,5,5+,0,19,12,31,1.491362,Casual | 2020-2021 | 5to10 | 5+
 1335790,Operation: Tango,2021,2020-2021,19.97,66,10to20,Puzzle,8,5+,1,6990,1007,7997,3.902927,Puzzle | 2020-2021 | 10to20 | 5+
@@ -25242,6 +25292,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1339800,Seeker 2,2020,2020-2021,1.0,51,lt5,Casual,26,5+,1,18,2,20,1.30103,Casual | 2020-2021 | lt5 | 5+
 1339820,Flowers Garden Solitaire,2020,2020-2021,5.99,30,5to10,Casual,0,0,0,8,5,13,1.113943,Casual | 2020-2021 | 5to10 | 0
 1339850,Karting Grand Prix Minigame,2020,2020-2021,1.0,51,lt5,Casual,10,5+,1,20,1,21,1.322219,Casual | 2020-2021 | lt5 | 5+
+1339860,Lumione,2021,2020-2021,11.99,0,10to20,Action,7,5+,1,351,125,476,2.677607,Action | 2020-2021 | 10to20 | 5+
 1339900,BOT.vinnik Chess: Combination Lessons,2020,2020-2021,1.98,50,lt5,Strategy,0,0,0,108,11,119,2.075547,Strategy | 2020-2021 | lt5 | 0
 1340020,Aster Fpv Drone Simulator,2020,2020-2021,19.99,0,10to20,Action,1,1-4,0,9,4,13,1.113943,Action | 2020-2021 | 10to20 | 1-4
 1340120,IxSHE Tell,2020,2020-2021,29.98,50,gt20,Casual,0,0,0,131,11,142,2.152288,Casual | 2020-2021 | gt20 | 0
@@ -25343,6 +25394,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1344450,Black Smith2,2020,2020-2021,5.99,0,5to10,Casual,1,1-4,1,15,0,15,1.176091,Casual | 2020-2021 | 5to10 | 1-4
 1344530,vrkshop,2021,2020-2021,19.98,50,10to20,Puzzle,0,0,0,141,27,168,2.225309,Puzzle | 2020-2021 | 10to20 | 0
 1344740,FOOTSIES Rollback Edition,2020,2020-2021,3.99,25,lt5,Action,0,0,0,495,19,514,2.710963,Action | 2020-2021 | lt5 | 0
+1344790,Unsung Kingdom,2020,2020-2021,0.0,0,free,RPG,1,1-4,0,76,9,85,1.929419,RPG | 2020-2021 | free | 1-4
 1344800,Twin-Turbo Supercharged Nitro-Fueled Papamobile,2020,2020-2021,0.0,0,free,Action,0,0,0,42,10,52,1.716003,Action | 2020-2021 | free | 0
 1344810,Homeland: Lay to Rest,2020,2020-2021,0.0,0,free,Action,0,0,0,34,5,39,1.591065,Action | 2020-2021 | free | 0
 1344820,Stargaze,2020,2020-2021,19.99,0,10to20,Puzzle,0,0,0,22,10,32,1.50515,Puzzle | 2020-2021 | 10to20 | 0
@@ -25884,6 +25936,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1375640,Lost Keys,2020,2020-2021,1.0,51,lt5,Puzzle,1,1-4,0,12,1,13,1.113943,Puzzle | 2020-2021 | lt5 | 1-4
 1375760,Tropicalia: a Brazilian Game,2023,2022+,14.98,60,10to20,RPG,12,5+,1,70,7,77,1.886491,RPG | 2022+ | 10to20 | 5+
 1375810,Legends of Solitaire: Diamond Relic,2020,2020-2021,4.96,75,lt5,Casual,0,0,0,10,2,12,1.079181,Casual | 2020-2021 | lt5 | 0
+1375870,川建国同志想要连任/Comrade Trump's Re-election,2020,2020-2021,2.97,60,lt5,Casual,0,0,1,1105,138,1243,3.094471,Casual | 2020-2021 | lt5 | 0
 1375880,Rave Heart,2020,2020-2021,9.99,0,5to10,RPG,0,0,0,23,1,24,1.380211,RPG | 2020-2021 | 5to10 | 0
 1375900,Swarm Grinder,2024,2022+,7.99,0,5to10,RPG,6,5+,1,886,233,1119,3.04883,RPG | 2022+ | 5to10 | 5+
 1375930,Minesweeper: Collector,2020,2020-2021,3.99,0,lt5,Puzzle,2,1-4,0,105,9,114,2.056905,Puzzle | 2020-2021 | lt5 | 1-4
@@ -25936,6 +25989,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1378870,In the House of Silence,2021,2020-2021,14.99,0,10to20,Strategy,0,0,0,7,3,10,1.0,Strategy | 2020-2021 | 10to20 | 0
 1378890,Indoorlands,2022,2022+,18.96,75,10to20,Strategy,6,5+,1,212,40,252,2.401401,Strategy | 2022+ | 10to20 | 5+
 1378940,Verdungo,2020,2020-2021,1.19,0,lt5,RPG,0,0,0,37,3,40,1.60206,RPG | 2020-2021 | lt5 | 0
+1378990,Crash Bandicoot™ 4: It’s About Time,2022,2022+,39.98,50,gt20,Action,10,5+,0,2786,425,3211,3.50664,Action | 2022+ | gt20 | 5+
 1379020,The Horrorscope: Fatal Awakening,2020,2020-2021,1.59,0,lt5,Visual Novel,0,0,0,383,29,412,2.614897,Visual Novel | 2020-2021 | lt5 | 0
 1379110,Anime Feet,2020,2020-2021,1.99,30,lt5,Puzzle,6,5+,1,124,24,148,2.170262,Puzzle | 2020-2021 | lt5 | 5+
 1379120,MechNest,2024,2022+,15.99,0,10to20,Action,1,1-4,0,10,6,16,1.20412,Action | 2022+ | 10to20 | 1-4
@@ -26076,6 +26130,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1386510,How to Win: Season One,2021,2020-2021,0.0,0,free,Visual Novel,0,0,0,16,4,20,1.30103,Visual Novel | 2020-2021 | free | 0
 1386620,Anuchard,2022,2022+,5.98,60,5to10,RPG,6,5+,1,133,26,159,2.201397,RPG | 2022+ | 5to10 | 5+
 1386630,Shujinkou,2025,2022+,39.59,0,gt20,RPG,0,0,0,11,0,11,1.041393,RPG | 2022+ | gt20 | 0
+1386650,ZCREW,2022,2022+,6.98,50,5to10,Action,0,0,1,189,170,359,2.555094,Action | 2022+ | 5to10 | 0
 1386730,Wordle 2,2020,2020-2021,14.9,90,10to20,Puzzle,100,5+,1,114,25,139,2.143015,Puzzle | 2020-2021 | 10to20 | 5+
 1386780,City of Gangsters,2021,2020-2021,29.95,80,gt20,Strategy,4,1-4,1,1049,378,1427,3.154424,Strategy | 2020-2021 | gt20 | 1-4
 1386790,Gordian Rooms: A curious heritage Prologue,2020,2020-2021,0.0,0,free,Puzzle,8,5+,1,107,16,123,2.089905,Puzzle | 2020-2021 | free | 5+
@@ -26128,6 +26183,8 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1389300,Soulcaster,2020,2020-2021,0.0,0,free,Action,0,0,0,67,6,73,1.863323,Action | 2020-2021 | free | 0
 1389360,Mech Armada,2022,2022+,3.99,0,lt5,RPG,7,5+,1,516,123,639,2.805501,RPG | 2022+ | lt5 | 5+
 1389450,The Spirit,2021,2020-2021,8.99,0,5to10,Action,0,0,0,12,9,21,1.322219,Action | 2020-2021 | 5to10 | 0
+1389510,Souls Lore,2020,2020-2021,0.0,0,free,RPG,1,1-4,0,10,1,11,1.041393,RPG | 2020-2021 | free | 1-4
+1389530,Happy Marriage Project - Starting from 9 years old -,2020,2020-2021,0.0,0,free,RPG,1,1-4,0,16,0,16,1.20412,RPG | 2020-2021 | free | 1-4
 1389550,Mind Scanners,2021,2020-2021,16.93,85,10to20,RPG,5,5+,1,907,262,1169,3.067815,RPG | 2020-2021 | 10to20 | 5+
 1389560,Paint Girl,2020,2020-2021,1.98,60,lt5,Casual,0,0,1,661,119,780,2.892095,Casual | 2020-2021 | lt5 | 0
 1389610,Hell Road VR,2021,2020-2021,19.99,0,10to20,Action,7,5+,1,64,10,74,1.869232,Action | 2020-2021 | 10to20 | 5+
@@ -26603,6 +26660,8 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1417720,Gemini,2020,2020-2021,7.95,80,5to10,Action,2,1-4,0,128,14,142,2.152288,Action | 2020-2021 | 5to10 | 1-4
 1417730,Coffin Mall,2021,2020-2021,4.98,50,lt5,Action,0,0,0,54,14,68,1.832509,Action | 2020-2021 | lt5 | 0
 1417750,Moondrop,2023,2022+,10.04,0,10to20,Action,0,0,0,28,2,30,1.477121,Action | 2022+ | 10to20 | 0
+1417880,Winter Ember,2022,2022+,7.49,0,5to10,Action,6,5+,1,69,38,107,2.029384,Action | 2022+ | 5to10 | 5+
+1417890,Catie in MeowmeowLand,2022,2022+,3.74,0,lt5,Puzzle,5,5+,1,149,12,161,2.206826,Puzzle | 2022+ | lt5 | 5+
 1417930,Lorn's Lure,2024,2022+,14.98,45,10to20,Action,10,5+,1,1916,235,2151,3.33264,Action | 2022+ | 10to20 | 5+
 1417950,Simon the Sorcerer 3D,2021,2020-2021,5.98,35,5to10,Puzzle,6,5+,0,15,13,28,1.447158,Puzzle | 2020-2021 | 5to10 | 5+
 1417970,Surprise Party!,2021,2020-2021,0.0,0,free,Puzzle,0,0,0,8,3,11,1.041393,Puzzle | 2020-2021 | free | 0
@@ -27479,6 +27538,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1470930,Space Captain McCallery - Episode 3: The Weaponmaster's Challenge,2022,2022+,1.99,0,lt5,Action,0,0,0,10,0,10,1.0,Action | 2022+ | lt5 | 0
 1470940,STAR FLEET II - Krellan Commander Version 2.0,2023,2022+,9.99,0,5to10,Strategy,0,0,0,59,1,60,1.778151,Strategy | 2022+ | 5to10 | 0
 1470970,GraviFire,2020,2020-2021,3.98,60,lt5,Puzzle,20,5+,1,19,1,20,1.30103,Puzzle | 2020-2021 | lt5 | 5+
+1471040,Base One,2021,2020-2021,24.96,75,gt20,Strategy,5,5+,1,179,291,470,2.672098,Strategy | 2020-2021 | gt20 | 5+
 1471200,YUME,2021,2020-2021,2.98,50,lt5,Strategy,3,1-4,1,735,598,1333,3.12483,Strategy | 2020-2021 | lt5 | 1-4
 1471250,Orion: The Eternal Punishment,2021,2020-2021,0.0,0,free,Action,0,0,0,20,9,29,1.462398,Action | 2020-2021 | free | 0
 1471470,Tales of Lagoona,2020,2020-2021,7.92,88,5to10,Casual,6,5+,0,19,1,20,1.30103,Casual | 2020-2021 | 5to10 | 5+
@@ -28007,6 +28067,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1501120,Samurai Cat,2021,2020-2021,1.0,51,lt5,Puzzle,0,0,0,38,7,45,1.653213,Puzzle | 2020-2021 | lt5 | 0
 1501140,Taekwondo Demonstration Team Simulator,2021,2020-2021,9.99,0,5to10,Strategy,1,1-4,1,7,6,13,1.113943,Strategy | 2020-2021 | 5to10 | 1-4
 1501150,Pebble Witch,2021,2020-2021,2.24,0,lt5,RPG,0,0,0,10,1,11,1.041393,RPG | 2020-2021 | lt5 | 0
+1501160,CLOSER - anagnorisis,2021,2020-2021,5.97,70,5to10,Casual,3,1-4,1,13,10,23,1.361728,Casual | 2020-2021 | 5to10 | 1-4
 1501210,ARENIX,2020,2020-2021,4.9,90,lt5,Casual,26,5+,1,9,5,14,1.146128,Casual | 2020-2021 | lt5 | 5+
 1501320,Prison Girl,2021,2020-2021,4.98,50,lt5,RPG,0,0,1,20,62,82,1.913814,RPG | 2020-2021 | lt5 | 0
 1501410,Dwarf Journey,2021,2020-2021,9.96,75,5to10,Action,7,5+,1,323,22,345,2.537819,Action | 2020-2021 | 5to10 | 5+
@@ -28846,6 +28907,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1552530,Silverwing,2022,2022+,4.99,0,lt5,Action,0,0,0,10,3,13,1.113943,Action | 2022+ | lt5 | 0
 1552550,Castlevania Advance Collection,2021,2020-2021,19.98,50,10to20,Action,1,1-4,0,1908,176,2084,3.318898,Action | 2020-2021 | 10to20 | 1-4
 1552600,Joon Shining,2023,2022+,14.98,50,10to20,Puzzle,0,0,0,22,1,23,1.361728,Puzzle | 2022+ | 10to20 | 0
+1552620,Expedition Agartha,2023,2022+,0.0,0,free,Action,11,5+,1,1092,602,1694,3.228913,Action | 2022+ | free | 5+
 1552730,Fireworks Simulator: Realistic,2021,2020-2021,1.0,51,lt5,RPG,24,5+,1,123,39,162,2.209515,RPG | 2020-2021 | lt5 | 5+
 1552740,First Days of Atlantis,2021,2020-2021,9.95,80,5to10,Strategy,1,1-4,0,14,0,14,1.146128,Strategy | 2020-2021 | 5to10 | 1-4
 1552760,Ghostist,2021,2020-2021,4.98,50,lt5,Action,0,0,0,35,2,37,1.568202,Action | 2020-2021 | lt5 | 0
@@ -29089,6 +29151,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1567380,Try To Remember,2021,2020-2021,1.19,0,lt5,Casual,0,0,0,17,0,17,1.230449,Casual | 2020-2021 | lt5 | 0
 1567440,inbento,2021,2020-2021,0.99,0,lt5,Casual,13,5+,1,1771,52,1823,3.260787,Casual | 2020-2021 | lt5 | 5+
 1567490,Alien Death Mob,2021,2020-2021,1.98,50,lt5,Action,4,1-4,0,47,3,50,1.69897,Action | 2020-2021 | lt5 | 1-4
+1567520,Blackwind,2022,2022+,6.24,0,5to10,Action,5,5+,1,42,31,73,1.863323,Action | 2022+ | 5to10 | 5+
 1567890,Date Z,2024,2022+,14.83,94,10to20,Visual Novel,25,5+,1,38,20,58,1.763428,Visual Novel | 2022+ | 10to20 | 5+
 1567930,War Tank combat,2021,2020-2021,0.99,0,lt5,Action,0,0,0,13,0,13,1.113943,Action | 2020-2021 | lt5 | 0
 1567950,Disco Ball,2021,2020-2021,3.74,0,lt5,Casual,0,0,0,12,3,15,1.176091,Casual | 2020-2021 | lt5 | 0
@@ -29124,6 +29187,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1569650,Palladise Island,2021,2020-2021,1.0,51,lt5,Casual,3,1-4,1,126,14,140,2.146128,Casual | 2020-2021 | lt5 | 1-4
 1569750,Ninja Ming: Wu,2024,2022+,1.97,66,lt5,Action,1,1-4,1,61,0,61,1.78533,Action | 2022+ | lt5 | 1-4
 1569760,Lab BreakOut,2021,2020-2021,9.89,91,5to10,Strategy,0,0,0,14,6,20,1.30103,Strategy | 2020-2021 | 5to10 | 0
+1569810,24 Solar Terms,2023,2022+,6.98,40,5to10,Puzzle,1,1-4,1,149,17,166,2.220108,Puzzle | 2022+ | 5to10 | 1-4
 1569920,Saphyro,2021,2020-2021,0.55,0,lt5,Casual,11,5+,1,8,4,12,1.079181,Casual | 2020-2021 | lt5 | 5+
 1569970,Fireball Wizard,2023,2022+,6.97,65,5to10,Action,10,5+,1,20,2,22,1.342423,Action | 2022+ | 5to10 | 5+
 1570010,FAR: Changing Tides,2022,2022+,19.96,75,10to20,Action,13,5+,1,4324,349,4673,3.669596,Action | 2022+ | 10to20 | 5+
@@ -29133,6 +29197,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1570160,Skip Lake,2021,2020-2021,2.99,0,lt5,Casual,0,0,0,36,1,37,1.568202,Casual | 2020-2021 | lt5 | 0
 1570290,Hyper Dungeon Crawler,2021,2020-2021,4.99,30,lt5,RPG,1,1-4,1,8,3,11,1.041393,RPG | 2020-2021 | lt5 | 1-4
 1570320,Battle Star Asteroids,2021,2020-2021,0.99,0,lt5,Action,0,0,0,13,0,13,1.113943,Action | 2020-2021 | lt5 | 0
+1570330,West Hunt,2023,2022+,9.98,50,5to10,Puzzle,10,5+,1,1724,323,2047,3.311118,Puzzle | 2022+ | 5to10 | 5+
 1570420,Clan of Death,2021,2020-2021,0.0,0,free,Casual,0,0,0,11,2,13,1.113943,Casual | 2020-2021 | free | 0
 1570500,Space Moth: Lunar Edition,2021,2020-2021,2.39,0,lt5,Action,4,1-4,0,26,3,29,1.462398,Action | 2020-2021 | lt5 | 1-4
 1570510,Undernauts: Labyrinth of Yomi,2021,2020-2021,59.98,50,gt20,RPG,1,1-4,0,159,33,192,2.283301,RPG | 2020-2021 | gt20 | 1-4
@@ -29265,6 +29330,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1577690,Video Game Fables,2022,2022+,3.49,0,lt5,RPG,0,0,0,43,1,44,1.643453,RPG | 2022+ | lt5 | 0
 1577700,Soul Challenge,2021,2020-2021,0.0,0,free,RPG,0,0,0,14,8,22,1.342423,RPG | 2020-2021 | free | 0
 1577750,Hamster All-Stars,2021,2020-2021,1.49,0,lt5,Casual,0,0,0,25,4,29,1.462398,Casual | 2020-2021 | lt5 | 0
+1577880,LUNAR LICH/月球巫妖,2021,2020-2021,2.98,45,lt5,Puzzle,0,0,1,90,2,92,1.963788,Puzzle | 2020-2021 | lt5 | 0
 1577940,Redaxium,2021,2020-2021,0.99,0,lt5,RPG,0,0,0,8,6,14,1.146128,RPG | 2020-2021 | lt5 | 0
 1578060,Mastho is Together,2021,2020-2021,1.99,0,lt5,Action,0,0,0,38,0,38,1.579784,Action | 2020-2021 | lt5 | 0
 1578110,God of Riffs: Battle For The Metalverse,2022,2022+,9.99,0,5to10,Action,8,5+,0,16,2,18,1.255273,Action | 2022+ | 5to10 | 5+
@@ -29520,6 +29586,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1592550,My Sweet Ants!,2021,2020-2021,24.96,72,gt20,Casual,0,0,0,13,7,20,1.30103,Casual | 2020-2021 | gt20 | 0
 1592640,Sakura Alien,2022,2022+,2.49,0,lt5,Visual Novel,0,0,1,59,23,82,1.913814,Visual Novel | 2022+ | lt5 | 0
 1592650,Olobollo,2021,2020-2021,5.99,0,5to10,Action,0,0,0,8,3,11,1.041393,Action | 2020-2021 | 5to10 | 0
+1592670,Soda Crisis,2022,2022+,10.98,40,10to20,Action,5,5+,1,2824,201,3025,3.480725,Action | 2022+ | 10to20 | 5+
 1592720,Garbage Crew!,2023,2022+,9.98,50,5to10,Action,0,0,0,29,2,31,1.491362,Action | 2022+ | 5to10 | 0
 1592740,Railroad Ink Challenge,2021,2020-2021,7.97,70,5to10,Puzzle,8,5+,1,78,17,95,1.977724,Puzzle | 2020-2021 | 5to10 | 5+
 1592750,Anode Heart,2023,2022+,17.97,70,10to20,RPG,1,1-4,0,342,36,378,2.577492,RPG | 2022+ | 10to20 | 1-4
@@ -29782,6 +29849,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1611130,Playback Trauma®: The Beach,2022,2022+,2.98,50,lt5,Casual,22,5+,1,16,7,23,1.361728,Casual | 2022+ | lt5 | 5+
 1611290,Puzzle Compound,2023,2022+,11.98,50,10to20,Puzzle,0,0,0,54,4,58,1.763428,Puzzle | 2022+ | 10to20 | 0
 1611300,Happy Guy,2021,2020-2021,2.99,0,lt5,Puzzle,0,0,1,503,142,645,2.80956,Puzzle | 2020-2021 | lt5 | 0
+1611420,Sea Horizon,2022,2022+,14.95,80,10to20,RPG,4,1-4,1,140,35,175,2.243038,RPG | 2022+ | 10to20 | 1-4
 1611490,[Chilla's Art] Night Delivery | 例外配達,2021,2020-2021,2.39,0,lt5,Casual,3,1-4,1,966,249,1215,3.084576,Casual | 2020-2021 | lt5 | 1-4
 1611540,Magic Frame,2021,2020-2021,0.49,0,lt5,Action,26,5+,1,13,11,24,1.380211,Action | 2020-2021 | lt5 | 5+
 1611580,Behind Glass: Aquarium Simulator,2025,2022+,11.99,0,10to20,Casual,11,5+,1,325,13,338,2.528917,Casual | 2022+ | 10to20 | 5+
@@ -29896,6 +29964,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1621310,Atelier Sophie 2: The Alchemist of the Mysterious Dream,2022,2022+,29.99,0,gt20,RPG,2,1-4,1,2201,129,2330,3.367356,RPG | 2022+ | gt20 | 1-4
 1621380,Scampr,2021,2020-2021,3.99,0,lt5,Casual,0,0,0,12,3,15,1.176091,Casual | 2020-2021 | lt5 | 0
 1621420,After Shadows,2021,2020-2021,14.99,0,10to20,Action,1,1-4,0,8,5,13,1.113943,Action | 2020-2021 | 10to20 | 1-4
+1621690,Core Keeper,2024,2022+,19.98,40,10to20,Casual,10,5+,1,51042,3937,54979,4.740197,Casual | 2022+ | 10to20 | 5+
 1621760,Decision: Red Daze,2022,2022+,19.95,80,10to20,Action,5,5+,1,582,211,793,2.899273,Action | 2022+ | 10to20 | 5+
 1621980,Territory: Animals Genetic Strategy,2022,2022+,6.95,80,5to10,Strategy,0,0,0,23,12,35,1.544068,Strategy | 2022+ | 5to10 | 0
 1621990,Stray Blade,2023,2022+,19.97,60,10to20,Action,8,5+,1,358,128,486,2.686636,Action | 2022+ | 10to20 | 5+
@@ -30101,6 +30170,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1637950,Cloaks and Capes,2022,2022+,0.0,0,free,Action,0,0,0,33,1,34,1.531479,Action | 2022+ | free | 0
 1637970,LOGistICAL 3,2021,2020-2021,9.98,50,5to10,Casual,9,5+,1,17,5,22,1.342423,Casual | 2020-2021 | 5to10 | 5+
 1638130,Terra Atlantis,2021,2020-2021,0.0,0,free,Action,0,0,0,28,9,37,1.568202,Action | 2020-2021 | free | 0
+1638230,Xuan-Yuan Sword: Mists Beyond the Mountains,2023,2022+,13.98,50,10to20,RPG,0,0,1,853,185,1038,3.016197,RPG | 2022+ | 10to20 | 0
 1638340,Cat Simulator : Animals on Farm,2021,2020-2021,3.97,70,lt5,Casual,5,5+,0,124,5,129,2.11059,Casual | 2020-2021 | lt5 | 5+
 1638390,Indies' Lies,2023,2022+,14.97,70,10to20,Strategy,4,1-4,1,578,177,755,2.877947,Strategy | 2022+ | 10to20 | 1-4
 1638500,The Garden Path,2024,2022+,19.98,50,10to20,Casual,3,1-4,1,53,16,69,1.838849,Casual | 2022+ | 10to20 | 1-4
@@ -30850,6 +30920,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1696090,HYPERBALL TACHYON,2021,2020-2021,1.99,0,lt5,Action,0,0,0,15,0,15,1.176091,Action | 2020-2021 | lt5 | 0
 1696200,Hell Blasters,2021,2020-2021,14.95,80,10to20,Action,2,1-4,1,20,4,24,1.380211,Action | 2020-2021 | 10to20 | 1-4
 1696220,FixFox,2022,2022+,3.74,0,lt5,Puzzle,4,1-4,1,345,46,391,2.592177,Puzzle | 2022+ | lt5 | 1-4
+1696440,The Matchless Kungfu,2024,2022+,19.98,40,10to20,RPG,3,1-4,1,6076,1196,7272,3.861654,RPG | 2022+ | 10to20 | 1-4
 1696610,Escape from the Lockdown: The Demon Fortress (Steam Version) - Day 1,2021,2020-2021,0.0,0,free,RPG,0,0,0,10,3,13,1.113943,RPG | 2020-2021 | free | 0
 1696670,Agarta,2022,2022+,2.99,30,lt5,Action,2,1-4,0,344,136,480,2.681241,Action | 2022+ | lt5 | 1-4
 1696710,Inventory Manager,2021,2020-2021,0.99,0,lt5,Strategy,0,0,0,27,11,38,1.579784,Strategy | 2020-2021 | lt5 | 0
@@ -32397,6 +32468,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1818940,Typing Land,2021,2020-2021,5.99,0,5to10,Casual,8,5+,1,108,14,122,2.08636,Casual | 2020-2021 | 5to10 | 5+
 1819160,Meteor World Actor: Badge & Dagger,2022,2022+,3.59,0,lt5,Visual Novel,0,0,1,282,34,316,2.499687,Visual Novel | 2022+ | lt5 | 0
 1819180,Oxide Room 104,2022,2022+,24.93,85,gt20,Action,11,5+,1,158,73,231,2.363612,Action | 2022+ | gt20 | 5+
+1819230,UDONGEIN X,2021,2020-2021,4.94,84,lt5,Action,3,1-4,1,361,33,394,2.595496,Action | 2020-2021 | lt5 | 1-4
 1819370,Murder by Moonlight 2 - Crimson Night,2021,2020-2021,8.99,30,5to10,Casual,0,0,0,10,5,15,1.176091,Casual | 2020-2021 | 5to10 | 0
 1819440,Block Line Engineer,2021,2020-2021,4.99,0,lt5,Strategy,2,1-4,0,8,7,15,1.176091,Strategy | 2020-2021 | lt5 | 1-4
 1819450,Koa and the Five Pirates of Mara,2023,2022+,6.99,0,5to10,Action,7,5+,1,348,25,373,2.571709,Action | 2022+ | 5to10 | 5+
@@ -32455,6 +32527,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1824010,QuaQua,2022,2022+,1.99,0,lt5,Casual,0,0,0,12,2,14,1.146128,Casual | 2022+ | lt5 | 0
 1824040,Star Shift Rebellion,2024,2022+,7.99,0,5to10,Strategy,0,0,0,24,2,26,1.414973,Strategy | 2022+ | 5to10 | 0
 1824080,LUL inc.,2022,2022+,1.09,0,lt5,Casual,0,0,0,106,1,107,2.029384,Casual | 2022+ | lt5 | 0
+1824130,Outside the Window,2022,2022+,1.98,45,lt5,Casual,1,1-4,1,51,5,56,1.748188,Casual | 2022+ | lt5 | 1-4
 1824210,Istanbul Ship Simulator,2021,2020-2021,0.99,0,lt5,Casual,3,1-4,0,15,4,19,1.278754,Casual | 2020-2021 | lt5 | 1-4
 1824220,Chivalry 2,2022,2022+,39.95,80,gt20,Action,9,5+,1,37673,9288,46961,4.671737,Action | 2022+ | gt20 | 5+
 1824290,100 Pumpkins 2,2023,2022+,2.59,0,lt5,Action,0,0,0,43,2,45,1.653213,Action | 2022+ | lt5 | 0
@@ -32563,6 +32636,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1833490,GOODBYE WORLD,2022,2022+,11.98,40,10to20,Visual Novel,2,1-4,1,676,119,795,2.900367,Visual Novel | 2022+ | 10to20 | 1-4
 1833560,Witchhazel Woods,2022,2022+,7.98,50,5to10,Puzzle,0,0,0,39,0,39,1.591065,Puzzle | 2022+ | 5to10 | 0
 1833670,2048 3D,2021,2020-2021,0.99,24,lt5,Casual,0,0,0,10,2,12,1.079181,Casual | 2020-2021 | lt5 | 0
+1833680,BeatRider,2024,2022+,7.19,0,5to10,Casual,1,1-4,1,48,16,64,1.80618,Casual | 2022+ | 5to10 | 1-4
 1833710,My Museum: Treasure Hunter,2024,2022+,14.98,35,10to20,Puzzle,10,5+,1,8,27,35,1.544068,Puzzle | 2022+ | 10to20 | 5+
 1833820,From Red to Green,2022,2022+,1.96,75,lt5,Puzzle,1,1-4,0,15,2,17,1.230449,Puzzle | 2022+ | lt5 | 1-4
 1833850,HelloWorld:ESCAPE,2022,2022+,1.99,0,lt5,Action,2,1-4,0,17,2,19,1.278754,Action | 2022+ | lt5 | 1-4
@@ -33282,6 +33356,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1893880,Wormhole,2022,2022+,4.99,0,lt5,Action,0,0,0,14,0,14,1.146128,Action | 2022+ | lt5 | 0
 1894220,Square,2022,2022+,0.49,0,lt5,Action,100,5+,1,25,3,28,1.447158,Action | 2022+ | lt5 | 5+
 1894320,Dr. Professor Scientist's Weapons Testing Facility,2022,2022+,4.95,80,lt5,Strategy,0,0,0,65,11,76,1.880814,Strategy | 2022+ | lt5 | 0
+1894460,Zombie Within,2024,2022+,9.97,67,5to10,Casual,9,5+,1,24,8,32,1.50515,Casual | 2022+ | 5to10 | 5+
 1894720,Motordoom,2024,2022+,13.98,40,10to20,Action,6,5+,0,140,6,146,2.164353,Action | 2022+ | 10to20 | 5+
 1894730,Asterix & Obelix XXXL : The Ram From Hibernia,2022,2022+,5.99,0,5to10,Action,9,5+,1,13,19,32,1.50515,Action | 2022+ | 5to10 | 5+
 1894770,Bloody Forest,2022,2022+,4.99,0,lt5,Action,0,0,0,6,10,16,1.20412,Action | 2022+ | lt5 | 0
@@ -33728,6 +33803,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1928020,Gargoyles Remastered,2023,2022+,14.98,50,10to20,Action,5,5+,1,25,13,38,1.579784,Action | 2022+ | 10to20 | 5+
 1928120,Swords & Bones 2,2022,2022+,0.69,0,lt5,Action,2,1-4,0,23,0,23,1.361728,Action | 2022+ | lt5 | 1-4
 1928320,PopSlinger,2022,2022+,14.97,70,10to20,Puzzle,2,1-4,0,30,8,38,1.579784,Puzzle | 2022+ | 10to20 | 1-4
+1928360,Please Teach Me Onedari Shogi,2023,2022+,1.09,0,lt5,Casual,1,1-4,0,11,1,12,1.079181,Casual | 2022+ | lt5 | 1-4
 1928370,Exodemic,2022,2022+,4.99,0,lt5,Action,0,0,0,47,3,50,1.69897,Action | 2022+ | lt5 | 0
 1928540,"Horticular: Build a Garden, Attract Wildlife",2024,2022+,9.99,0,5to10,Casual,5,5+,1,314,29,343,2.535294,Casual | 2022+ | 5to10 | 5+
 1928650,Niflhel's Fables: The Book of Gypsies,2023,2022+,7.19,0,5to10,Visual Novel,1,1-4,0,20,6,26,1.414973,Visual Novel | 2022+ | 5to10 | 1-4
@@ -33856,6 +33932,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1937980,DUST - Post Apocalyptic RPG,2022,2022+,2.98,50,lt5,Visual Novel,0,0,0,8,2,10,1.0,Visual Novel | 2022+ | lt5 | 0
 1938010,WILD HEARTS™,2023,2022+,69.9,90,gt20,Action,9,5+,1,5709,6481,12190,4.086004,Action | 2022+ | gt20 | 5+
 1938040,Royal Duality,2022,2022+,0.0,0,free,Visual Novel,0,0,0,13,2,15,1.176091,Visual Novel | 2022+ | free | 0
+1938090,Call of Duty®,2022,2022+,0.0,45,free,Action,11,5+,1,419594,294520,714114,5.853768,Action | 2022+ | free | 5+
 1938180,Axolotl is Dry,2022,2022+,9.99,0,5to10,Action,1,1-4,0,46,5,51,1.70757,Action | 2022+ | 5to10 | 1-4
 1938200,Desktop Dog,2022,2022+,2.98,42,lt5,Casual,4,1-4,1,34,8,42,1.623249,Casual | 2022+ | lt5 | 1-4
 1938290,Vactics,2023,2022+,10.99,0,10to20,Strategy,0,0,0,50,1,51,1.70757,Strategy | 2022+ | 10to20 | 0
@@ -33955,6 +34032,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1946170,Reindeer Story,2024,2022+,1.99,0,lt5,RPG,0,0,0,14,0,14,1.146128,RPG | 2022+ | lt5 | 0
 1946260,Just a ball: Jumping in the space,2022,2022+,3.99,0,lt5,Action,0,0,0,11,0,11,1.041393,Action | 2022+ | lt5 | 0
 1946310,Escape the Ayurok DEMAKE,2022,2022+,2.99,0,lt5,Action,0,0,0,10,8,18,1.255273,Action | 2022+ | lt5 | 0
+1946430,Garage: Bad Dream Adventure,2022,2022+,19.89,25,10to20,Puzzle,1,1-4,1,301,8,309,2.489958,Puzzle | 2022+ | 10to20 | 1-4
 1946550,Toilet Chronicles,2022,2022+,9.9,90,5to10,Puzzle,0,0,0,1251,138,1389,3.142702,Puzzle | 2022+ | 5to10 | 0
 1946610,Soul Street,2023,2022+,3.49,0,lt5,Puzzle,1,1-4,1,38,6,44,1.643453,Puzzle | 2022+ | lt5 | 1-4
 1946700,Layers of Fear,2023,2022+,29.98,60,gt20,Puzzle,11,5+,1,1099,275,1374,3.137987,Puzzle | 2022+ | gt20 | 5+
@@ -34421,6 +34499,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1986070,Cook OL,2022,2022+,4.98,50,lt5,RPG,0,0,1,8,8,16,1.20412,RPG | 2022+ | lt5 | 0
 1986230,What if your girl was a frog?,2022,2022+,0.98,40,lt5,Casual,11,5+,1,239,27,266,2.424882,Casual | 2022+ | lt5 | 5+
 1986240,Maid PizzaHub,2022,2022+,0.98,40,lt5,Puzzle,11,5+,1,71,11,82,1.913814,Puzzle | 2022+ | lt5 | 5+
+1986250,ヒロイン忍法帖 姫影・ 壱／Pretty Ninja HIMEKAGE_01,2022,2022+,3.99,0,lt5,Visual Novel,1,1-4,0,8,2,10,1.0,Visual Novel | 2022+ | lt5 | 1-4
 1986630,Royal Legends: Raised in Exile Collector's Edition,2022,2022+,3.19,0,lt5,Puzzle,3,1-4,0,5,6,11,1.041393,Puzzle | 2022+ | lt5 | 1-4
 1986840,POPGOES Arcade,2022,2022+,4.99,25,lt5,RPG,0,0,0,1441,51,1492,3.173769,RPG | 2022+ | lt5 | 0
 1986880,Growing My Grandpa!,2022,2022+,4.97,60,lt5,Casual,0,0,0,396,4,400,2.60206,Casual | 2022+ | lt5 | 0
@@ -34560,6 +34639,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 1998340,Labyrinth of Galleria: The Moon Society,2023,2022+,49.97,60,gt20,RPG,1,1-4,0,398,73,471,2.673021,RPG | 2022+ | gt20 | 1-4
 1998350,The Sand Knight,2024,2022+,14.97,67,10to20,Action,0,0,0,19,0,19,1.278754,Action | 2022+ | 10to20 | 0
 1998390,Road Trip,2022,2022+,2.19,0,lt5,Casual,1,1-4,0,14,22,36,1.556303,Casual | 2022+ | lt5 | 1-4
+1998530,Yoiyami Dancers: Twilight Danmaku Dancers,2022,2022+,6.99,0,5to10,Action,1,1-4,0,589,9,598,2.776701,Action | 2022+ | 5to10 | 1-4
 1998580,Breath of Ghosts 2,2022,2022+,4.95,80,lt5,Puzzle,7,5+,1,15,18,33,1.518514,Puzzle | 2022+ | lt5 | 5+
 1998590,Russian Hunter,2022,2022+,1.24,0,lt5,Action,22,5+,1,19,26,45,1.653213,Action | 2022+ | lt5 | 5+
 1998980,Peppa Pig: World Adventures,2023,2022+,39.97,65,gt20,Casual,13,5+,0,60,9,69,1.838849,Casual | 2022+ | gt20 | 5+
@@ -34696,6 +34776,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2011140,Art your brains,2022,2022+,9.91,89,5to10,Casual,1,1-4,0,10,6,16,1.20412,Casual | 2022+ | 5to10 | 1-4
 2011160,Puzzles with nature,2022,2022+,9.95,79,5to10,Casual,1,1-4,0,12,2,14,1.146128,Casual | 2022+ | 5to10 | 1-4
 2011310,Entropic Float: This World Will Decay And Disappear,2022,2022+,0.0,0,free,Visual Novel,0,0,0,41,5,46,1.662758,Visual Novel | 2022+ | free | 0
+2011550,Mouse People,2022,2022+,1.45,25,lt5,Casual,100,5+,1,23,1,24,1.380211,Casual | 2022+ | lt5 | 5+
 2011650,SPIRITUS,2023,2022+,7.98,50,5to10,Action,0,0,0,7,25,32,1.50515,Action | 2022+ | 5to10 | 0
 2011730,Long Drop,2022,2022+,1.98,35,lt5,Casual,0,0,0,22,1,23,1.361728,Casual | 2022+ | lt5 | 0
 2011750,Silver Lines,2022,2022+,0.0,0,free,Casual,0,0,0,7,3,10,1.0,Casual | 2022+ | free | 0
@@ -34729,6 +34810,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2014480,Costly Adventure,2023,2022+,0.0,0,free,Strategy,3,1-4,1,11,1,12,1.079181,Strategy | 2022+ | free | 1-4
 2014550,Voidwrought,2024,2022+,19.97,66,10to20,Action,8,5+,1,480,131,611,2.786041,Action | 2022+ | 10to20 | 5+
 2014690,Shame Legacy,2023,2022+,14.95,80,10to20,Action,10,5+,1,105,65,170,2.230449,Action | 2022+ | 10to20 | 5+
+2014870,EXECUTE DADDY～パパが何度も死ぬゲーム～,2022,2022+,19.99,0,10to20,Visual Novel,1,1-4,0,24,3,27,1.431364,Visual Novel | 2022+ | 10to20 | 1-4
 2014930,A Last will and Testament: Adventure,2022,2022+,0.49,0,lt5,Casual,27,5+,1,55,27,82,1.913814,Casual | 2022+ | lt5 | 5+
 2015000,The Ghost and the Golem,2024,2022+,7.98,40,5to10,Casual,0,0,0,16,1,17,1.230449,Casual | 2022+ | 5to10 | 0
 2015130,Thrae,2025,2022+,7.99,30,5to10,RPG,0,0,0,11,4,15,1.176091,RPG | 2022+ | 5to10 | 0
@@ -34773,6 +34855,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2018840,UNILOGUE,2022,2022+,0.0,0,free,Strategy,1,1-4,0,18,1,19,1.278754,Strategy | 2022+ | free | 1-4
 2018850,Fire Truck Simulator,2022,2022+,99.8,95,gt20,Strategy,1,1-4,1,20,10,30,1.477121,Strategy | 2022+ | gt20 | 1-4
 2019300,Dokimon: Quest,2024,2022+,14.96,75,10to20,RPG,3,1-4,0,164,38,202,2.305351,RPG | 2022+ | 10to20 | 1-4
+2019340,The Cecil: The Journey Begins,2025,2022+,19.98,50,10to20,Action,7,5+,1,25,15,40,1.60206,Action | 2022+ | 10to20 | 5+
 2019360,World Cruise Story,2022,2022+,8.98,36,5to10,Casual,3,1-4,1,49,1,50,1.69897,Casual | 2022+ | 5to10 | 1-4
 2019370,Oh! Edo Towns,2022,2022+,3.23,0,lt5,Strategy,2,1-4,1,67,10,77,1.886491,Strategy | 2022+ | lt5 | 1-4
 2019380,Pocket Harvest,2023,2022+,8.97,64,5to10,Strategy,2,1-4,1,72,4,76,1.880814,Strategy | 2022+ | 5to10 | 1-4
@@ -35033,6 +35116,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2063870,bloody lonely cold,2023,2022+,2.99,30,lt5,RPG,4,1-4,1,17,19,36,1.556303,RPG | 2022+ | lt5 | 1-4
 2064380,One Week By Car,2022,2022+,0.0,0,free,Casual,0,0,0,14,1,15,1.176091,Casual | 2022+ | free | 0
 2064490,Art Reborn: Painting Connoisseur,2023,2022+,5.24,0,5to10,Casual,0,0,1,319,17,336,2.526339,Casual | 2022+ | 5to10 | 0
+2064650,Tower of Fantasy,2022,2022+,0.0,0,free,RPG,8,5+,1,7595,3375,10970,4.040207,RPG | 2022+ | free | 5+
 2064700,Speedonauts,2023,2022+,7.99,0,5to10,Action,0,0,0,27,1,28,1.447158,Action | 2022+ | 5to10 | 0
 2064810,CityDriver,2023,2022+,29.98,40,gt20,Casual,7,5+,1,358,505,863,2.936011,Casual | 2022+ | gt20 | 5+
 2064850,Lifespace Traveler,2023,2022+,14.98,50,10to20,Action,0,0,0,18,2,20,1.30103,Action | 2022+ | 10to20 | 0
@@ -35044,6 +35128,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2065200,The Stone Cutter and the Mountain Spirit,2022,2022+,1.99,0,lt5,Puzzle,1,1-4,0,37,3,40,1.60206,Puzzle | 2022+ | lt5 | 1-4
 2065280,Red Tower,2025,2022+,1.49,0,lt5,Action,5,5+,1,17,0,17,1.230449,Action | 2022+ | lt5 | 5+
 2065510,Bots City,2022,2022+,49.9,90,gt20,Action,0,0,0,13,3,16,1.20412,Action | 2022+ | gt20 | 0
+2065520,Endless Nightmare,2022,2022+,15.99,0,10to20,Puzzle,3,1-4,1,11,3,14,1.146128,Puzzle | 2022+ | 10to20 | 1-4
 2065560,Acanthoceras,2022,2022+,1.96,72,lt5,Action,0,0,0,5,6,11,1.041393,Action | 2022+ | lt5 | 0
 2065610,Rush Rush Rally Reloaded,2022,2022+,5.98,60,5to10,Action,0,0,0,10,0,10,1.0,Action | 2022+ | 5to10 | 0
 2065630,Goat's Tale 2,2022,2022+,4.99,0,lt5,Casual,7,5+,1,24,5,29,1.462398,Casual | 2022+ | lt5 | 5+
@@ -35263,6 +35348,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2083180,Cat Herder,2022,2022+,4.98,50,lt5,Puzzle,4,1-4,1,38,0,38,1.579784,Puzzle | 2022+ | lt5 | 1-4
 2083240,Asterogues,2024,2022+,14.98,40,10to20,Action,0,0,0,91,8,99,1.995635,Action | 2022+ | 10to20 | 0
 2083540,Disc Golf Online,2022,2022+,14.98,50,10to20,Casual,0,0,0,29,5,34,1.531479,Casual | 2022+ | 10to20 | 0
+2083560,Eva：Final Mission,2022,2022+,2.98,50,lt5,Casual,0,0,1,64,22,86,1.934498,Casual | 2022+ | lt5 | 0
 2083630,Ailin: Traps and Treasures,2022,2022+,3.98,50,lt5,Puzzle,7,5+,1,14,0,14,1.146128,Puzzle | 2022+ | lt5 | 5+
 2083670,Cats Yakuza - Online card game,2022,2022+,1.99,0,lt5,Casual,3,1-4,1,25,1,26,1.414973,Casual | 2022+ | lt5 | 1-4
 2083730,Physics Playground,2022,2022+,2.99,0,lt5,Casual,1,1-4,0,9,3,12,1.079181,Casual | 2022+ | lt5 | 1-4
@@ -35502,6 +35588,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2102810,Cookie Clicker but You Type,2022,2022+,1.99,0,lt5,Casual,0,0,0,23,10,33,1.518514,Casual | 2022+ | lt5 | 0
 2102940,Jade Order,2022,2022+,0.99,0,lt5,Strategy,1,1-4,0,15,2,17,1.230449,Strategy | 2022+ | lt5 | 1-4
 2102980,The Tale of Galariel,2023,2022+,6.99,0,5to10,RPG,0,0,0,13,0,13,1.113943,RPG | 2022+ | 5to10 | 0
+2103140,Magicraft,2024,2022+,15.99,20,10to20,RPG,4,1-4,1,12485,1048,13533,4.131394,RPG | 2022+ | 10to20 | 1-4
 2103180,Ignite,2022,2022+,0.0,0,free,Action,1,1-4,0,10,2,12,1.079181,Action | 2022+ | free | 1-4
 2103190,Reilla ~Sweets Adventure~,2022,2022+,0.0,0,free,Action,1,1-4,0,23,4,27,1.431364,Action | 2022+ | free | 1-4
 2103320,Screaming Noppy,2022,2022+,0.0,0,free,Casual,3,1-4,0,14,1,15,1.176091,Casual | 2022+ | free | 1-4
@@ -35600,6 +35687,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2112550,Ice Nosfe,2022,2022+,2.99,0,lt5,Action,0,0,0,10,0,10,1.0,Action | 2022+ | lt5 | 0
 2112820,The Godfeather : A Mafia Pigeon Saga,2023,2022+,9.99,0,5to10,Action,7,5+,1,19,0,19,1.278754,Action | 2022+ | 5to10 | 5+
 2113030,The Nameless,2022,2022+,1.99,0,lt5,Action,0,0,0,15,5,20,1.30103,Action | 2022+ | lt5 | 0
+2113040,RUNGORE,2024,2022+,14.97,65,10to20,Strategy,17,5+,1,793,96,889,2.948902,Strategy | 2022+ | 10to20 | 5+
 2113120,Verlet Ascend,2023,2022+,6.96,75,5to10,Action,26,5+,1,80,8,88,1.944483,Action | 2022+ | 5to10 | 5+
 2113180,Into the Sinkhole,2022,2022+,0.99,0,lt5,Action,1,1-4,0,120,33,153,2.184691,Action | 2022+ | lt5 | 1-4
 2113220,Voxel Miner: Dwellers of The Deep,2023,2022+,0.99,0,lt5,Action,0,0,0,11,0,11,1.041393,Action | 2022+ | lt5 | 0
@@ -36105,6 +36193,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2161110,The end is nahual: If I may say so,2023,2022+,9.95,80,5to10,Visual Novel,2,1-4,0,52,6,58,1.763428,Visual Novel | 2022+ | 5to10 | 1-4
 2161120,Slime Ranger Sokoban,2022,2022+,0.59,0,lt5,Puzzle,0,0,0,21,3,24,1.380211,Puzzle | 2022+ | lt5 | 0
 2161430,FAKE SIGNALS,2023,2022+,9.9,90,5to10,Action,3,1-4,1,56,15,71,1.851258,Action | 2022+ | 5to10 | 1-4
+2161440,Sailing Era,2023,2022+,24.98,50,gt20,Strategy,1,1-4,1,3652,964,4616,3.664266,Strategy | 2022+ | gt20 | 1-4
 2161450,Sorry We're Open,2023,2022+,7.98,50,5to10,RPG,0,0,0,117,6,123,2.089905,RPG | 2022+ | 5to10 | 0
 2161590,Bike Arena,2022,2022+,4.9,90,lt5,Casual,1,1-4,0,7,5,12,1.079181,Casual | 2022+ | lt5 | 1-4
 2161600,Ghost Bus Simulator,2022,2022+,0.69,0,lt5,Casual,1,1-4,1,18,15,33,1.518514,Casual | 2022+ | lt5 | 1-4
@@ -36416,6 +36505,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2192480,Luna & Monsters Tower Defense -The deprived magical kingdom-,2022,2022+,12.95,80,10to20,Strategy,13,5+,1,10,4,14,1.146128,Strategy | 2022+ | 10to20 | 5+
 2192530,Dark Box,2022,2022+,4.99,0,lt5,Puzzle,8,5+,1,11,0,11,1.041393,Puzzle | 2022+ | lt5 | 5+
 2192570,Vosphia,2023,2022+,9.99,0,5to10,RPG,0,0,0,13,15,28,1.447158,RPG | 2022+ | 5to10 | 0
+2192620,ghostpia Season One,2023,2022+,19.99,30,10to20,Visual Novel,1,1-4,1,724,32,756,2.878522,Visual Novel | 2022+ | 10to20 | 1-4
 2192650,Super Clown 3: Revenge,2022,2022+,1.0,51,lt5,Action,0,0,0,17,5,22,1.342423,Action | 2022+ | lt5 | 0
 2192670,G-MODEアーカイブス+ 女神転生外伝 新約ラストバイブル,2022,2022+,15.98,40,10to20,RPG,1,1-4,0,19,2,21,1.322219,RPG | 2022+ | 10to20 | 1-4
 2192790,The Walking Dead: Destinies,2023,2022+,49.95,80,gt20,Action,6,5+,0,330,389,719,2.856729,Action | 2022+ | gt20 | 5+
@@ -36471,6 +36561,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2196230,SlasherRPG,2023,2022+,16.99,0,10to20,Strategy,1,1-4,0,11,3,14,1.146128,Strategy | 2022+ | 10to20 | 1-4
 2196370,Cherry Lady,2022,2022+,49.8,95,gt20,Casual,0,0,0,13,2,15,1.176091,Casual | 2022+ | gt20 | 0
 2196380,Candy Maid,2022,2022+,49.8,95,gt20,Puzzle,0,0,0,14,2,16,1.20412,Puzzle | 2022+ | gt20 | 0
+2196390,2022生存指南 2022 SURVIVAL GUIDE,2023,2022+,1.19,0,lt5,Puzzle,0,0,1,40,7,47,1.672098,Puzzle | 2022+ | lt5 | 0
 2196430,Final Age,2023,2022+,6.99,0,5to10,Casual,0,0,0,6,5,11,1.041393,Casual | 2022+ | 5to10 | 0
 2196560,My Little Sister Fiona,2023,2022+,1.0,51,lt5,Casual,0,0,0,20,1,21,1.322219,Casual | 2022+ | lt5 | 0
 2196680,CHARGED: RC Racing,2022,2022+,9.99,0,5to10,Action,6,5+,1,16,6,22,1.342423,Action | 2022+ | 5to10 | 5+
@@ -36685,6 +36776,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2214970,Get To The Gate,2024,2022+,19.95,80,10to20,RPG,3,1-4,0,11,2,13,1.113943,RPG | 2022+ | 10to20 | 1-4
 2215080,Twin Mind: Nobody's Here Collector's Edition,2022,2022+,1.59,0,lt5,Puzzle,3,1-4,0,12,3,15,1.176091,Puzzle | 2022+ | lt5 | 1-4
 2215220,Jewel Match Winter Wonderland 2 Collector's Edition,2022,2022+,12.96,75,10to20,Puzzle,0,0,0,23,2,25,1.39794,Puzzle | 2022+ | 10to20 | 0
+2215260,Scott Pilgrim vs. The World™: The Game – Complete Edition,2023,2022+,14.97,67,10to20,Action,4,1-4,0,2315,757,3072,3.487421,Action | 2022+ | 10to20 | 1-4
 2215340,Shishi : Timeless Prelude,2023,2022+,9.99,0,5to10,RPG,4,1-4,1,12,0,12,1.079181,RPG | 2022+ | 5to10 | 1-4
 2215430,Ghost of Tsushima DIRECTOR'S CUT,2024,2022+,59.98,40,gt20,Action,23,5+,1,61086,4029,65115,4.813681,Action | 2022+ | gt20 | 5+
 2215500,Frogurai,2023,2022+,0.99,0,lt5,Casual,6,5+,0,19,0,19,1.278754,Casual | 2022+ | lt5 | 5+
@@ -37002,6 +37094,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2248340,UNRESTRAINED,2023,2022+,1.0,51,lt5,Casual,0,0,0,14,11,25,1.39794,Casual | 2022+ | lt5 | 0
 2248350,Taste of War,2023,2022+,1.0,51,lt5,Casual,0,0,0,12,2,14,1.146128,Casual | 2022+ | lt5 | 0
 2248390,Citadelic,2023,2022+,9.98,50,5to10,Strategy,1,1-4,0,10,4,14,1.146128,Strategy | 2022+ | 5to10 | 1-4
+2248430,Touhou Artificial Dream in Arcadia,2023,2022+,9.98,50,5to10,RPG,4,1-4,1,1026,32,1058,3.024486,RPG | 2022+ | 5to10 | 1-4
 2248570,I commissioned some bees 12 Days,2022,2022+,0.89,0,lt5,Puzzle,9,5+,1,28,2,30,1.477121,Puzzle | 2022+ | lt5 | 5+
 2248810,Dungeon Shooter : Dark Temple,2023,2022+,4.99,0,lt5,Action,7,5+,1,10,3,13,1.113943,Action | 2022+ | lt5 | 5+
 2248830,Street Fighting Grandma,2023,2022+,0.99,0,lt5,Casual,0,0,0,11,0,11,1.041393,Casual | 2022+ | lt5 | 0
@@ -37252,6 +37345,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2275780,Round Trip,2023,2022+,0.49,0,lt5,Casual,5,5+,0,21,8,29,1.462398,Casual | 2022+ | lt5 | 5+
 2275820,Kitchen Chaos - Learn Game Development,2023,2022+,0.0,0,free,Action,0,0,0,38,2,40,1.60206,Action | 2022+ | free | 0
 2276110,Cush's Amazin' Adventure!!,2023,2022+,0.74,0,lt5,Puzzle,1,1-4,0,37,1,38,1.579784,Puzzle | 2022+ | lt5 | 1-4
+2276440,鞭炮&烟花：春节模拟器Firecrackers&fireworks：china new year simulation,2023,2022+,1.99,0,lt5,Casual,0,0,1,34,13,47,1.672098,Casual | 2022+ | lt5 | 0
 2276550,Bang Bang Land,2023,2022+,0.0,0,free,Action,0,0,0,10,4,14,1.146128,Action | 2022+ | free | 0
 2276830,Kingsvein,2024,2022+,19.98,40,10to20,RPG,0,0,0,235,22,257,2.409933,RPG | 2022+ | 10to20 | 0
 2276850,The Voidness - Lidar Horror Survival Game,2023,2022+,11.99,20,10to20,Action,0,0,0,246,51,297,2.472756,Action | 2022+ | 10to20 | 0
@@ -37870,6 +37964,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2336730,Dungeon Survivors,2024,2022+,2.49,0,lt5,RPG,8,5+,1,109,48,157,2.1959,RPG | 2022+ | lt5 | 5+
 2336760,Immortal Hunters,2025,2022+,19.98,50,10to20,RPG,4,1-4,1,78,25,103,2.012837,RPG | 2022+ | 10to20 | 1-4
 2336840,Taka Taka,2024,2022+,0.0,0,free,Action,0,0,0,34,1,35,1.544068,Action | 2022+ | free | 0
+2336980,Enjoy the Diner,2023,2022+,10.99,30,10to20,Visual Novel,2,1-4,1,706,16,722,2.858537,Visual Novel | 2022+ | 10to20 | 1-4
 2337090,Real Dive World,2024,2022+,11.99,0,10to20,Visual Novel,1,1-4,1,63,17,80,1.90309,Visual Novel | 2022+ | 10to20 | 1-4
 2337140,Can't Live Without Electricity,2023,2022+,4.99,20,lt5,Strategy,1,1-4,0,214,10,224,2.350248,Strategy | 2022+ | lt5 | 1-4
 2337290,Ruku's Heart Balloon,2024,2022+,8.98,50,5to10,Casual,6,5+,0,13,1,14,1.146128,Casual | 2022+ | 5to10 | 5+
@@ -37877,6 +37972,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2337820,The Crush House,2024,2022+,16.96,75,10to20,Casual,6,5+,1,239,91,330,2.518514,Casual | 2022+ | 10to20 | 5+
 2337860,Nubs! Arena,2025,2022+,3.99,0,lt5,Action,9,5+,1,382,226,608,2.783904,Action | 2022+ | lt5 | 5+
 2337910,Asuji: The Legend of You,2023,2022+,2.98,50,lt5,Casual,0,0,0,9,1,10,1.0,Casual | 2022+ | lt5 | 0
+2337970,March of Tulpas:Xanadu,2023,2022+,8.96,75,5to10,RPG,1,1-4,1,21,0,21,1.322219,RPG | 2022+ | 5to10 | 1-4
 2338040,Cards Survivors,2024,2022+,9.98,50,5to10,Strategy,20,5+,1,7,3,10,1.0,Strategy | 2022+ | 5to10 | 5+
 2338090,Full Moon Rush,2023,2022+,4.98,55,lt5,Action,6,5+,1,15,1,16,1.20412,Action | 2022+ | lt5 | 5+
 2338120,Outlive,2023,2022+,12.96,77,10to20,Action,14,5+,1,56,8,64,1.80618,Action | 2022+ | 10to20 | 5+
@@ -38154,6 +38250,8 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2368510,Soulvester VS Lil' Beezey,2023,2022+,1.0,51,lt5,Action,0,0,0,46,2,48,1.681241,Action | 2022+ | lt5 | 0
 2368650,GUNSHIP,2023,2022+,1.0,51,lt5,Action,0,0,0,17,16,33,1.518514,Action | 2022+ | lt5 | 0
 2368860,Paws of Coal,2023,2022+,4.99,0,lt5,Casual,0,0,0,59,5,64,1.80618,Casual | 2022+ | lt5 | 0
+2369140,幻影魔都,2023,2022+,0.99,0,lt5,RPG,0,0,1,45,25,70,1.845098,RPG | 2022+ | lt5 | 0
+2369390,Far Cry® 6,2023,2022+,59.94,83,gt20,Action,11,5+,1,19411,7737,27148,4.433738,Action | 2022+ | gt20 | 5+
 2369410,Lotte,2023,2022+,0.49,0,lt5,Puzzle,3,1-4,0,67,7,74,1.869232,Puzzle | 2022+ | lt5 | 1-4
 2369610,Veriscape,2023,2022+,1.5,0,lt5,Action,0,0,0,10,0,10,1.0,Action | 2022+ | lt5 | 0
 2369810,S.O.V: Passenger 23,2025,2022+,3.98,45,lt5,Action,1,1-4,0,53,11,64,1.80618,Action | 2022+ | lt5 | 1-4
@@ -38237,6 +38335,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2377420,Eris Dysnomia,2023,2022+,12.99,30,10to20,RPG,1,1-4,1,229,18,247,2.392697,RPG | 2022+ | 10to20 | 1-4
 2377490,Psychiatric Hospital,2023,2022+,0.99,30,lt5,Puzzle,1,1-4,0,27,24,51,1.70757,Puzzle | 2022+ | lt5 | 1-4
 2377520,2D Dogfight,2023,2022+,4.98,50,lt5,Action,2,1-4,1,24,2,26,1.414973,Action | 2022+ | lt5 | 1-4
+2377780,终极功德模拟器 | Zen Simulator,2023,2022+,1.39,0,lt5,Casual,0,0,1,21,5,26,1.414973,Casual | 2022+ | lt5 | 0
 2377970,Cats Hidden Around the World,2024,2022+,4.98,50,lt5,Puzzle,16,5+,1,504,13,517,2.713491,Puzzle | 2022+ | lt5 | 5+
 2377980,Dye The Bunny,2023,2022+,1.98,45,lt5,Puzzle,0,0,0,32,3,35,1.544068,Puzzle | 2022+ | lt5 | 0
 2378290,Grasshoping,2023,2022+,6.95,80,5to10,Action,5,5+,1,16,1,17,1.230449,Action | 2022+ | 5to10 | 5+
@@ -38795,6 +38894,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2441100,Unrooted,2024,2022+,7.99,0,5to10,Casual,0,0,0,98,13,111,2.045323,Casual | 2022+ | 5to10 | 0
 2441120,Viking Heroes 4,2023,2022+,2.09,0,lt5,Casual,2,1-4,0,11,1,12,1.079181,Casual | 2022+ | lt5 | 1-4
 2441270,Kill The Crows,2023,2022+,4.98,50,lt5,Action,8,5+,1,2016,109,2125,3.327359,Action | 2022+ | lt5 | 5+
+2441360,"Get Me Out, Please",2023,2022+,5.99,0,5to10,Action,1,1-4,1,21,9,30,1.477121,Action | 2022+ | 5to10 | 1-4
 2441670,Carnival in the hut,2023,2022+,1.0,51,lt5,Casual,1,1-4,0,6,5,11,1.041393,Casual | 2022+ | lt5 | 1-4
 2441700,UNDERDOGS,2024,2022+,29.99,33,gt20,Action,7,5+,1,2182,45,2227,3.34772,Action | 2022+ | gt20 | 5+
 2442040,Swapshot,2023,2022+,1.97,70,lt5,Casual,8,5+,1,25,2,27,1.431364,Casual | 2022+ | lt5 | 5+
@@ -39095,6 +39195,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2478120,Nekograms,2025,2022+,7.48,40,5to10,Puzzle,12,5+,1,16,0,16,1.20412,Puzzle | 2022+ | 5to10 | 5+
 2478310,DERE. Some Answers Before I...,2023,2022+,1.98,43,lt5,Visual Novel,2,1-4,0,15,6,21,1.322219,Visual Novel | 2022+ | lt5 | 1-4
 2478340,Sokoban 3D,2023,2022+,0.99,0,lt5,Casual,11,5+,1,9,1,10,1.0,Casual | 2022+ | lt5 | 5+
+2478470,Doomsday,2023,2022+,1.98,44,lt5,Action,0,0,1,8,7,15,1.176091,Action | 2022+ | lt5 | 0
 2478580,絶体絶命少女 虚空の方程式,2023,2022+,0.0,0,free,Visual Novel,1,1-4,0,19,1,20,1.30103,Visual Novel | 2022+ | free | 1-4
 2478640,Spider Fox,2024,2022+,7.96,75,5to10,Casual,5,5+,1,50,3,53,1.724276,Casual | 2022+ | 5to10 | 5+
 2478750,Demon Hunter,2023,2022+,3.97,70,lt5,RPG,7,5+,1,11,5,16,1.20412,RPG | 2022+ | lt5 | 5+
@@ -39452,6 +39553,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2527500,MiSide,2024,2022+,14.99,20,10to20,Puzzle,28,5+,1,108883,2204,111087,5.045663,Puzzle | 2022+ | 10to20 | 5+
 2527580,Teenage Mutant Ninja Turtles Arcade: Wrath of the Mutants,2024,2022+,29.97,67,gt20,Action,5,5+,0,43,30,73,1.863323,Action | 2022+ | gt20 | 5+
 2527600,The Detective Reaper Invites,2024,2022+,9.99,30,5to10,Puzzle,1,1-4,1,39,35,74,1.869232,Puzzle | 2022+ | 5to10 | 1-4
+2527660,The Awakener: Forgotten Oath,2023,2022+,16.98,50,10to20,Action,0,0,1,163,51,214,2.330414,Action | 2022+ | 10to20 | 0
 2527700,내 여동생과 친구의 여동생을 교환해 보았다,2023,2022+,2.99,0,lt5,Visual Novel,1,1-4,0,12,3,15,1.176091,Visual Novel | 2022+ | lt5 | 1-4
 2527880,Undead West,2024,2022+,7.99,33,5to10,Action,21,5+,1,25,3,28,1.447158,Action | 2022+ | 5to10 | 5+
 2528140,Coin Smith,2025,2022+,2.99,25,lt5,Casual,4,1-4,0,10,5,15,1.176091,Casual | 2022+ | lt5 | 1-4
@@ -39966,6 +40068,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2597290,SGS Battle For: Hue,2024,2022+,24.98,50,gt20,Strategy,7,5+,1,13,3,16,1.20412,Strategy | 2022+ | gt20 | 5+
 2597480,Bardic: Quest for Love,2024,2022+,14.99,0,10to20,Visual Novel,0,0,0,24,2,26,1.414973,Visual Novel | 2022+ | 10to20 | 0
 2597560,SpaceDRG,2023,2022+,0.0,0,free,Action,0,0,0,28,7,35,1.544068,Action | 2022+ | free | 0
+2597570,Chasmal Fear,2025,2022+,19.99,30,10to20,Action,11,5+,1,24,21,45,1.653213,Action | 2022+ | 10to20 | 5+
 2597880,STRIDE: Fates,2024,2022+,29.98,55,gt20,Action,0,0,0,119,163,282,2.450249,Action | 2022+ | gt20 | 0
 2597970,Finding Frankie,2024,2022+,14.99,0,10to20,Strategy,6,5+,1,1339,144,1483,3.171141,Strategy | 2022+ | 10to20 | 5+
 2598020,Spire Horizon Online,2024,2022+,3.95,80,lt5,RPG,9,5+,1,203,91,294,2.468347,RPG | 2022+ | lt5 | 5+
@@ -40647,6 +40750,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2695830,ZAKESTA-Z,2024,2022+,4.97,60,lt5,Action,1,1-4,0,30,0,30,1.477121,Action | 2022+ | lt5 | 1-4
 2695940,PANICORE,2024,2022+,4.99,30,lt5,Action,25,5+,1,8491,2056,10547,4.023129,Action | 2022+ | lt5 | 5+
 2696140,Nothing DOG,2024,2022+,1.99,0,lt5,Casual,8,5+,1,21,15,36,1.556303,Casual | 2022+ | lt5 | 5+
+2696320,Thought Experiment Simulator,2024,2022+,4.99,30,lt5,Casual,7,5+,1,487,96,583,2.765669,Casual | 2022+ | lt5 | 5+
 2696390,Guns And Draguns,2024,2022+,12.98,50,10to20,Action,1,1-4,0,17,0,17,1.230449,Action | 2022+ | 10to20 | 1-4
 2696480,Nothing,2024,2022+,0.49,0,lt5,Action,0,0,0,8755,505,9260,3.966611,Action | 2022+ | lt5 | 0
 2696520,Something,2024,2022+,0.0,0,free,Casual,0,0,0,115,7,122,2.08636,Casual | 2022+ | free | 0
@@ -41619,6 +41723,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2840250,ZERO PROTOCOL,2024,2022+,6.59,0,5to10,Puzzle,4,1-4,0,317,50,367,2.564666,Puzzle | 2022+ | 5to10 | 1-4
 2840480,FLATHEAD,2024,2022+,1.98,40,lt5,Puzzle,0,0,0,319,18,337,2.52763,Puzzle | 2022+ | lt5 | 0
 2840530,Winnie-The-Pooh Taste Test,2024,2022+,0.0,0,free,Action,0,0,0,17,6,23,1.361728,Action | 2022+ | free | 0
+2840770,Avatar: Frontiers of Pandora™,2024,2022+,29.99,33,gt20,Action,10,5+,1,2816,1240,4056,3.608098,Action | 2022+ | gt20 | 5+
 2840800,Victim Complex: Part 1,2024,2022+,0.0,0,free,Action,0,0,0,16,4,20,1.30103,Action | 2022+ | free | 0
 2840990,Elevator Zero,2024,2022+,3.99,0,lt5,Casual,0,0,0,48,6,54,1.732394,Casual | 2022+ | lt5 | 0
 2841060,Pawsome Hidden Cats - Kittynawa,2024,2022+,2.99,30,lt5,Casual,1,1-4,0,83,0,83,1.919078,Casual | 2022+ | lt5 | 1-4
@@ -42191,6 +42296,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2933130,The Lord of the Rings: Return to Moria™,2024,2022+,29.98,50,gt20,RPG,7,5+,1,6840,1404,8244,3.916138,RPG | 2022+ | gt20 | 5+
 2933470,Atomite,2024,2022+,0.99,0,lt5,Action,0,0,0,15,1,16,1.20412,Action | 2022+ | lt5 | 0
 2933490,Nine Floors,2024,2022+,6.99,0,5to10,Puzzle,6,5+,0,12,1,13,1.113943,Puzzle | 2022+ | 5to10 | 5+
+2933620,Call of Duty®: Black Ops 6,2024,2022+,69.98,50,gt20,Action,11,5+,1,6383,7422,13805,4.140036,Action | 2022+ | gt20 | 5+
 2933870,Mbembe Radio,2024,2022+,3.99,30,lt5,Puzzle,1,1-4,0,31,6,37,1.568202,Puzzle | 2022+ | lt5 | 1-4
 2934110,Death Horizon: Cyberfusion,2025,2022+,14.98,50,10to20,Action,0,0,0,46,20,66,1.819544,Action | 2022+ | 10to20 | 0
 2934190,Aooni,2024,2022+,9.95,80,5to10,RPG,7,5+,1,585,171,756,2.878522,RPG | 2022+ | 5to10 | 5+
@@ -42367,6 +42473,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2964540,Nurikabe World,2025,2022+,9.98,50,5to10,Puzzle,3,1-4,0,76,0,76,1.880814,Puzzle | 2022+ | 5to10 | 1-4
 2965280,Chess,2024,2022+,7.99,25,5to10,Casual,14,5+,1,34,11,45,1.653213,Casual | 2022+ | 5to10 | 5+
 2965380,Relaxing Simulator,2024,2022+,7.98,60,5to10,Action,24,5+,1,28,2,30,1.477121,Action | 2022+ | 5to10 | 5+
+2965790,Arena of block puzzle,2024,2022+,1.99,0,lt5,Casual,13,5+,1,12,0,12,1.079181,Casual | 2022+ | lt5 | 5+
 2965940,Soviet Anomaly 7,2024,2022+,0.99,20,lt5,Puzzle,10,5+,1,13,5,18,1.255273,Puzzle | 2022+ | lt5 | 5+
 2966110,EYE TO ME,2024,2022+,0.99,33,lt5,Casual,2,1-4,1,49,7,56,1.748188,Casual | 2022+ | lt5 | 1-4
 2966150,Magic Venue,2024,2022+,4.98,50,lt5,Action,1,1-4,0,15,1,16,1.20412,Action | 2022+ | lt5 | 1-4
@@ -42398,6 +42505,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2972350,Devious Path,2024,2022+,3.99,30,lt5,Casual,7,5+,1,42,2,44,1.643453,Casual | 2022+ | lt5 | 5+
 2972480,THE DESCENT VR,2025,2022+,14.98,55,10to20,Casual,16,5+,1,12,0,12,1.079181,Casual | 2022+ | 10to20 | 5+
 2972810,Five Nights at Roner's 2,2024,2022+,0.0,0,free,Strategy,0,0,0,33,5,38,1.579784,Strategy | 2022+ | free | 0
+2972890,猫语拾光 Cat And Life,2024,2022+,5.98,40,5to10,Casual,0,0,1,9,1,10,1.0,Casual | 2022+ | 5to10 | 0
 2972990,hololive Treasure Mountain,2024,2022+,8.98,40,5to10,Casual,2,1-4,1,751,16,767,2.884795,Casual | 2022+ | 5to10 | 1-4
 2973120,Dusk City,2024,2022+,24.99,20,gt20,Action,2,1-4,1,179,10,189,2.276462,Action | 2022+ | gt20 | 1-4
 2973820,Feet Paradise,2024,2022+,0.98,40,lt5,Casual,12,5+,1,62,32,94,1.973128,Casual | 2022+ | lt5 | 5+
@@ -42462,6 +42570,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 2984780,Unclogged,2024,2022+,0.99,0,lt5,Puzzle,0,0,0,18,0,18,1.255273,Puzzle | 2022+ | lt5 | 0
 2984860,Letters of Bernard Thorne,2025,2022+,9.99,10,5to10,Puzzle,4,1-4,1,90,1,91,1.959041,Puzzle | 2022+ | 5to10 | 1-4
 2985190,Candy Renovation,2024,2022+,1.0,51,lt5,Action,0,0,0,6,10,16,1.20412,Action | 2022+ | lt5 | 0
+2985300,GASPING.2,2024,2022+,0.0,0,free,Action,0,0,1,21,43,64,1.80618,Action | 2022+ | free | 0
 2985740,Ocean Planet,2024,2022+,9.99,0,5to10,Action,11,5+,1,23,0,23,1.361728,Action | 2022+ | 5to10 | 5+
 2985930,I Am Part-time Worker!!,2024,2022+,5.99,20,5to10,Action,2,1-4,1,213,56,269,2.429752,Action | 2022+ | 5to10 | 1-4
 2985950,Save Daddy Trump 4: Maga 2024,2024,2022+,3.94,83,lt5,Action,0,0,0,16,7,23,1.361728,Action | 2022+ | lt5 | 0
@@ -42984,6 +43093,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 3083660,Backrooms: The Labyrinth,2024,2022+,5.99,0,5to10,Action,0,0,0,16,5,21,1.322219,Action | 2022+ | 5to10 | 0
 3084150,Packit List,2024,2022+,3.99,0,lt5,Casual,2,1-4,0,80,6,86,1.934498,Casual | 2022+ | lt5 | 1-4
 3084280,Threefold Recital,2025,2022+,14.99,20,10to20,Visual Novel,1,1-4,1,3436,39,3475,3.540955,Visual Novel | 2022+ | 10to20 | 1-4
+3084310,Nerl's Crazy C”rough”t!,2024,2022+,4.99,20,lt5,Casual,1,1-4,0,13,0,13,1.113943,Casual | 2022+ | lt5 | 1-4
 3084720,Flesh Psychosis,2025,2022+,1.59,0,lt5,Puzzle,3,1-4,1,26,1,27,1.431364,Puzzle | 2022+ | lt5 | 1-4
 3085010,Emoji Shooter,2025,2022+,6.99,20,5to10,Strategy,7,5+,1,24,0,24,1.380211,Strategy | 2022+ | 5to10 | 5+
 3085020,The King of Wall Street,2024,2022+,1.99,0,lt5,Strategy,0,0,1,22,0,22,1.342423,Strategy | 2022+ | lt5 | 0
@@ -43232,6 +43342,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 3135990,Finnish Cabin Mayhem - Mökkimähinä,2024,2022+,4.98,40,lt5,Action,0,0,0,111,5,116,2.064458,Action | 2022+ | lt5 | 0
 3136150,Dates & Wires: Augmented Edition,2024,2022+,7.98,50,5to10,Visual Novel,0,0,0,33,0,33,1.518514,Visual Novel | 2022+ | 5to10 | 0
 3137110,SACRIFICE VILLAINS,2025,2022+,19.99,30,10to20,Visual Novel,0,0,1,76,10,86,1.934498,Visual Novel | 2022+ | 10to20 | 0
+3137240,Mystical Maritime Adventure,2024,2022+,8.98,40,5to10,RPG,1,1-4,1,49,7,56,1.748188,RPG | 2022+ | 5to10 | 1-4
 3137500,EmyLiveShow: How To Write A Bestseller,2025,2022+,8.97,70,5to10,Casual,8,5+,1,15,2,17,1.230449,Casual | 2022+ | 5to10 | 5+
 3137530,Escape from Mutation Station,2025,2022+,1.59,0,lt5,Puzzle,2,1-4,0,63,0,63,1.799341,Puzzle | 2022+ | lt5 | 1-4
 3137690,Mini Mania,2024,2022+,0.0,0,free,Casual,0,0,0,25,1,26,1.414973,Casual | 2022+ | free | 0
@@ -44034,6 +44145,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 3349600,Romania Prop Hunt,2024,2022+,1.0,51,lt5,Action,0,0,0,24,0,24,1.380211,Action | 2022+ | lt5 | 0
 3349670,Cavalry Charge·Three Kingdoms,2024,2022+,6.99,25,5to10,Strategy,3,1-4,1,10,3,13,1.113943,Strategy | 2022+ | 5to10 | 1-4
 3349930,Only Out,2025,2022+,4.99,15,lt5,RPG,2,1-4,1,54,1,55,1.740363,RPG | 2022+ | lt5 | 1-4
+3350140,漢字でGO! 集英社マンガ祭,2025,2022+,0.0,0,free,Casual,1,1-4,0,60,7,67,1.826075,Casual | 2022+ | free | 1-4
 3350500,"Rêves, lettres et ciel",2024,2022+,0.0,0,free,RPG,1,1-4,0,16,0,16,1.20412,RPG | 2022+ | free | 1-4
 3350780,Nice Pro?,2025,2022+,1.0,51,lt5,Action,9,5+,1,12,0,12,1.079181,Action | 2022+ | lt5 | 5+
 3350790,Banana Ragdoll,2025,2022+,1.0,51,lt5,Action,9,5+,1,19,1,20,1.30103,Action | 2022+ | lt5 | 5+
@@ -44206,6 +44318,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 3414370,Satan Santa,2025,2022+,1.98,40,lt5,Action,0,0,0,8,5,13,1.113943,Action | 2022+ | lt5 | 0
 3414480,Double Trip,2025,2022+,4.99,20,lt5,Puzzle,0,0,0,14,0,14,1.146128,Puzzle | 2022+ | lt5 | 0
 3416070,Ropuka's Idle Island,2025,2022+,3.99,25,lt5,Casual,8,5+,1,1907,62,1969,3.294246,Casual | 2022+ | lt5 | 5+
+3416230,深夜1時の交換手,2025,2022+,6.99,0,5to10,Visual Novel,1,1-4,0,14,1,15,1.176091,Visual Novel | 2022+ | 5to10 | 1-4
 3416270,Cross The Boundaries,2025,2022+,4.99,20,lt5,Visual Novel,0,0,0,44,0,44,1.643453,Visual Novel | 2022+ | lt5 | 0
 3416370,Hope's Farm 2,2025,2022+,7.19,0,5to10,Casual,6,5+,1,13,0,13,1.113943,Casual | 2022+ | 5to10 | 5+
 3416450,Hell of a Birthday,2025,2022+,1.99,0,lt5,Casual,0,0,0,63,2,65,1.812913,Casual | 2022+ | lt5 | 0
@@ -44593,6 +44706,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 3633790,Attack on Inirea,2025,2022+,3.74,0,lt5,Casual,0,0,0,12,0,12,1.079181,Casual | 2022+ | lt5 | 0
 3636440,Click To Continue,2025,2022+,4.99,30,lt5,Puzzle,2,1-4,0,26,1,27,1.431364,Puzzle | 2022+ | lt5 | 1-4
 3638590,みすずの国,2025,2022+,2.49,0,lt5,Casual,1,1-4,0,10,0,10,1.0,Casual | 2022+ | lt5 | 1-4
+3640040,回煞录 | Phantom Reckoning,2025,2022+,1.98,50,lt5,Puzzle,4,1-4,1,10,6,16,1.20412,Puzzle | 2022+ | lt5 | 1-4
 3640750,This is Interesting,2025,2022+,3.49,0,lt5,RPG,0,0,0,60,1,61,1.78533,RPG | 2022+ | lt5 | 0
 3642110,JK Girl Samurai - AOI no mon,2025,2022+,1.99,0,lt5,Action,0,0,1,23,10,33,1.518514,Action | 2022+ | lt5 | 0
 3644790,Way To Hell,2025,2022+,3.94,83,lt5,Action,0,0,0,13,2,15,1.176091,Action | 2022+ | lt5 | 0
@@ -44614,6 +44728,7 @@ app_id,name,release_year,year_band,price,discount_pct,price_tier,genre_group,n_o
 3662150,Winning Tactics,2025,2022+,9.88,92,5to10,Casual,1,1-4,0,11,1,12,1.079181,Casual | 2022+ | 5to10 | 1-4
 3663980,Pogo Stick: Ultimate Challenge,2025,2022+,1.59,0,lt5,Action,7,5+,1,16,1,17,1.230449,Action | 2022+ | lt5 | 5+
 3664820,Sandboxels,2025,2022+,0.99,26,lt5,Casual,13,5+,1,82,2,84,1.924279,Casual | 2022+ | lt5 | 5+
+3665900,HougekiShoujo,2025,2022+,3.99,0,lt5,Action,1,1-4,1,14,2,16,1.20412,Action | 2022+ | lt5 | 1-4
 3667230,The Deadseat,2025,2022+,2.98,34,lt5,Action,0,0,0,225,5,230,2.361728,Action | 2022+ | lt5 | 0
 3668950,Star Soraight Fantasy: Magic to reach the sky,2025,2022+,8.09,0,5to10,Action,1,1-4,0,33,4,37,1.568202,Action | 2022+ | 5to10 | 1-4
 3668990,Legacy - Reawakening,2025,2022+,3.59,0,lt5,Puzzle,7,5+,0,11,2,13,1.113943,Puzzle | 2022+ | lt5 | 5+

@@ -215,6 +215,8 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 9760,Act of War: High Treason,Action,2008,<=2017,2.99,lt5,0,394,506,0.284264,large,0,0,0,0,control,Action | large
 9800,Death to Spies,Action,2008,<=2017,4.99,lt5,5+,786,939,0.194656,large,0,0,0,0,control,Action | large
 9850,Codename: Panzers - Cold War,Strategy,2009,<=2017,14.99,10to20,5+,218,265,0.215596,large,0,0,0,0,control,Strategy | large
+9880,Champions Online,RPG,2011,<=2017,0.0,free,0,3791,4182,0.103139,large,0,0,0,0,control,RPG | large
+9900,Star Trek Online,RPG,2012,<=2017,0.0,free,1-4,16620,20145,0.212094,large,0,0,0,0,control,RPG | large
 9940,Blade Kitten,Action,2014,<=2017,2.99,lt5,1-4,1006,1070,0.063618,large,0,0,0,0,control,Action | large
 9970,Star Raiders,Action,2011,<=2017,9.99,5to10,1-4,31,37,0.193548,medium,0,0,0,0,control,Action | medium
 9980,The UnderGarden,Casual,2010,<=2017,1.39,lt5,1-4,83,91,0.096386,medium,0,0,0,0,control,Casual | medium
@@ -1792,7 +1794,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 258090,99 Spirits,RPG,2013,<=2017,4.99,lt5,1-4,389,403,0.03599,large,0,0,0,0,control,RPG | large
 258200,Talisman: Prologue,Strategy,2013,<=2017,0.0,free,1-4,358,364,0.01676,large,0,0,0,0,control,Strategy | large
 258220,Blood Knights,Action,2013,<=2017,9.99,5to10,5+,900,1000,0.111111,large,0,0,0,0,control,Action | large
-258240,Tank Operations: European Campaign,Strategy,2013,<=2017,0.0,free,1-4,122,126,0.032787,large,0,0,0,0,control,Strategy | large
+258240,Tank Operations: European Campaign,Strategy,2013,<=2017,0.0,free,1-4,122,126,0.032787,medium,0,0,0,0,control,Strategy | medium
 258520,The Vanishing of Ethan Carter,Puzzle,2014,<=2017,19.99,10to20,5+,8449,8831,0.045212,large,0,0,0,0,control,Puzzle | large
 258880,Professional Farmer 2014,Action,2013,<=2017,2.99,lt5,5+,606,625,0.031353,large,0,0,0,0,control,Action | large
 258890,Type:Rider,Casual,2013,<=2017,4.99,lt5,1-4,1576,1661,0.053934,large,0,0,0,0,control,Casual | large
@@ -2424,7 +2426,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 292800,Pajama Sam 3: You Are What You Eat From Your Head To Your Feet,Casual,2014,<=2017,6.99,5to10,1-4,292,395,0.35274,large,0,0,0,0,control,Casual | large
 292820,Pajama Sam 4: Life Is Rough When You Lose Your Stuff!,Casual,2014,<=2017,6.99,5to10,0,122,163,0.336066,large,0,0,0,0,control,Casual | large
 292840,Pajama Sam's Sock Works,Casual,2014,<=2017,4.99,lt5,0,53,81,0.528302,medium,0,0,0,0,control,Casual | medium
-292860,Pajama Sam's Lost & Found,Casual,2014,<=2017,4.99,lt5,0,28,48,0.714286,medium,0,0,0,0,control,Casual | medium
+292860,Pajama Sam's Lost & Found,Casual,2014,<=2017,4.99,lt5,0,28,48,0.714286,small,0,0,0,0,control,Casual | small
 292880,Robin's Quest,Puzzle,2014,<=2017,4.99,lt5,0,110,120,0.090909,medium,0,0,0,0,control,Puzzle | medium
 292910,Deponia: The Complete Journey,Puzzle,2014,<=2017,2.99,lt5,5+,5800,6544,0.128276,large,0,0,0,0,control,Puzzle | large
 292930,Black Mirror I,Puzzle,2014,<=2017,9.99,5to10,5+,1026,1350,0.315789,large,0,0,0,0,control,Puzzle | large
@@ -3161,6 +3163,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 327510,WASTED,Action,2016,<=2017,12.99,10to20,0,1106,1171,0.05877,large,0,0,0,0,control,Action | large
 327560,Near Death,Action,2016,<=2017,7.99,5to10,5+,899,1026,0.141268,large,0,0,0,1,control,Action | large
 327670,Ironcast,Strategy,2015,<=2017,14.99,10to20,1-4,844,935,0.10782,large,0,0,0,0,control,Strategy | large
+327690,Gigantic,Action,2017,<=2017,0.0,free,1-4,7421,7490,0.009298,large,0,0,0,0,control,Action | large
 327740,TRON 2.0,Action,2014,<=2017,9.99,5to10,1-4,549,709,0.291439,large,0,0,0,0,control,Action | large
 327760,Bacon Man: An Adventure,Action,2018,2018-2019,9.99,5to10,0,35,40,0.142857,medium,0,0,0,0,control,Action | medium
 327860,Salt,RPG,2018,2018-2019,14.99,10to20,0,2166,2238,0.033241,large,0,0,0,0,control,RPG | large
@@ -5733,6 +5736,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 436320,Raw Data,Action,2017,<=2017,39.99,gt20,0,2405,2468,0.026195,large,0,0,0,0,control,Action | large
 436360,Robo's World: The Zarnok Fortress,Action,2016,<=2017,9.99,5to10,0,20,22,0.1,small,0,0,0,0,control,Action | small
 436390,Prison Run and Gun,Action,2016,<=2017,0.49,lt5,0,448,529,0.180804,large,0,0,0,0,control,Action | large
+436400,Heroes of the Seven Seas VR,RPG,2016,<=2017,6.99,5to10,0,45,46,0.022222,medium,0,0,0,0,control,RPG | medium
 436470,Gamma Bros,Action,2018,2018-2019,0.0,free,0,132,158,0.19697,large,0,0,0,0,control,Action | large
 436500,Diaries of a Spaceport Janitor,Casual,2016,<=2017,9.99,5to10,0,809,952,0.176761,large,0,0,0,0,control,Casual | large
 436520,Line of Sight,Action,2017,<=2017,0.0,free,0,9034,9055,0.002325,large,0,0,0,0,control,Action | large
@@ -8641,6 +8645,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 588800,HEVN,Action,2018,2018-2019,9.99,5to10,0,20,23,0.15,small,0,0,0,0,control,Action | small
 588880,Crush,Action,2017,<=2017,11.99,10to20,5+,20,23,0.15,small,0,0,0,1,control,Action | small
 588890,Heroes of Arca,Strategy,2017,<=2017,0.0,free,1-4,67,77,0.149254,medium,0,0,0,0,control,Strategy | medium
+588920,BADASS,RPG,2017,<=2017,4.99,lt5,0,29,29,0.0,medium,0,0,0,0,control,RPG | medium
 588930,King 'n Knight,Action,2022,2022+,11.99,10to20,0,41,100,1.439024,medium,0,0,1,7,excluded,Action | medium
 588950,Kingsway,RPG,2017,<=2017,9.99,5to10,0,1340,1646,0.228358,large,0,0,0,0,control,RPG | large
 588980,Speed and Scream,Casual,2017,<=2017,4.99,lt5,0,17,16,-0.058824,small,0,0,0,0,control,Casual | small
@@ -8767,6 +8772,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 595790,Hell is Other Demons,Action,2019,2018-2019,9.99,5to10,5+,280,319,0.139286,large,0,0,0,0,control,Action | large
 595920,Death Point,Action,2017,<=2017,5.99,5to10,1-4,41,43,0.04878,medium,0,0,0,0,control,Action | medium
 596080,Embers of Mirrim,Action,2017,<=2017,14.99,10to20,1-4,30,33,0.1,medium,0,0,0,0,control,Action | medium
+596200,Blood 'n Bikinis,RPG,2018,2018-2019,9.99,5to10,0,35,35,0.0,medium,0,0,0,0,control,RPG | medium
 596370,Turn,Casual,2017,<=2017,0.0,free,0,14,14,0.0,small,0,0,0,0,control,Casual | small
 596380,Coffee Crisis,Action,2018,2018-2019,9.99,5to10,0,166,182,0.096386,large,0,0,0,0,control,Action | large
 596390,Over My Dead Body (For You),Puzzle,2017,<=2017,9.99,5to10,0,14,15,0.071429,small,0,0,0,0,control,Puzzle | small
@@ -9849,7 +9855,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 670400,Malatzshia,RPG,2017,<=2017,0.0,free,1-4,11,15,0.363636,small,0,0,0,0,control,RPG | small
 670410,Citadale: The Legends Trilogy,Action,2017,<=2017,9.99,5to10,0,15,23,0.533333,small,0,0,0,0,control,Action | small
 670430,Colorless Life,Casual,2017,<=2017,1.99,lt5,1-4,43,45,0.046512,medium,0,0,0,0,control,Casual | medium
-670720,Stealthscape,Action,2020,2020-2021,0.0,free,0,28,36,0.285714,medium,0,0,0,0,control,Action | medium
+670720,Stealthscape,Action,2020,2020-2021,0.0,free,0,28,36,0.285714,small,0,0,0,0,control,Action | small
 670780,Albert Mort - Desert Heat,Action,2017,<=2017,4.99,lt5,0,12,12,0.0,small,0,0,0,0,control,Action | small
 670830,VR Trivia Battle,Casual,2018,2018-2019,0.0,free,0,25,29,0.16,small,0,0,0,0,control,Casual | small
 670850,Sokoban Land DX,Casual,2017,<=2017,4.99,lt5,1-4,17,20,0.176471,small,0,0,0,0,control,Casual | small
@@ -17557,6 +17563,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 1344430,Kosta Projekt,Action,2021,2020-2021,3.99,lt5,1-4,10,22,1.2,small,0,0,0,0,control,Action | small
 1344530,vrkshop,Puzzle,2021,2020-2021,19.99,10to20,0,143,168,0.174825,large,0,0,0,0,control,Puzzle | large
 1344740,FOOTSIES Rollback Edition,Action,2020,2020-2021,3.99,lt5,0,319,514,0.611285,large,0,0,0,0,control,Action | large
+1344790,Unsung Kingdom,RPG,2020,2020-2021,0.0,free,1-4,60,85,0.416667,medium,0,0,0,0,control,RPG | medium
 1344800,Twin-Turbo Supercharged Nitro-Fueled Papamobile,Action,2020,2020-2021,0.0,free,0,44,52,0.181818,medium,0,0,0,0,control,Action | medium
 1344810,Homeland: Lay to Rest,Action,2020,2020-2021,0.0,free,0,29,39,0.344828,medium,0,0,0,0,control,Action | medium
 1344820,Stargaze,Puzzle,2020,2020-2021,19.99,10to20,0,21,32,0.52381,small,0,0,0,0,control,Puzzle | small
@@ -17869,6 +17876,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 1378860,Cubic Currency,Strategy,2020,2020-2021,5.99,5to10,0,33,34,0.030303,medium,0,0,0,0,control,Strategy | medium
 1378870,In the House of Silence,Strategy,2021,2020-2021,14.99,10to20,0,10,10,0.0,small,0,0,0,0,control,Strategy | small
 1378940,Verdungo,RPG,2020,2020-2021,7.99,5to10,0,32,40,0.25,medium,0,0,0,0,control,RPG | medium
+1378990,Crash Bandicoot™ 4: It’s About Time,Action,2022,2022+,39.99,gt20,5+,142,3211,21.612676,large,0,0,0,0,control,Action | large
 1379020,The Horrorscope: Fatal Awakening,Visual Novel,2020,2020-2021,1.99,lt5,0,374,412,0.101604,large,0,0,0,0,control,Visual Novel | large
 1379200,Escape from Skull Dungeon,Puzzle,2020,2020-2021,4.99,lt5,0,73,78,0.068493,medium,0,0,0,0,control,Puzzle | medium
 1379270,First Session,RPG,2021,2020-2021,0.0,free,1-4,69,84,0.217391,medium,0,0,0,0,control,RPG | medium
@@ -17958,6 +17966,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 1389270,Don't Crash - The Political Game,Action,2020,2020-2021,1.99,lt5,0,104,129,0.240385,medium,0,0,0,0,control,Action | medium
 1389300,Soulcaster,Action,2020,2020-2021,0.0,free,0,57,73,0.280702,medium,0,0,0,0,control,Action | medium
 1389450,The Spirit,Action,2021,2020-2021,5.99,5to10,0,22,21,-0.045455,small,0,0,0,0,control,Action | small
+1389530,Happy Marriage Project - Starting from 9 years old -,RPG,2020,2020-2021,0.0,free,1-4,10,16,0.6,small,0,0,0,0,control,RPG | small
 1389630,High Entropy: Challenges,Action,2020,2020-2021,0.0,free,1-4,882,1227,0.391156,large,0,0,0,0,control,Action | large
 1389750,RoboPhobik,Strategy,2020,2020-2021,9.99,5to10,0,14,25,0.785714,small,0,0,0,0,control,Strategy | small
 1389850,Digital Janitors,Action,2021,2020-2021,4.99,lt5,0,14,26,0.857143,small,0,0,0,0,control,Action | small
@@ -21335,6 +21344,7 @@ app_id,name,genre_group,release_year,year_band,price_c,price_tier,n_other_langs_
 1998170,Second Thoughts,Casual,2022,2022+,1.99,lt5,0,16,81,4.0625,small,0,0,0,0,control,Casual | small
 1998380,Crash Forts,Casual,2022,2022+,10.99,10to20,1-4,10,9,-0.1,small,0,0,0,0,control,Casual | small
 1998390,Road Trip,Casual,2022,2022+,10.99,10to20,1-4,13,36,1.769231,small,0,0,0,0,control,Casual | small
+1998530,Yoiyami Dancers: Twilight Danmaku Dancers,Action,2022,2022+,8.49,5to10,1-4,116,598,4.155172,medium,0,0,0,0,control,Action | medium
 1999700,Something Strange,Visual Novel,2022,2022+,0.99,lt5,0,18,31,0.722222,small,0,0,1,1,excluded,Visual Novel | small
 2000360,CORGI,Puzzle,2022,2022+,10.99,10to20,0,17,22,0.294118,small,1,0,1,102,treated,Puzzle | small
 2000540,Chance at Life,Puzzle,2022,2022+,3.49,lt5,1-4,29,59,1.034483,medium,0,0,0,0,control,Puzzle | medium

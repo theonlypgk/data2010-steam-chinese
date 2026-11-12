@@ -39,6 +39,6 @@ sq2_groups,uplift_pts,median_growth_treated - median_growth_control
 sq2_groups,eligible,True when both arms have at least 10 games
 cn_excluded,"app_id, name",Chinese game removed from snapshot A (>= 10 reviews)
 cn_excluded,makers,Developers | publishers
-cn_excluded,cn_rules,"Rules that matched: chinese_without_english, maker_name_in_chinese, maker_in_chinese_city, known_chinese_company"
+cn_excluded,cn_rules,"Rules that matched: chinese_without_english, developer_name_in_chinese, developer_in_chinese_city, developer_known_chinese_company"
 cn_excluded,"has_english, has_zh_audio",English text supported / Chinese voice-over
 cn_excluded,total_reviews,positive + negative in snapshot A
