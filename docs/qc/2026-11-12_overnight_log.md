@@ -34,7 +34,7 @@ only update `games.json` (1 GB); see "To decide" below.
 ## Problems found in the real data, and fixes
 
 1. **Merged header in snapshot A.** The header says `DiscountDLC count` while rows hold two
-   values; every later column would be shifted. `scripts/01_trim.py` splits the name and
+   values; every later column would be shifted. the code splits the name and
    checks that `Supported languages` looks like a list.
 2. **Sale prices.** Snapshot A was taken during a sale (Hades 7.49 = 24.99 at -70%).
    `price` is now the list price, recovered from the `Discount` column (kept as `discount_pct`).
@@ -58,7 +58,7 @@ All analysis decisions are in `docs/decisions.md` (change log at the bottom).
 - [ ] Publisher proxy now keeps big Chinese games that also ship English (e.g. Black Myth:
       Wukong). Keep, or add a manual exclusion list?
 - [ ] Snapshot A is June 2026. Keep it, or switch to `games.json` (Nov 2026, 1 GB, slower)?
-- [ ] Review the tag -> genre map in `src/steamcn/config.py` (`TAG_TO_GENRE`, draft).
+- [ ] Review the tag -> genre map in the Settings cell of the notebook (`TAG_TO_GENRE`, draft).
 - [ ] Review the "major languages" list for the SQ2 control group (`MAJOR_LANGS`).
 - [ ] Spot-check 20 rows of `pcd_games_clean.xlsx` against Steam (T3 Human QC).
 - [ ] Invite the 4 members as collaborators (Settings -> Collaborators).
@@ -89,3 +89,12 @@ All analysis decisions are in `docs/decisions.md` (change log at the bottom).
 - **Comments**: every fixed choice in `config.py` has its reason; real-data problems are
   marked `DATA ISSUE` in the code.
 - Snapshot A stays at 2026-06-20 (kp's decision).
+
+## Update, 12 Nov 2026, late morning: one notebook
+
+- All code is now in `steam_chinese_analysis.ipynb`, in execution order, from the two input
+  CSV files to the tables and checks. Removed: `scripts/` (download, trim, build scripts,
+  the `steamcn` package, tests), `run.py`, `Makefile`, `data/interim/`. The test cases became
+  check cells (section A10).
+- The notebook reproduces the previous tables byte for byte (checked before removing the
+  old code).

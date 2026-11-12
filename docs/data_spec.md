@@ -1,7 +1,6 @@
 # Data handling spec: which table serves which question
 
-Everything below is produced by `python run.py tables` (`scripts/02_build_tables.py`,
-functions in `src/steamcn/clean.py`). Each table is saved twice in `data/processed/`,
+Everything below is produced by the notebook `steam_chinese_analysis.ipynb`, Part A. Each table is saved twice in `data/processed/`,
 with the prefix `pcd_` (processed):
 
 - `data/processed/csv/pcd_<table>.csv`: what every later step reads with `pandas.read_csv`;
@@ -24,13 +23,13 @@ All column names are English snake_case.
 SQ3 needs no table from this step. It combines the by-genre results of SQ1 and SQ2.
 
 ```
-a_trim ──┬─> games_clean ──> sq1_groups          (SQ1)
+raw A ───┬─> games_clean ──> sq1_groups          (SQ1)
          │
-c_trim ──┴─> panel_ac ─────> sq2_groups          (SQ2)
+raw C ───┴─> panel_ac ─────> sq2_groups          (SQ2)
                                    sq1 by genre + sq2 by genre ──> sq3_summary   (SQ3)
 ```
 
-## Step 1. Clean each snapshot (same code for A and C)
+## Step 1. Clean each snapshot (same code for A and C; notebook A1-A2)
 
 1. `app_id` to integer; drop rows without one; drop duplicate `app_id`.
 2. `positive`, `negative` to integers; `release_date` to a date. `price` becomes the
@@ -157,7 +156,7 @@ the estimate and its interval). SQ3 reads both and writes `sq3_summary.csv`:
 | large | not large | translate at launch |
 | not large | any | not a priority |
 
-## Checks to run by hand after `python run.py tables`
+## Checks to run by hand after running the notebook
 
 1. Open `xlsx/pcd_funnel.xlsx`: no single filter should remove most games.
 2. `xlsx/pcd_games_clean.xlsx`: pick 20 random rows and compare `has_zh`, `genre_group`,
@@ -166,4 +165,4 @@ the estimate and its interval). SQ3 reads both and writes `sq3_summary.csv`:
    count `arm` by `genre_group` (need roughly 20+ treated games per genre).
 4. `xlsx/pcd_sq1_groups.xlsx` and `xlsx/pcd_sq2_groups.xlsx`: count the `eligible` rows.
 5. `xlsx/pcd_cn_excluded.xlsx`: scan the biggest games and the `cn_rules` column; a Western
-   game in the list means a rule is too broad (add an exception in `config.py`).
+   game in the list means a rule is too broad (add an exception in the Settings cell).

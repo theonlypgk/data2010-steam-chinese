@@ -1,4 +1,4 @@
-# raw downloads are re-created by `python run.py data`
+# raw input files are downloaded by the notebook (section A1)
 data/raw/*
 !data/raw/.gitkeep
 __pycache__/
@@ -9,3 +9,4 @@ __pycache__/
 .DS_Store
 report/*_files/
 .quarto/
+executed.ipynb

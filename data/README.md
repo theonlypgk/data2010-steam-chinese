@@ -10,11 +10,10 @@ Steam Games Dataset by FronkonGames, taken from its Hugging Face repository
 | Commit hash | `52ba62abfa707a2fa31f4d147c2777a9d9fbd2da` | `aefdeb1ff1a739b92ac5338682cc2610a0328505` |
 | Commit date | 2026-06-20 (last commit that updated `games.csv`) | 2024-01-11 |
 | Rows x columns (raw) | _T1_ | _T1_ |
-| Rows x columns (trimmed) | _T1_ | _T1_ |
 | Used for | SQ1, SQ2 | SQ2 |
 
 Licence: _T1: copy the licence stated on the dataset page and confirm it allows
-redistributing the trimmed files._
+redistributing derived tables._
 
 Backup of the raw files: GitHub release `raw-snapshots-v1` of this repo (made by the
 `archive-raw` workflow) holds `games_a.csv.gz`, `games_c.csv.gz` and their SHA-256 checksums.
@@ -23,12 +22,11 @@ Backup of the raw files: GitHub release `raw-snapshots-v1` of this repo (made by
 
 | Folder | File | Committed | Made by |
 |---|---|---|---|
-| `raw/` | `games_a.csv`, `games_c.csv` | no (too large for GitHub) | `scripts/00_download.py` |
-| `interim/` | `a_trim.csv.gz`, `c_trim.csv.gz` | yes | `scripts/01_trim.py` |
-| `processed/csv/` | `pcd_<table>.csv`: for code (`pandas.read_csv`) | yes | `scripts/02_build_tables.py` |
-| `processed/xlsx/` | `pcd_<table>.xlsx`: to open and look at | yes | `scripts/02_build_tables.py` |
+| `raw/` | `games_a.csv`, `games_c.csv` (the two inputs) | no (too large for GitHub) | notebook, section A1 |
+| `processed/csv/` | `pcd_<table>.csv`: for code (`pandas.read_csv`) | yes | notebook, section A9 |
+| `processed/xlsx/` | `pcd_<table>.xlsx`: to open and look at | yes | notebook, section A9 |
 
-## Columns kept from the raw data
+## Columns read from the raw data
 
 | Column | Raw name | Meaning |
 |---|---|---|
@@ -53,4 +51,4 @@ and in `processed/csv/pcd_data_dictionary.csv`.
 - The exact date a game added a language is unknown, only that it changed between C and A.
 - Chinese games are identified by four rules (no country field exists); see `pcd_cn_excluded`.
 - Snapshot A was taken during a sale; list prices are recovered from the discount column.
-- In snapshot A the header merges "Discount" and "DLC count" into one name; `scripts/01_trim.py` splits it.
+- In snapshot A the header merges "Discount" and "DLC count" into one name; the notebook splits it (`read_header()`).

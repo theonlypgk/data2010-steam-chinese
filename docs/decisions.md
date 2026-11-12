@@ -1,7 +1,7 @@
 # Decisions (frozen before results are seen)
 
 Only the team leader edits this file. Every change gets a date and a reason at the bottom.
-`src/steamcn/config.py` mirrors these values.
+The Settings cell of `steam_chinese_analysis.ipynb` mirrors these values.
 
 ## Scope (12 Nov 2026)
 
@@ -69,3 +69,5 @@ Two figures per question in the body.
   Chinese. With publishers and "any developer", Western games were removed because of a
   regional publisher (bilibili for Core Keeper) or a Chinese support studio (Ubisoft
   Shanghai for Far Cry, Activision Shanghai for Call of Duty).
+- 2026-11-12 (kp): the whole project is one notebook, `steam_chinese_analysis.ipynb`, from the two
+  input CSV files to the tables; all other code files and the trimmed intermediate files removed.

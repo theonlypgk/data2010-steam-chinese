@@ -1,11 +1,12 @@
-# Runs the data pipeline end to end on a clean machine and commits the outputs.
-# This doubles as a reproducibility check: anyone can re-run it from the Actions tab.
+# Runs the notebook from scratch on a clean machine (download -> clean -> tables -> checks)
+# and commits the output tables if they changed. Also a reproducibility check: anyone can
+# re-run it from the Actions tab ("Run workflow").
 name: pipeline
 on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["scripts/**", "src/**", "run.py", "requirements.txt", ".github/workflows/pipeline.yml"]
+    paths: ["steam_chinese_analysis.ipynb", "requirements.txt", ".github/workflows/pipeline.yml"]
 permissions:
   contents: write
 concurrency:
@@ -23,23 +24,19 @@ jobs:
           cache: pip
       - name: Install
         run: pip install -r requirements.txt
-      - name: Tests
-        run: python run.py test
-      - name: Download and trim the pinned snapshots
-        run: python run.py data
-      - name: Clean and build the analysis tables
-        run: python run.py tables
+      - name: Run the notebook from scratch
+        run: jupyter nbconvert --to notebook --execute steam_chinese_analysis.ipynb --output /tmp/executed.ipynb --ExecutePreprocessor.timeout=1800
       - name: Commit outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # .xlsx files are zip archives whose bytes change on every run even when the data
-          # does not; commit only when a CSV or a trimmed snapshot actually changed.
-          if git diff --quiet -- data/interim data/processed/csv && [ -z "$(git ls-files --others --exclude-standard data/processed)" ]; then
+          # does not; commit only when a CSV actually changed.
+          if git diff --quiet -- data/processed/csv && [ -z "$(git ls-files --others --exclude-standard data/processed)" ]; then
             git checkout -- data/processed
             echo "outputs unchanged"
           else
-            git add data/interim data/processed
-            git commit -m "data: rebuild trimmed snapshots and pcd_ tables [pipeline]"
+            git add data/processed
+            git commit -m "data: rebuild pcd_ tables from the notebook [pipeline]"
             git push
           fi

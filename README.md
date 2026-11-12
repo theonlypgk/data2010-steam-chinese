@@ -20,7 +20,7 @@ of similar games, so that the gap is not simply "bigger games get translated mor
 | **look at** a table (Excel, Google Sheets) | `data/processed/xlsx/pcd_<table>.xlsx` |
 | **read** a table **in code** | `data/processed/csv/pcd_<table>.csv` |
 | know what each table and column means | `docs/data_spec.md`, or `pcd_data_dictionary` |
-| get the original input files | `python run.py data`, or the release [raw-snapshots-v1](../../releases) |
+| get the original input files | run section A1 of the notebook, or the release [raw-snapshots-v1](../../releases/tag/raw-snapshots-v1) |
 
 The `.xlsx` and `.csv` files with the same name hold exactly the same data. Code always
 reads the CSV version, for example:
@@ -40,47 +40,54 @@ games = pd.read_csv("data/processed/csv/pcd_games_clean.csv")
 | `pcd_funnel` | one cleaning step, with the number of games left | report |
 | `pcd_data_dictionary` | one column of the tables above | reference |
 
-## Reproduce everything
+## Reproduce the project
+
+The whole project is **one notebook**, `steam_chinese_analysis.ipynb`. It runs from scratch:
+its only input is the two original CSV files (snapshots A and C), which it downloads at
+pinned versions; every cleaning step, filter and table is done in code.
 
 ```bash
-pip install -r requirements.txt   # Python 3.12, exact versions
-python run.py all                 # or: make all
+pip install -r requirements.txt     # Python 3.12, exact package versions
+jupyter nbconvert --to notebook --execute steam_chinese_analysis.ipynb --output executed.ipynb
 ```
 
-| Step | Command | Script | Reads | Writes |
-|---|---|---|---|---|
-| Download | `python run.py data` | `scripts/00_download.py` | Hugging Face, pinned commits | `data/raw/` |
-| Trim | (same command) | `scripts/01_trim.py` | `data/raw/` | `data/interim/*_trim.csv.gz` |
-| Clean + build tables | `python run.py tables` | `scripts/02_build_tables.py` (logic in `src/steamcn/clean.py`) | `data/interim/` | `data/processed/csv/`, `data/processed/xlsx/` |
-| EDA, SQ1, SQ2, SQ3 | `python run.py eda` / `sq1` / `sq2` / `sq3` | to be written | `data/processed/csv/` | `report/figures/`, results |
-| Report | `python run.py report` | to be written | everything above | `report/report.pdf` |
-| Tests | `python run.py test` | `tests/` | | |
+or open the notebook and choose *Run All*. Two runs give byte-identical CSV files. On
+GitHub, the `pipeline` workflow (Actions tab) runs the notebook on a clean machine after
+every change and commits the tables; GitHub Codespaces opens the repo with the same
+environment (`.devcontainer/`). If the Hugging Face history is ever unavailable, the input
+files are kept in the release [raw-snapshots-v1](../../releases/tag/raw-snapshots-v1).
 
-Two independent re-runs give byte-identical CSV files. The GitHub Actions workflow
-`pipeline` re-runs `test`, `data` and `tables` on a clean machine after every code change
-and commits the outputs. Opening the repo in GitHub Codespaces uses `.devcontainer/`,
-the same environment.
+| Notebook section | What it does | Output |
+|---|---|---|
+| Settings and decisions | every fixed choice, with its reason | |
+| A1 Load the raw snapshots | download A and C, repair the header, keep 13 columns | `data/raw/` |
+| A2 Clean each snapshot | fix types, parse lists, add derived columns | |
+| A3-A8 Filters and tables | select rows, join A and C, aggregate | |
+| A9 Save the tables | write csv and xlsx | `data/processed/` |
+| A10 Checks | stop with an error if anything is wrong | |
+| B1-B4 Analysis | EDA, SQ1, SQ2, SQ3 (to be written by the team) | `report/figures/` |
 
-## Where each decision is in the code
+## Where each decision is in the notebook
 
-Every fixed choice is in `src/steamcn/config.py`, next to a comment giving the reason;
-`docs/decisions.md` lists them with a dated change log. Problems found in the real data are
-marked `DATA ISSUE` in the code.
+Every fixed choice is in the **Settings and decisions** cell, next to a comment giving the
+reason; `docs/decisions.md` lists them with a dated change log. The first line of every
+code cell says what kind of step it is (LOAD DATA, DATA CLEANING, SELECT ROWS, AGGREGATE,
+SAVE OUTPUTS, CHECKS), and problems found in the real data are marked `DATA ISSUE`.
 
-| Decision or data issue | Code |
+| Decision or data issue | Notebook |
 |---|---|
-| Which snapshots (pinned commits) | `config.py`, "DATA SOURCE" |
-| Header of snapshot A merges two columns (`DiscountDLC count`) | `scripts/01_trim.py`, `read_header()` |
-| Snapshot A prices are sale prices: use the list price | `config.py` `OPTIONAL_RAW_TO_CLEAN`; `clean.py` `add_features()` step 1 |
-| Junk in language and tag cells (`[b]*[/b]`, HTML) | `clean.py` `_TAG_JUNK`, `parse_list()` |
-| All Chinese games removed (4 rules) | `config.py` "CHINESE GAMES"; `clean.py` `add_features()` step 5 |
-| Genre = first matching user tag | `config.py` `TAG_TO_GENRE`; `clean.py` `first_genre()` |
-| Filters: Early Access, >= 10 reviews, >= 1 year old, Traditional-only | `config.py` "FILTERS"; `clean.py` `_base_filters()`, `build_games_clean()` |
-| SQ1 groups use year bands | `config.py` `YEAR_BAND_BINS`; `clean.py` `build_games_clean()` |
-| SQ2 treated / control / excluded | `config.py` `MAJOR_LANGS`; `clean.py` `build_panel_ac()` |
-| SQ2 drops delisted games (0 reviews in A) | `clean.py` `build_panel_ac()` |
-| SQ2 groups = genre x starting reach | `clean.py` `build_panel_ac()` |
-| Byte-identical re-runs (versions, rounding, gzip, xlsx dates) | `requirements.txt`; `clean.py`; `01_trim.py`; `02_build_tables.py` |
+| Which snapshots (pinned commits) | Settings, "DATA SOURCE" |
+| Header of snapshot A merges two columns (`DiscountDLC count`) | A1, `read_header()` |
+| Snapshot A prices are sale prices: use the list price | Settings `OPTIONAL_RAW_TO_CLEAN`; A2 `add_features()` step 1 |
+| Junk in language and tag cells (`[b]*[/b]`, HTML) | A2, `_TAG_JUNK`, `parse_list()` |
+| All Chinese games removed (4 rules) | Settings "CHINESE GAMES"; A2 `add_features()` step 5 |
+| Genre = first matching user tag | Settings `TAG_TO_GENRE`; A2 `first_genre()` |
+| Filters: Early Access, >= 10 reviews, >= 1 year old, Traditional-only | Settings "FILTERS"; A3 `_base_filters()`; A4 |
+| SQ1 groups use year bands | Settings `YEAR_BAND_BINS`; A4 `build_games_clean()` |
+| SQ2 treated / control / excluded | Settings `MAJOR_LANGS`; A6 `build_panel_ac()` |
+| SQ2 drops delisted games (0 reviews in A) | A6 `build_panel_ac()` |
+| SQ2 groups = genre x starting reach | A6 `build_panel_ac()` |
+| Byte-identical re-runs (versions, rounding, xlsx dates) | `requirements.txt`; A4-A7 rounding; A9 |
 
 ## Limitations
 
@@ -108,19 +115,19 @@ marked `DATA ISSUE` in the code.
 ## Repository layout
 
 ```
-data/        raw/ (downloaded, not committed) · interim/ (trimmed snapshots) ·
-             processed/csv/ (for code) · processed/xlsx/ (to view) · README.md
-scripts/     numbered pipeline steps, run in order by run.py
-src/steamcn/ shared code: paths, config (all decisions), cleaning
-notebooks/   exploratory notebooks
-report/      report source, figures, individual reflections
-app/         interactive dashboard (bonus)
-slides/      presentation
-docs/        data_spec.md, decisions.md, QC logs (docs/qc/)
-tests/       pytest tests
+steam_chinese_analysis.ipynb   THE project: all code, from the two input files to the analysis
+requirements.txt               exact package versions
+data/
+  raw/              the two input CSV files (downloaded by the notebook, not committed)
+  processed/csv/    output tables, for code (pandas.read_csv)
+  processed/xlsx/   the same tables, to open and look at
+  README.md         source, versions, columns, licence
+docs/               data_spec.md (tables and columns), decisions.md (all choices), qc/ (check logs)
+report/             report, figures, reflections, slides
 ```
 
-All column names, file names and code are in English.
+`.github/` (automatic re-runs on GitHub) and `.devcontainer/` (Codespaces environment) are
+configuration folders that GitHub requires at the top level.
 
 ## Team and contributions
 
