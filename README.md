@@ -11,7 +11,7 @@ DATA2010 Data Science Programming, final project.
 | SQ3 | For each genre: translate at launch, translate later, or not a priority? | results of SQ1 + SQ2 |
 
 Reach = number of reviews (`positive + negative`). Every comparison is made inside a group
-of similar games, so that a gap is not simply "bigger games get translated more".
+of similar games (Step 5), so that a gap is not simply "bigger games get translated more".
 
 This README follows the work in order, from the two input files to the answers; each step
 names the notebook section that does it and explains why each choice was made.
@@ -133,45 +133,82 @@ sq2_games = pd.read_csv("data/processed/csv/pcd_sq2_games.csv")
 | Column | Meaning |
 |---|---|
 | `app_id`, `name` | Steam id and title |
-| `release_year`, `year_band` | release year and its band |
-| `price`, `discount_pct`, `price_tier` | list price (USD); sale discount on the snapshot day; tier |
 | `genre_group` | genre group |
+| `release_year`, `year_band` | release year and its band |
+| `price`, `price_tier` | list price (USD) and its tier |
 | `n_other_langs`, `n_other_langs_bin` | number of other languages and its bin |
 | `has_zh` | **treatment**: 1 = supports Simplified Chinese, 0 = no Chinese at all |
-| `positive`, `negative`, `total_reviews`, `log_total_reviews` | **outcome**: reach |
-| `group_id` | group of similar games: `genre_group | year_band | price_tier | n_other_langs_bin` |
+| `total_reviews`, `log_total_reviews` | **outcome**: reach |
+| `group_id` | comparison group (Step 5): `genre_group | year_band | price_tier | n_other_langs_bin` |
 
 ### `pcd_sq2_games`: one game in both snapshots, no Chinese in January 2024 (SQ2). 21,555 games
 
 | Column | Meaning |
 |---|---|
 | `app_id`, `name` | Steam id and title |
-| `genre_group`, `release_year`, `year_band`, `price_c`, `price_tier`, `n_other_langs_bin` | the game in January 2024 (snapshot C) |
+| `genre_group`, `release_year`, `year_band`, `price_c`, `price_tier` | the game in January 2024 (snapshot C) |
 | `reviews_c`, `reviews_a` | reviews in January 2024 and in June 2026 |
 | `growth` | **outcome**: `(reviews_a - reviews_c) / reviews_c` |
-| `initial_reach_bin` | starting reach: small, medium, large (thirds of `reviews_c`) |
-| `added_zh`, `added_only_zh` | added Simplified Chinese; Chinese was the only language added |
-| `added_other_major_lang`, `n_langs_added` | added a major language; number of languages added |
-| `arm` | **treatment**: `treated` = added Chinese (509); `control` = added neither Chinese nor a major language (20,805); `excluded` = added another major language only (241) |
-| `group_id_sq2` | group of similar games: `genre_group | initial_reach_bin` |
+| `arm` | **treatment**: `treated` = added Simplified Chinese (509); `control` = added neither Chinese nor a major language (20,805); `excluded` = added another major language only (241) |
+| `group_id_sq2` | comparison group (Step 5): `genre_group | year_band` |
 
 Major languages: German, French, Spanish - Spain, Japanese, Russian, Korean, Portuguese - Brazil.
 
-## Step 5. Analysis (notebook: Part B)
+## Step 5. Comparison groups: holding confounders fixed (notebook: A4, A5)
 
-| Section | What | Rule |
+A **confounder** is a characteristic that affects reach on its own and also differs between
+games with and without Chinese. Comparing all games directly would mix the effect of Chinese
+with the effect of these characteristics (for example, bigger-budget games are both more
+often translated and more reviewed). So each game is put in a **group of similar games**,
+and games with and without Chinese are compared **only inside the same group**: within a
+group the confounders are the same on both sides, and the remaining gap is not explained by
+them. Because of this, the confounders need no separate treatment in the analysis; their raw
+columns are kept only to check that the two sides are still alike inside each group.
+
+A group is used only if it has **at least 10 games on each side**; a median of fewer games
+moves too much with a single game.
+
+### SQ1 group = genre x price tier x release-year band x number of other languages
+
+| Confounder | Why it matters |
+|---|---|
+| Genre | Genres differ in audience size and in how much text a game has |
+| Price tier | Stands in for budget and studio size, which drive both translation and reach |
+| Release-year band | Older games have had more time to collect reviews |
+| Other languages (0, 1-4, 5+) | The strongest one: games with Chinese have a median of 7 other languages, games without it 0 (69% vs 9% have 5+). Without it, SQ1 would compare "localised in many languages" with "not localised" rather than measure Chinese itself |
+
+Result: 360 groups, **178 usable, covering 76% of games (87% of games with Chinese)**, all
+6 genres. Years are grouped into bands because single years left only 44% of games in usable
+groups.
+
+### SQ2 group = genre x release-year band
+
+Only 509 games added Chinese between the two snapshots, so the group can hold only the
+confounders that matter most for **growth**:
+
+| Variable | In the group? | Why |
 |---|---|---|
-| B1 EDA | describe both tables | |
-| B2 SQ1 | inside each `group_id`, compare median `total_reviews` of `has_zh` 1 vs 0; average over groups, overall and per genre (price tier in the appendix) | a group counts if it has >= 10 games on each side: 178 of 360 groups |
-| B3 SQ2 | inside each `group_id_sq2`, compare median `growth` of treated vs control; average, overall and per genre | same rule: 14 of 18 groups |
-| B4 SQ3 | per genre: translate at launch, later, or not a priority, from B2 and B3 | |
+| Genre | yes | Needed to answer per genre |
+| Release-year band | yes | The strongest one: among control games, median growth is +12% for games from <=2017 and +77% for 2022+, and games that added Chinese are about 2 years newer. Without it the effect of Chinese would be overstated |
+| Price tier | no | Once the year band is fixed, growth is about the same in every tier except gt20; and genre x price x year leaves only 17 usable groups, 54% of treated games and 3 genres (no RPG, Strategy or Visual Novel), too few to answer per genre |
+| Other languages | no | Treated and control games have almost the same mix (0 / 1-4 / 5+: 62/25/13% vs 64/26/10%) |
+
+Result: 24 groups, **16 usable, covering 90% of treated games**, all 6 genres.
+
+## Step 6. Analysis (notebook: Part B)
+
+| Section | What |
+|---|---|
+| B1 EDA | describe both tables |
+| B2 SQ1 | inside each `group_id`, the gap = median `total_reviews` with Chinese / without Chinese. The result is the average gap over the usable groups: overall, and per genre (average over the groups of that genre); per price tier in the appendix |
+| B3 SQ2 | inside each `group_id_sq2`, the uplift = median `growth` of treated minus control. Average over the usable groups: overall and per genre |
+| B4 SQ3 | per genre: translate at launch, later, or not a priority, from B2 and B3 |
+
+"Per genre" is only how results are reported: every comparison is still made inside the
+full group, never across groups.
 
 Uncertainty: bootstrap, 2,000 resamples, seed 2010. A gap is "large enough" when SQ1 >= +20%
 or SQ2 >= +10 points, and its interval does not include 0.
-
-Why these groups: with single release years, SQ1 groups big enough covered only 47% of games;
-year bands raise this to 81%. For SQ2, a five-way group (genre, year, price, other languages, starting reach) leaves only 7 usable groups in 2 genres;
-genre x starting reach gives 14 groups in all 6 genres.
 
 ## Limitations
 
@@ -179,9 +216,9 @@ genre x starting reach gives 14 groups in all 6 genres.
   languages are counted together, so Chinese-speaking players cannot be separated.
 - **SQ1 shows an association, not a cause.** Unmeasured differences remain between games
   with and without Chinese: marketing, studio size (only partly captured by price), quality.
-- **SQ2 holds fewer things fixed than SQ1.** About 500 games added Chinese, too few to split
-  by five characteristics; release year, price and number of other languages are not held
-  fixed, so part of a difference could come from them.
+- **SQ2 holds fewer things fixed than SQ1.** About 500 games added Chinese, too few to also
+  group by price tier; within the gt20 tier growth is higher, so part of a difference could
+  come from price.
 - **The date a language was added is unknown**, only that it happened between January 2024
   and June 2026. A big update or sale at the same time could also raise reviews.
 - **Chinese games are found by rules.** A Chinese studio with an English name, not on the
