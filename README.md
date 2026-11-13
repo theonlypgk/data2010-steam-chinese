@@ -15,32 +15,25 @@ data/raw/                      the two input files games_a.csv, games_c.csv (Git
 data/processed/csv/            output tables, for code (pandas.read_csv)
 data/processed/xlsx/           the same tables, to open and look at
 report/                        report, figures, reflections, slides
-.github/, .devcontainer/       automatic re-runs on GitHub; Codespaces environment
+.gitattributes                 stores the two input files with Git LFS
 ```
 
 **Reproducibility settings**
 
-Every file that decides whether a rerun gives the same output. Their locations are fixed:
-Git and GitHub only read them there.
+Every file that decides whether a rerun gives the same output.
 
 | File | What it fixes |
 |---|---|
 | `requirements.txt` | exact package versions (Python 3.12) |
-| `steam_chinese_analysis.ipynb`, cell *Settings and decisions* | pinned dataset commits of snapshots A and C, every cleaning and filter choice |
+| `steam_chinese_analysis.ipynb`, section *Settings* | pinned dataset commits of snapshots A and C, every cleaning and filter choice |
 | `.gitattributes` | `data/raw/*.csv filter=lfs diff=lfs merge=lfs -text`: the two input files are over GitHub's 100 MB file limit, so they are stored with Git LFS; a normal `git clone` downloads them |
-| `.gitignore` | keeps temporary files (`executed.ipynb`, caches) out of the repo; `data/raw/` is not ignored, so the input files are committed |
-| `.github/workflows/pipeline.yml` | reruns the notebook on a clean machine after every change; `lfs: true` in the checkout step gives it the real input files |
-| `.github/workflows/archive-raw.yml` | backup of the input files as the release [raw-snapshots-v1](../../releases/tag/raw-snapshots-v1) (gzip + SHA-256) |
-| `.devcontainer/devcontainer.json` | the same environment in GitHub Codespaces |
 
 **Rerun everything from scratch**
-- `pip install -r requirements.txt` (Python 3.12), or open the repo in GitHub Codespaces.
+- `pip install -r requirements.txt` (Python 3.12).
 - Open `steam_chinese_analysis.ipynb` and choose *Run All*, or run
-  `jupyter nbconvert --to notebook --execute steam_chinese_analysis.ipynb --output executed.ipynb`.
+  `jupyter nbconvert --to notebook --execute steam_chinese_analysis.ipynb --inplace`.
 - The notebook reads the two input files from `data/raw/` and rewrites every output table.
 - Two runs give byte-identical CSV files.
-- On GitHub, the `pipeline` workflow reruns the notebook after every change and commits the
-  tables if they changed.
 
 **Use the outputs**
 - To look at a table: open `data/processed/xlsx/pcd_<table>.xlsx`.
