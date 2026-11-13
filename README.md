@@ -11,7 +11,7 @@ DATA2010 Data Science Programming, final project.
 ```
 steam_chinese_analysis.ipynb   all the code, from the two input files to the analysis
 requirements.txt               exact package versions (Python 3.12)
-data/raw/                      the two input files games_a.csv, games_c.csv (Git LFS)
+data/raw/                      the two input files (downloaded by the notebook, not committed)
 data/processed/csv/            output tables, for code (pandas.read_csv)
 data/processed/xlsx/           the same tables, to open and look at
 report/                        report, figures, reflections, slides
@@ -22,10 +22,7 @@ report/                        report, figures, reflections, slides
 - `pip install -r requirements.txt` (Python 3.12), or open the repo in GitHub Codespaces.
 - Open `steam_chinese_analysis.ipynb` and choose *Run All*, or run
   `jupyter nbconvert --to notebook --execute steam_chinese_analysis.ipynb --output executed.ipynb`.
-- The two input files are in `data/raw/`, stored with Git LFS (each is over GitHub's 100 MB
-  file limit): run `git lfs install` before cloning, or `git lfs pull` after. Without them
-  the notebook downloads the same files from Hugging Face itself. It then rewrites every
-  output table.
+- The notebook downloads the two input files itself and rewrites every output table.
 - Two runs give byte-identical CSV files.
 - On GitHub, the `pipeline` workflow reruns the notebook after every change and commits the
   tables if they changed.
