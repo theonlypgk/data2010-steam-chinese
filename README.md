@@ -99,7 +99,7 @@ report/                                report, figures, reflections, slides
 - **Checked by:**
   - tests on known games;
   - a random sample of 50 games checked by hand → the two rules are right for 36 of 37 (notebook 3.1n);
-  - SQ1 run again under other filters → same result (notebook 3.2d).
+  - SQ1 run again under other filters → same result (notebook 5.1b).
 
 **Not changed**
 - Very large review counts are kept because: they are real; comparisons use medians.
@@ -140,9 +140,9 @@ report/                                report, figures, reflections, slides
   - Price tier: stands in for budget and studio size.
   - Year band: older games had more time to collect reviews. Bands, not single years because: single years → only 47% of games in usable groups (bands: 79%).
   - Other languages: games with Chinese have a median of 7 other languages; without: 0.
-- **Comparison:** medians because: review counts are very skewed. Gap = median with Chinese / median without - 1.
+- **Per side:** number of games and median reviews. Medians because: review counts are very skewed.
 - **Eligible group** = >= 10 games per side because: fewer → one game moves the median.
-- **Filter check (3.2d):** median gap +125% with no Chinese-first filter, +120% with it, +117% with a stricter one, +112% without the top 1% games.
+- The two sides are compared in section 5.1.
 
 **Output:** `pcd_sq1_groups` (360 groups, 190 eligible, 79% of games)
 
@@ -159,16 +159,15 @@ report/                                report, figures, reflections, slides
 | `n_no_zh` | number of games without Chinese |
 | `median_reviews_zh` | median reviews of games with Chinese |
 | `median_reviews_no_zh` | median reviews of games without Chinese |
-| `pct_diff` | gap: `median_reviews_zh / median_reviews_no_zh - 1` (0.5 = +50%) |
 | `eligible` | True if the group has >= 10 games on each side |
 
 **First 3 rows**
 
-| group_id | genre_group | year_band | price_tier | n_other_langs_bin | n_zh | n_no_zh | median_reviews_zh | median_reviews_no_zh | pct_diff | eligible |
-|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|:---|
-| Action \| <=2017 \| free \| 0 | Action | 1 | 1 | 1 | 9 | 350 | 65 | 103.5 | -0.371981 | False |
-| Action \| <=2017 \| free \| 1-4 | Action | 1 | 1 | 2 | 12 | 99 | 49 | 310 | -0.841935 | True |
-| Action \| <=2017 \| free \| 5+ | Action | 1 | 1 | 3 | 77 | 52 | 8617 | 1328 | 5.48871 | True |
+| group_id | genre_group | year_band | price_tier | n_other_langs_bin | n_zh | n_no_zh | median_reviews_zh | median_reviews_no_zh | eligible |
+|:---|:---|---:|---:|---:|---:|---:|---:|---:|:---|
+| Action \| <=2017 \| free \| 0 | Action | 1 | 1 | 1 | 9 | 350 | 65 | 103.5 | False |
+| Action \| <=2017 \| free \| 1-4 | Action | 1 | 1 | 2 | 12 | 99 | 49 | 310 | True |
+| Action \| <=2017 \| free \| 5+ | Action | 1 | 1 | 3 | 77 | 52 | 8617 | 1328 | True |
 
 ### 3.3 SQ2 groups: similar games, added Chinese after launch vs did not
 
@@ -182,7 +181,8 @@ report/                                report, figures, reflections, slides
   - Year band in: control games grow +12% (<=2017) vs +77% (2022+); treated games are ~2 years newer.
   - Price tier out: little effect once the year is fixed; with it only 3 genres keep usable groups.
   - Other languages out: same mix in both arms.
-- **Uplift** = median growth treated - median growth control. Eligible = >= 10 games per side.
+- **Per arm:** number of games and median growth. Eligible = >= 10 games per side.
+- The two arms are compared in section 5.2.
 
 **Output:** `pcd_sq2_groups` (24 groups, 16 eligible, 90% of treated games)
 
@@ -197,16 +197,15 @@ report/                                report, figures, reflections, slides
 | `n_control` | number of games that added neither Chinese nor a major language |
 | `median_growth_treated` | median review growth of the treated games |
 | `median_growth_control` | median review growth of the control games |
-| `uplift_pts` | `median_growth_treated - median_growth_control` (0.1 = +10 points) |
 | `eligible` | True if the group has >= 10 games on each side |
 
 **First 3 rows**
 
-| group_id_sq2 | genre_group | year_band | n_treated | n_control | median_growth_treated | median_growth_control | uplift_pts | eligible |
-|:---|:---|---:|---:|---:|---:|---:|---:|:---|
-| Action \| <=2017 | Action | 1 | 41 | 3897 | 0.171821 | 0.105263 | 0.066558 | True |
-| Action \| 2018-2019 | Action | 2 | 31 | 1971 | 0.175252 | 0.148148 | 0.027104 | True |
-| Action \| 2020-2021 | Action | 3 | 49 | 1800 | 0.285714 | 0.255479 | 0.030235 | True |
+| group_id_sq2 | genre_group | year_band | n_treated | n_control | median_growth_treated | median_growth_control | eligible |
+|:---|:---|---:|---:|---:|---:|---:|:---|
+| Action \| <=2017 | Action | 1 | 41 | 3897 | 0.171821 | 0.105263 | True |
+| Action \| 2018-2019 | Action | 2 | 31 | 1971 | 0.175252 | 0.148148 | True |
+| Action \| 2020-2021 | Action | 3 | 49 | 1800 | 0.285714 | 0.255479 | True |
 
 ### 3.4 Save the tables and check them
 
@@ -230,7 +229,7 @@ report/                                report, figures, reflections, slides
 - The date a language was added is unknown (between 2024-01 and 2026-06).
 - Chinese-first games: dataset too large to check row by row → found by two rules. A Chinese
   studio with an English name and an English release (Black Myth: Wukong) is missed. Effect
-  on the result is small: SQ1 gap +125% with no filter, +120% with it, +112% without the top 1% games.
+  on the result is small: SQ1 gap +125% with no filter, +120% with it, +112% without the top 1% games (notebook 5.1b).
 - Genre comes from user tags; snapshot A is from 2026-06-20, not today.
 
 ## Team and contributions
