@@ -10,7 +10,7 @@ DATA2010 Data Science Programming, final project.
 
 ```
 steam_chinese_analysis.ipynb   all the code, from the two input files to the analysis
-requirements.txt               exact package versions (Python 3.12)
+requirements.txt               exact package versions (Python 3.12 or 3.13)
 data/raw/                      the two input files games_a.csv, games_c.csv (Git LFS)
 data/processed/csv/            output tables, for code (pandas.read_csv)
 data/processed/xlsx/           the same tables, to open and look at
@@ -24,16 +24,23 @@ Every file that decides whether a rerun gives the same output.
 
 | File | What it fixes |
 |---|---|
-| `requirements.txt` | exact package versions (Python 3.12) |
-| `steam_chinese_analysis.ipynb`, section *Settings* | pinned dataset commits of snapshots A and C, every cleaning and filter choice |
+| `requirements.txt` | exact package versions, tested end to end on Python 3.12 and 3.13; the notebook's Setup stops if the installed versions differ |
+| `steam_chinese_analysis.ipynb`, Step 1.1 | pinned dataset commits and SHA-256 fingerprints of snapshots A and C; every other fixed value is set in the step that uses it |
 | `.gitattributes` | `data/raw/*.csv filter=lfs diff=lfs merge=lfs -text`: the two input files are over GitHub's 100 MB file limit, so they are stored with Git LFS; a normal `git clone` downloads them |
 
 **Rerun everything from scratch**
-- `pip install -r requirements.txt` (Python 3.12).
-- Open `steam_chinese_analysis.ipynb` and choose *Run All*, or run
+- **Google Colab:** open
+  [the notebook in Colab](https://colab.research.google.com/github/theonlypgk/data2010-steam-chinese/blob/main/steam_chinese_analysis.ipynb)
+  and choose *Runtime → Run all*. Setup clones the repository and installs the pinned versions;
+  on a new runtime it stops once and asks for *Runtime → Restart session*, then *Run all* again.
+- **Own computer or Codespaces:** `pip install -r requirements.txt`, open
+  `steam_chinese_analysis.ipynb` and choose *Run All*, or run
   `jupyter nbconvert --to notebook --execute steam_chinese_analysis.ipynb --inplace`.
-- The notebook reads the two input files from `data/raw/` and rewrites every output table.
-- Two runs give byte-identical CSV files.
+- The notebook checks each input file against its SHA-256 fingerprint. It uses `data/raw/`
+  when the check passes; otherwise (Colab, or a clone without Git LFS, where the files are
+  134-byte pointers) it fetches the release copy, then Hugging Face at the pinned commit.
+- It rewrites every output table. Two runs give byte-identical CSV and xlsx files; the last
+  check cell prints their fingerprints.
 
 **Use the outputs**
 - To look at a table: open `data/processed/xlsx/pcd_<table>.xlsx`.
