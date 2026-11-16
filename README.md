@@ -207,10 +207,10 @@ report/                        report, figures, reflections, slides
 | Action \| 2018-2019 | Action | 2 | 31 | 1971 | 0.175252 | 0.148148 | 0.027104 | True |
 | Action \| 2020-2021 | Action | 3 | 49 | 1800 | 0.285714 | 0.255479 | 0.030235 | True |
 
-### 3.4 Save and check
+### 3.4 Save the tables and check them
 
-- Tables written as csv and xlsx.
-- The notebook stops if a table is wrong or a number differs from the ones reported here.
+- Save: the three output tables are written to `data/processed/` as csv and xlsx.
+- Check: automatic tests on the tables; if a table is wrong or a number differs from the ones reported here, the notebook stops.
 
 ## 4. Data analysis / EDA
 
