@@ -121,18 +121,26 @@ Every file that decides whether a rerun gives the same output.
 
 *6. Irrelevant data*
 - Only 13 of the 40 columns are read: the rest does not serve the questions.
-- Chinese games removed, large or small: made for China, not translated into Chinese.
-  - Chinese = Chinese without English (text or voice-over), or every developer is Chinese
-    (Chinese-character name, mainland city in the name, known Chinese company).
-  - Not "Chinese voice-over" alone: it would remove 4,233 Western games (Cyberpunk 2077).
-  - Developers only, and all of them: publishers are often regional partners (bilibili for
-    Core Keeper), and Western games list Chinese support studios (Ubisoft Shanghai, Far Cry).
+- Chinese-first games removed, large or small: Chinese is their original language, not a
+  translation, so they do not belong in a study of translating into Chinese.
+  - The data has no country column; a game is flagged by either of two signals computed
+    from the data only: Chinese text without English text, or every developer's name in
+    Chinese characters (names with kana are Japanese and are not counted).
+  - No hand-made lists of Chinese cities or companies: never complete, and error-prone
+    ("Paper Games" also matches the British White Paper Games).
+  - Voice-over languages are not used: many Japanese games are dubbed in Chinese but not in
+    English (NEKOPARA, STEINS;GATE).
+  - Developers only, and all of them: publishers are often regional partners (方块游戏 for
+    Sekiro in Asia), and a game made elsewhere can list one Chinese-named co-developer.
+  - Checked in three ways: tests on known games; a random sample of 50 flagged games checked
+    by hand (the two signals are right for 36 of 37 games; notebook 1.5b); SQ1 computed
+    again under other filters (notebook 2d).
 - Early Access removed: unfinished games, their reviews behave differently.
 - Fewer than 10 reviews removed: below that, reach is noise.
 - Released less than 1 year before the snapshot removed: no time to collect reviews.
 - Traditional-Chinese-only games removed: neither "with" nor "without" Simplified Chinese.
 
-**Final output table:** `pcd_games_clean` (44,765 games, 14,078 with Simplified Chinese)
+**Final output table:** `pcd_games_clean` (45,445 games, 14,701 with Simplified Chinese)
 
 **Data dictionary**
 
@@ -172,7 +180,7 @@ Every file that decides whether a rerun gives the same output.
 - Genre: audience size and amount of text differ by genre.
 - Price tier: stands in for budget and studio size.
 - Year band: older games had more time to collect reviews; bands, because single years leave
-  only 44% of games in usable groups (76% with bands).
+  only 47% of games in usable groups (79% with bands).
 - Other languages: the strongest; games with Chinese have a median of 7 other languages,
   games without it 0.
 
@@ -181,7 +189,7 @@ Every file that decides whether a rerun gives the same output.
 - Gap = median with Chinese / median without - 1.
 - Eligible only with >= 10 games on each side: a median of fewer games moves too much.
 
-**Final output table:** `pcd_sq1_groups` (360 groups, 178 eligible, 76% of games)
+**Final output table:** `pcd_sq1_groups` (360 groups, 190 eligible, 79% of games)
 
 **Data dictionary**
 
@@ -203,8 +211,8 @@ Every file that decides whether a rerun gives the same output.
 
 | group_id | genre_group | year_band | price_tier | n_other_langs_bin | n_zh | n_no_zh | median_reviews_zh | median_reviews_no_zh | pct_diff | eligible |
 |:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|:---|
-| Action \| <=2017 \| free \| 0 | Action | 1 | 1 | 1 | 6 | 348 | 54 | 103.5 | -0.478261 | False |
-| Action \| <=2017 \| free \| 1-4 | Action | 1 | 1 | 2 | 11 | 99 | 45 | 310 | -0.854839 | True |
+| Action \| <=2017 \| free \| 0 | Action | 1 | 1 | 1 | 9 | 350 | 65 | 103.5 | -0.371981 | False |
+| Action \| <=2017 \| free \| 1-4 | Action | 1 | 1 | 2 | 12 | 99 | 49 | 310 | -0.841935 | True |
 | Action \| <=2017 \| free \| 5+ | Action | 1 | 1 | 3 | 77 | 52 | 8617 | 1328 | 5.48871 | True |
 
 ### c. SQ2: groups of similar games, added Chinese after launch vs did not
@@ -224,7 +232,7 @@ Every file that decides whether a rerun gives the same output.
 - A control arm is needed: every game gains reviews over time anyway.
 
 *Which variables form a group: genre x year band*
-- Only 509 games added Chinese, so only the strongest confounders fit.
+- Only 510 games added Chinese, so only the strongest confounders fit.
 - Year band is in: control games from <=2017 grow +12%, from 2022+ +77%, and treated
   games are about 2 years newer.
 - Price tier is out: little effect on growth once the year is fixed; with it, only 3 genres
@@ -244,7 +252,7 @@ Every file that decides whether a rerun gives the same output.
 | `group_id_sq2` | group name: genre \| year band |
 | `genre_group` | genre of the group |
 | `year_band` | year-band code of the group (as in `pcd_games_clean`) |
-| `n_treated` | number of games that added Simplified Chinese (509 in total) |
+| `n_treated` | number of games that added Simplified Chinese (510 in total) |
 | `n_control` | number of games that added neither Chinese nor a major language |
 | `median_growth_treated` | median review growth of the treated games |
 | `median_growth_control` | median review growth of the control games |
@@ -255,9 +263,9 @@ Every file that decides whether a rerun gives the same output.
 
 | group_id_sq2 | genre_group | year_band | n_treated | n_control | median_growth_treated | median_growth_control | uplift_pts | eligible |
 |:---|:---|---:|---:|---:|---:|---:|---:|:---|
-| Action \| <=2017 | Action | 1 | 41 | 3891 | 0.171821 | 0.105263 | 0.066558 | True |
-| Action \| 2018-2019 | Action | 2 | 31 | 1960 | 0.175252 | 0.147244 | 0.028008 | True |
-| Action \| 2020-2021 | Action | 3 | 49 | 1792 | 0.285714 | 0.255392 | 0.030322 | True |
+| Action \| <=2017 | Action | 1 | 41 | 3897 | 0.171821 | 0.105263 | 0.066558 | True |
+| Action \| 2018-2019 | Action | 2 | 31 | 1971 | 0.175252 | 0.148148 | 0.027104 | True |
+| Action \| 2020-2021 | Action | 3 | 49 | 1800 | 0.285714 | 0.255479 | 0.030235 | True |
 
 ## 4. Data analysis / EDA
 
@@ -275,7 +283,11 @@ Every file that decides whether a rerun gives the same output.
 - Single- vs multiplayer is not held fixed in either SQ: it can affect both reach and the
   decision to translate.
 - The date a language was added is unknown, only that it was between 2024-01 and 2026-06.
-- Chinese games are found by rules: a Chinese studio with an English name can be missed.
+- With about 125,000 games, Chinese-first games cannot be removed one by one; they are found
+  by two signals in the data. A Chinese studio with an English name and an English release
+  (Black Myth: Wukong) is not detected and stays in the "with Chinese" group. This barely
+  affects the result: the median gap of SQ1 is +125% with no filter, +120% with the filter
+  and +112% without the 1% most-reviewed games.
 - Genre comes from user tags; snapshot A is from 2026-06-20, not today.
 
 ## Team and contributions
