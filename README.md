@@ -2,51 +2,34 @@
 
 DATA2010 Data Science Programming, final project.
 
+The notebook `steam_chinese_analysis.ipynb` has the same sections as this file.
+
 ---
 
-# I. How to use and rerun the project
+# I. Setup and how to reproduce
 
-**Repository**
+**Files**
 
 ```
-steam_chinese_analysis.ipynb   all the code, from the two input files to the analysis
+steam_chinese_analysis.ipynb   all the code
 requirements.txt               exact package versions (Python 3.12 or 3.13)
-data/raw/                      the two input files games_a.csv, games_c.csv (Git LFS)
-data/processed/csv/            output tables, for code (pandas.read_csv)
-data/processed/xlsx/           the same tables, to open and look at
+data/raw/                      the two input files (Git LFS)
+data/processed/csv/            output tables, for code
+data/processed/xlsx/           the same tables, to look at
 report/                        report, figures, reflections, slides
-.gitattributes                 stores the two input files with Git LFS
 ```
 
-**Reproducibility settings**
+**How to run**
+- **Colab:** open [the notebook in Colab](https://colab.research.google.com/github/theonlypgk/data2010-steam-chinese/blob/main/steam_chinese_analysis.ipynb)
+  → *Runtime → Run all*. A new runtime stops once and asks for *Restart session*; then *Run all* again.
+- **Own computer:** `pip install -r requirements.txt`, open the notebook, *Run All*.
 
-Every file that decides whether a rerun gives the same output.
-
-| File | What it fixes |
-|---|---|
-| `requirements.txt` | exact package versions, tested end to end on Python 3.12 and 3.13; the notebook's Setup stops if the installed versions differ |
-| `steam_chinese_analysis.ipynb`, Step 1.1 | pinned dataset commits and SHA-256 fingerprints of snapshots A and C; every other fixed value is set in the step that uses it |
-| `.gitattributes` | `data/raw/*.csv filter=lfs diff=lfs merge=lfs -text`: the two input files are over GitHub's 100 MB file limit, so they are stored with Git LFS; a normal `git clone` downloads them |
-
-**Rerun everything from scratch**
-- **Google Colab:** open
-  [the notebook in Colab](https://colab.research.google.com/github/theonlypgk/data2010-steam-chinese/blob/main/steam_chinese_analysis.ipynb)
-  and choose *Runtime → Run all*. Setup clones the repository and installs the pinned versions;
-  on a new runtime it stops once and asks for *Runtime → Restart session*, then *Run all* again.
-- **Own computer or Codespaces:** `pip install -r requirements.txt`, open
-  `steam_chinese_analysis.ipynb` and choose *Run All*, or run
-  `jupyter nbconvert --to notebook --execute steam_chinese_analysis.ipynb --inplace`.
-- The notebook checks each input file against its SHA-256 fingerprint. It uses `data/raw/`
-  when the check passes; otherwise (Colab, or a clone without Git LFS, where the files are
-  134-byte pointers) it fetches the release copy, then Hugging Face at the pinned commit.
-- It rewrites every output table. The CSV files are byte-identical on every machine; the xlsx
-  files hold identical content (their zip compression depends on the machine's zlib). The last
-  check cell prints fingerprints of all six files to compare runs.
-
-**Use the outputs**
-- To look at a table: open `data/processed/xlsx/pcd_<table>.xlsx`.
-- To use a table in code: `pd.read_csv("data/processed/csv/pcd_<table>.csv")`.
-- Each table and its columns are described in II.3 below.
+**Why every run gives the same result**
+- Package versions pinned in `requirements.txt`; the notebook stops if they differ.
+- Input files checked by SHA-256; a missing or wrong file is downloaded again (release
+  [raw-snapshots-v1](../../releases/tag/raw-snapshots-v1), then Hugging Face).
+- Only the notebook writes `data/processed/`; nothing is edited by hand.
+- The last cell prints fingerprints of the output tables to compare runs.
 
 ---
 
@@ -54,93 +37,73 @@ Every file that decides whether a rerun gives the same output.
 
 ## 1. Business understanding
 
-- **Context:** Chinese-speaking players are one of the largest player groups on Steam, but a
-  translation costs money and time, so studios need to know when it pays off.
+- **Context:** Chinese-speaking players are one of the largest groups on Steam; a translation costs money and time.
 - **Main question:** should a Steam game support Simplified Chinese, for which genres, and when?
-- **Reach** = number of reviews (`positive + negative`): Steam does not publish sales.
+- **Reach** = number of reviews because: Steam publishes no sales.
 
 | | Question |
 |---|---|
-| SQ1 | How much larger is the reach of games that support Simplified Chinese, and in which genres? |
+| SQ1 | How much larger is the reach of games with Simplified Chinese, and in which genres? |
 | SQ2 | Does adding Simplified Chinese after launch still increase reach, and in which genres? |
-| SQ3 | For each genre: translate at launch, translate later, or not a priority? |
+| SQ3 | For each genre: translate at launch, later, or not a priority? |
 
 ## 2. Data collection
 
-- **Source:** Steam Games Dataset by FronkonGames (Hugging Face
-  `FronkonGames/steam-games-dataset`), one row per game.
-- **Two snapshots** of the same file, to see which games added Chinese over time (SQ2).
-- **Pinned by commit hash**, so the data never changes even though the dataset is updated.
-- **Backup:** release [raw-snapshots-v1](../../releases/tag/raw-snapshots-v1) (gzip + SHA-256).
+- **Source:** Steam Games Dataset by FronkonGames (Hugging Face `FronkonGames/steam-games-dataset`), one row per game.
+- **Two snapshots** because: SQ2 needs to see which games added Chinese over time.
+- **Pinned by commit + SHA-256** because: the dataset keeps being updated.
 
 | | Snapshot A ("now") | Snapshot C ("before") |
 |---|---|---|
 | Commit | `52ba62abfa707a2fa31f4d147c2777a9d9fbd2da` | `aefdeb1ff1a739b92ac5338682cc2610a0328505` |
-| Date | 2026-06-20 (last version of `games.csv`) | 2024-01-11 |
+| Date | 2026-06-20 | 2024-01-11 |
 | Raw rows | 125,855 | 85,103 |
 | Used for | SQ1, SQ2 | SQ2 |
 
 ## 3. Data processing
 
-### a. Clean data
+### 3.1 Clean data
 
-**Strategy**
+**Data issues fixed**
+- Header of A merges two names (`DiscountDLC count`) → later columns shifted → split back.
+- Prices in A are sale prices (Hades 7.49 = 24.99 at -70%) → list price.
+- Junk in language and tag cells (`[b]*[/b]`, HTML) → removed.
+- No id or repeated id → row dropped (first kept). Unreadable date → missing.
 
-*1. Data assessment / profiling*
-- Raw size: A has 125,855 rows, C has 85,103 rows, 40 columns each.
-- Header of A: `DiscountDLC count` is one name over two value columns, so every later column
-  is shifted; found by checking that language cells look like lists.
-- Prices of A are sale prices (Hades 7.49 = 24.99 at -70%): A was taken during a Steam sale.
-- Language and tag cells contain store-page junk (`[b]*[/b]`, HTML).
+**Columns added**
+- Outcome: `total_reviews = positive + negative`.
+- Treatment: `has_zh` (supports Simplified Chinese).
+- Confounders: genre group, price tier, year band, number of other languages.
+- Bins saved as ranks 1, 2, 3, ... because: text labels sort wrongly ("10to20" before "5to10").
 
-*2. Deduplication*
-- Repeated `app_id`: only the first row is kept, so each game appears once.
+**Games removed**
 
-*3. Structural error correction*
-- Split the merged header back into `Discount` and `DLC count`.
-- Rename columns to English snake_case; ids and review counts to integers, prices to numbers.
-- Dates come as "Aug 1, 2023" or "Aug 2023": all converted to one date type.
-- Price: list price recovered as `sale price / (1 - discount / 100)`, so tiers describe the
-  game, not the sale.
-- Junk removed from list cells, then cells parsed into clean lists of languages and tags.
-- Tags standardised into 6 genre groups: the first matching tag wins (Steam orders by votes).
-- Price, year and other languages encoded as ranks 1, 2, 3, ...: as text they sort in the
-  wrong order ("10to20" before "5to10"); codes are never averaged; genre has no order, so it
-  is not encoded.
+| Rule | Reason |
+|---|---|
+| drop Chinese-first games | original language is Chinese → not a translation |
+| drop Early Access | unfinished game |
+| keep >= 10 reviews | below that, reach is noise |
+| keep released >= 1 year before the snapshot | time to collect reviews |
+| keep games with genre, price and year | needed to form groups; not imputed because: an invented value → wrong group |
+| drop Traditional-Chinese-only | neither "with" nor "without" Simplified Chinese |
 
-*4. Handling missing values*
-- No `app_id`: row dropped (the game cannot be identified).
-- Missing review count or discount: set to 0 (Steam shows nothing when there is none).
-- Unreadable date, no price, or no matching genre tag: game dropped, not imputed, because an
-  invented value would put the game in a wrong comparison group.
+**Chinese-first games**
+- **Rules:** a game is flagged if
+  1. it has Chinese text without English text, or
+  2. every developer's name is in Chinese characters, without kana.
+- **Not used:**
+  - hand-made lists of cities or companies because: dataset too large → cannot check row by row.
+  - voice-over languages because: Japanese games are dubbed in Chinese too → right only 1 of 9 times.
+  - names with kana because: kana = Japanese.
+- **Checked by:**
+  - tests on known games;
+  - a random sample of 50 games checked by hand → the two rules are right for 36 of 37 (notebook 3.1n);
+  - SQ1 run again under other filters → same result (notebook 3.2d).
 
-*5. Outliers*
-- Review counts are very skewed (a few hits have millions): kept, because they are real;
-  later comparisons use medians, which they do not distort.
-- Discount capped at 0-99%: a 100% discount would make the list price infinite.
+**Not changed**
+- Very large review counts are kept because: they are real; comparisons use medians.
 
-*6. Irrelevant data*
-- Only 13 of the 40 columns are read: the rest does not serve the questions.
-- Chinese-first games removed, large or small: Chinese is their original language, not a
-  translation, so they do not belong in a study of translating into Chinese.
-  - The data has no country column; a game is flagged by either of two signals computed
-    from the data only: Chinese text without English text, or every developer's name in
-    Chinese characters (names with kana are Japanese and are not counted).
-  - No hand-made lists of Chinese cities or companies: never complete, and error-prone
-    ("Paper Games" also matches the British White Paper Games).
-  - Voice-over languages are not used: many Japanese games are dubbed in Chinese but not in
-    English (NEKOPARA, STEINS;GATE).
-  - Developers only, and all of them: publishers are often regional partners (方块游戏 for
-    Sekiro in Asia), and a game made elsewhere can list one Chinese-named co-developer.
-  - Checked in three ways: tests on known games; a random sample of 50 flagged games checked
-    by hand (the two signals are right for 36 of 37 games; notebook 1.5b); SQ1 computed
-    again under other filters (notebook 2d).
-- Early Access removed: unfinished games, their reviews behave differently.
-- Fewer than 10 reviews removed: below that, reach is noise.
-- Released less than 1 year before the snapshot removed: no time to collect reviews.
-- Traditional-Chinese-only games removed: neither "with" nor "without" Simplified Chinese.
-
-**Final output table:** `pcd_games_clean` (45,445 games, 14,701 with Simplified Chinese)
+**Output:** `pcd_games_clean` (45,445 games, 14,701 with Simplified Chinese)
 
 **Data dictionary**
 
@@ -167,29 +130,20 @@ Every file that decides whether a rerun gives the same output.
 | 20 | Team Fortress Classic | Action | 1999 | 1 | 4.96 | 2 | 6 | 3 | 1 | 8738 | 3.94141 |
 | 30 | Day of Defeat | Action | 2003 | 1 | 4.96 | 2 | 4 | 2 | 0 | 7102 | 3.85138 |
 
-### b. SQ1: groups of similar games, with vs without Chinese
+### 3.2 SQ1 groups: similar games, with vs without Chinese
 
-**Strategy**
+- **Rule:** compare games with and without Chinese only inside groups of similar games.
+- **Reason:** bigger games are both translated more and reviewed more.
+- **Group** = genre x price tier x year band x other languages.
+  - Genre: audience size and amount of text differ.
+  - Price tier: stands in for budget and studio size.
+  - Year band: older games had more time to collect reviews. Bands, not single years because: single years → only 47% of games in usable groups (bands: 79%).
+  - Other languages: games with Chinese have a median of 7 other languages; without: 0.
+- **Comparison:** medians because: review counts are very skewed. Gap = median with Chinese / median without - 1.
+- **Eligible group** = >= 10 games per side because: fewer → one game moves the median.
+- **Filter check (3.2d):** median gap +125% with no Chinese-first filter, +120% with it, +117% with a stricter one, +112% without the top 1% games.
 
-*Why groups*
-- Compare games with and without Chinese only inside groups of similar games: otherwise
-  the gap partly comes from other differences (bigger games are translated more).
-
-*Which variables form a group: genre x price tier x year band x other languages*
-- Each affects reach and differs between games with and without Chinese (a confounder).
-- Genre: audience size and amount of text differ by genre.
-- Price tier: stands in for budget and studio size.
-- Year band: older games had more time to collect reviews; bands, because single years leave
-  only 47% of games in usable groups (79% with bands).
-- Other languages: the strongest; games with Chinese have a median of 7 other languages,
-  games without it 0.
-
-*How each group is compared*
-- Medians, not means: review counts are very skewed.
-- Gap = median with Chinese / median without - 1.
-- Eligible only with >= 10 games on each side: a median of fewer games moves too much.
-
-**Final output table:** `pcd_sq1_groups` (360 groups, 190 eligible, 79% of games)
+**Output:** `pcd_sq1_groups` (360 groups, 190 eligible, 79% of games)
 
 **Data dictionary**
 
@@ -215,35 +169,21 @@ Every file that decides whether a rerun gives the same output.
 | Action \| <=2017 \| free \| 1-4 | Action | 1 | 1 | 2 | 12 | 99 | 49 | 310 | -0.841935 | True |
 | Action \| <=2017 \| free \| 5+ | Action | 1 | 1 | 3 | 77 | 52 | 8617 | 1328 | 5.48871 | True |
 
-### c. SQ2: groups of similar games, added Chinese after launch vs did not
+### 3.3 SQ2 groups: similar games, added Chinese after launch vs did not
 
-**Strategy**
+- **Rule:** follow games with no Chinese in C to A; compare those that added Chinese (treated) with similar games that did not (control).
+- **Reason for a control:** every game gains reviews over time anyway.
+- **Games:** C filtered as in 3.1, no Chinese in C, still in A. Characteristics from C because: the state before adding Chinese.
+- **Dropped:** 0 reviews in A because: delisted → -100% growth is not real.
+- **Growth** = (reviews in A - reviews in C) / reviews in C.
+- **Control** = added no Chinese and no major language. Games that added another major language are excluded because: own localisation push.
+- **Group** = genre x year band because: only 510 games added Chinese → only the strongest confounders fit.
+  - Year band in: control games grow +12% (<=2017) vs +77% (2022+); treated games are ~2 years newer.
+  - Price tier out: little effect once the year is fixed; with it only 3 genres keep usable groups.
+  - Other languages out: same mix in both arms.
+- **Uplift** = median growth treated - median growth control. Eligible = >= 10 games per side.
 
-*Which games*
-- Games with no Chinese in snapshot C that are still in snapshot A, followed over time.
-- C is filtered exactly as in a.: the starting point is measured the same way.
-- Game characteristics come from C: what the game looked like before adding Chinese.
-- Games with 0 reviews in A are dropped: delisted, a growth of -100% is not real.
-
-*Outcome and treatment*
-- Growth = (reviews in A - reviews in C) / reviews in C.
-- Treated = added Simplified Chinese; control = added neither Chinese nor a major language.
-- Games that added another major language are excluded: a localisation push of their own.
-- A control arm is needed: every game gains reviews over time anyway.
-
-*Which variables form a group: genre x year band*
-- Only 510 games added Chinese, so only the strongest confounders fit.
-- Year band is in: control games from <=2017 grow +12%, from 2022+ +77%, and treated
-  games are about 2 years newer.
-- Price tier is out: little effect on growth once the year is fixed; with it, only 3 genres
-  keep usable groups.
-- Other languages are out: treated and control have almost the same mix.
-
-*How each group is compared*
-- Uplift = median growth treated - median growth control.
-- Eligible only with >= 10 games on each side, as in SQ1.
-
-**Final output table:** `pcd_sq2_groups` (24 groups, 16 eligible, 90% of treated games)
+**Output:** `pcd_sq2_groups` (24 groups, 16 eligible, 90% of treated games)
 
 **Data dictionary**
 
@@ -267,6 +207,11 @@ Every file that decides whether a rerun gives the same output.
 | Action \| 2018-2019 | Action | 2 | 31 | 1971 | 0.175252 | 0.148148 | 0.027104 | True |
 | Action \| 2020-2021 | Action | 3 | 49 | 1800 | 0.285714 | 0.255479 | 0.030235 | True |
 
+### 3.4 Save and check
+
+- Tables written as csv and xlsx.
+- The notebook stops if a table is wrong or a number differs from the ones reported here.
+
 ## 4. Data analysis / EDA
 
 ## 5. Data modelling
@@ -277,17 +222,14 @@ Every file that decides whether a rerun gives the same output.
 
 ## Limitations
 
-- Reach = reviews from all languages: Chinese-speaking players cannot be separated.
+- Reach = reviews in all languages → Chinese-speaking players cannot be separated.
 - SQ1 is an association, not a cause: marketing, studio size and quality are not measured.
-- SQ2 does not hold price fixed: part of a difference could come from price.
-- Single- vs multiplayer is not held fixed in either SQ: it can affect both reach and the
-  decision to translate.
-- The date a language was added is unknown, only that it was between 2024-01 and 2026-06.
-- With about 125,000 games, Chinese-first games cannot be removed one by one; they are found
-  by two signals in the data. A Chinese studio with an English name and an English release
-  (Black Myth: Wukong) is not detected and stays in the "with Chinese" group. This barely
-  affects the result: the median gap of SQ1 is +125% with no filter, +120% with the filter
-  and +112% without the 1% most-reviewed games.
+- SQ2 does not hold price fixed.
+- Single- vs multiplayer is not held fixed.
+- The date a language was added is unknown (between 2024-01 and 2026-06).
+- Chinese-first games: dataset too large to check row by row → found by two rules. A Chinese
+  studio with an English name and an English release (Black Myth: Wukong) is missed. Effect
+  on the result is small: SQ1 gap +125% with no filter, +120% with it, +112% without the top 1% games.
 - Genre comes from user tags; snapshot A is from 2026-06-20, not today.
 
 ## Team and contributions
