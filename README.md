@@ -39,8 +39,9 @@ Every file that decides whether a rerun gives the same output.
 - The notebook checks each input file against its SHA-256 fingerprint. It uses `data/raw/`
   when the check passes; otherwise (Colab, or a clone without Git LFS, where the files are
   134-byte pointers) it fetches the release copy, then Hugging Face at the pinned commit.
-- It rewrites every output table. Two runs give byte-identical CSV and xlsx files; the last
-  check cell prints their fingerprints.
+- It rewrites every output table. The CSV files are byte-identical on every machine; the xlsx
+  files hold identical content (their zip compression depends on the machine's zlib). The last
+  check cell prints fingerprints of all six files to compare runs.
 
 **Use the outputs**
 - To look at a table: open `data/processed/xlsx/pcd_<table>.xlsx`.
