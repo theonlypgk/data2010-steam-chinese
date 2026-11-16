@@ -4,7 +4,7 @@
 
 - **Dataset:** Steam Games Dataset by FronkonGames, one row per game on Steam.
 - **Link:** https://huggingface.co/datasets/FronkonGames/steam-games-dataset (file `games.csv`)
-- **License:** the license shown on the dataset page above.
+- **License:** MIT (as stated on the dataset page).
 - **Two snapshots** of the same file because: SQ2 needs to see which games added Chinese over time.
 
 | File | Snapshot | Dataset commit | Rows | Columns | Size |
@@ -49,8 +49,8 @@ Screenshots, Movies.
 
 ## Output tables (`processed/`)
 
-Written by `scripts/steam_chinese_analysis.ipynb`; never edited by hand. Each table is saved
-as `csv/pcd_<table>.csv` (for code) and `xlsx/pcd_<table>.xlsx` (to look at).
+Written by `scripts/steam_chinese_analysis.ipynb` as `csv/pcd_<table>.csv`; never edited by hand.
+`xlsx/pcd_<table>.xlsx` is a copy of the same tables, only to open and look at.
 
 | Table | One row per | Rows |
 |---|---|---:|

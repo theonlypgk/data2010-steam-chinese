@@ -15,8 +15,8 @@ scripts/steam_chinese_analysis.ipynb   all the code
 requirements.txt                       exact package versions
 data/README.md                         description of the dataset
 data/raw/                              the two input files (Git LFS)
-data/processed/csv/                    output tables, for code
-data/processed/xlsx/                   the same tables, to look at
+data/processed/csv/                    output tables (written by the notebook)
+data/processed/xlsx/                   a copy of the same tables, to open and look at
 report/                                report, figures, reflections, slides
 ```
 
@@ -213,7 +213,7 @@ report/                                report, figures, reflections, slides
 
 ### 3.4 Save the tables and check them
 
-- Save: the three output tables are written to `data/processed/` as csv and xlsx.
+- Save: the three output tables are written to `data/processed/csv/`.
 - Check: automatic tests on the tables; if a table is wrong or a number differs from the ones reported here, the notebook stops.
 
 ## 4. Data analysis / EDA
