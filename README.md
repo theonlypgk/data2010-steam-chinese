@@ -29,11 +29,8 @@ report/                                report, figures, reflections, slides
 4. Open `scripts/steam_chinese_analysis.ipynb` and choose *Run All*.
    Or in one command: `jupyter nbconvert --to notebook --execute --inplace scripts/steam_chinese_analysis.ipynb`
 
-**Notes**
+**If step 4 fails**
 - The raw files look tiny (a few lines of text)? → run `git lfs pull` in the project folder.
-- Every path is relative to the notebook → nothing to edit by hand.
-- Only the notebook writes `data/processed/`; nothing is edited by hand.
-- The notebook checks its own results: if a number differs from the ones reported here, it stops with an error.
 
 ---
 
