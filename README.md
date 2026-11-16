@@ -272,6 +272,8 @@ Every file that decides whether a rerun gives the same output.
 - Reach = reviews from all languages: Chinese-speaking players cannot be separated.
 - SQ1 is an association, not a cause: marketing, studio size and quality are not measured.
 - SQ2 does not hold price fixed: part of a difference could come from price.
+- Single- vs multiplayer is not held fixed in either SQ: it can affect both reach and the
+  decision to translate.
 - The date a language was added is unknown, only that it was between 2024-01 and 2026-06.
 - Chinese games are found by rules: a Chinese studio with an English name can be missed.
 - Genre comes from user tags; snapshot A is from 2026-06-20, not today.
