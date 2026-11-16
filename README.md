@@ -2,7 +2,7 @@
 
 DATA2010 Data Science Programming, final project.
 
-The notebook `steam_chinese_analysis.ipynb` has the same sections as this file.
+The notebook `scripts/steam_chinese_analysis.ipynb` has the same sections as this file.
 
 ---
 
@@ -11,25 +11,29 @@ The notebook `steam_chinese_analysis.ipynb` has the same sections as this file.
 **Files**
 
 ```
-steam_chinese_analysis.ipynb   all the code
-requirements.txt               exact package versions (Python 3.12 or 3.13)
-data/raw/                      the two input files (Git LFS)
-data/processed/csv/            output tables, for code
-data/processed/xlsx/           the same tables, to look at
-report/                        report, figures, reflections, slides
+scripts/steam_chinese_analysis.ipynb   all the code
+requirements.txt                       exact package versions
+data/README.md                         description of the dataset
+data/raw/                              the two input files (Git LFS)
+data/processed/csv/                    output tables, for code
+data/processed/xlsx/                   the same tables, to look at
+report/                                report, figures, reflections, slides
 ```
 
-**How to run**
-- **Colab:** open [the notebook in Colab](https://colab.research.google.com/github/theonlypgk/data2010-steam-chinese/blob/main/steam_chinese_analysis.ipynb)
-  → *Runtime → Run all*. A new runtime stops once and asks for *Restart session*; then *Run all* again.
-- **Own computer:** `pip install -r requirements.txt`, open the notebook, *Run All*.
+**Needed:** Git, [Git LFS](https://git-lfs.com) (the two raw files are large), Python 3.12 or 3.13.
 
-**Why every run gives the same result**
-- Package versions pinned in `requirements.txt`; the notebook stops if they differ.
-- Input files checked by SHA-256; a missing or wrong file is downloaded again (release
-  [raw-snapshots-v1](../../releases/tag/raw-snapshots-v1), then Hugging Face).
+**Steps**
+1. `git lfs install`
+2. `git clone https://github.com/theonlypgk/data2010-steam-chinese.git`
+3. `cd data2010-steam-chinese` then `pip install -r requirements.txt`
+4. Open `scripts/steam_chinese_analysis.ipynb` and choose *Run All*.
+   Or in one command: `jupyter nbconvert --to notebook --execute --inplace scripts/steam_chinese_analysis.ipynb`
+
+**Notes**
+- The raw files look tiny (a few lines of text)? → run `git lfs pull` in the project folder.
+- Every path is relative to the notebook → nothing to edit by hand.
 - Only the notebook writes `data/processed/`; nothing is edited by hand.
-- The last cell prints fingerprints of the output tables to compare runs.
+- The notebook checks its own results: if a number differs from the ones reported here, it stops with an error.
 
 ---
 
@@ -51,7 +55,7 @@ report/                        report, figures, reflections, slides
 
 - **Source:** Steam Games Dataset by FronkonGames (Hugging Face `FronkonGames/steam-games-dataset`), one row per game.
 - **Two snapshots** because: SQ2 needs to see which games added Chinese over time.
-- **Pinned by commit + SHA-256** because: the dataset keeps being updated.
+- **Saved in `data/raw/`** because: the dataset keeps being updated. Details: [data/README.md](data/README.md).
 
 | | Snapshot A ("now") | Snapshot C ("before") |
 |---|---|---|
