@@ -69,6 +69,7 @@ report/                                report, figures, reflections, slides
 - Prices in A are sale prices (Hades 7.49 = 24.99 at -70%) → list price.
 - Junk in language and tag cells (`[b]*[/b]`, HTML) → removed.
 - One genre label is written two ways ("Free To Play" in snapshot A, "Free to Play" in snapshot C and in the tags) → compared in lower case.
+- One language renamed between the snapshots ("Portuguese" in C = "Portuguese - Portugal" in A) → the new name is used in both.
 - No id or repeated id → row dropped (first kept). Unreadable date → missing.
 
 **Columns added**
@@ -170,10 +171,10 @@ report/                                report, figures, reflections, slides
 
 - **Rule:** follow games with no Chinese in C to A; compare those that added Chinese (treated) with similar games that did not (control).
 - **Reason for a control:** every game gains reviews over time anyway.
-- **Games:** C filtered as in 3.1, no Chinese in C, still in A. Characteristics from C because: the state before adding Chinese.
+- **Games:** C filtered as A (3.1.9), no Chinese in C, still in A. Characteristics from C because: the state before adding Chinese.
 - **Dropped:** 0 reviews in A because: delisted → -100% growth is not real.
 - **Growth** = (reviews in A - reviews in C) / reviews in C.
-- **Control** = added no Chinese and no major language. Games that added another major language are excluded because: own localisation push.
+- **Treated** = added Simplified Chinese. **Control** = language list unchanged. **Excluded** = added another language (also only Traditional Chinese) because: own localisation push → not a clean control. Not a hand-made list of "major" languages because: it cannot be justified from the data.
 - **Group** = genre x year band.
 - **Per arm:** number of games and median growth. Eligible = >= 10 games per side.
 - The two arms are compared in section 5.2.
@@ -188,7 +189,7 @@ report/                                report, figures, reflections, slides
 | `genre_group` | genre of the group |
 | `year_band` | year-band code of the group (as in `pcd_games_clean`) |
 | `n_treated` | number of games that added Simplified Chinese (532 in total) |
-| `n_control` | number of games that added neither Chinese nor a major language |
+| `n_control` | number of games whose language list did not change |
 | `median_growth_treated` | median review growth of the treated games |
 | `median_growth_control` | median review growth of the control games |
 | `eligible` | True if the group has >= 10 games on each side |
@@ -197,9 +198,9 @@ report/                                report, figures, reflections, slides
 
 | group_id_sq2 | genre_group | year_band | n_treated | n_control | median_growth_treated | median_growth_control | eligible |
 |:---|:---|---:|---:|---:|---:|---:|:---|
-| Action \| <=2017 | Action | 1 | 29 | 3141 | 0.166134 | 0.104377 | True |
-| Action \| 2018-2019 | Action | 2 | 21 | 1625 | 0.17931 | 0.142857 | True |
-| Action \| 2020-2021 | Action | 3 | 38 | 1418 | 0.296376 | 0.25 | True |
+| Action \| <=2017 | Action | 1 | 29 | 3133 | 0.166134 | 0.104465 | True |
+| Action \| 2018-2019 | Action | 2 | 21 | 1617 | 0.17931 | 0.142857 | True |
+| Action \| 2020-2021 | Action | 3 | 38 | 1410 | 0.296376 | 0.25 | True |
 
 ### 3.4 Save the tables
 

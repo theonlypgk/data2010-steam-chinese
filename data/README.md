@@ -46,6 +46,7 @@ Screenshots, Movies.
 - Prices in snapshot A are sale prices → the notebook recovers the list price.
 - Language and tag cells contain store-page junk (`[b]*[/b]`, HTML) → removed.
 - One genre label is written two ways ("Free To Play" in snapshot A, "Free to Play" in snapshot C and in the tags) → compared in lower case.
+- One language renamed between the snapshots ("Portuguese" in C = "Portuguese - Portugal" in A) → the notebook uses the new name in both.
 
 ## Output tables (`processed/`)
 
