@@ -77,7 +77,7 @@ report/                                report, figures, reflections, slides
 - Treatment: `has_zh` (supports Simplified Chinese).
 - Confounders: genre group, price tier, year band, number of other languages.
 - Genre group = the first user tag (most voted) that is a Steam genre. The genre list is taken from the data by code: Steam's genre labels on >= 2% of games, without Indie, Early Access, Free to Play (not a type of gameplay). Not a hand-made tag list because: it cannot be checked against 125k games.
-- Price, release year and number of other languages are put into bins, saved as codes 1, 2, 3, ... (meaning: data dictionary below).
+- Price, release year and number of other languages are cut into ranges, each saved by its name (e.g. "<=2017", "<$5", "5+").
 
 **Games removed**
 
@@ -112,11 +112,11 @@ report/                                report, figures, reflections, slides
 | `name` | game title |
 | `genre_group` | Steam genre: Action, Adventure, Casual, Massively Multiplayer, Racing, RPG, Simulation, Sports or Strategy |
 | `release_year` | year of release |
-| `year_band` | 1 = <=2017, 2 = 2018-2019, 3 = 2020-2021, 4 = 2022+ |
+| `year_band` | release-year range: <=2017, 2018-2019, 2020-2021, 2022+ |
 | `price` | list price in USD |
-| `price_tier` | 1 = free, 2 = < $5, 3 = $5-10, 4 = $10-20, 5 = > $20 |
+| `price_tier` | list-price range: free, <$5, $5-10, $10-20, >$20 |
 | `n_other_langs` | number of supported languages other than English and Chinese |
-| `n_other_langs_bin` | 1 = 0 other languages, 2 = 1-4, 3 = 5+ |
+| `n_other_langs_bin` | range of other languages: 0, 1-4, 5+ |
 | `has_zh` | 1 = supports Simplified Chinese, 0 = no Chinese at all (treatment) |
 | `total_reviews` | positive + negative reviews (= reach) |
 
@@ -124,9 +124,9 @@ report/                                report, figures, reflections, slides
 
 | app_id | name | genre_group | release_year | year_band | price | price_tier | n_other_langs | n_other_langs_bin | has_zh | total_reviews |
 |---:|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 10 | Counter-Strike | Action | 2000 | 1 | 9.95 | 3 | 5 | 3 | 1 | 250245 |
-| 20 | Team Fortress Classic | Action | 1999 | 1 | 4.96 | 2 | 6 | 3 | 1 | 8738 |
-| 30 | Day of Defeat | Action | 2003 | 1 | 4.96 | 2 | 4 | 2 | 0 | 7102 |
+| 10 | Counter-Strike | Action | 2000 | <=2017 | 9.95 | $5-10 | 5 | 5+ | 1 | 250245 |
+| 20 | Team Fortress Classic | Action | 1999 | <=2017 | 4.96 | <$5 | 6 | 5+ | 1 | 8738 |
+| 30 | Day of Defeat | Action | 2003 | <=2017 | 4.96 | <$5 | 4 | 1-4 | 0 | 7102 |
 
 ### 3.2 SQ1 groups: similar games, with vs without Chinese
 
@@ -147,11 +147,11 @@ report/                                report, figures, reflections, slides
 
 | Column | Description |
 |---|---|
-| `group_id` | group name: genre \| year band \| price tier \| other-languages bin (codes as in `pcd_games_clean`), e.g. "Action \| 1 \| 2 \| 3" |
+| `group_id` | group name: genre \| year band \| price tier \| other languages, e.g. "Action \| <=2017 \| <$5 \| 5+" |
 | `genre_group` | genre of the group |
-| `year_band` | year-band code of the group (as in `pcd_games_clean`) |
-| `price_tier` | price-tier code of the group |
-| `n_other_langs_bin` | other-languages code of the group |
+| `year_band` | year range of the group (as in `pcd_games_clean`) |
+| `price_tier` | price range of the group |
+| `n_other_langs_bin` | other-languages range of the group |
 | `n_zh` | number of games with Simplified Chinese |
 | `n_no_zh` | number of games without Chinese |
 | `median_reviews_zh` | median reviews of games with Chinese |
@@ -162,9 +162,9 @@ report/                                report, figures, reflections, slides
 
 | group_id | genre_group | year_band | price_tier | n_other_langs_bin | n_zh | n_no_zh | median_reviews_zh | median_reviews_no_zh | eligible |
 |:---|:---|---:|---:|---:|---:|---:|---:|---:|:---|
-| Action \| 1 \| 1 \| 1 | Action | 1 | 1 | 1 | 7 | 279 | 43 | 79 | False |
-| Action \| 1 \| 1 \| 2 | Action | 1 | 1 | 2 | 8 | 82 | 186.5 | 302 | False |
-| Action \| 1 \| 1 \| 3 | Action | 1 | 1 | 3 | 55 | 36 | 9937 | 1186.5 | True |
+| Action \| <=2017 \| free \| 0 | Action | <=2017 | free | 0 | 7 | 279 | 43 | 79 | False |
+| Action \| <=2017 \| free \| 1-4 | Action | <=2017 | free | 1-4 | 8 | 82 | 186.5 | 302 | False |
+| Action \| <=2017 \| free \| 5+ | Action | <=2017 | free | 5+ | 55 | 36 | 9937 | 1186.5 | True |
 
 ### 3.3 SQ2 groups: similar games, added Chinese after launch vs did not
 
@@ -184,9 +184,9 @@ report/                                report, figures, reflections, slides
 
 | Column | Description |
 |---|---|
-| `group_id_sq2` | group name: genre \| year band (code), e.g. "Action \| 1" |
+| `group_id_sq2` | group name: genre \| year band, e.g. "Action \| <=2017" |
 | `genre_group` | genre of the group |
-| `year_band` | year-band code of the group (as in `pcd_games_clean`) |
+| `year_band` | year range of the group (as in `pcd_games_clean`) |
 | `n_treated` | number of games that added Simplified Chinese (532 in total) |
 | `n_control` | number of games whose language list did not change |
 | `median_growth_treated` | median review growth of the treated games |
@@ -197,9 +197,9 @@ report/                                report, figures, reflections, slides
 
 | group_id_sq2 | genre_group | year_band | n_treated | n_control | median_growth_treated | median_growth_control | eligible |
 |:---|:---|---:|---:|---:|---:|---:|:---|
-| Action \| 1 | Action | 1 | 29 | 3133 | 0.166134 | 0.104465 | True |
-| Action \| 2 | Action | 2 | 21 | 1617 | 0.17931 | 0.142857 | True |
-| Action \| 3 | Action | 3 | 38 | 1410 | 0.296376 | 0.25 | True |
+| Action \| <=2017 | Action | <=2017 | 29 | 3133 | 0.166134 | 0.104465 | True |
+| Action \| 2018-2019 | Action | 2018-2019 | 21 | 1617 | 0.17931 | 0.142857 | True |
+| Action \| 2020-2021 | Action | 2020-2021 | 38 | 1410 | 0.296376 | 0.25 | True |
 
 ### 3.4 Save the tables
 
