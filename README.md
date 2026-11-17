@@ -20,11 +20,9 @@ data/processed/xlsx/                   a copy of the same tables, to open and lo
 report/                                report, figures, reflections, slides
 ```
 
-**Needed:** Python 3.12 or 3.13 (or just Google Colab).
+**Needed:** Python 3.12 or 3.13.
 
-**Option A · Google Colab:** open `scripts/steam_chinese_analysis.ipynb` in Colab and choose *Run All* (cell I.0 gets the project).
-
-**Option B · Your computer**
+**Steps**
 1. Get the project: `git clone https://github.com/theonlypgk/data2010-steam-chinese.git` **or** *Code → Download ZIP* on GitHub and unzip it.
 2. In the project folder: `pip install -r requirements.txt`
 3. Open `scripts/steam_chinese_analysis.ipynb` and choose *Run All*.
