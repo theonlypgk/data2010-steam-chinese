@@ -29,6 +29,8 @@ report/                                report, figures, reflections, slides
 4. Open `scripts/steam_chinese_analysis.ipynb` and choose *Run All*.
    Or in one command: `jupyter nbconvert --to notebook --execute --inplace scripts/steam_chinese_analysis.ipynb`
 
+**On Google Colab:** open the notebook and choose *Run All* — cell I.0 clones the repo, pulls the data and moves into `scripts/`.
+
 **If step 4 fails**
 - The raw files look tiny (a few lines of text)? → run `git lfs pull` in the project folder.
 
