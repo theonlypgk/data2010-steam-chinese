@@ -170,7 +170,7 @@ report/                                report, figures, reflections, slides
 
 - **Rule:** follow games with no Chinese in C to A; compare those that added Chinese (treated) with similar games that did not (control).
 - **Reason for a control:** every game gains reviews over time anyway.
-- **Games:** C filtered as A (3.1.9), no Chinese in C, still in A. Characteristics from C because: the state before adding Chinese.
+- **Games:** C filtered as A (3.1.8), no Chinese in C, still in A. Characteristics from C because: the state before adding Chinese.
 - **Dropped:** 0 reviews in A because: delisted → -100% growth is not real.
 - **Growth** = (reviews in A - reviews in C) / reviews in C.
 - **Treated** = added Simplified Chinese. **Control** = language list unchanged. **Excluded** = added another language (also only Traditional Chinese) because: own localisation push → not a clean control. Not a hand-made list of "major" languages because: it cannot be justified from the data.
