@@ -95,12 +95,9 @@ report/                                report, figures, reflections, slides
   2. every developer's name is in Chinese characters, without kana.
 - **Not used:**
   - hand-made lists of cities or companies because: dataset too large → cannot check row by row.
-  - voice-over languages because: Japanese games are dubbed in Chinese too → right only 1 of 9 times.
+  - voice-over languages because: Japanese games are dubbed in Chinese too.
   - names with kana because: kana = Japanese.
-- **Checked by:**
-  - tests on known games;
-  - a random sample of 50 games checked by hand → the two rules are right for 36 of 37 (notebook 3.1n);
-  - SQ1 run again under other filters → same result (notebook 5.1b).
+- **Check:** notebook 3.1n draws a random sample of 50 flagged games to check by hand.
 
 **Not changed**
 - Very large review counts are kept because: they are real; comparisons use medians.
@@ -139,13 +136,13 @@ report/                                report, figures, reflections, slides
 - **Group** = genre x price tier x year band x other languages.
   - Genre: audience size and amount of text differ.
   - Price tier: stands in for budget and studio size.
-  - Year band: older games had more time to collect reviews. Bands, not single years because: single years → only 42% of games in usable groups (bands: 74%).
-  - Other languages: games with Chinese have a median of 7 other languages; without: 0.
+  - Year band: older games had more time to collect reviews.
+  - Other languages: bigger games ship in more languages.
 - **Per side:** number of games and median reviews. Medians because: review counts are very skewed.
 - **Eligible group** = >= 10 games per side because: fewer → one game moves the median.
 - The two sides are compared in section 5.1.
 
-**Output:** `pcd_sq1_groups` (518 groups, 202 eligible, 74% of games)
+**Output:** `pcd_sq1_groups` (518 groups, 202 eligible)
 
 **Data dictionary**
 
@@ -178,14 +175,11 @@ report/                                report, figures, reflections, slides
 - **Dropped:** 0 reviews in A because: delisted → -100% growth is not real.
 - **Growth** = (reviews in A - reviews in C) / reviews in C.
 - **Control** = added no Chinese and no major language. Games that added another major language are excluded because: own localisation push.
-- **Group** = genre x year band because: only 532 games added Chinese → only the strongest confounders fit.
-  - Year band in: control games grow +13% (<=2017) vs +79% (2022+); treated games are ~2 years newer.
-  - Price tier out: little effect once the year is fixed; with it only 3 genres keep usable groups.
-  - Other languages out: same mix in both arms.
+- **Group** = genre x year band.
 - **Per arm:** number of games and median growth. Eligible = >= 10 games per side.
 - The two arms are compared in section 5.2.
 
-**Output:** `pcd_sq2_groups` (36 groups, 19 eligible, 88% of treated games; 6 of the 9 genres have an eligible group)
+**Output:** `pcd_sq2_groups` (36 groups, 19 eligible)
 
 **Data dictionary**
 
@@ -208,10 +202,9 @@ report/                                report, figures, reflections, slides
 | Action \| 2018-2019 | Action | 2 | 21 | 1625 | 0.17931 | 0.142857 | True |
 | Action \| 2020-2021 | Action | 3 | 38 | 1418 | 0.296376 | 0.25 | True |
 
-### 3.4 Save the tables and check them
+### 3.4 Save the tables
 
-- Save: the three output tables are written to `data/processed/csv/`.
-- Check: automatic tests on the tables; if a table is wrong or a number differs from the ones reported here, the notebook stops.
+- The three output tables are written to `data/processed/csv/`.
 
 ## 4. Data analysis / EDA
 
@@ -229,13 +222,11 @@ report/                                report, figures, reflections, slides
 - Single- vs multiplayer is not held fixed.
 - The date a language was added is unknown (between 2024-01 and 2026-06).
 - Chinese-first games: dataset too large to check row by row → found by two rules. A Chinese
-  studio with an English name and an English release (Black Myth: Wukong) is missed. Effect
-  on the result is small: SQ1 gap +117% with no filter, +115% with it, +106% without the top 1% games (notebook 5.1b).
+  studio with an English name and an English release (Black Myth: Wukong) is missed.
 - Genre = Steam's own genre list, so there is no Visual Novel or Puzzle group: those games (the most text-heavy ones)
-  fall into Adventure (about half), Casual or Simulation → their result is mixed into those genres.
+  fall into other genres (e.g. Adventure, Casual, Simulation) → their result is mixed into those genres.
 - One genre per game (the most-voted user tag that is a Steam genre) → a game that is both, e.g. Action and RPG, counts
-  only in one. The 2% cut-off for a genre is a choice; Racing, Sports and Massively Multiplayer still have too few
-  games that added Chinese to answer SQ2 for them.
+  only in one. The 2% cut-off for a genre is a choice.
 - Snapshot A is from 2026-06-20, not today.
 
 ## Team and contributions
