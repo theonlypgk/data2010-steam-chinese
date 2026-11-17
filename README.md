@@ -119,15 +119,14 @@ report/                                report, figures, reflections, slides
 | `n_other_langs_bin` | 1 = 0 other languages, 2 = 1-4, 3 = 5+ |
 | `has_zh` | 1 = supports Simplified Chinese, 0 = no Chinese at all (treatment) |
 | `total_reviews` | positive + negative reviews (= reach) |
-| `log_total_reviews` | log10 of `total_reviews`, for figures (counts are very skewed) |
 
 **First 3 rows**
 
-| app_id | name | genre_group | release_year | year_band | price | price_tier | n_other_langs | n_other_langs_bin | has_zh | total_reviews | log_total_reviews |
-|---:|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 10 | Counter-Strike | Action | 2000 | 1 | 9.95 | 3 | 5 | 3 | 1 | 250245 | 5.39837 |
-| 20 | Team Fortress Classic | Action | 1999 | 1 | 4.96 | 2 | 6 | 3 | 1 | 8738 | 3.94141 |
-| 30 | Day of Defeat | Action | 2003 | 1 | 4.96 | 2 | 4 | 2 | 0 | 7102 | 3.85138 |
+| app_id | name | genre_group | release_year | year_band | price | price_tier | n_other_langs | n_other_langs_bin | has_zh | total_reviews |
+|---:|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 10 | Counter-Strike | Action | 2000 | 1 | 9.95 | 3 | 5 | 3 | 1 | 250245 |
+| 20 | Team Fortress Classic | Action | 1999 | 1 | 4.96 | 2 | 6 | 3 | 1 | 8738 |
+| 30 | Day of Defeat | Action | 2003 | 1 | 4.96 | 2 | 4 | 2 | 0 | 7102 |
 
 ### 3.2 SQ1 groups: similar games, with vs without Chinese
 
