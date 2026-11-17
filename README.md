@@ -37,16 +37,27 @@ data/processed/xlsx/                   a copy of the same tables, to open and lo
 report/                                report, figures, reflections, slides
 ```
 
-**Needed:** [Git](https://git-scm.com) with [Git LFS](https://git-lfs.com) (the Windows installer of Git already includes it), Python 3.12 or 3.13.
+**Needed (install once)**
+- [Git](https://git-scm.com) with [Git LFS](https://git-lfs.com) (the Windows installer of Git already includes Git LFS)
+- Python 3.12 or 3.13
+- [VS Code](https://code.visualstudio.com) with the Python and Jupyter extensions
 
 **Steps**
-1. `git lfs install` (once per computer)
-2. `git clone https://github.com/theonlypgk/data2010-steam-chinese.git`
-3. `cd data2010-steam-chinese` then `pip install -r requirements.txt`
-4. Open `scripts/steam_chinese_analysis.ipynb` and choose *Run All*.
-   Or in one command: `jupyter nbconvert --to notebook --execute --inplace scripts/steam_chinese_analysis.ipynb`
+1. Open a terminal (VS Code: *Terminal → New Terminal*).
+2. Turn on Git LFS, once per computer: `git lfs install`
+3. Download the project: `git clone https://github.com/theonlypgk/data2010-steam-chinese.git`
+4. Go into the project folder: `cd data2010-steam-chinese`
+5. Install the packages: `pip install -r requirements.txt`
+6. In VS Code: *File → Open Folder* → choose `data2010-steam-chinese`, then open `scripts/steam_chinese_analysis.ipynb`.
+7. *Select Kernel* (top right) → choose the Python used in step 5.
+8. Click *Run All*.
 
-- `data/raw/games_a.csv` is only a few lines of text (not ~400 MB)? → run `git lfs pull` in the project folder.
+Or, after step 5, run the whole notebook in one command: `jupyter nbconvert --to notebook --execute --inplace scripts/steam_chinese_analysis.ipynb`
+
+**If something goes wrong**
+- `data/raw/games_a.csv` is only a few lines (not ~400 MB) → run `git lfs pull` in the project folder.
+- `ModuleNotFoundError` → the kernel is not the Python of step 5 → choose it again (step 7).
+- Project already cloned before → get the latest version with `git pull`.
 
 **How to read section 3 of the notebook**
 - Steps are numbered 3.1.1, 3.1.2, ... Each step = a table (problem, solution, output; problems lettered a, b, c), then its code cell.
