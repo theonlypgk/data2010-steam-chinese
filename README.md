@@ -2,7 +2,24 @@
 
 DATA2010 Data Science Programming, final project.
 
+- **Question:** should a Steam game support Simplified Chinese, for which genres, and when?
+- **Data:** two snapshots of the Steam catalogue (2024-01-11 and 2026-06-20).
+- **Approach:** reach = number of reviews. SQ1 compares games with and without Simplified Chinese inside groups of similar games; SQ2 compares games that added Simplified Chinese after launch with similar games that did not.
+
 The notebook `scripts/steam_chinese_analysis.ipynb` has the same sections as this file.
+
+**Contents**
+- [I. Setup and how to reproduce](#i-setup-and-how-to-reproduce)
+- [II. Data science life cycle](#ii-data-science-life-cycle)
+  - [1. Business understanding](#1-business-understanding)
+  - [2. Data collection](#2-data-collection)
+  - [3. Data processing](#3-data-processing)
+  - [4. Data analysis / EDA](#4-data-analysis--eda)
+  - [5. Data modelling](#5-data-modelling)
+  - [6. Model deployment](#6-model-deployment)
+- [Limitations](#limitations)
+- [Team and contributions](#team-and-contributions)
+- [Use of AI tools](#use-of-ai-tools)
 
 ---
 
@@ -31,6 +48,11 @@ report/                                report, figures, reflections, slides
 
 - `data/raw/games_a.csv` is only a few lines of text (not ~400 MB)? → run `git lfs pull` in the project folder.
 
+**How to read section 3 of the notebook**
+- Steps are numbered 3.1.1, 3.1.2, ... Each step = a table (problem, solution, output; problems lettered a, b, c), then its code cell.
+- In the code, `# 3.1.1e · ...` stands above the lines that solve problem e.
+- Each step runs on both snapshots right after its functions, then prints its counts and a preview of the first 3 games of A and of C.
+
 ---
 
 # II. Data science life cycle
@@ -50,6 +72,7 @@ report/                                report, figures, reflections, slides
 ## 2. Data collection
 
 - **Source:** Steam Games Dataset by FronkonGames (Hugging Face `FronkonGames/steam-games-dataset`), one row per game.
+- **License:** MIT (as given on the Hugging Face page).
 - **Two snapshots** because: SQ2 needs to see which games added Chinese over time.
 - **Saved in `data/raw/`** because: the dataset keeps being updated. Details: [data/README.md](data/README.md).
 
@@ -70,25 +93,28 @@ report/                                report, figures, reflections, slides
 - Junk in language and tag cells (`[b]*[/b]`, HTML) → removed.
 - One genre label is written two ways ("Free To Play" in snapshot A, "Free to Play" in snapshot C and in the tags) → compared in lower case.
 - One language renamed between the snapshots ("Portuguese" in C = "Portuguese - Portugal" in A) → the new name is used in both.
-- No id or repeated id → row dropped (first kept). Unreadable date → missing.
+- No id or repeated id → row dropped (first kept); none in the current data. Unreadable date → missing.
 
 **Columns added**
 - Reach: `total_reviews = positive + negative`.
-- Treatment: `has_zh` (supports Simplified Chinese).
+- Simplified Chinese support: `has_zh`.
 - Confounders: genre group, price tier, year band, number of other languages.
 - Genre group = the first user tag (most voted) that is a Steam genre. The genre list is taken from the data by code: Steam's genre labels on >= 2% of games, without Indie, Early Access, Free to Play (not a type of gameplay). Not a hand-made tag list because: it cannot be checked against 125k games.
 - Price, release year and number of other languages are cut into ranges, each saved by its name (e.g. "<=2017", "<$5", "5+").
 
 **Games removed**
 
-| Rule | Reason |
-|---|---|
-| drop Chinese-first games | original language is Chinese → not a translation |
-| drop Early Access | unfinished game |
-| keep >= 10 reviews | below that, reach is noise |
-| keep released >= 1 year before the snapshot | time to collect reviews |
-| keep games with genre, price and year | needed to form groups; not imputed because: an invented value → wrong group |
-| drop Traditional-Chinese-only | neither "with" nor "without" Simplified Chinese |
+Applied in this order (notebook 3.1.8); games left in snapshot A after each rule:
+
+| Rule | Reason | Games left in A |
+|---|---|---:|
+| (start) | | 125,855 |
+| drop Chinese-first games | original language is Chinese → not a translation | 121,228 |
+| drop Early Access | unfinished game | 110,107 |
+| keep >= 10 reviews | below that, reach is noise | 50,160 |
+| keep released >= 1 year before the snapshot | time to collect reviews | 49,838 |
+| keep games with genre, price and year | needed to form groups; not imputed because: an invented value → wrong group | 48,371 |
+| drop Traditional-Chinese-only (A only) | neither "with" nor "without" Simplified Chinese | 47,603 |
 
 **Chinese-first games**
 - **Rules:** a game is flagged if
@@ -117,7 +143,7 @@ report/                                report, figures, reflections, slides
 | `price_tier` | list-price range: free, <$5, $5-10, $10-20, >$20 |
 | `n_other_langs` | number of supported languages other than English and Chinese |
 | `n_other_langs_bin` | range of other languages: 0, 1-4, 5+ |
-| `has_zh` | 1 = supports Simplified Chinese, 0 = no Chinese at all (treatment) |
+| `has_zh` | 1 = supports Simplified Chinese, 0 = no Chinese at all |
 | `total_reviews` | positive + negative reviews (= reach) |
 
 **First 3 rows**
@@ -175,8 +201,8 @@ report/                                report, figures, reflections, slides
 - **Growth** = (reviews in A - reviews in C) / reviews in C.
 - **Treated** = added Simplified Chinese. **Control** = language list unchanged. **Excluded** = added another language (also only Traditional Chinese) because: own localisation push → not a clean control. Not a hand-made list of "major" languages because: it cannot be justified from the data.
 - **Group** = genre x year band.
-- **Per arm:** number of games and median growth. Eligible = >= 10 games per side.
-- The two arms are compared in section 5.2.
+- **Per side (treated / control):** number of games and median growth. Eligible = >= 10 games per side.
+- The two sides are compared in section 5.2.
 
 **Output:** `pcd_sq2_groups` (36 groups, 19 eligible)
 
