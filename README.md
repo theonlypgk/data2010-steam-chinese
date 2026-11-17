@@ -73,7 +73,7 @@ report/                                report, figures, reflections, slides
 - No id or repeated id → row dropped (first kept). Unreadable date → missing.
 
 **Columns added**
-- Outcome: `total_reviews = positive + negative`.
+- Reach: `total_reviews = positive + negative`.
 - Treatment: `has_zh` (supports Simplified Chinese).
 - Confounders: genre group, price tier, year band, number of other languages.
 - Genre group = the first user tag (most voted) that is a Steam genre. The genre list is taken from the data by code: Steam's genre labels on >= 2% of games, without Indie, Early Access, Free to Play (not a type of gameplay). Not a hand-made tag list because: it cannot be checked against 125k games.
@@ -118,7 +118,7 @@ report/                                report, figures, reflections, slides
 | `n_other_langs` | number of supported languages other than English and Chinese |
 | `n_other_langs_bin` | 1 = 0 other languages, 2 = 1-4, 3 = 5+ |
 | `has_zh` | 1 = supports Simplified Chinese, 0 = no Chinese at all (treatment) |
-| `total_reviews` | positive + negative reviews (outcome: reach) |
+| `total_reviews` | positive + negative reviews (= reach) |
 | `log_total_reviews` | log10 of `total_reviews`, for figures (counts are very skewed) |
 
 **First 3 rows**
