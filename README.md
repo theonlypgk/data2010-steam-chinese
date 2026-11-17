@@ -77,7 +77,7 @@ report/                                report, figures, reflections, slides
 - Treatment: `has_zh` (supports Simplified Chinese).
 - Confounders: genre group, price tier, year band, number of other languages.
 - Genre group = the first user tag (most voted) that is a Steam genre. The genre list is taken from the data by code: Steam's genre labels on >= 2% of games, without Indie, Early Access, Free to Play (not a type of gameplay). Not a hand-made tag list because: it cannot be checked against 125k games.
-- Bins saved as ranks 1, 2, 3, ... because: text labels sort wrongly ("10to20" before "5to10").
+- Price, release year and number of other languages are put into bins, saved as codes 1, 2, 3, ... (meaning: data dictionary below).
 
 **Games removed**
 
@@ -148,7 +148,7 @@ report/                                report, figures, reflections, slides
 
 | Column | Description |
 |---|---|
-| `group_id` | group name: genre \| year band \| price tier \| other languages |
+| `group_id` | group name: genre \| year band \| price tier \| other-languages bin (codes as in `pcd_games_clean`), e.g. "Action \| 1 \| 2 \| 3" |
 | `genre_group` | genre of the group |
 | `year_band` | year-band code of the group (as in `pcd_games_clean`) |
 | `price_tier` | price-tier code of the group |
@@ -163,9 +163,9 @@ report/                                report, figures, reflections, slides
 
 | group_id | genre_group | year_band | price_tier | n_other_langs_bin | n_zh | n_no_zh | median_reviews_zh | median_reviews_no_zh | eligible |
 |:---|:---|---:|---:|---:|---:|---:|---:|---:|:---|
-| Action \| <=2017 \| free \| 0 | Action | 1 | 1 | 1 | 7 | 279 | 43 | 79 | False |
-| Action \| <=2017 \| free \| 1-4 | Action | 1 | 1 | 2 | 8 | 82 | 186.5 | 302 | False |
-| Action \| <=2017 \| free \| 5+ | Action | 1 | 1 | 3 | 55 | 36 | 9937 | 1186.5 | True |
+| Action \| 1 \| 1 \| 1 | Action | 1 | 1 | 1 | 7 | 279 | 43 | 79 | False |
+| Action \| 1 \| 1 \| 2 | Action | 1 | 1 | 2 | 8 | 82 | 186.5 | 302 | False |
+| Action \| 1 \| 1 \| 3 | Action | 1 | 1 | 3 | 55 | 36 | 9937 | 1186.5 | True |
 
 ### 3.3 SQ2 groups: similar games, added Chinese after launch vs did not
 
@@ -185,7 +185,7 @@ report/                                report, figures, reflections, slides
 
 | Column | Description |
 |---|---|
-| `group_id_sq2` | group name: genre \| year band |
+| `group_id_sq2` | group name: genre \| year band (code), e.g. "Action \| 1" |
 | `genre_group` | genre of the group |
 | `year_band` | year-band code of the group (as in `pcd_games_clean`) |
 | `n_treated` | number of games that added Simplified Chinese (532 in total) |
@@ -198,9 +198,9 @@ report/                                report, figures, reflections, slides
 
 | group_id_sq2 | genre_group | year_band | n_treated | n_control | median_growth_treated | median_growth_control | eligible |
 |:---|:---|---:|---:|---:|---:|---:|:---|
-| Action \| <=2017 | Action | 1 | 29 | 3133 | 0.166134 | 0.104465 | True |
-| Action \| 2018-2019 | Action | 2 | 21 | 1617 | 0.17931 | 0.142857 | True |
-| Action \| 2020-2021 | Action | 3 | 38 | 1410 | 0.296376 | 0.25 | True |
+| Action \| 1 | Action | 1 | 29 | 3133 | 0.166134 | 0.104465 | True |
+| Action \| 2 | Action | 2 | 21 | 1617 | 0.17931 | 0.142857 | True |
+| Action \| 3 | Action | 3 | 38 | 1410 | 0.296376 | 0.25 | True |
 
 ### 3.4 Save the tables
 
