@@ -68,12 +68,14 @@ report/                                report, figures, reflections, slides
 - Header of A merges two names (`DiscountDLC count`) → later columns shifted → split back.
 - Prices in A are sale prices (Hades 7.49 = 24.99 at -70%) → list price.
 - Junk in language and tag cells (`[b]*[/b]`, HTML) → removed.
+- One genre label is written two ways ("Free To Play" in snapshot A, "Free to Play" in snapshot C and in the tags) → compared in lower case.
 - No id or repeated id → row dropped (first kept). Unreadable date → missing.
 
 **Columns added**
 - Outcome: `total_reviews = positive + negative`.
 - Treatment: `has_zh` (supports Simplified Chinese).
 - Confounders: genre group, price tier, year band, number of other languages.
+- Genre group = the first user tag (most voted) that is a Steam genre. The genre list is taken from the data by code: Steam's genre labels on >= 2% of games, without Indie, Early Access, Free to Play (not a type of gameplay). Not a hand-made tag list because: it cannot be checked against 125k games.
 - Bins saved as ranks 1, 2, 3, ... because: text labels sort wrongly ("10to20" before "5to10").
 
 **Games removed**
@@ -103,7 +105,7 @@ report/                                report, figures, reflections, slides
 **Not changed**
 - Very large review counts are kept because: they are real; comparisons use medians.
 
-**Output:** `pcd_games_clean` (45,445 games, 14,701 with Simplified Chinese)
+**Output:** `pcd_games_clean` (47,603 games, 15,178 with Simplified Chinese)
 
 **Data dictionary**
 
@@ -111,7 +113,7 @@ report/                                report, figures, reflections, slides
 |---|---|
 | `app_id` | Steam application id |
 | `name` | game title |
-| `genre_group` | Visual Novel, RPG, Strategy, Action, Puzzle or Casual |
+| `genre_group` | Steam genre: Action, Adventure, Casual, Massively Multiplayer, Racing, RPG, Simulation, Sports or Strategy |
 | `release_year` | year of release |
 | `year_band` | 1 = <=2017, 2 = 2018-2019, 3 = 2020-2021, 4 = 2022+ |
 | `price` | list price in USD |
@@ -137,13 +139,13 @@ report/                                report, figures, reflections, slides
 - **Group** = genre x price tier x year band x other languages.
   - Genre: audience size and amount of text differ.
   - Price tier: stands in for budget and studio size.
-  - Year band: older games had more time to collect reviews. Bands, not single years because: single years → only 47% of games in usable groups (bands: 79%).
+  - Year band: older games had more time to collect reviews. Bands, not single years because: single years → only 42% of games in usable groups (bands: 74%).
   - Other languages: games with Chinese have a median of 7 other languages; without: 0.
 - **Per side:** number of games and median reviews. Medians because: review counts are very skewed.
 - **Eligible group** = >= 10 games per side because: fewer → one game moves the median.
 - The two sides are compared in section 5.1.
 
-**Output:** `pcd_sq1_groups` (360 groups, 190 eligible, 79% of games)
+**Output:** `pcd_sq1_groups` (518 groups, 202 eligible, 74% of games)
 
 **Data dictionary**
 
@@ -164,9 +166,9 @@ report/                                report, figures, reflections, slides
 
 | group_id | genre_group | year_band | price_tier | n_other_langs_bin | n_zh | n_no_zh | median_reviews_zh | median_reviews_no_zh | eligible |
 |:---|:---|---:|---:|---:|---:|---:|---:|---:|:---|
-| Action \| <=2017 \| free \| 0 | Action | 1 | 1 | 1 | 9 | 350 | 65 | 103.5 | False |
-| Action \| <=2017 \| free \| 1-4 | Action | 1 | 1 | 2 | 12 | 99 | 49 | 310 | True |
-| Action \| <=2017 \| free \| 5+ | Action | 1 | 1 | 3 | 77 | 52 | 8617 | 1328 | True |
+| Action \| <=2017 \| free \| 0 | Action | 1 | 1 | 1 | 7 | 279 | 43 | 79 | False |
+| Action \| <=2017 \| free \| 1-4 | Action | 1 | 1 | 2 | 8 | 82 | 186.5 | 302 | False |
+| Action \| <=2017 \| free \| 5+ | Action | 1 | 1 | 3 | 55 | 36 | 9937 | 1186.5 | True |
 
 ### 3.3 SQ2 groups: similar games, added Chinese after launch vs did not
 
@@ -176,14 +178,14 @@ report/                                report, figures, reflections, slides
 - **Dropped:** 0 reviews in A because: delisted → -100% growth is not real.
 - **Growth** = (reviews in A - reviews in C) / reviews in C.
 - **Control** = added no Chinese and no major language. Games that added another major language are excluded because: own localisation push.
-- **Group** = genre x year band because: only 510 games added Chinese → only the strongest confounders fit.
-  - Year band in: control games grow +12% (<=2017) vs +77% (2022+); treated games are ~2 years newer.
+- **Group** = genre x year band because: only 532 games added Chinese → only the strongest confounders fit.
+  - Year band in: control games grow +13% (<=2017) vs +79% (2022+); treated games are ~2 years newer.
   - Price tier out: little effect once the year is fixed; with it only 3 genres keep usable groups.
   - Other languages out: same mix in both arms.
 - **Per arm:** number of games and median growth. Eligible = >= 10 games per side.
 - The two arms are compared in section 5.2.
 
-**Output:** `pcd_sq2_groups` (24 groups, 16 eligible, 90% of treated games)
+**Output:** `pcd_sq2_groups` (36 groups, 19 eligible, 88% of treated games; 6 of the 9 genres have an eligible group)
 
 **Data dictionary**
 
@@ -192,7 +194,7 @@ report/                                report, figures, reflections, slides
 | `group_id_sq2` | group name: genre \| year band |
 | `genre_group` | genre of the group |
 | `year_band` | year-band code of the group (as in `pcd_games_clean`) |
-| `n_treated` | number of games that added Simplified Chinese (510 in total) |
+| `n_treated` | number of games that added Simplified Chinese (532 in total) |
 | `n_control` | number of games that added neither Chinese nor a major language |
 | `median_growth_treated` | median review growth of the treated games |
 | `median_growth_control` | median review growth of the control games |
@@ -202,9 +204,9 @@ report/                                report, figures, reflections, slides
 
 | group_id_sq2 | genre_group | year_band | n_treated | n_control | median_growth_treated | median_growth_control | eligible |
 |:---|:---|---:|---:|---:|---:|---:|:---|
-| Action \| <=2017 | Action | 1 | 41 | 3897 | 0.171821 | 0.105263 | True |
-| Action \| 2018-2019 | Action | 2 | 31 | 1971 | 0.175252 | 0.148148 | True |
-| Action \| 2020-2021 | Action | 3 | 49 | 1800 | 0.285714 | 0.255479 | True |
+| Action \| <=2017 | Action | 1 | 29 | 3141 | 0.166134 | 0.104377 | True |
+| Action \| 2018-2019 | Action | 2 | 21 | 1625 | 0.17931 | 0.142857 | True |
+| Action \| 2020-2021 | Action | 3 | 38 | 1418 | 0.296376 | 0.25 | True |
 
 ### 3.4 Save the tables and check them
 
@@ -228,8 +230,13 @@ report/                                report, figures, reflections, slides
 - The date a language was added is unknown (between 2024-01 and 2026-06).
 - Chinese-first games: dataset too large to check row by row → found by two rules. A Chinese
   studio with an English name and an English release (Black Myth: Wukong) is missed. Effect
-  on the result is small: SQ1 gap +125% with no filter, +120% with it, +112% without the top 1% games (notebook 5.1b).
-- Genre comes from user tags; snapshot A is from 2026-06-20, not today.
+  on the result is small: SQ1 gap +117% with no filter, +115% with it, +106% without the top 1% games (notebook 5.1b).
+- Genre = Steam's own genre list, so there is no Visual Novel or Puzzle group: those games (the most text-heavy ones)
+  fall into Adventure (about half), Casual or Simulation → their result is mixed into those genres.
+- One genre per game (the most-voted user tag that is a Steam genre) → a game that is both, e.g. Action and RPG, counts
+  only in one. The 2% cut-off for a genre is a choice; Racing, Sports and Massively Multiplayer still have too few
+  games that added Chinese to answer SQ2 for them.
+- Snapshot A is from 2026-06-20, not today.
 
 ## Team and contributions
 

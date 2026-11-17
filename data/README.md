@@ -32,7 +32,7 @@ The 13 columns the project reads (the other 27 are not used):
 | `Negative` | `negative` | number of negative reviews |
 | `Developers` | `developers` | developer names |
 | `Publishers` | `publishers` | publisher names |
-| `Genres` | `genres` | Steam genres |
+| `Genres` | `genres` | Steam genres (also gives the list of genres, notebook 3.1f) |
 | `Tags` | `tags` | user tags, ordered by votes |
 
 Not used: Estimated owners, Peak CCU, Required age, DLC count, About the game, Reviews, Header
@@ -46,6 +46,7 @@ Screenshots, Movies.
 - Header of snapshot A merges two names (`DiscountDLC count`) → the notebook splits it back.
 - Prices in snapshot A are sale prices → the notebook recovers the list price.
 - Language and tag cells contain store-page junk (`[b]*[/b]`, HTML) → removed.
+- One genre label is written two ways ("Free To Play" in snapshot A, "Free to Play" in snapshot C and in the tags) → compared in lower case.
 
 ## Output tables (`processed/`)
 
@@ -54,8 +55,8 @@ Written by `scripts/steam_chinese_analysis.ipynb` as `csv/pcd_<table>.csv`; neve
 
 | Table | One row per | Rows |
 |---|---|---:|
-| `pcd_games_clean` | game of snapshot A after cleaning | 45,445 |
-| `pcd_sq1_groups` | SQ1 group of similar games | 360 |
-| `pcd_sq2_groups` | SQ2 group of similar games | 24 |
+| `pcd_games_clean` | game of snapshot A after cleaning | 47,603 |
+| `pcd_sq1_groups` | SQ1 group of similar games | 518 |
+| `pcd_sq2_groups` | SQ2 group of similar games | 36 |
 
 Columns of each table: see the main [README](../README.md), section II.3.
