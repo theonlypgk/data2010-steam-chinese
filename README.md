@@ -97,7 +97,6 @@ report/                                report, figures, reflections, slides
   - hand-made lists of cities or companies because: dataset too large → cannot check row by row.
   - voice-over languages because: Japanese games are dubbed in Chinese too.
   - names with kana because: kana = Japanese.
-- **Check:** notebook 3.1n draws a random sample of 50 flagged games to check by hand.
 
 **Not changed**
 - Very large review counts are kept because: they are real; comparisons use medians.

@@ -17,7 +17,7 @@
 
 ## Variables
 
-The 13 columns the project reads (the other 27 are not used):
+The 12 columns the project reads (the other 28 are not used):
 
 | Raw column | Name in the code | Meaning |
 |---|---|---|
@@ -31,8 +31,7 @@ The 13 columns the project reads (the other 27 are not used):
 | `Positive` | `positive` | number of positive reviews |
 | `Negative` | `negative` | number of negative reviews |
 | `Developers` | `developers` | developer names |
-| `Publishers` | `publishers` | publisher names |
-| `Genres` | `genres` | Steam genres (also gives the list of genres, notebook 3.1f) |
+| `Genres` | `genres` | Steam genres (also gives the list of genres, notebook 3.1.6) |
 | `Tags` | `tags` | user tags, ordered by votes |
 
 Not used: Estimated owners, Peak CCU, Required age, DLC count, About the game, Reviews, Header
