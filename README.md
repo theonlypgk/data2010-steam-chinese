@@ -20,15 +20,16 @@ data/processed/xlsx/                   a copy of the same tables, to open and lo
 report/                                report, figures, reflections, slides
 ```
 
-**Needed:** Python 3.12 or 3.13.
+**Needed:** [Git](https://git-scm.com) with [Git LFS](https://git-lfs.com) (the Windows installer of Git already includes it), Python 3.12 or 3.13.
 
 **Steps**
-1. Get the project: `git clone https://github.com/theonlypgk/data2010-steam-chinese.git` **or** *Code → Download ZIP* on GitHub and unzip it.
-2. In the project folder: `pip install -r requirements.txt`
-3. Open `scripts/steam_chinese_analysis.ipynb` and choose *Run All*.
+1. `git lfs install` (once per computer)
+2. `git clone https://github.com/theonlypgk/data2010-steam-chinese.git`
+3. `cd data2010-steam-chinese` then `pip install -r requirements.txt`
+4. Open `scripts/steam_chinese_analysis.ipynb` and choose *Run All*.
    Or in one command: `jupyter nbconvert --to notebook --execute --inplace scripts/steam_chinese_analysis.ipynb`
 
-- The raw files look tiny (a few lines of text)? → your Git has no Git LFS: install it, then run `git lfs pull` in the project folder.
+- `data/raw/games_a.csv` is only a few lines of text (not ~400 MB)? → run `git lfs pull` in the project folder.
 
 ---
 
