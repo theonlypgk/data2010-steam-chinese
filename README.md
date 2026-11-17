@@ -20,17 +20,17 @@ data/processed/xlsx/                   a copy of the same tables, to open and lo
 report/                                report, figures, reflections, slides
 ```
 
-**Needed:** Git, [Git LFS](https://git-lfs.com) (the two raw files are large), Python 3.12 or 3.13.
+**Needed:** Python 3.12 or 3.13 (or just Google Colab).
 
-**Steps**
-1. `git lfs install`
-2. `git clone https://github.com/theonlypgk/data2010-steam-chinese.git`
-3. `cd data2010-steam-chinese` then `pip install -r requirements.txt`
-4. Open `scripts/steam_chinese_analysis.ipynb` and choose *Run All*.
+**Option A · Google Colab:** open `scripts/steam_chinese_analysis.ipynb` in Colab and choose *Run All*.
+
+**Option B · Your computer**
+1. Get the project: `git clone https://github.com/theonlypgk/data2010-steam-chinese.git` **or** *Code → Download ZIP* on GitHub and unzip it.
+2. In the project folder: `pip install -r requirements.txt`
+3. Open `scripts/steam_chinese_analysis.ipynb` and choose *Run All*.
    Or in one command: `jupyter nbconvert --to notebook --execute --inplace scripts/steam_chinese_analysis.ipynb`
 
-**If step 4 fails**
-- The raw files look tiny (a few lines of text)? → run `git lfs pull` in the project folder.
+Cell I.a finds the project folder by itself. The first run downloads the two raw files (~650 MB) if they are not there yet (a ZIP or a clone without Git LFS only has small placeholder files).
 
 ---
 
