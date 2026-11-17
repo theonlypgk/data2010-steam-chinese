@@ -22,7 +22,7 @@ report/                                report, figures, reflections, slides
 
 **Needed:** Python 3.12 or 3.13 (or just Google Colab).
 
-**Option A · Google Colab:** open `scripts/steam_chinese_analysis.ipynb` in Colab and choose *Run All*.
+**Option A · Google Colab:** open `scripts/steam_chinese_analysis.ipynb` in Colab and choose *Run All* (cell I.0 gets the project).
 
 **Option B · Your computer**
 1. Get the project: `git clone https://github.com/theonlypgk/data2010-steam-chinese.git` **or** *Code → Download ZIP* on GitHub and unzip it.
@@ -30,7 +30,7 @@ report/                                report, figures, reflections, slides
 3. Open `scripts/steam_chinese_analysis.ipynb` and choose *Run All*.
    Or in one command: `jupyter nbconvert --to notebook --execute --inplace scripts/steam_chinese_analysis.ipynb`
 
-Cell I.a finds the project folder by itself. The first run downloads the two raw files (~650 MB) if they are not there yet (a ZIP or a clone without Git LFS only has small placeholder files).
+- The raw files look tiny (a few lines of text)? → your Git has no Git LFS: install it, then run `git lfs pull` in the project folder.
 
 ---
 

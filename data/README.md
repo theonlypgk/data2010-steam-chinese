@@ -12,7 +12,7 @@
 | `raw/games_a.csv` | A, 2026-06-20 ("now") | `52ba62abfa707a2fa31f4d147c2777a9d9fbd2da` | 125,855 | 40 | 401 MB |
 | `raw/games_c.csv` | C, 2024-01-11 ("before") | `aefdeb1ff1a739b92ac5338682cc2610a0328505` | 85,103 | 39 | 257 MB |
 
-- The files are larger than GitHub's 100 MB limit → stored with Git LFS (cell I.a of the notebook downloads them if they are missing).
+- The files are larger than GitHub's 100 MB limit → stored with Git LFS (`git lfs pull` downloads them).
 - Snapshot C has no `Discount` column.
 
 ## Variables
