@@ -31,11 +31,14 @@ The notebook `scripts/steam_chinese_analysis.ipynb` has the same sections as thi
 scripts/steam_chinese_analysis.ipynb   all the code
 requirements.txt                       exact package versions
 data/README.md                         description of the dataset
-data/raw/                              the two input files (Git LFS)
-data/processed/csv/                    output tables (written by the notebook)
-data/processed/xlsx/                   a copy of the same tables, to open and look at
-report/                                report, figures, reflections, slides
+data/raw/                              the two input files (Git LFS), never changed
+outputs/tables/                        stage 3: output tables as csv (read back by stages 4-5)
+outputs/eda/                           stage 4: EDA tables and figures
+outputs/results/                       stage 5: result tables and figures
+report/                                report, reflections, slides
 ```
+
+- `data/` = input only; `outputs/` = everything the notebook writes → Run All writes it again.
 
 **Needed (install once)**
 - [Git](https://git-scm.com) with [Git LFS](https://git-lfs.com) (the Windows installer of Git already includes Git LFS)
@@ -240,7 +243,13 @@ Applied in this order (notebook 3.1.8); games left in snapshot A after each rule
 
 ### 3.4 Save the tables
 
-- The three output tables are written to `data/processed/csv/`.
+- The three output tables are written to `outputs/tables/` as csv, never edited by hand.
+
+| Table | One row per | Rows |
+|---|---|---:|
+| `pcd_games_clean` | game of snapshot A after cleaning | 47,603 |
+| `pcd_sq1_groups` | SQ1 group of similar games | 518 |
+| `pcd_sq2_groups` | SQ2 group of similar games | 36 |
 
 ## 4. Data analysis / EDA
 
